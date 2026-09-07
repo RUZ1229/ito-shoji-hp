@@ -1254,6 +1254,7 @@
   }
 
   async function bootstrap() {
+    window.__chibaMapBooted = true;
     try {
       setStatus("合言葉を確認中…");
       await ensureLiveAccess();
