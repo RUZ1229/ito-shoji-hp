@@ -7,7 +7,7 @@
   → 機能追加後はブラウザ再読込(F5)だけで反映
 
 【ブックマーク用URL】
-  https://ruz1229.github.io/ito-shoji/chiba-map/?k=PK9aQfI-vc1efEizC-Sm2w
+  https://ruz1229.github.io/ito-shoji-hp/chiba-map/?k=PK9aQfI-vc1efEizC-Sm2w
 
 【初回】
   1) zip を「すべて展開」
