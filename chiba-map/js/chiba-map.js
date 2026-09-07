@@ -978,15 +978,49 @@
     if (el) el.textContent = text;
   }
 
-  function liveVersionUrl() {
-    const meta = document.querySelector('meta[name="chiba-map-live-base"]');
-    if (meta?.content?.trim()) {
-      return meta.content.trim().replace(/\/?$/, "/") + ".version.json";
+  function safeSessionGet(key) {
+    try {
+      return sessionStorage.getItem(key);
+    } catch (_) {
+      return null;
     }
-    if (IS_WEB_HOST) {
-      return new URL(".version.json", window.location.href).toString();
+  }
+
+  function safeSessionSet(key, value) {
+    try {
+      sessionStorage.setItem(key, value);
+      return true;
+    } catch (_) {
+      return false;
     }
-    return ".version.json";
+  }
+
+  /** GitHub Pages は .version.json を 404 にするため version.json を正とする */
+  function liveVersionCandidates() {
+    const base = (() => {
+      const meta = document.querySelector('meta[name="chiba-map-live-base"]');
+      if (meta?.content?.trim()) {
+        return meta.content.trim().replace(/\/?$/, "/");
+      }
+      if (IS_WEB_HOST) {
+        return new URL("./", window.location.href).toString();
+      }
+      return "./";
+    })();
+    return [`${base}version.json`, `${base}.version.json`];
+  }
+
+  function reloadOnce(reloadKey, marker) {
+    if (safeSessionGet(reloadKey) === marker) return false;
+    const url = new URL(window.location.href);
+    if (url.searchParams.get(reloadKey) === marker) return false;
+    if (!safeSessionSet(reloadKey, marker)) {
+      url.searchParams.set(reloadKey, marker);
+    } else {
+      url.searchParams.set("_", String(Date.now()));
+    }
+    window.location.replace(url.toString());
+    return true;
   }
 
   function pageBuildStamp() {
@@ -994,13 +1028,16 @@
   }
 
   async function fetchLiveVersionMeta() {
-    try {
-      const r = await fetch(`${liveVersionUrl()}?v=${Date.now()}`, { cache: "no-store" });
-      if (!r.ok) return null;
-      return await r.json();
-    } catch (_) {
-      return null;
+    for (const url of liveVersionCandidates()) {
+      try {
+        const r = await fetch(`${url}?v=${Date.now()}`, { cache: "no-store" });
+        if (!r.ok) continue;
+        return await r.json();
+      } catch (_) {
+        /* try next candidate */
+      }
     }
+    return null;
   }
 
   async function maybeReloadForLatestBuild() {
@@ -1012,12 +1049,7 @@
 
     const pageBuild = pageBuildStamp();
     const staleHtml = pageBuild && ver.built > pageBuild;
-    const reloadKey = "chiba-map-reloaded-for";
-    if (staleHtml && sessionStorage.getItem(reloadKey) !== ver.built) {
-      sessionStorage.setItem(reloadKey, ver.built);
-      const url = new URL(window.location.href);
-      url.searchParams.set("_", String(Date.now()));
-      window.location.replace(url.toString());
+    if (staleHtml && reloadOnce("chiba-map-reloaded-for", ver.built)) {
       await new Promise(() => {});
     }
   }
@@ -1046,12 +1078,7 @@
       const data = await r.json();
       const ver = await fetchLiveVersionMeta();
       if (ver?.map_generated && data.generated && ver.map_generated > data.generated) {
-        const reloadKey = "chiba-map-data-reloaded-for";
-        if (sessionStorage.getItem(reloadKey) !== ver.map_generated) {
-          sessionStorage.setItem(reloadKey, ver.map_generated);
-          const url = new URL(window.location.href);
-          url.searchParams.set("_", String(Date.now()));
-          window.location.replace(url.toString());
+        if (reloadOnce("chiba-map-data-reloaded-for", ver.map_generated)) {
           await new Promise(() => {});
         }
       }
@@ -1092,6 +1119,11 @@
   }
 
   async function sha256Hex(text) {
+    if (!window.crypto?.subtle) {
+      throw new Error(
+        "合言葉の確認に HTTPS が必要です。URL が https:// で始まっているか確認してください。"
+      );
+    }
     const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
     return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
   }
@@ -1147,6 +1179,7 @@
       `;
       document.body.appendChild(overlay);
       document.body.classList.add("access-gate-open");
+      setStatus("合言葉を入力してください");
 
       const input = overlay.querySelector("#accessKeyInput");
       const btn = overlay.querySelector("#accessKeyBtn");
@@ -1222,8 +1255,11 @@
 
   async function bootstrap() {
     try {
+      setStatus("合言葉を確認中…");
       await ensureLiveAccess();
+      setStatus("最新版を確認中…");
       await maybeReloadForLatestBuild();
+      setStatus("地図データを読込中…");
       const data = await loadMapDataWithRetry();
       mapData = data;
       const hasVisit = (data.sites || []).some((s) => "visit_count" in s);
