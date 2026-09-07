@@ -1,9 +1,9 @@
 {
   "generated": "2026-09-07T15:52:42",
-  "map_variant": "他社",
-  "map_variant_label": "他社向け",
+  "map_variant": "社内",
+  "map_variant_label": "伊藤商事専用（社内）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
-  "map_overrides": "AI化/千葉配送地図_他社/data/map_overrides.json",
+  "map_overrides": "AI化/千葉配送地図/data/map_overrides.json",
   "site_count": 332,
   "zones": {
     "chiba_a": {
@@ -550,7 +550,7 @@
       "last_visit": "2026-09-07",
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
       "search_names": [
         "藤野トーヨー住器（株）市原支店",
         "藤野ト ーヨー住器（ 株） 市原支店"
@@ -572,7 +572,7 @@
       "last_visit": "2026-09-07",
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
       "search_names": [
         "ＮＢＰ日板Ｓ＆Ｓ（トップＥ工場",
         "ＮＢＰ日板千葉（ＪＨＲＭＡＤＯ",
@@ -605,7 +605,7 @@
       "last_visit": "2026-09-01",
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
       "search_names": []
     },
     {
@@ -695,7 +695,7 @@
       "last_visit": "2026-09-07",
       "master_course": "柏3V",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
       "search_names": [
         "（株）山善 （エヌ・イー）",
         "（株）エヌ・イー",
@@ -1019,7 +1019,7 @@
       "last_visit": "2026-09-03",
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
       "search_names": [
         "（株）佐川材木店（通常）",
         "（ 株） 佐川材木店（ 通常）"
@@ -1041,7 +1041,7 @@
       "last_visit": "2026-09-04",
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
       "search_names": []
     },
     {
@@ -4520,7 +4520,7 @@
       "last_visit": "2026-09-04",
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
       "search_names": [
         "日の出グリーン建商（ 株） ＨＢ"
       ]
@@ -5170,7 +5170,7 @@
       "last_visit": "2026-08-28",
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
       "search_names": []
     },
     {
@@ -5265,7 +5265,7 @@
       "last_visit": "2026-08-31",
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
       "search_names": [
         "（株）ひらい 特販課",
         "（株）ひらい　住宅部"
@@ -5668,7 +5668,7 @@
       "last_visit": "2026-09-03",
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
       "search_names": []
     },
     {
@@ -5687,7 +5687,7 @@
       "last_visit": "2026-09-07",
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
       "search_names": []
     },
     {
@@ -5824,7 +5824,7 @@
       "last_visit": "2026-06-18",
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
       "search_names": []
     },
     {
@@ -5843,7 +5843,7 @@
       "last_visit": "2026-08-06",
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
       "search_names": []
     },
     {
@@ -7498,12 +7498,13 @@
   "visit_period_end": "2026-09-07",
   "course_merges": {
     "柏2T.5O": {
-      "label": "柏2T+5O",
+      "label": "柏2T+5O（4t）",
       "source_courses": [
         "柏2T",
         "柏5O"
       ],
-      "marker_shape": "circle",
+      "marker_shape": "square",
+      "truck_t": 4,
       "hub": "yachiyo_dp",
       "color": "hsl(175, 72%, 46%)"
     },
@@ -7530,7 +7531,8 @@
   },
   "marker_legend": {
     "circle": "通常（丸）",
-    "triangle": "2t専用（三角）"
+    "triangle": "2t専用（三角）",
+    "square": "4t専用（四角）"
   },
   "course_aliases": {
     "2S": "柏2S",
