@@ -1,0 +1,56 @@
+{
+  "note": "地図表示専用。現場マスタ.json は変更しない。build_chiba_map_data.py が map_data.json 生成時に適用。",
+  "updated": "2026-09-04",
+  "course_moves": [
+    { "site_id": "site_140", "map_course": "柏3V車立て", "reason": "ヨドハン千葉のみ独立コース" },
+    { "site_id": "site_33", "map_course": "柏1H", "reason": "3X→1H 石川商会" },
+    { "site_id": "site_149", "map_course": "柏1H", "reason": "3X→1H カワカ" },
+    { "site_id": "site_203", "map_course": "柏1H", "reason": "3X→1H EX鏑木" },
+    { "site_id": "site_255", "map_course": "柏1H", "reason": "3X→1H オオカワ" },
+    { "site_id": "site_234", "map_course": "柏1H", "reason": "3X→1H コメリPW旭" },
+    { "site_id": "site_34", "map_course": "柏1H", "reason": "3X→1H 林ガラス" },
+    { "site_id": "virtual_maruo_y", "map_course": "柏1H", "reason": "3X→1H Yマルウ（配車表表示・地図専用ピン）" },
+    { "site_id": "site_23", "map_course": "柏2T.5O", "reason": "3V→2T.5O 山善エヌイー" }
+  ],
+  "course_merges": {
+    "柏2T.5O": {
+      "label": "柏2T+5O",
+      "source_courses": ["柏2T", "柏5O"],
+      "marker_shape": "circle",
+      "hub": "yachiyo_dp",
+      "color": "hsl(175, 72%, 46%)"
+    },
+    "柏1I.5P": {
+      "label": "柏1I+5P（2t）",
+      "source_courses": ["柏1I", "柏5P"],
+      "marker_shape": "triangle",
+      "truck_t": 2,
+      "hub": "yachiyo_dp",
+      "color": "hsl(39, 72%, 46%)"
+    }
+  },
+  "new_courses": {
+    "柏3V車立て": {
+      "label": "柏3V車立て",
+      "marker_shape": "circle",
+      "hub": "yachiyo_dp",
+      "zone": "chiba_a",
+      "color": "hsl(200, 75%, 48%)"
+    }
+  },
+  "virtual_sites": [
+    {
+      "id": "virtual_maruo_y",
+      "master_course": "柏3X",
+      "name": "新（株）マルウ Ｙ",
+      "address": "千葉県 旭市（柏3X→1H・地図表示のみ）",
+      "lat": 35.7168,
+      "lng": 140.6542,
+      "geocode_source": "map_override_near_pw_asahikawa"
+    }
+  ],
+  "marker_legend": {
+    "circle": "通常（丸）",
+    "triangle": "2t専用（三角）"
+  }
+}
