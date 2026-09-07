@@ -1091,16 +1091,103 @@
     throw lastErr;
   }
 
-  function enforceLiveAccess() {
-    const meta = document.querySelector('meta[name="chiba-map-access-key"]');
-    if (!meta?.content?.trim()) return;
-    const required = meta.content.trim();
-    const got = new URLSearchParams(window.location.search).get("k") || "";
-    if (got !== required) {
-      throw new Error(
-        "この地図は共有URLから開いてください。開く.bat または社長から受け取ったリンクをご利用ください。"
-      );
+  async function sha256Hex(text) {
+    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+    return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
+  }
+
+  function isLiveAccessRequired() {
+    return !!(
+      document.querySelector('meta[name="chiba-map-access-hash"]') ||
+      document.querySelector('meta[name="chiba-map-access-key"]') ||
+      (IS_WEB_HOST && document.querySelector('meta[name="chiba-map-live-base"]'))
+    );
+  }
+
+  function accessStorageKey() {
+    const hashMeta = document.querySelector('meta[name="chiba-map-access-hash"]');
+    if (hashMeta?.content?.trim()) {
+      return `chiba-map-ok-${hashMeta.content.trim().slice(0, 16)}`;
     }
+    const keyMeta = document.querySelector('meta[name="chiba-map-access-key"]');
+    if (keyMeta?.content?.trim()) {
+      return `chiba-map-ok-legacy-${keyMeta.content.trim().slice(0, 8)}`;
+    }
+    return null;
+  }
+
+  async function verifyAccessKey(key) {
+    const trimmed = (key || "").trim();
+    if (!trimmed) return false;
+    const hashMeta = document.querySelector('meta[name="chiba-map-access-hash"]');
+    if (hashMeta?.content?.trim()) {
+      return (await sha256Hex(trimmed)) === hashMeta.content.trim();
+    }
+    const keyMeta = document.querySelector('meta[name="chiba-map-access-key"]');
+    if (keyMeta?.content?.trim()) {
+      return trimmed === keyMeta.content.trim();
+    }
+    return true;
+  }
+
+  function showAccessGate() {
+    return new Promise((resolve) => {
+      const overlay = document.createElement("div");
+      overlay.className = "access-gate";
+      overlay.innerHTML = `
+        <div class="access-gate__panel">
+          <div class="access-gate__icon" aria-hidden="true">🔒</div>
+          <h2 class="access-gate__title">千葉配送地図</h2>
+          <p class="access-gate__lead">共有された合言葉を入力してください</p>
+          <label class="access-gate__label" for="accessKeyInput">合言葉</label>
+          <input id="accessKeyInput" class="access-gate__input" type="password" placeholder="合言葉を入力" autocomplete="off">
+          <button id="accessKeyBtn" type="button" class="access-gate__btn">地図を開く</button>
+          <p id="accessKeyErr" class="access-gate__err" hidden></p>
+        </div>
+      `;
+      document.body.appendChild(overlay);
+      document.body.classList.add("access-gate-open");
+
+      const input = overlay.querySelector("#accessKeyInput");
+      const btn = overlay.querySelector("#accessKeyBtn");
+      const err = overlay.querySelector("#accessKeyErr");
+
+      async function tryKey() {
+        if (!(await verifyAccessKey(input.value))) {
+          err.textContent =
+            "合言葉が違います。社長から受け取ったリンク・合言葉をご確認ください。";
+          err.hidden = false;
+          input.focus();
+          input.select();
+          return;
+        }
+        const sk = accessStorageKey();
+        if (sk) sessionStorage.setItem(sk, "1");
+        overlay.remove();
+        document.body.classList.remove("access-gate-open");
+        resolve();
+      }
+
+      btn.addEventListener("click", tryKey);
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") tryKey();
+      });
+      input.focus();
+    });
+  }
+
+  async function ensureLiveAccess() {
+    if (!isLiveAccessRequired()) return;
+    const sk = accessStorageKey();
+    if (sk && sessionStorage.getItem(sk) === "1") return;
+
+    const urlKey = new URLSearchParams(window.location.search).get("k") || "";
+    if (urlKey && (await verifyAccessKey(urlKey)) {
+      if (sk) sessionStorage.setItem(sk, "1");
+      return;
+    }
+
+    await showAccessGate();
   }
 
   function startLiveVersionWatch(initialBuilt) {
@@ -1135,7 +1222,7 @@
 
   async function bootstrap() {
     try {
-      enforceLiveAccess();
+      await ensureLiveAccess();
       await maybeReloadForLatestBuild();
       const data = await loadMapDataWithRetry();
       mapData = data;
