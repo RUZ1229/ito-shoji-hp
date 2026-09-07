@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta name="chiba-map-build" content="2026-09-07T16:09:35">
+  <meta name="chiba-map-build" content="2026-09-07T16:14:21">
   <meta name="chiba-map-live-base" content="https://ruz1229.github.io/ito-shoji-hp/chiba-map">
-  <meta name="chiba-map-access-hash" content="f626aabec9d76e93c414f045772ca5cf1c112d1652646208de404e876d0d08db">
+  <meta name="chiba-map-access-keys" content="PK9aQfI-vc1efEizC-Sm2w,PK9aQfl-vc1efEizC-Sm2w">
 
   <meta charset="UTF-8">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>伊藤商事 千葉配送地図</title>
   <link rel="stylesheet" href="vendor/leaflet.css">
-  <link rel="stylesheet" href="css/chiba-map.css?v=20260907T16093">
+  <link rel="stylesheet" href="css/chiba-map.css?v=20260907T16142">
 </head>
 <body>
   <header class="header">
@@ -41,25 +41,35 @@
 
   <script src="vendor/leaflet.js"></script>
   <script src="vendor/leaflet-ant-path.min.js"></script>
-  <script src="js/chiba-map.js?v=20260907T16093" onerror="(function(){var s=document.getElementById('statusText');if(s)s.textContent='地図プログラムが読めません。McAfee等でブロックされている可能性があります。オフラインzip（手動で開く.bat）を使ってください。';})();"></script>
+  <script>
+    (function () {
+      var st = document.getElementById("statusText");
+      if (st) st.textContent = "地図プログラム読込中…";
+      var s = document.createElement("script");
+      s.src = "js/chiba-map.js?v=" + Date.now();
+      s.onerror = function () {
+        if (st) {
+          st.textContent =
+            "地図プログラムが読めません。Ctrl+F5 で再読込するか、シークレットウィンドウで開いてください。";
+        }
+      };
+      document.body.appendChild(s);
+    })();
+  </script>
   <script>
     window.addEventListener("load", function () {
       setTimeout(function () {
         var st = document.getElementById("statusText");
-        if (!st || st.textContent.indexOf("読込中") === -1) return;
+        if (!st) return;
+        if (st.textContent.indexOf("読込中") === -1 && st.textContent.indexOf("地図プログラム読込中") === -1) return;
         if (typeof L === "undefined") {
-          st.textContent =
-            "地図ライブラリが読み込めません。McAfee等で CDN がブロックされていないか確認し、Ctrl+F5 で再読込してください。";
+          st.textContent = "地図ライブラリが読めません。Ctrl+F5 で再読込してください。";
           return;
         }
         if (!window.__chibaMapBooted) {
-          st.textContent =
-            "地図プログラムが起動できません。live_url から URL を丸ごとコピーしてください（合言葉末尾は大文字 I）。McAfee ならオフライン zip を使ってください。";
-          return;
+          st.textContent = "地図プログラムが起動できません。Ctrl+F5 またはシークレットウィンドウで再試行してください。";
         }
-        st.textContent =
-          "起動に時間がかかっています。合言葉付きURLか Ctrl+F5 で再読込してください。";
-      }, 8000);
+      }, 12000);
     });
   </script>
 </body>

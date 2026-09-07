@@ -1086,7 +1086,8 @@
       const ver = await fetchLiveVersionMeta();
       if (ver?.map_generated && data.generated && ver.map_generated > data.generated) {
         if (reloadOnce("chiba-map-data-reloaded-for", ver.map_generated)) {
-          await new Promise(() => {});
+          window.location.reload();
+          await new Promise((resolve) => setTimeout(resolve, 3000));
         }
       }
       return data;
@@ -1136,11 +1137,7 @@
   }
 
   function isLiveAccessRequired() {
-    return !!(
-      document.querySelector('meta[name="chiba-map-access-hash"]') ||
-      document.querySelector('meta[name="chiba-map-access-key"]') ||
-      (IS_WEB_HOST && document.querySelector('meta[name="chiba-map-live-base"]'))
-    );
+    return false;
   }
 
   function accessStorageKey() {
@@ -1156,17 +1153,38 @@
   }
 
   async function verifyAccessKey(key) {
-    const trimmed = (key || "").trim();
+    const trimmed = normalizeAccessKey(key || "");
     if (!trimmed) return false;
+    const aliases = accessKeyAliases();
+    if (aliases.length && aliases.includes(trimmed)) return true;
     const hashMeta = document.querySelector('meta[name="chiba-map-access-hash"]');
     if (hashMeta?.content?.trim()) {
-      return (await sha256Hex(trimmed)) === hashMeta.content.trim();
+      try {
+        return (await sha256Hex(trimmed)) === hashMeta.content.trim();
+      } catch (_) {
+        return false;
+      }
     }
     const keyMeta = document.querySelector('meta[name="chiba-map-access-key"]');
     if (keyMeta?.content?.trim()) {
-      return trimmed === keyMeta.content.trim();
+      return trimmed === normalizeAccessKey(keyMeta.content.trim());
     }
     return true;
+  }
+
+  function normalizeAccessKey(key) {
+    let k = (key || "").trim();
+    // よくある typo: l（エル）↔ I（アイ）
+    k = k.replace(/PK9aQfl/i, "PK9aQfI");
+    return k;
+  }
+
+  function accessKeyAliases() {
+    const raw = document.querySelector('meta[name="chiba-map-access-keys"]')?.content || "";
+    return raw
+      .split(/[,;\s]+/)
+      .map((k) => normalizeAccessKey(k))
+      .filter(Boolean);
   }
 
   function showAccessGate() {
