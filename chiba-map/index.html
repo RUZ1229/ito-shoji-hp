@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta name="chiba-map-build" content="2026-09-07T16:06:01">
+  <meta name="chiba-map-build" content="2026-09-07T16:09:35">
   <meta name="chiba-map-live-base" content="https://ruz1229.github.io/ito-shoji-hp/chiba-map">
   <meta name="chiba-map-access-hash" content="f626aabec9d76e93c414f045772ca5cf1c112d1652646208de404e876d0d08db">
 
@@ -9,8 +9,8 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>伊藤商事 千葉配送地図</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-  <link rel="stylesheet" href="css/chiba-map.css?v=20260907T16060">
+  <link rel="stylesheet" href="vendor/leaflet.css">
+  <link rel="stylesheet" href="css/chiba-map.css?v=20260907T16093">
 </head>
 <body>
   <header class="header">
@@ -39,9 +39,9 @@
     <span id="visitPeriodText" class="footer__period"></span>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-  <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.3.0/dist/leaflet-ant-path.min.js"></script>
-  <script src="js/chiba-map.js?v=20260907T16060" onerror="(function(){var s=document.getElementById('statusText');if(s)s.textContent='地図プログラムが読めません。McAfee等でブロックされている可能性があります。オフラインzip（手動で開く.bat）を使ってください。';})();"></script>
+  <script src="vendor/leaflet.js"></script>
+  <script src="vendor/leaflet-ant-path.min.js"></script>
+  <script src="js/chiba-map.js?v=20260907T16093" onerror="(function(){var s=document.getElementById('statusText');if(s)s.textContent='地図プログラムが読めません。McAfee等でブロックされている可能性があります。オフラインzip（手動で開く.bat）を使ってください。';})();"></script>
   <script>
     window.addEventListener("load", function () {
       setTimeout(function () {

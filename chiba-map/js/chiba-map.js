@@ -997,17 +997,20 @@
 
   /** GitHub Pages は .version.json を 404 にするため version.json を正とする */
   function liveVersionCandidates() {
-    const base = (() => {
-      const meta = document.querySelector('meta[name="chiba-map-live-base"]');
-      if (meta?.content?.trim()) {
-        return meta.content.trim().replace(/\/?$/, "/");
-      }
-      if (IS_WEB_HOST) {
-        return new URL("./", window.location.href).toString();
-      }
-      return "./";
-    })();
-    return [`${base}version.json`, `${base}.version.json`];
+    const candidates = [];
+    if (IS_WEB_HOST) {
+      const here = new URL("./", window.location.href).toString().replace(/\/?$/, "/");
+      candidates.push(`${here}version.json`, `${here}.version.json`);
+    }
+    const meta = document.querySelector('meta[name="chiba-map-live-base"]');
+    if (meta?.content?.trim()) {
+      const base = meta.content.trim().replace(/\/?$/, "/");
+      candidates.push(`${base}version.json`, `${base}.version.json`);
+    }
+    if (!IS_WEB_HOST) {
+      candidates.push("./version.json", "./.version.json");
+    }
+    return [...new Set(candidates)];
   }
 
   function reloadOnce(reloadKey, marker) {
@@ -1050,7 +1053,8 @@
     const pageBuild = pageBuildStamp();
     const staleHtml = pageBuild && ver.built > pageBuild;
     if (staleHtml && reloadOnce("chiba-map-reloaded-for", ver.built)) {
-      await new Promise(() => {});
+      window.location.reload();
+      await new Promise((resolve) => setTimeout(resolve, 3000));
     }
   }
 
@@ -1076,6 +1080,9 @@
         );
       }
       const data = await r.json();
+      if (IS_WEB_HOST) {
+        return data;
+      }
       const ver = await fetchLiveVersionMeta();
       if (ver?.map_generated && data.generated && ver.map_generated > data.generated) {
         if (reloadOnce("chiba-map-data-reloaded-for", ver.map_generated)) {
