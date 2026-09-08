@@ -272,7 +272,7 @@
   }
 
   function defaultStatusText() {
-    return `現場 ${mapData.site_count}件 / 更新 ${formatGenerated(mapData.generated)} 【反映テスト1455】`;
+    return `現場 ${mapData.site_count}件 / 更新 ${formatGenerated(mapData.generated)}`;
   }
 
   function formatVisitLine(site) {
