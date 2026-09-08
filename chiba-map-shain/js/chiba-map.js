@@ -1257,7 +1257,9 @@ html, body {
     let html = "<h3>区分・形状</h3>";
     html += `<div class="legend-row"><span class="legend-swatch legend-swatch--circle"></span>${ml.circle || "通常（丸）"}</div>`;
     html += `<div class="legend-row"><span class="legend-swatch legend-swatch--triangle"></span>${ml.triangle || "2t（三角）"}</div>`;
-    html += `<div class="legend-row"><span class="legend-swatch legend-swatch--square"></span>${ml.square || "4t（四角）"}</div>`;
+    if (ml.square) {
+      html += `<div class="legend-row"><span class="legend-swatch legend-swatch--square"></span>${ml.square}</div>`;
+    }
     html += `<div class="legend-row"><span class="legend-swatch" style="background:#ff4757"></span>倉庫（赤）</div>`;
     html += "<h3 style='margin-top:10px'>コース一覧</h3>";
     for (const group of allCourseGroups()) {

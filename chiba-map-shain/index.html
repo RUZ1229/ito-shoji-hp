@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta name="chiba-map-build" content="2026-09-08T15:04:15">
+  <meta name="chiba-map-build" content="2026-09-08T15:20:24">
   <meta name="chiba-map-live-base" content="https://ruz1229.github.io/ito-shoji-hp/chiba-map-shain">
   <meta name="chiba-map-access-required" content="1">
   <meta name="chiba-map-access-keys" content="PK9aQfI-vc1efEizC-Sm2w,PK9aQfl-vc1efEizC-Sm2w">
@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>伊藤商事 千葉配送地図</title>
   <link rel="stylesheet" href="vendor/leaflet.css?v=6">
-  <link rel="stylesheet" href="css/chiba-map.css?v=20260908T15041">
+  <link rel="stylesheet" href="css/chiba-map.css?v=20260908T15202">
 </head>
 <body>
   <header class="header">
@@ -1316,7 +1316,9 @@ html, body {
     let html = "<h3>区分・形状</h3>";
     html += `<div class="legend-row"><span class="legend-swatch legend-swatch--circle"></span>${ml.circle || "通常（丸）"}</div>`;
     html += `<div class="legend-row"><span class="legend-swatch legend-swatch--triangle"></span>${ml.triangle || "2t（三角）"}</div>`;
-    html += `<div class="legend-row"><span class="legend-swatch legend-swatch--square"></span>${ml.square || "4t（四角）"}</div>`;
+    if (ml.square) {
+      html += `<div class="legend-row"><span class="legend-swatch legend-swatch--square"></span>${ml.square}</div>`;
+    }
     html += `<div class="legend-row"><span class="legend-swatch" style="background:#ff4757"></span>倉庫（赤）</div>`;
     html += "<h3 style='margin-top:10px'>コース一覧</h3>";
     for (const group of allCourseGroups()) {
