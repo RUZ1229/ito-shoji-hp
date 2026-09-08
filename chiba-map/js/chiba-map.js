@@ -202,6 +202,15 @@
     return null;
   }
 
+  const MARKER_ICON_W = 140;
+  const MARKER_ICON_H = 40;
+
+  function shopIconAnchor(shape) {
+    if (shape === "triangle") return [MARKER_ICON_W / 2, 12];
+    if (shape === "square") return [MARKER_ICON_W / 2, 6];
+    return [MARKER_ICON_W / 2, 6];
+  }
+
   function createShopIcon(site, extraClass) {
     const color = getHighlightColor(site, extraClass) || DEFAULT_SHOP_COLOR;
     const shape = site.marker_shape || "circle";
@@ -215,8 +224,8 @@
     return L.divIcon({
       html,
       className: "marker-wrap",
-      iconSize: [0, 0],
-      iconAnchor: [0, 0],
+      iconSize: [MARKER_ICON_W, MARKER_ICON_H],
+      iconAnchor: shopIconAnchor(shape),
     });
   }
 
@@ -229,8 +238,8 @@
     return L.divIcon({
       html,
       className: "marker-wrap",
-      iconSize: [0, 0],
-      iconAnchor: [0, 0],
+      iconSize: [MARKER_ICON_W, MARKER_ICON_H],
+      iconAnchor: [MARKER_ICON_W / 2, 8],
     });
   }
 
@@ -833,8 +842,8 @@ html, body {
         if (site) {
           const hubId = site.hub || "yachiyo_dp";
           drawRoute(
-            getWarehouse(hubId),
-            site,
+            warehouseMarkers[hubId] || getWarehouse(hubId),
+            getShopMarker(site.id) || site,
             getCourseHighlightColor(getMapCourse(site)),
             { weight: 3 }
           );
@@ -842,8 +851,8 @@ html, body {
       } else if (sel.type === "yokomochi") {
         const y = (mapData.yokomochi || []).find((x) => x.id === sel.yokomochiId);
         if (y) {
-          const from = getWarehouse(y.from);
-          const to = getWarehouse(y.to);
+          const from = warehouseMarkers[y.from] || getWarehouse(y.from);
+          const to = warehouseMarkers[y.to] || getWarehouse(y.to);
           drawRoute(from, to, YOKOMOCHI_COLOR, { weight: 5 });
         }
       } else if (sel.type === "warehouse") {
@@ -1052,13 +1061,22 @@ html, body {
     return (mapData.warehouses || []).find((w) => w.id === id);
   }
 
+  function getShopMarker(siteId) {
+    return shopMarkers.find(({ site }) => site.id === siteId)?.marker || null;
+  }
+
+  function resolveRouteLatLng(ref) {
+    if (!ref) return null;
+    if (ref.getLatLng) return ref.getLatLng();
+    if (ref.lat != null && ref.lng != null) return L.latLng(ref.lat, ref.lng);
+    return null;
+  }
+
   function drawRoute(from, to, color, opts = {}) {
-    if (!from || !to) return;
-    const latlngs = [
-      [from.lat, from.lng],
-      [to.lat, to.lng],
-    ];
-    const line = L.polyline(latlngs, {
+    const fromLl = resolveRouteLatLng(from);
+    const toLl = resolveRouteLatLng(to);
+    if (!fromLl || !toLl) return;
+    const line = L.polyline([fromLl, toLl], {
       color,
       weight: opts.weight || 4,
       opacity: 0.85,
@@ -1068,10 +1086,12 @@ html, body {
   }
 
   function drawHubToSites(hubId, sites, color) {
-    const hub = getWarehouse(hubId);
+    const hubMarker = warehouseMarkers[hubId];
+    const hub = hubMarker || getWarehouse(hubId);
     if (!hub) return;
     sites.forEach((site) => {
-      drawRoute(hub, site, color, { weight: 2.5 });
+      const siteMarker = getShopMarker(site.id);
+      drawRoute(hub, siteMarker || site, color, { weight: 2.5 });
     });
   }
 

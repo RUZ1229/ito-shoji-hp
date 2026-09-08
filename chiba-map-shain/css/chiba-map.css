@@ -338,16 +338,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* 緯度経度＝光る丸（dot）の中心。線の終点と一致させる */
-  transform: translate(-50%, -6px);
-}
-
-.marker-warehouse {
-  transform: translate(-50%, -8px);
-}
-
-.marker-shop:has(.shape-triangle) {
-  transform: translate(-50%, -12px);
+  width: 100%;
 }
 
 .marker-dot {
