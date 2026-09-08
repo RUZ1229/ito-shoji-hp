@@ -251,6 +251,7 @@ button {
 
 .legend-row--course {
   margin-bottom: 2px;
+  gap: 4px;
 }
 
 .legend-course-btn {
@@ -262,12 +263,33 @@ button {
   padding: 3px 8px;
   border-radius: 6px;
   cursor: pointer;
-  width: 100%;
+  flex: 1;
+  min-width: 0;
   text-align: left;
 }
 
 .legend-course-btn:hover {
   background: rgba(59, 158, 255, 0.2);
+}
+
+.legend-course-print {
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 3px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+.legend-course-print:hover {
+  color: var(--text);
+  background: rgba(59, 158, 255, 0.18);
+  border-color: rgba(59, 158, 255, 0.35);
 }
 
 .legend-swatch {
@@ -913,4 +935,92 @@ body.site-card-panel-open {
 
 .photo-viewer__print-title {
   display: none;
+}
+
+.map-print-banner {
+  display: none;
+}
+
+.map-print-banner__title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.map-print-banner__sub {
+  margin: 4px 0 0;
+  font-size: 0.78rem;
+  color: #555;
+}
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 8mm;
+  }
+
+  html, body {
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+    color: #000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .header,
+  .legend,
+  .footer,
+  .leaflet-control-container,
+  .site-card-panel,
+  .photo-viewer,
+  .access-gate,
+  #photoViewerPrintFrame {
+    display: none !important;
+  }
+
+  #map {
+    position: relative !important;
+    width: 100% !important;
+    height: 178mm !important;
+    margin: 0 !important;
+    page-break-inside: avoid;
+  }
+
+  .map-print-banner {
+    display: block !important;
+    position: relative !important;
+    margin: 0 0 4mm !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    color: #000 !important;
+  }
+
+  .map-print-banner[hidden] {
+    display: block !important;
+  }
+
+  .leaflet-tile-pane {
+    filter: none !important;
+  }
+
+  .marker-shop .marker-dot,
+  .marker-warehouse .marker-dot {
+    animation: none !important;
+  }
+
+  .marker-label {
+    background: rgba(255, 255, 255, 0.92) !important;
+    color: #111 !important;
+    border: 1px solid #ccc !important;
+  }
+}
+
+body.is-map-printing .header,
+body.is-map-printing .legend,
+body.is-map-printing .footer {
+  opacity: 0.35;
 }

@@ -528,6 +528,112 @@ html, body {
     }
   }
 
+  function formatPrintDate() {
+    const d = new Date();
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, "0");
+    const day = String(d.getDate()).padStart(2, "0");
+    return `${y}/${m}/${day}`;
+  }
+
+  function buildMapPrintTitle() {
+    if (!activeSelections.length) return "伊藤商事 千葉配送地図（全体表示）";
+    const labels = activeSelections.map((sel) => sel.label).filter(Boolean);
+    if (labels.length === 1) return `伊藤商事 千葉配送地図 — ${labels[0]}`;
+    return `伊藤商事 千葉配送地図 — ${labels.join("・")}`;
+  }
+
+  function buildMapPrintSubtitle() {
+    const visibleCount = shopMarkers.filter(({ marker }) => map && map.hasLayer(marker)).length;
+    const parts = [`表示 ${visibleCount} 箇所`, formatPrintDate(), "© OpenStreetMap"];
+    const periodEl = $("#visitPeriodText");
+    if (periodEl && periodEl.textContent.trim()) {
+      parts.unshift(periodEl.textContent.trim());
+    }
+    return parts.join(" ／ ");
+  }
+
+  function buildCoursePrintSubtitle(course) {
+    const count = shopMarkers.filter(({ site }) => getMapCourse(site) === course).length;
+    const meta = courseSearchMeta(course);
+    return `${meta} ／ ${count} 箇所 ／ ${formatPrintDate()} ／ © OpenStreetMap`;
+  }
+
+  function setMapPrintBanner(title, subtitle) {
+    const banner = $("#mapPrintBanner");
+    const titleEl = $("#mapPrintTitle");
+    const subEl = $("#mapPrintSubtitle");
+    if (!banner || !titleEl || !subEl) return;
+    titleEl.textContent = title || "伊藤商事 千葉配送地図";
+    subEl.textContent = subtitle || buildMapPrintSubtitle();
+    banner.hidden = false;
+  }
+
+  function clearMapPrintBanner() {
+    const banner = $("#mapPrintBanner");
+    if (banner) banner.hidden = true;
+  }
+
+  function waitForMapSettled(callback) {
+    if (!map) {
+      callback();
+      return;
+    }
+    let done = false;
+    const finish = () => {
+      if (done) return;
+      done = true;
+      setTimeout(callback, 280);
+    };
+    map.once("moveend", finish);
+    map.once("zoomend", finish);
+    setTimeout(finish, 1200);
+  }
+
+  function runMapPrintDialog(title, subtitle) {
+    if (!map) return;
+    closeSiteCardPanel();
+    closePhotoViewer();
+    setMapPrintBanner(title, subtitle);
+    document.body.classList.add("is-map-printing");
+
+    const cleanup = () => {
+      document.body.classList.remove("is-map-printing");
+      clearMapPrintBanner();
+      window.removeEventListener("afterprint", cleanup);
+    };
+    window.addEventListener("afterprint", cleanup);
+
+    map.invalidateSize({ animate: false });
+    setTimeout(() => {
+      try {
+        window.print();
+      } catch (_) {
+        cleanup();
+        alert("印刷できませんでした。もう一度お試しください。");
+      }
+    }, 320);
+  }
+
+  function printCurrentMapView() {
+    runMapPrintDialog(buildMapPrintTitle(), buildMapPrintSubtitle());
+  }
+
+  function printCourseMap(course) {
+    if (!course || !map) return;
+    activeSelections = [];
+    renderSearchTags();
+    $("#searchInput").value = "";
+    hideSuggestions();
+    addSelection({ type: "course", course, label: course });
+    waitForMapSettled(() => {
+      runMapPrintDialog(
+        `伊藤商事 千葉配送地図 — ${course}`,
+        buildCoursePrintSubtitle(course)
+      );
+    });
+  }
+
   function bindSiteCardPhotoClicks(body) {
     const items = [];
     body.querySelectorAll(".site-card-panel__photo img").forEach((img) => {
@@ -1275,7 +1381,7 @@ html, body {
     for (const group of allCourseGroups()) {
       html += `<div class="legend-group">${escapeHtml(group.title)}</div>`;
       for (const c of group.courses) {
-        html += `<div class="legend-row legend-row--course"><button type="button" class="legend-course-btn" data-course="${escapeHtml(c)}">${escapeHtml(c)}</button></div>`;
+        html += `<div class="legend-row legend-row--course"><button type="button" class="legend-course-btn" data-course="${escapeHtml(c)}">${escapeHtml(c)}</button><button type="button" class="legend-course-print" data-course="${escapeHtml(c)}" title="このコースを印刷" aria-label="${escapeHtml(c)}を印刷">印</button></div>`;
       }
     }
     html += "<h3 style='margin-top:10px'>エリア</h3>";
@@ -1289,6 +1395,13 @@ html, body {
         $("#searchInput").value = "";
         hideSuggestions();
         addSelection({ type: "course", course, label: course });
+      });
+    });
+    el.querySelectorAll(".legend-course-print").forEach((btn) => {
+      btn.addEventListener("click", (ev) => {
+        ev.preventDefault();
+        ev.stopPropagation();
+        printCourseMap(btn.dataset.course);
       });
     });
   }
@@ -1391,6 +1504,10 @@ html, body {
       resetHighlight();
       $("#statusText").textContent = defaultStatusText();
     });
+    const printBtn = $("#printBtn");
+    if (printBtn) {
+      printBtn.addEventListener("click", () => printCurrentMapView());
+    }
     bindSearchSuggestions();
   }
 
