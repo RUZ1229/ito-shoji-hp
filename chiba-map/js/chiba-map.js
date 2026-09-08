@@ -272,7 +272,7 @@
   }
 
   function defaultStatusText() {
-    return `★更新テスト9/8★ 現場 ${mapData.site_count}件 / 更新 ${formatGenerated(mapData.generated)}`;
+    return `現場 ${mapData.site_count}件 / 更新 ${formatGenerated(mapData.generated)}`;
   }
 
   function formatVisitLine(site) {

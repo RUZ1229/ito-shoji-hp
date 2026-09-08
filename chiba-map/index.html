@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta name="chiba-map-build" content="2026-09-08T15:20:24">
+  <meta name="chiba-map-build" content="2026-09-08T15:23:19">
   <meta name="chiba-map-live-base" content="https://ruz1229.github.io/ito-shoji-hp/chiba-map">
   <meta name="chiba-map-access-required" content="1">
   <meta name="chiba-map-access-keys" content="PK9aQfI-vc1efEizC-Sm2w,PK9aQfl-vc1efEizC-Sm2w">
@@ -11,13 +11,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>伊藤商事 千葉配送地図</title>
   <link rel="stylesheet" href="vendor/leaflet.css">
-  <link rel="stylesheet" href="css/chiba-map.css?v=20260908T15202">
+  <link rel="stylesheet" href="css/chiba-map.css?v=20260908T15231">
 </head>
 <body>
   <header class="header">
     <div class="header__brand">
       <h1>伊藤商事 千葉配送地図</h1>
-      <p class="header__sub">★ 9/8 更新テスト（社長PCから反映）★ — 共有用</p>
+      <p class="header__sub">工務店・倉庫・コースルート（共有用）</p>
     </div>
     <div class="search-panel">
       <div class="search-box">
@@ -331,7 +331,7 @@
   }
 
   function defaultStatusText() {
-    return `★更新テスト9/8★ 現場 ${mapData.site_count}件 / 更新 ${formatGenerated(mapData.generated)}`;
+    return `現場 ${mapData.site_count}件 / 更新 ${formatGenerated(mapData.generated)}`;
   }
 
   function formatVisitLine(site) {
