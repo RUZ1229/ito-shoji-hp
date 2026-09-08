@@ -1,6 +1,6 @@
 {
   "note": "地図表示専用。現場マスタ.json は変更しない。build_chiba_map_data.py が map_data.json 生成時に適用。",
-  "updated": "2026-09-07",
+  "updated": "2026-09-08",
   "course_moves": [
     {
       "site_id": "site_140",
@@ -46,6 +46,21 @@
       "site_id": "site_23",
       "map_course": "柏2T.5O",
       "reason": "3V→2T.5O 山善エヌイー"
+    },
+    {
+      "site_id": "site_245",
+      "map_course": "柏2T.5O",
+      "reason": "3V→2T.5O カインズホーム市原"
+    },
+    {
+      "site_id": "site_201",
+      "map_course": "柏1I.5P",
+      "reason": "3V→1I.5P ＤＡ（株）ビスタ"
+    },
+    {
+      "site_id": "site_244",
+      "map_course": "柏1I.5P",
+      "reason": "3V→1I.5P ＤＡ ＥＸＴＥＲＩＯＲ宏和"
     }
   ],
   "course_merges": {

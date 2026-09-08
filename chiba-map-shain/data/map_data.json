@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-08T15:04:14",
+  "generated": "2026-09-08T15:47:25",
   "map_variant": "社内",
   "map_variant_label": "伊藤商事専用（社内）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
@@ -4911,14 +4911,14 @@
       "address": "千葉県 市原市市原２６５",
       "lat": 35.523277,
       "lng": 140.125656,
-      "color": "hsl(235, 72%, 46%)",
+      "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 2,
       "first_visit": "2026-06-25",
       "last_visit": "2026-07-16",
       "master_course": "柏3V",
-      "map_course": "柏3V",
-      "marker_shape": "circle",
+      "map_course": "柏1I.5P",
+      "marker_shape": "triangle",
       "search_names": []
     },
     {
@@ -5778,14 +5778,14 @@
       "address": "千葉県 市原市五井７０２６ー７",
       "lat": 35.518326,
       "lng": 140.085892,
-      "color": "hsl(235, 72%, 46%)",
+      "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 2,
       "first_visit": "2026-06-18",
       "last_visit": "2026-09-03",
       "master_course": "柏3V",
-      "map_course": "柏3V",
-      "marker_shape": "circle",
+      "map_course": "柏1I.5P",
+      "marker_shape": "triangle",
       "search_names": []
     },
     {
@@ -5797,14 +5797,14 @@
       "address": "千葉県 市原市更級３ー１ー１",
       "lat": 35.506393,
       "lng": 140.103302,
-      "color": "hsl(235, 72%, 46%)",
+      "color": "hsl(175, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 3,
       "first_visit": "2026-05-25",
       "last_visit": "2026-07-15",
       "master_course": "柏3V",
-      "map_course": "柏3V",
-      "marker_shape": "circle",
+      "map_course": "柏2T.5O",
+      "marker_shape": "square",
       "search_names": [
         "ヨドハン（ＣＨＥＸプラザ市原店"
       ]
