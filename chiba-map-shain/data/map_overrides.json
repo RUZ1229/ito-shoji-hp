@@ -2,20 +2,59 @@
   "note": "地図表示専用。現場マスタ.json は変更しない。build_chiba_map_data.py が map_data.json 生成時に適用。",
   "updated": "2026-09-07",
   "course_moves": [
-    { "site_id": "site_140", "map_course": "柏3V車立て", "reason": "ヨドハン千葉のみ独立コース" },
-    { "site_id": "site_33", "map_course": "柏1H", "reason": "3X→1H 石川商会" },
-    { "site_id": "site_149", "map_course": "柏1H", "reason": "3X→1H カワカ" },
-    { "site_id": "site_203", "map_course": "柏1H", "reason": "3X→1H EX鏑木" },
-    { "site_id": "site_255", "map_course": "柏1H", "reason": "3X→1H オオカワ" },
-    { "site_id": "site_234", "map_course": "柏1H", "reason": "3X→1H コメリPW旭" },
-    { "site_id": "site_34", "map_course": "柏1H", "reason": "3X→1H 林ガラス" },
-    { "site_id": "virtual_maruo_y", "map_course": "柏1H", "reason": "3X→1H Yマルウ（配車表表示・地図専用ピン）" },
-    { "site_id": "site_23", "map_course": "柏2T.5O", "reason": "3V→2T.5O 山善エヌイー" }
+    {
+      "site_id": "site_140",
+      "map_course": "柏3V車立て",
+      "reason": "ヨドハン千葉のみ独立コース"
+    },
+    {
+      "site_id": "site_33",
+      "map_course": "柏1H",
+      "reason": "3X→1H 石川商会"
+    },
+    {
+      "site_id": "site_149",
+      "map_course": "柏1H",
+      "reason": "3X→1H カワカ"
+    },
+    {
+      "site_id": "site_203",
+      "map_course": "柏1H",
+      "reason": "3X→1H EX鏑木"
+    },
+    {
+      "site_id": "site_255",
+      "map_course": "柏1H",
+      "reason": "3X→1H オオカワ"
+    },
+    {
+      "site_id": "site_234",
+      "map_course": "柏1H",
+      "reason": "3X→1H コメリPW旭"
+    },
+    {
+      "site_id": "site_34",
+      "map_course": "柏1H",
+      "reason": "3X→1H 林ガラス"
+    },
+    {
+      "site_id": "virtual_maruo_y",
+      "map_course": "柏1H",
+      "reason": "3X→1H Yマルウ（配車表表示・地図専用ピン）"
+    },
+    {
+      "site_id": "site_23",
+      "map_course": "柏2T.5O",
+      "reason": "3V→2T.5O 山善エヌイー"
+    }
   ],
   "course_merges": {
     "柏2T.5O": {
       "label": "柏2T+5O（4t）",
-      "source_courses": ["柏2T", "柏5O"],
+      "source_courses": [
+        "柏2T",
+        "柏5O"
+      ],
       "marker_shape": "square",
       "truck_t": 4,
       "hub": "yachiyo_dp",
@@ -23,7 +62,10 @@
     },
     "柏1I.5P": {
       "label": "柏1I+5P（2t）",
-      "source_courses": ["柏1I", "柏5P"],
+      "source_courses": [
+        "柏1I",
+        "柏5P"
+      ],
       "marker_shape": "triangle",
       "truck_t": 2,
       "hub": "yachiyo_dp",
@@ -54,5 +96,155 @@
     "circle": "通常（丸）",
     "triangle": "2t専用（三角）",
     "square": "4t専用（四角）"
+  },
+  "site_cards": {
+    "site_101": {
+      "title": "一全",
+      "subtitle": "（株）一全 柏営業所",
+      "course": "千H4",
+      "address": "千葉県 柏市 藤ケ谷１０５９ー１",
+      "card_html": "data/cards/site_101/card.html",
+      "fields": [
+        {
+          "label": "配送先名",
+          "value": "一全 柏営業所（一全柏）"
+        },
+        {
+          "label": "正式名称",
+          "value": "（株）一全 柏営業所"
+        },
+        {
+          "label": "地図コース",
+          "value": "千H4（方面コード BH4）"
+        },
+        {
+          "label": "配送先コード",
+          "value": "053-RIT"
+        },
+        {
+          "label": "住所",
+          "value": "千葉県 柏市 藤ケ谷１０５９ー１"
+        },
+        {
+          "label": "TEL",
+          "value": "04-7190-0752"
+        },
+        {
+          "label": "4t車",
+          "value": "可"
+        },
+        {
+          "label": "受領印",
+          "value": "もらえない"
+        },
+        {
+          "label": "仕分け",
+          "value": "有 → 物件別"
+        },
+        {
+          "label": "搬入時",
+          "value": "入口進入→点灯→シャッター開。バック進入路の障害物確認。黒塗り一全トラックの荷台から長物がはみ出していないか必ず確認。"
+        },
+        {
+          "label": "荷降ろし時",
+          "value": "一全作業員は8:00頃から組立開始。枠・窓・障子はその前に降ろし終える。"
+        },
+        {
+          "label": "退出時",
+          "value": "硝子職人がいなければシャッター閉。フォーク・照明等の電源OFFを確認して退出。"
+        },
+        {
+          "label": "カード作成",
+          "value": "2025/2/26 大塚"
+        }
+      ],
+      "photos": [
+        {
+          "id": "haisou_card_01",
+          "label": "配送カード（見取り図①）",
+          "src": "data/cards/site_101/photos/haisou_card_01.png",
+          "memo": ""
+        },
+        {
+          "id": "haisou_card_kashiwa_02",
+          "label": "配送カード（見取り図②）",
+          "src": "data/cards/site_101/photos/haisou_card_kashiwa_02.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_01",
+          "label": "荷降ろし場・入口",
+          "src": "data/cards/site_101/photos/genba_01.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_02",
+          "label": "荷降ろし場・入口②",
+          "src": "data/cards/site_101/photos/genba_02.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_03",
+          "label": "部品棚 ①",
+          "src": "data/cards/site_101/photos/genba_03.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_04",
+          "label": "窓・障子②",
+          "src": "data/cards/site_101/photos/genba_04.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_05",
+          "label": "枠・シャッター枠③",
+          "src": "data/cards/site_101/photos/genba_05.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_06",
+          "label": "玄関・ドア枠④",
+          "src": "data/cards/site_101/photos/genba_06.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_07",
+          "label": "返品置き場⑤",
+          "src": "data/cards/site_101/photos/genba_07.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_08",
+          "label": "フォーク⑥",
+          "src": "data/cards/site_101/photos/genba_08.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_09",
+          "label": "シャッター⑦",
+          "src": "data/cards/site_101/photos/genba_09.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_10",
+          "label": "シャッター本体・レールなど⑧",
+          "src": "data/cards/site_101/photos/genba_10.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_11",
+          "label": "ルーバーなど⑨",
+          "src": "data/cards/site_101/photos/genba_11.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_12",
+          "label": "網戸 ⑩",
+          "src": "data/cards/site_101/photos/genba_12.png",
+          "memo": ""
+        }
+      ],
+      "aliases_note": "総栄一全柏第一、●アルシス一全柏、渡辺パイプ（一全柏） 等"
+    }
   }
 }

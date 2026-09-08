@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T15:52:42",
+  "generated": "2026-09-07T17:06:05",
   "map_variant": "社内",
   "map_variant_label": "伊藤商事専用（社内）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
@@ -7464,10 +7464,10 @@
       "hub": "yachiyo_dp",
       "name": "黒沢硝子工業（株）リフォーム",
       "address": "千葉県 千葉市稲毛区園生町１３９ー４",
-      "lat": 35.607,
-      "lng": 140.106,
+      "lat": 35.649067,
+      "lng": 140.101395,
       "color": "hsl(235, 72%, 46%)",
-      "geocode_source": "default_chiba",
+      "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-09-04",
       "last_visit": "2026-09-04",
@@ -7583,5 +7583,155 @@
     "柏2T.5O",
     "柏1I.5P",
     "柏3V車立て"
-  ]
+  ],
+  "site_cards": {
+    "site_101": {
+      "title": "一全",
+      "subtitle": "（株）一全 柏営業所",
+      "course": "千H4",
+      "address": "千葉県 柏市 藤ケ谷１０５９ー１",
+      "card_html": "data/cards/site_101/card.html",
+      "fields": [
+        {
+          "label": "配送先名",
+          "value": "一全 柏営業所（一全柏）"
+        },
+        {
+          "label": "正式名称",
+          "value": "（株）一全 柏営業所"
+        },
+        {
+          "label": "地図コース",
+          "value": "千H4（方面コード BH4）"
+        },
+        {
+          "label": "配送先コード",
+          "value": "053-RIT"
+        },
+        {
+          "label": "住所",
+          "value": "千葉県 柏市 藤ケ谷１０５９ー１"
+        },
+        {
+          "label": "TEL",
+          "value": "04-7190-0752"
+        },
+        {
+          "label": "4t車",
+          "value": "可"
+        },
+        {
+          "label": "受領印",
+          "value": "もらえない"
+        },
+        {
+          "label": "仕分け",
+          "value": "有 → 物件別"
+        },
+        {
+          "label": "搬入時",
+          "value": "入口進入→点灯→シャッター開。バック進入路の障害物確認。黒塗り一全トラックの荷台から長物がはみ出していないか必ず確認。"
+        },
+        {
+          "label": "荷降ろし時",
+          "value": "一全作業員は8:00頃から組立開始。枠・窓・障子はその前に降ろし終える。"
+        },
+        {
+          "label": "退出時",
+          "value": "硝子職人がいなければシャッター閉。フォーク・照明等の電源OFFを確認して退出。"
+        },
+        {
+          "label": "カード作成",
+          "value": "2025/2/26 大塚"
+        }
+      ],
+      "photos": [
+        {
+          "id": "haisou_card_01",
+          "label": "配送カード（見取り図①）",
+          "src": "data/cards/site_101/photos/haisou_card_01.png",
+          "memo": ""
+        },
+        {
+          "id": "haisou_card_kashiwa_02",
+          "label": "配送カード（見取り図②）",
+          "src": "data/cards/site_101/photos/haisou_card_kashiwa_02.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_01",
+          "label": "荷降ろし場・入口",
+          "src": "data/cards/site_101/photos/genba_01.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_02",
+          "label": "荷降ろし場・入口②",
+          "src": "data/cards/site_101/photos/genba_02.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_03",
+          "label": "部品棚 ①",
+          "src": "data/cards/site_101/photos/genba_03.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_04",
+          "label": "窓・障子②",
+          "src": "data/cards/site_101/photos/genba_04.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_05",
+          "label": "枠・シャッター枠③",
+          "src": "data/cards/site_101/photos/genba_05.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_06",
+          "label": "玄関・ドア枠④",
+          "src": "data/cards/site_101/photos/genba_06.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_07",
+          "label": "返品置き場⑤",
+          "src": "data/cards/site_101/photos/genba_07.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_08",
+          "label": "フォーク⑥",
+          "src": "data/cards/site_101/photos/genba_08.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_09",
+          "label": "シャッター⑦",
+          "src": "data/cards/site_101/photos/genba_09.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_10",
+          "label": "シャッター本体・レールなど⑧",
+          "src": "data/cards/site_101/photos/genba_10.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_11",
+          "label": "ルーバーなど⑨",
+          "src": "data/cards/site_101/photos/genba_11.png",
+          "memo": ""
+        },
+        {
+          "id": "genba_12",
+          "label": "網戸 ⑩",
+          "src": "data/cards/site_101/photos/genba_12.png",
+          "memo": ""
+        }
+      ],
+      "aliases_note": "総栄一全柏第一、●アルシス一全柏、渡辺パイプ（一全柏） 等"
+    }
+  }
 }

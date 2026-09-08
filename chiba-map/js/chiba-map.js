@@ -6,11 +6,14 @@
   "use strict";
 
   const DATA_URL = "data/map_data.json";
+  const SITE_CARDS_URL = "data/site_cards.json";
   const GEOJSON_URL = "data/chiba_cities.geojson";
   const IS_WEB_HOST = /github\.io$/i.test(window.location.hostname);
 
   let map;
   let mapData;
+  /** @type {Record<string, object>} */
+  let siteCardsById = {};
   let shopMarkers = [];
   let warehouseMarkers = {};
   let routeLayers = [];
@@ -191,6 +194,7 @@
 
   function getHighlightColor(site, extraClass) {
     if (!extraClass) return null;
+    if (extraClass.includes("is-shop-highlight")) return "#ffd54a";
     if (extraClass.includes("is-zone-highlight")) return "#ffd54a";
     if (extraClass.includes("is-course-highlight")) {
       return getCourseHighlightColor(getMapCourse(site));
@@ -284,16 +288,395 @@
     return `運送回数: ${n}回`;
   }
 
-  function formatSitePopup(site) {
+  function getSiteCard(siteId) {
+    return siteCardsById[siteId] || null;
+  }
+
+  function siteHasDetailCard(card) {
+    if (!card) return false;
+    if (card.card_html) return true;
+    if (card.fields?.length) return true;
+    if (card.photos?.some((p) => p.src)) return true;
+    return false;
+  }
+
+  function zoneLabel(site) {
+    if (!site?.zone) return "";
+    if (site.zone === "chiba_a") return "千葉A";
+    if (site.zone === "chiba_b") return "千葉B";
+    if (site.zone === "funa") return "房";
+    return site.zone;
+  }
+
+  function buildDefaultSiteFields(site) {
     const mc = getMapCourse(site);
-    let html = `<b>${escapeHtml(site.name)}</b><br>`;
-    html += `地図コース: ${escapeHtml(mc)}`;
+    const fields = [
+      { label: "配送先名", value: site.name },
+      { label: "地図コース", value: mc },
+    ];
     if (site.master_course && site.master_course !== mc) {
-      html += `<br>マスタ: ${escapeHtml(site.master_course)}`;
+      fields.push({ label: "マスタコース", value: site.master_course });
     }
-    html += `<br>${escapeHtml(site.address)}`;
-    html += `<br>${escapeHtml(formatVisitLine(site))}`;
-    return html;
+    const zl = zoneLabel(site);
+    if (zl) fields.push({ label: "区域", value: zl });
+    fields.push({ label: "住所", value: site.address || "—" });
+    fields.push({
+      label: "運送",
+      value: formatVisitLine(site).replace(/^運送回数:\s*/, ""),
+    });
+    fields.push({
+      label: "配送カード",
+      value: "順次追加予定（現時点は基本情報のみ）",
+    });
+    return fields;
+  }
+
+  function ensurePhotoViewer() {
+    let root = document.getElementById("photoViewer");
+    if (root) return root;
+    root = document.createElement("div");
+    root.id = "photoViewer";
+    root.className = "photo-viewer";
+    root.hidden = true;
+    root.innerHTML = `
+      <div class="photo-viewer__backdrop" data-close-photo-viewer></div>
+      <div class="photo-viewer__panel" role="dialog" aria-modal="true">
+        <div class="photo-viewer__toolbar">
+          <button type="button" class="photo-viewer__nav" data-photo-prev aria-label="前の写真">◀</button>
+          <p id="photoViewerCaption" class="photo-viewer__caption"></p>
+          <button type="button" class="photo-viewer__print" data-photo-print>🖨 印刷</button>
+          <button type="button" class="photo-viewer__nav" data-photo-next aria-label="次の写真">▶</button>
+          <button type="button" class="photo-viewer__close" data-close-photo-viewer aria-label="閉じる">×</button>
+        </div>
+        <div class="photo-viewer__stage">
+          <p class="photo-viewer__print-title"></p>
+          <img id="photoViewerImg" alt="">
+        </div>
+        <p id="photoViewerCounter" class="photo-viewer__counter"></p>
+      </div>`;
+    document.body.appendChild(root);
+    root.querySelectorAll("[data-close-photo-viewer]").forEach((el) => {
+      el.addEventListener("click", closePhotoViewer);
+    });
+    root.querySelector("[data-photo-prev]").addEventListener("click", () => stepPhotoViewer(-1));
+    root.querySelector("[data-photo-next]").addEventListener("click", () => stepPhotoViewer(1));
+    root.querySelector("[data-photo-print]").addEventListener("click", printPhotoViewerImage);
+    if (!window.__photoViewerKeyBound) {
+      window.__photoViewerKeyBound = true;
+      document.addEventListener("keydown", (ev) => {
+        const viewer = document.getElementById("photoViewer");
+        if (!viewer || viewer.hidden) return;
+        if (ev.key === "Escape") {
+          closePhotoViewer();
+        } else if (ev.key === "ArrowLeft") {
+          stepPhotoViewer(-1);
+        } else if (ev.key === "ArrowRight") {
+          stepPhotoViewer(1);
+        }
+      });
+    }
+    return root;
+  }
+
+  /** @type {{src:string,label:string}[]} */
+  let photoViewerItems = [];
+  let photoViewerIndex = 0;
+
+  function renderPhotoViewerFrame() {
+    const root = document.getElementById("photoViewer");
+    if (!root || root.hidden || !photoViewerItems.length) return;
+    const item = photoViewerItems[photoViewerIndex];
+    const img = root.querySelector("#photoViewerImg");
+    const caption = root.querySelector("#photoViewerCaption");
+    const counter = root.querySelector("#photoViewerCounter");
+    if (img) {
+      img.src = item.src;
+      img.alt = item.label;
+    }
+    if (caption) caption.textContent = item.label;
+    const printTitle = root.querySelector(".photo-viewer__print-title");
+    if (printTitle) printTitle.textContent = item.label;
+    if (counter) {
+      counter.textContent = `${photoViewerIndex + 1} / ${photoViewerItems.length}`;
+    }
+    const prevBtn = root.querySelector("[data-photo-prev]");
+    const nextBtn = root.querySelector("[data-photo-next]");
+    if (prevBtn) prevBtn.disabled = photoViewerIndex <= 0;
+    if (nextBtn) nextBtn.disabled = photoViewerIndex >= photoViewerItems.length - 1;
+  }
+
+  function openPhotoViewer(items, startIndex = 0) {
+    if (!items?.length) return;
+    photoViewerItems = items;
+    photoViewerIndex = Math.max(0, Math.min(startIndex, items.length - 1));
+    const root = ensurePhotoViewer();
+    renderPhotoViewerFrame();
+    root.hidden = false;
+    document.body.classList.add("photo-viewer-open");
+  }
+
+  function closePhotoViewer() {
+    const root = document.getElementById("photoViewer");
+    if (!root) return;
+    root.hidden = true;
+    document.body.classList.remove("photo-viewer-open");
+  }
+
+  function stepPhotoViewer(delta) {
+    if (!photoViewerItems.length) return;
+    const next = photoViewerIndex + delta;
+    if (next < 0 || next >= photoViewerItems.length) return;
+    photoViewerIndex = next;
+    renderPhotoViewerFrame();
+  }
+
+  function printPhotoViewerImage() {
+    const item = photoViewerItems[photoViewerIndex];
+    if (!item) return;
+
+    const absSrc = new URL(item.src, window.location.href).href;
+    const title = escapeHtml(item.label || "現場写真");
+
+    let frame = document.getElementById("photoViewerPrintFrame");
+    if (!frame) {
+      frame = document.createElement("iframe");
+      frame.id = "photoViewerPrintFrame";
+      frame.setAttribute("title", "印刷プレビュー");
+      frame.style.cssText =
+        "position:fixed;width:0;height:0;border:0;opacity:0;pointer-events:none";
+      document.body.appendChild(frame);
+    }
+
+    const win = frame.contentWindow;
+    const doc = win.document;
+    doc.open();
+    doc.write(`<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>${title}</title>
+<style>
+@page { size: A4 portrait; margin: 8mm; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #000;
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+}
+.print-page {
+  width: 100%;
+  max-width: 190mm;
+  margin: 0 auto;
+  page-break-after: avoid;
+  page-break-inside: avoid;
+}
+.print-title {
+  margin: 0 0 6mm;
+  font-size: 13pt;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.35;
+}
+.print-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 268mm;
+  object-fit: contain;
+  page-break-inside: avoid;
+}
+</style>
+</head>
+<body>
+<div class="print-page">
+  <h1 class="print-title">${title}</h1>
+  <img class="print-photo" src="${absSrc.replace(/"/g, "&quot;")}" alt="${title}">
+</div>
+</body>
+</html>`);
+    doc.close();
+
+    const runPrint = () => {
+      try {
+        win.focus();
+        win.print();
+      } catch (_) {
+        alert("印刷できませんでした。もう一度お試しください。");
+      }
+    };
+
+    const img = doc.querySelector(".print-photo");
+    if (!img) {
+      runPrint();
+      return;
+    }
+    if (img.complete) {
+      setTimeout(runPrint, 80);
+    } else {
+      img.onload = () => setTimeout(runPrint, 80);
+      img.onerror = () => alert("写真を読み込めませんでした。");
+    }
+  }
+
+  function bindSiteCardPhotoClicks(body) {
+    const items = [];
+    body.querySelectorAll(".site-card-panel__photo img").forEach((img) => {
+      const fig = img.closest(".site-card-panel__photo");
+      const label = fig?.querySelector("figcaption")?.textContent?.trim() || img.alt || "現場写真";
+      items.push({ src: img.src, label });
+    });
+    body.querySelectorAll(".site-card-panel__photo").forEach((fig, i) => {
+      const img = fig.querySelector("img");
+      if (!img) return;
+      fig.classList.add("is-clickable");
+      fig.addEventListener("click", (ev) => {
+        ev.preventDefault();
+        ev.stopPropagation();
+        openPhotoViewer(items, i);
+      });
+    });
+  }
+
+  function ensureSiteCardPanel() {
+    let root = document.getElementById("siteCardPanel");
+    if (root) return root;
+    root = document.createElement("aside");
+    root.id = "siteCardPanel";
+    root.className = "site-card-panel";
+    root.hidden = true;
+    root.innerHTML = `
+      <div class="site-card-panel__head">
+        <h2 id="siteCardPanelTitle" class="site-card-panel__title"></h2>
+        <button type="button" class="site-card-panel__close" data-close-site-card aria-label="閉じる">×</button>
+      </div>
+      <div id="siteCardPanelBody" class="site-card-panel__body"></div>`;
+    document.body.appendChild(root);
+    root.querySelector("[data-close-site-card]").addEventListener("click", closeSiteCardPanelAndResetShopTap);
+    if (!window.__siteCardPanelKeyBound) {
+      window.__siteCardPanelKeyBound = true;
+      document.addEventListener("keydown", (ev) => {
+        if (ev.key !== "Escape") return;
+        const viewer = document.getElementById("photoViewer");
+        if (viewer && !viewer.hidden) return;
+        const panel = document.getElementById("siteCardPanel");
+        if (panel && !panel.hidden) closeSiteCardPanelAndResetShopTap();
+      });
+    }
+    return root;
+  }
+
+  function closeSiteCardPanel() {
+    const root = document.getElementById("siteCardPanel");
+    if (!root) return;
+    root.hidden = true;
+    document.body.classList.remove("site-card-panel-open");
+  }
+
+  function closeSiteCardPanelAndResetShopTap() {
+    closeSiteCardPanel();
+    if (
+      activeSelections.length &&
+      activeSelections.every((s) => s.type === "shop")
+    ) {
+      activeSelections = [];
+      clearRoutes();
+      hideHint();
+      renderSearchTags();
+      showAllShopMarkers();
+      $("#statusText").textContent = defaultStatusText();
+    }
+  }
+
+  function renderSiteCardFields(fields) {
+    if (!fields?.length) return "";
+    const rows = fields
+      .map(
+        (f) =>
+          `<tr><th>${escapeHtml(f.label)}</th><td>${escapeHtml(f.value || "—")}</td></tr>`
+      )
+      .join("");
+    return `<table class="site-card-panel__table"><tbody>${rows}</tbody></table>`;
+  }
+
+  function renderSiteCardPhotos(photos) {
+    if (!photos?.length) {
+      return `<p class="site-card-panel__empty">現場写真は準備中です。</p>`;
+    }
+    const cards = photos
+      .map((p) => {
+        const hasSrc = Boolean(p.src);
+        const img = hasSrc
+          ? `<img src="${escapeHtml(p.src)}" alt="${escapeHtml(p.label || "")}" loading="lazy">`
+          : `<div class="site-card-panel__photo-placeholder">写真準備中</div>`;
+        const memo = p.memo
+          ? `<p class="site-card-panel__photo-memo">${escapeHtml(p.memo)}</p>`
+          : "";
+        return `<figure class="site-card-panel__photo">${img}<figcaption>${escapeHtml(p.label || "")}</figcaption>${memo}</figure>`;
+      })
+      .join("");
+    return `<div class="site-card-panel__photos">${cards}</div>`;
+  }
+
+  function showSiteCardPanel(siteId) {
+    const site = (mapData.sites || []).find((s) => s.id === siteId);
+    if (!site) return;
+
+    const card = getSiteCard(siteId);
+    const hasDetail = siteHasDetailCard(card);
+    const root = ensureSiteCardPanel();
+    const titleEl = root.querySelector("#siteCardPanelTitle");
+    const body = root.querySelector("#siteCardPanelBody");
+    const title = card?.title || site.name || "配送先";
+    const subtitle = card?.subtitle || "";
+    const course = card?.course || getMapCourse(site);
+    const address = card?.address || site.address || "";
+    const visitLine = formatVisitLine(site);
+    const fields = hasDetail && card?.fields?.length ? card.fields : buildDefaultSiteFields(site);
+    const cardLink = card?.card_html
+      ? `<p class="site-card-panel__links"><a href="${escapeHtml(card.card_html)}" target="_blank" rel="noopener">印刷用カードを別タブで開く</a></p>`
+      : "";
+    const statusBadge = hasDetail
+      ? `<span class="site-card-panel__badge site-card-panel__badge--ready">詳細カードあり</span>`
+      : `<span class="site-card-panel__badge">基本情報（カード追加予定）</span>`;
+
+    titleEl.textContent = title;
+    body.innerHTML = `
+      ${statusBadge}
+      ${subtitle ? `<p class="site-card-panel__subtitle">${escapeHtml(subtitle)}</p>` : ""}
+      <p class="site-card-panel__meta">${escapeHtml(course)}　${escapeHtml(address)}</p>
+      <p class="site-card-panel__meta">${escapeHtml(visitLine)}</p>
+      ${renderSiteCardFields(fields)}
+      ${card?.aliases_note ? `<p class="site-card-panel__aliases"><span>PDF別名:</span> ${escapeHtml(card.aliases_note)}</p>` : ""}
+      <h3 class="site-card-panel__sec">現場写真</h3>
+      ${renderSiteCardPhotos(hasDetail ? card?.photos : [])}
+      ${cardLink}`;
+
+    bindSiteCardPhotoClicks(body);
+
+    root.hidden = false;
+    document.body.classList.add("site-card-panel-open");
+  }
+
+  function maybeShowSiteCardForSelections() {
+    const shopSels = activeSelections.filter((s) => s.type === "shop");
+    if (shopSels.length === 1) {
+      showSiteCardPanel(shopSels[0].siteId);
+      return;
+    }
+    if (shopSels.length !== 1) closeSiteCardPanel();
+  }
+
+  async function loadSiteCards() {
+    siteCardsById = { ...(mapData?.site_cards || {}) };
+    try {
+      const r = await fetch(`${SITE_CARDS_URL}?v=${Date.now()}`, { cache: "no-store" });
+      if (!r.ok) return;
+      const data = await r.json();
+      siteCardsById = { ...siteCardsById, ...(data.sites || {}) };
+    } catch {
+      /* map_data.site_cards が正本フォールバック */
+    }
   }
 
   function clearRoutes() {
@@ -358,6 +741,17 @@
     });
   }
 
+  function selectionFiltersShopMarkers() {
+    return activeSelections.some(
+      (sel) =>
+        sel.type === "course" ||
+        sel.type === "zone" ||
+        sel.type === "shops" ||
+        sel.type === "yokomochi" ||
+        sel.type === "warehouse"
+    );
+  }
+
   function applyAllSelections() {
     clearRoutes();
     renderSearchTags();
@@ -365,6 +759,7 @@
     if (!activeSelections.length) {
       showAllShopMarkers();
       hideHint();
+      closeSiteCardPanel();
       $("#statusText").textContent = defaultStatusText();
       return;
     }
@@ -398,16 +793,25 @@
       }
     });
 
+    const filterMarkers = selectionFiltersShopMarkers();
+
     shopMarkers.forEach(({ marker, site }) => {
-      if (visibleIds.has(site.id)) {
-        const mode = highlightMode.get(site.id);
-        const extra =
-          mode === "course" ? "is-course-highlight" : "is-zone-highlight";
-        marker.setIcon(createShopIcon(site, extra));
-        setMarkerVisible(marker, true);
-      } else {
-        setMarkerVisible(marker, false);
+      if (filterMarkers) {
+        if (visibleIds.has(site.id)) {
+          const mode = highlightMode.get(site.id);
+          const extra =
+            mode === "course" ? "is-course-highlight" : "is-zone-highlight";
+          marker.setIcon(createShopIcon(site, extra));
+          setMarkerVisible(marker, true);
+        } else {
+          setMarkerVisible(marker, false);
+        }
+        return;
       }
+
+      const isSelected = visibleIds.has(site.id);
+      marker.setIcon(createShopIcon(site, isSelected ? "is-shop-highlight" : ""));
+      setMarkerVisible(marker, true);
     });
 
     activeSelections.forEach((sel) => {
@@ -477,8 +881,15 @@
     }
 
     const labels = activeSelections.map((s) => s.label).join("、");
-    showHint(`${visibleSites.length}件表示中 … ${labels}`);
-    $("#statusText").textContent = `表示 ${visibleSites.length}件 / 検索 ${activeSelections.length}件`;
+    const totalShops = shopMarkers.length;
+    if (!filterMarkers && visibleSites.length) {
+      showHint(`${totalShops}件表示中（${visibleSites.length}件選択） … ${labels}`);
+      $("#statusText").textContent = `表示 ${totalShops}件（選択 ${visibleSites.length}件）`;
+    } else {
+      showHint(`${visibleSites.length}件表示中 … ${labels}`);
+      $("#statusText").textContent = `表示 ${visibleSites.length}件 / 検索 ${activeSelections.length}件`;
+    }
+    maybeShowSiteCardForSelections();
   }
 
   function findShops(query) {
@@ -600,9 +1011,8 @@
 
   function highlightSingleShop(site) {
     addSelection({ type: "shop", siteId: site.id, label: site.name });
-    shopMarkers.forEach(({ marker, site: s }) => {
-      if (s.id === site.id) marker.openPopup();
-    });
+    if (map) map.closePopup();
+    showSiteCardPanel(site.id);
   }
 
   function showYokomochi(type) {
@@ -927,7 +1337,6 @@
         icon: createShopIcon(site),
         zIndexOffset: 100,
       })
-        .bindPopup(formatSitePopup(site))
         .addTo(map);
       marker.on("click", () => highlightSingleShop(site));
       shopMarkers.push({ marker, site });
@@ -1137,7 +1546,9 @@
   }
 
   function isLiveAccessRequired() {
-    return false;
+    return (
+      document.querySelector('meta[name="chiba-map-access-required"]')?.content === "1"
+    );
   }
 
   function accessStorageKey() {
@@ -1148,6 +1559,9 @@
     const keyMeta = document.querySelector('meta[name="chiba-map-access-key"]');
     if (keyMeta?.content?.trim()) {
       return `chiba-map-ok-legacy-${keyMeta.content.trim().slice(0, 8)}`;
+    }
+    if (isLiveAccessRequired()) {
+      return "chiba-map-ok-live-gate";
     }
     return null;
   }
@@ -1240,7 +1654,7 @@
     if (sk && sessionStorage.getItem(sk) === "1") return;
 
     const urlKey = new URLSearchParams(window.location.search).get("k") || "";
-    if (urlKey && (await verifyAccessKey(urlKey)) {
+    if (urlKey && (await verifyAccessKey(urlKey))) {
       if (sk) sessionStorage.setItem(sk, "1");
       return;
     }
@@ -1288,6 +1702,7 @@
       setStatus("地図データを読込中…");
       const data = await loadMapDataWithRetry();
       mapData = data;
+      await loadSiteCards();
       const hasVisit = (data.sites || []).some((s) => "visit_count" in s);
       if ((data.sites || []).length && !hasVisit) {
         throw new Error(
