@@ -1060,21 +1060,11 @@ html, body {
     ];
     const line = L.polyline(latlngs, {
       color,
-      weight: opts.weight || 3,
-      opacity: 0.35,
-      dashArray: "6 8",
-    }).addTo(map);
-
-    const ant = L.polyline.antPath(latlngs, {
-      delay: 280,
-      dashArray: [12, 18],
       weight: opts.weight || 4,
-      color,
-      pulseColor: "#ffffff",
-      opacity: 0.9,
+      opacity: 0.85,
     }).addTo(map);
 
-    routeLayers.push(line, ant);
+    routeLayers.push(line);
   }
 
   function drawHubToSites(hubId, sites, color) {

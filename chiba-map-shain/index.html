@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta name="chiba-map-build" content="2026-09-08T15:47:26">
+  <meta name="chiba-map-build" content="2026-09-08T15:58:49">
   <meta name="chiba-map-live-base" content="https://ruz1229.github.io/ito-shoji-hp/chiba-map-shain">
   <meta name="chiba-map-access-required" content="1">
   <meta name="chiba-map-access-keys" content="PK9aQfI-vc1efEizC-Sm2w,PK9aQfl-vc1efEizC-Sm2w">
@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>伊藤商事 千葉配送地図</title>
   <link rel="stylesheet" href="vendor/leaflet.css?v=6">
-  <link rel="stylesheet" href="css/chiba-map.css?v=20260908T15472">
+  <link rel="stylesheet" href="css/chiba-map.css?v=20260908T15584">
 </head>
 <body>
   <header class="header">
@@ -1119,21 +1119,11 @@ html, body {
     ];
     const line = L.polyline(latlngs, {
       color,
-      weight: opts.weight || 3,
-      opacity: 0.35,
-      dashArray: "6 8",
-    }).addTo(map);
-
-    const ant = L.polyline.antPath(latlngs, {
-      delay: 280,
-      dashArray: [12, 18],
       weight: opts.weight || 4,
-      color,
-      pulseColor: "#ffffff",
-      opacity: 0.9,
+      opacity: 0.85,
     }).addTo(map);
 
-    routeLayers.push(line, ant);
+    routeLayers.push(line);
   }
 
   function drawHubToSites(hubId, sites, color) {
