@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta name="chiba-map-build" content="2026-09-08T17:08:00">
+  <meta name="chiba-map-build" content="2026-09-09T15:07:09">
   <meta name="chiba-map-live-base" content="https://ruz1229.github.io/ito-shoji-hp/chiba-map">
   <meta name="chiba-map-access-required" content="1">
   <meta name="chiba-map-access-keys" content="PK9aQfI-vc1efEizC-Sm2w,PK9aQfl-vc1efEizC-Sm2w">
@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>伊藤商事 千葉配送地図</title>
   <link rel="stylesheet" href="vendor/leaflet.css">
-  <link rel="stylesheet" href="css/chiba-map.css?v=20260908T17080">
+  <link rel="stylesheet" href="css/chiba-map.css?v=20260909T15070">
 </head>
 <body>
   <header class="header">
@@ -34,12 +34,12 @@
 
   <aside class="legend" id="legend"></aside>
 
-  <div id="map"></div>
-
   <div id="mapPrintBanner" class="map-print-banner" hidden>
     <h2 id="mapPrintTitle" class="map-print-banner__title"></h2>
     <p id="mapPrintSubtitle" class="map-print-banner__sub"></p>
   </div>
+
+  <div id="map"></div>
 
   <footer class="footer">
     <span id="statusText">読込中…</span>
@@ -122,7 +122,7 @@
 
   function showAllShopMarkers() {
     shopMarkers.forEach(({ marker, site }) => {
-      marker.setIcon(createShopIcon(site));
+      applyShopMarkerStyle(marker, site, "");
       setMarkerVisible(marker, true);
     });
   }
@@ -267,45 +267,196 @@
     return null;
   }
 
-  const MARKER_ICON_W = 140;
-  const MARKER_ICON_H = 40;
+  const SHOP_DOT_RADIUS = { circle: 7, square: 6.5, triangle: 7 };
+  const WH_DOT_RADIUS = 8;
 
-  function shopIconAnchor(shape) {
-    if (shape === "triangle") return [MARKER_ICON_W / 2, 12];
-    if (shape === "square") return [MARKER_ICON_W / 2, 6];
-    return [MARKER_ICON_W / 2, 6];
-  }
-
-  function createShopIcon(site, extraClass) {
+  function getShopDotStyle(site, extraClass) {
     const color = getHighlightColor(site, extraClass) || DEFAULT_SHOP_COLOR;
     const shape = site.marker_shape || "circle";
-    const cls = ["marker-shop", extraClass].filter(Boolean).join(" ");
-    const shapeCls = `shape-${shape}`;
-    const html = `
-      <div class="${cls}" data-id="${site.id}">
-        <div class="marker-dot ${shapeCls}" style="--mc:${color}"></div>
-        <div class="marker-label">${escapeHtml(site.name)}</div>
-      </div>`;
-    return L.divIcon({
-      html,
-      className: "marker-wrap",
-      iconSize: [MARKER_ICON_W, MARKER_ICON_H],
-      iconAnchor: shopIconAnchor(shape),
-    });
+    const radius = SHOP_DOT_RADIUS[shape] || SHOP_DOT_RADIUS.circle;
+    const cls = ["chiba-shop-dot", `shape-${shape}`, extraClass].filter(Boolean).join(" ");
+    return {
+      radius,
+      fillColor: color,
+      fillOpacity: 0.95,
+      color,
+      weight: shape === "circle" ? 2 : 2.5,
+      opacity: 1,
+      className: cls,
+    };
   }
 
-  function createWarehouseIcon(wh) {
-    const html = `
-      <div class="marker-warehouse" data-id="${wh.id}">
-        <div class="marker-dot"></div>
-        <div class="marker-label">${escapeHtml(wh.name)}</div>
-      </div>`;
-    return L.divIcon({
-      html,
-      className: "marker-wrap",
-      iconSize: [MARKER_ICON_W, MARKER_ICON_H],
-      iconAnchor: [MARKER_ICON_W / 2, 8],
+  function applyShopMarkerStyle(marker, site, extraClass) {
+    if (!marker) return;
+    marker.setStyle(getShopDotStyle(site, extraClass || ""));
+  }
+
+  function getWarehouseDotStyle() {
+    return {
+      radius: WH_DOT_RADIUS,
+      fillColor: "#ff4757",
+      fillOpacity: 1,
+      color: "#ff4757",
+      weight: 2.5,
+      opacity: 1,
+      className: "chiba-wh-dot",
+    };
+  }
+
+  const MAP_UI_PAD = {
+    topLeft: [260, 128],
+    bottomRight: [460, 80],
+  };
+
+  function getMapUiPad() {
+    const topLeft = [260, 128];
+    let bottomRight = [72, 80];
+    const panel = document.getElementById("siteCardPanel");
+    if (
+      document.body.classList.contains("site-card-panel-open") &&
+      panel &&
+      !panel.hidden
+    ) {
+      bottomRight[0] = Math.round(panel.getBoundingClientRect().width + 28);
+    }
+    if (map) {
+      const w = map.getSize().x;
+      topLeft[0] = Math.min(topLeft[0], Math.round(w * 0.38));
+      bottomRight[0] = Math.min(bottomRight[0], Math.round(w * 0.58));
+    }
+    return { topLeft, bottomRight };
+  }
+
+  function focusMapOnLatLng(latlng, zoom) {
+    if (!map) return;
+    map.setView(latlng, zoom, { animate: false });
+    const pad = getMapUiPad();
+    const dx = Math.round((pad.bottomRight[0] - pad.topLeft[0]) / 2);
+    const dy = Math.round((pad.topLeft[1] - pad.bottomRight[1]) / 2);
+    if (dx || dy) map.panBy([dx, dy], { animate: false });
+  }
+
+  function fitMapToSites(sites) {
+    if (!map || !sites.length) return;
+    if (sites.length === 1) {
+      focusMapOnLatLng([sites[0].lat, sites[0].lng], 14);
+      return;
+    }
+    const pad = getMapUiPad();
+    map.fitBounds(
+      L.latLngBounds(sites.map((s) => [s.lat, s.lng])),
+      {
+        paddingTopLeft: L.point(pad.topLeft[0], pad.topLeft[1]),
+        paddingBottomRight: L.point(pad.bottomRight[0], pad.bottomRight[1]),
+        maxZoom: 12,
+        animate: false,
+      }
+    );
+  }
+
+  function attachTooltipTap(marker, onTap) {
+    const bind = () => {
+      const el = marker.getTooltip()?.getElement?.();
+      if (!el) return;
+      if (el.dataset.tapBound === "1") return;
+      el.dataset.tapBound = "1";
+      el.classList.add("is-map-tappable");
+      el.addEventListener("click", (ev) => {
+        L.DomEvent.stop(ev);
+        onTap();
+      });
+    };
+    marker.on("add", bind);
+    marker.on("tooltipopen", bind);
+    bind();
+  }
+
+  function bindShopLabel(marker, name, onTap) {
+    marker.unbindTooltip();
+    marker.bindTooltip(name, {
+      permanent: true,
+      direction: "bottom",
+      offset: L.point(0, 5),
+      className: "chiba-shop-tooltip",
+      opacity: 1,
+      interactive: true,
     });
+    if (onTap) attachTooltipTap(marker, onTap);
+  }
+
+  function bindWarehouseLabel(marker, name, onTap) {
+    marker.unbindTooltip();
+    marker.bindTooltip(name, {
+      permanent: true,
+      direction: "bottom",
+      offset: L.point(0, 6),
+      className: "chiba-wh-tooltip",
+      opacity: 1,
+      interactive: true,
+    });
+    if (onTap) attachTooltipTap(marker, onTap);
+  }
+
+  function wireShopMarker(marker, site) {
+    const open = () => highlightSingleShop(site);
+    marker.off("click");
+    marker.on("click", open);
+    bindShopLabel(marker, site.name, open);
+  }
+
+  let printMapLayoutRestore = null;
+
+  function beginPrintMapLayout() {
+    const mapEl = document.getElementById("map");
+    if (!mapEl) return;
+    printMapLayoutRestore = {
+      height: mapEl.style.height,
+      width: mapEl.style.width,
+      position: mapEl.style.position,
+      margin: mapEl.style.margin,
+      left: mapEl.style.left,
+      top: mapEl.style.top,
+    };
+    mapEl.style.width = "100%";
+    mapEl.style.height = "175mm";
+    mapEl.style.position = "relative";
+    mapEl.style.margin = "0";
+    mapEl.style.left = "0";
+    mapEl.style.top = "0";
+  }
+
+  function endPrintMapLayout() {
+    const mapEl = document.getElementById("map");
+    if (!mapEl || !printMapLayoutRestore) return;
+    mapEl.style.height = printMapLayoutRestore.height;
+    mapEl.style.width = printMapLayoutRestore.width;
+    mapEl.style.position = printMapLayoutRestore.position;
+    mapEl.style.margin = printMapLayoutRestore.margin;
+    mapEl.style.left = printMapLayoutRestore.left;
+    mapEl.style.top = printMapLayoutRestore.top;
+    printMapLayoutRestore = null;
+  }
+
+  function syncMapAfterLayout(bounds, maxZoom, done) {
+    if (!map) {
+      done();
+      return;
+    }
+    let finished = false;
+    const finish = () => {
+      if (finished) return;
+      finished = true;
+      map.invalidateSize({ animate: false });
+      setTimeout(done, 120);
+    };
+    map.invalidateSize({ animate: false });
+    if (bounds && bounds.isValid()) {
+      map.once("moveend", finish);
+      map.fitBounds(bounds, { padding: [36, 36], maxZoom, animate: false });
+      setTimeout(finish, 900);
+      return;
+    }
+    finish();
   }
 
   function escapeHtml(s) {
@@ -655,29 +806,102 @@ html, body {
     setTimeout(finish, 1200);
   }
 
+  function printFocusBounds() {
+    const pts = [];
+    activeSelections.forEach((sel) => {
+      if (sel.type === "shop") {
+        const site = mapData.sites.find((s) => s.id === sel.siteId);
+        if (site) pts.push([site.lat, site.lng]);
+      } else if (sel.type === "shops") {
+        sel.siteIds.forEach((id) => {
+          const site = mapData.sites.find((s) => s.id === id);
+          if (site) pts.push([site.lat, site.lng]);
+        });
+      } else if (sel.type === "course") {
+        shopMarkers.forEach(({ site }) => {
+          if (getMapCourse(site) === sel.course) pts.push([site.lat, site.lng]);
+        });
+      } else if (sel.type === "zone") {
+        shopMarkers.forEach(({ site }) => {
+          if (site.zone === sel.zoneKey) pts.push([site.lat, site.lng]);
+        });
+      }
+    });
+    if (!pts.length) return null;
+    return L.latLngBounds(pts);
+  }
+
+  function refitMapForPrint(done) {
+    const bounds = printFocusBounds();
+    const maxZoom =
+      bounds && bounds.isValid() && bounds.getNorth() === bounds.getSouth() ? 14 : 12;
+    syncMapAfterLayout(bounds, maxZoom, done);
+  }
+
+  function getPrintVisibleBounds() {
+    if (!map) return null;
+    const size = map.getSize();
+    if (!size.x || !size.y) return null;
+    const pad = getMapUiPad();
+    const x1 = Math.max(0, pad.topLeft[0]);
+    const y1 = Math.max(0, pad.topLeft[1]);
+    const x2 = Math.min(size.x, size.x - pad.bottomRight[0]);
+    const y2 = Math.min(size.y, size.y - pad.bottomRight[1]);
+    if (x2 - x1 < 40 || y2 - y1 < 40) return map.getBounds();
+    const nw = map.containerPointToLatLng([x1, y1]);
+    const se = map.containerPointToLatLng([x2, y2]);
+    return L.latLngBounds(nw, se);
+  }
+
+  function lockMapPrintView(bounds) {
+    if (!map || !bounds || !bounds.isValid()) return;
+    const maxZoom = map.getZoom();
+    map.invalidateSize({ animate: false });
+    map.fitBounds(bounds, { padding: [0, 0], animate: false, maxZoom });
+    const nw = bounds.getNorthWest();
+    const pt = map.latLngToContainerPoint(nw);
+    const dx = Math.round(pt.x);
+    const dy = Math.round(pt.y);
+    if (dx || dy) map.panBy([dx, dy], { animate: false });
+  }
+
   function runMapPrintDialog(title, subtitle) {
     if (!map) return;
-    closeSiteCardPanel();
     closePhotoViewer();
+    const printBounds = getPrintVisibleBounds();
     setMapPrintBanner(title, subtitle);
-    document.body.classList.add("is-map-printing");
 
     const cleanup = () => {
-      document.body.classList.remove("is-map-printing");
       clearMapPrintBanner();
+      applyAllSelections();
+      map.invalidateSize({ animate: false });
       window.removeEventListener("afterprint", cleanup);
+      window.removeEventListener("beforeprint", onBeforePrint);
     };
+    const onBeforePrint = () => {
+      lockMapPrintView(printBounds);
+    };
+    window.addEventListener("beforeprint", onBeforePrint);
     window.addEventListener("afterprint", cleanup);
 
-    map.invalidateSize({ animate: false });
-    setTimeout(() => {
-      try {
-        window.print();
-      } catch (_) {
-        cleanup();
-        alert("印刷できませんでした。もう一度お試しください。");
-      }
-    }, 320);
+    let printed = false;
+    const launchPrint = () => {
+      if (printed) return;
+      printed = true;
+      lockMapPrintView(printBounds);
+      setTimeout(() => {
+        try {
+          window.print();
+        } catch (_) {
+          cleanup();
+          alert("印刷できませんでした。もう一度お試しください。");
+        }
+      }, 180);
+    };
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(launchPrint);
+    });
   }
 
   function printCurrentMapView() {
@@ -981,7 +1205,7 @@ html, body {
           const mode = highlightMode.get(site.id);
           const extra =
             mode === "course" ? "is-course-highlight" : "is-zone-highlight";
-          marker.setIcon(createShopIcon(site, extra));
+          applyShopMarkerStyle(marker, site, extra);
           setMarkerVisible(marker, true);
         } else {
           setMarkerVisible(marker, false);
@@ -990,7 +1214,7 @@ html, body {
       }
 
       const isSelected = visibleIds.has(site.id);
-      marker.setIcon(createShopIcon(site, isSelected ? "is-shop-highlight" : ""));
+      applyShopMarkerStyle(marker, site, isSelected ? "is-shop-highlight" : "");
       setMarkerVisible(marker, true);
     });
 
@@ -1008,17 +1232,6 @@ html, body {
             ? "yachiyo_dp"
             : "esr_kazo");
         drawHubToSites(hubId, matched, color);
-      } else if (sel.type === "shop") {
-        const site = mapData.sites.find((s) => s.id === sel.siteId);
-        if (site) {
-          const hubId = site.hub || "yachiyo_dp";
-          drawRoute(
-            warehouseMarkers[hubId] || getWarehouse(hubId),
-            getShopMarker(site.id) || site,
-            getCourseHighlightColor(getMapCourse(site)),
-            { weight: 3 }
-          );
-        }
       } else if (sel.type === "yokomochi") {
         const y = (mapData.yokomochi || []).find((x) => x.id === sel.yokomochiId);
         if (y) {
@@ -1040,12 +1253,7 @@ html, body {
       .map(({ site }) => site)
       .filter((s) => visibleIds.has(s.id));
 
-    if (visibleSites.length) {
-      map.fitBounds(
-        L.latLngBounds(visibleSites.map((s) => [s.lat, s.lng])),
-        { padding: [60, 60], maxZoom: visibleSites.length === 1 ? 14 : 12 }
-      );
-    } else {
+    if (!visibleSites.length) {
       activeSelections.forEach((sel) => {
         if (sel.type !== "yokomochi") return;
         const y = (mapData.yokomochi || []).find((x) => x.id === sel.yokomochiId);
@@ -1070,6 +1278,7 @@ html, body {
       $("#statusText").textContent = `表示 ${visibleSites.length}件 / 検索 ${activeSelections.length}件`;
     }
     maybeShowSiteCardForSelections();
+    if (visibleSites.length) fitMapToSites(visibleSites);
   }
 
   function findShops(query) {
@@ -1190,7 +1399,10 @@ html, body {
   }
 
   function highlightSingleShop(site) {
-    addSelection({ type: "shop", siteId: site.id, label: site.name });
+    const key = selectionKey({ type: "shop", siteId: site.id });
+    if (!activeSelections.some((s) => s.key === key)) {
+      addSelection({ type: "shop", siteId: site.id, label: site.name });
+    }
     if (map) map.closePopup();
     showSiteCardPanel(site.id);
   }
@@ -1238,6 +1450,9 @@ html, body {
 
   function resolveRouteLatLng(ref) {
     if (!ref) return null;
+    if (ref.lat != null && ref.lng != null && typeof ref.getLatLng !== "function") {
+      return L.latLng(ref.lat, ref.lng);
+    }
     if (ref.getLatLng) return ref.getLatLng();
     if (ref.lat != null && ref.lng != null) return L.latLng(ref.lat, ref.lng);
     return null;
@@ -1251,18 +1466,17 @@ html, body {
       color,
       weight: opts.weight || 4,
       opacity: 0.85,
+      className: "chiba-route-line",
     }).addTo(map);
 
     routeLayers.push(line);
   }
 
   function drawHubToSites(hubId, sites, color) {
-    const hubMarker = warehouseMarkers[hubId];
-    const hub = hubMarker || getWarehouse(hubId);
+    const hub = getWarehouse(hubId);
     if (!hub) return;
     sites.forEach((site) => {
-      const siteMarker = getShopMarker(site.id);
-      drawRoute(hub, siteMarker || site, color, { weight: 2.5 });
+      drawRoute(hub, site, color, { weight: 2.5 });
     });
   }
 
@@ -1446,7 +1660,7 @@ html, body {
     for (const group of allCourseGroups()) {
       html += `<div class="legend-group">${escapeHtml(group.title)}</div>`;
       for (const c of group.courses) {
-        html += `<div class="legend-row legend-row--course"><button type="button" class="legend-course-btn" data-course="${escapeHtml(c)}">${escapeHtml(c)}</button><button type="button" class="legend-course-print" data-course="${escapeHtml(c)}" title="このコースを印刷" aria-label="${escapeHtml(c)}を印刷">印</button></div>`;
+        html += `<div class="legend-row legend-row--course"><button type="button" class="legend-course-btn" data-course="${escapeHtml(c)}">${escapeHtml(c)}</button></div>`;
       }
     }
     html += "<h3 style='margin-top:10px'>エリア</h3>";
@@ -1460,13 +1674,6 @@ html, body {
         $("#searchInput").value = "";
         hideSuggestions();
         addSelection({ type: "course", course, label: course });
-      });
-    });
-    el.querySelectorAll(".legend-course-print").forEach((btn) => {
-      btn.addEventListener("click", (ev) => {
-        ev.preventDefault();
-        ev.stopPropagation();
-        printCourseMap(btn.dataset.course);
       });
     });
   }
@@ -1512,23 +1719,17 @@ html, body {
 
     // 倉庫（常時表示・赤）
     (mapData.warehouses || []).forEach((wh) => {
-      const marker = L.marker([wh.lat, wh.lng], {
-        icon: createWarehouseIcon(wh),
-        zIndexOffset: 1000,
-      })
+      const marker = L.circleMarker([wh.lat, wh.lng], getWarehouseDotStyle())
         .bindPopup(`<b>${escapeHtml(wh.name)}</b><br>${escapeHtml(wh.address)}`)
         .addTo(map);
+      bindWarehouseLabel(marker, wh.name);
       warehouseMarkers[wh.id] = marker;
     });
 
     // 工務店（常時表示・青。調べる／クリックでハイライト色）
     (mapData.sites || []).forEach((site) => {
-      const marker = L.marker([site.lat, site.lng], {
-        icon: createShopIcon(site),
-        zIndexOffset: 100,
-      })
-        .addTo(map);
-      marker.on("click", () => highlightSingleShop(site));
+      const marker = L.circleMarker([site.lat, site.lng], getShopDotStyle(site)).addTo(map);
+      wireShopMarker(marker, site);
       shopMarkers.push({ marker, site });
     });
 
