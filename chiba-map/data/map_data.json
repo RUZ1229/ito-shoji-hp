@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-09T17:19:05",
+  "generated": "2026-09-10T13:49:08",
   "map_variant": "他社",
   "map_variant_label": "他社向け",
   "master_source": "AI化/コース別配車/現場マスタ.json",
@@ -150,13 +150,13 @@
       "visit_count": 38,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-09",
+      "weight_kg": 1387,
       "master_course": "柏1H",
       "map_course": "柏1H",
       "marker_shape": "circle",
       "search_names": [
         "共栄千葉流山 八日市場納"
-      ],
-      "weight_kg": 351
+      ]
     },
     {
       "id": "site_1",
@@ -172,6 +172,7 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 4709,
       "master_course": "柏1H",
       "map_course": "柏1H",
       "marker_shape": "circle",
@@ -188,8 +189,7 @@
         "（ 有） 小川ガラス店 Ｎ−Ｈ",
         "（ 有） 小川ガラス店（ Ｒ＋Ｔ Ｋ）",
         "（有）小川ガラス店（Ｒ＋ＴＫ）"
-      ],
-      "weight_kg": 591
+      ]
     },
     {
       "id": "site_2",
@@ -205,13 +205,13 @@
       "visit_count": 10,
       "first_visit": "2026-06-11",
       "last_visit": "2026-09-03",
+      "weight_kg": 3,
       "master_course": "柏1H",
       "map_course": "柏1H",
       "marker_shape": "circle",
       "search_names": [
         "（株）カネハン"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_3",
@@ -227,14 +227,14 @@
       "visit_count": 15,
       "first_visit": "2026-06-03",
       "last_visit": "2026-08-24",
+      "weight_kg": 0,
       "master_course": "柏1H",
       "map_course": "柏1H",
       "marker_shape": "circle",
       "search_names": [
         "島田ガラス店（ＫＫＭ）ＭＡＤＯ",
         "島田ガラス店（ＫＫＭ）"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_4",
@@ -250,13 +250,13 @@
       "visit_count": 20,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-08",
+      "weight_kg": 98,
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
       "search_names": [
         "（有）丸八住建ＭＡＤＯ"
-      ],
-      "weight_kg": 2
+      ]
     },
     {
       "id": "site_5",
@@ -272,13 +272,13 @@
       "visit_count": 6,
       "first_visit": "2026-07-07",
       "last_visit": "2026-08-26",
+      "weight_kg": 0,
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
       "search_names": [
         "（株）誠和 キロ〔野老亮輔〕"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_6",
@@ -294,14 +294,14 @@
       "visit_count": 14,
       "first_visit": "2026-06-03",
       "last_visit": "2026-09-09",
+      "weight_kg": 189,
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
       "search_names": [
         "ＤＡ上林】 エクステリアＭｏ ｂ ｂ",
         "ＤＡ【上林】エクステリア小笠原"
-      ],
-      "weight_kg": 76
+      ]
     },
     {
       "id": "site_7",
@@ -317,6 +317,7 @@
       "visit_count": 42,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 485,
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
@@ -329,8 +330,7 @@
         "イガリアルミ コサキ建設",
         "（株）イガリアルミ　ピカいち",
         "イガリアルミ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_8",
@@ -346,13 +346,13 @@
       "visit_count": 5,
       "first_visit": "2026-08-05",
       "last_visit": "2026-09-03",
+      "weight_kg": 30,
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
       "search_names": [
         "茂原市腰当"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_9",
@@ -368,11 +368,11 @@
       "visit_count": 3,
       "first_visit": "2026-07-07",
       "last_visit": "2026-08-31",
+      "weight_kg": 1,
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": [],
-      "weight_kg": 1
+      "search_names": []
     },
     {
       "id": "site_10",
@@ -388,13 +388,13 @@
       "visit_count": 26,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 38,
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
       "search_names": [
         "桶庄トーヨー住器（株）"
-      ],
-      "weight_kg": 1
+      ]
     },
     {
       "id": "site_11",
@@ -410,6 +410,7 @@
       "visit_count": 59,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1321,
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
@@ -421,8 +422,7 @@
         "（ 有） 川商アルミ 建材",
         "（ 有） 川商アルミ 建材 御園建設",
         "（ 有） 川商アルミ 建材 モト ヨシ"
-      ],
-      "weight_kg": 122
+      ]
     },
     {
       "id": "site_12",
@@ -438,6 +438,7 @@
       "visit_count": 58,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 560,
       "master_course": "柏2S",
       "map_course": "柏2S",
       "marker_shape": "circle",
@@ -448,8 +449,7 @@
         "群峰アクシア千葉（ アーバンＥＸ",
         "Ｍ 大仙（ 群峰アクシア千葉）",
         "群峰アクシア千葉"
-      ],
-      "weight_kg": 166
+      ]
     },
     {
       "id": "site_13",
@@ -465,6 +465,7 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 2211,
       "master_course": "柏2S",
       "map_course": "柏2S",
       "marker_shape": "circle",
@@ -472,8 +473,7 @@
         "（株）関東 千葉支店",
         "（ 株） 関東 千葉支店",
         "関東千葉"
-      ],
-      "weight_kg": 521
+      ]
     },
     {
       "id": "site_14",
@@ -489,6 +489,7 @@
       "visit_count": 41,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-09",
+      "weight_kg": 410,
       "master_course": "柏2S",
       "map_course": "柏2S",
       "marker_shape": "circle",
@@ -497,8 +498,7 @@
         "協栄ジェネックス（ 株） 千葉",
         "協栄ジェネックス",
         "協栄ジェネクス"
-      ],
-      "weight_kg": 50
+      ]
     },
     {
       "id": "site_15",
@@ -514,6 +514,7 @@
       "visit_count": 20,
       "first_visit": "2026-06-03",
       "last_visit": "2026-08-28",
+      "weight_kg": 0,
       "master_course": "柏2S",
       "map_course": "柏2S",
       "marker_shape": "circle",
@@ -523,8 +524,7 @@
         "（ 株） 林屋 千葉営業所",
         "（株）林屋 ＴＭＴ",
         "林屋千葉"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_16",
@@ -540,6 +540,7 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 4984,
       "master_course": "柏2S",
       "map_course": "柏2S",
       "marker_shape": "circle",
@@ -548,8 +549,7 @@
         "（ 株） メイク東関東支店",
         "Ｍ 大仙（メイクヒガシカント）",
         "メイク東関東"
-      ],
-      "weight_kg": 804
+      ]
     },
     {
       "id": "site_17",
@@ -565,14 +565,14 @@
       "visit_count": 49,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-08",
+      "weight_kg": 1235,
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "circle",
       "search_names": [
         "藤野トーヨー住器（株）市原支店",
         "藤野ト ーヨー住器（ 株） 市原支店"
-      ],
-      "weight_kg": 159
+      ]
     },
     {
       "id": "site_18",
@@ -588,6 +588,7 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1602,
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "circle",
@@ -605,8 +606,7 @@
         "ＮＢＰ日板Ｓ＆Ｓ千葉 ひらい",
         "ＮＢＰ日板千葉 フジセイコー",
         "ＮＢＰ日板Ｓ＆Ｓ千葉 フジコー"
-      ],
-      "weight_kg": 424
+      ]
     },
     {
       "id": "site_19",
@@ -622,11 +622,11 @@
       "visit_count": 23,
       "first_visit": "2026-06-03",
       "last_visit": "2026-09-08",
+      "weight_kg": 275,
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_20",
@@ -642,13 +642,13 @@
       "visit_count": 52,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1099,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
       "search_names": [
         "（株）マルウ（唐沢エクステリア"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_21",
@@ -664,6 +664,7 @@
       "visit_count": 36,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-09",
+      "weight_kg": 320,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -677,8 +678,7 @@
         "文化シヤッター／住建千葉工事",
         "文化シヤッター 住建千葉配送Ｃ",
         "文化シヤッター（タマ）住建千葉"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_22",
@@ -694,13 +694,13 @@
       "visit_count": 11,
       "first_visit": "2026-06-11",
       "last_visit": "2026-08-19",
+      "weight_kg": 0,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
       "search_names": [
         "フジ産業（株）千葉北事業所"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_23",
@@ -716,6 +716,7 @@
       "visit_count": 44,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 487,
       "master_course": "柏3V",
       "map_course": "柏2T.5O",
       "marker_shape": "circle",
@@ -727,8 +728,7 @@
         "（株）山善（エヌ・イーＣ）",
         "山善エヌイー",
         "山善エヌ・イー"
-      ],
-      "weight_kg": 8
+      ]
     },
     {
       "id": "site_24",
@@ -744,13 +744,13 @@
       "visit_count": 49,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-08",
+      "weight_kg": 441,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
       "search_names": [
         "旭化成ホームズ"
-      ],
-      "weight_kg": 64
+      ]
     },
     {
       "id": "site_25",
@@ -766,13 +766,13 @@
       "visit_count": 2,
       "first_visit": "2026-07-07",
       "last_visit": "2026-09-02",
+      "weight_kg": 31,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
       "search_names": [
         "（株）小泉千葉北 ぱっと市原"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_26",
@@ -788,13 +788,13 @@
       "visit_count": 39,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 479,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
       "search_names": [
         "群峰アクシア船橋（マルウ）"
-      ],
-      "weight_kg": 187
+      ]
     },
     {
       "id": "site_27",
@@ -810,13 +810,13 @@
       "visit_count": 17,
       "first_visit": "2026-06-03",
       "last_visit": "2026-09-04",
+      "weight_kg": 372,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
       "search_names": [
         "丸北運輸"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_28",
@@ -832,14 +832,14 @@
       "visit_count": 26,
       "first_visit": "2026-06-03",
       "last_visit": "2026-09-09",
+      "weight_kg": 416,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
       "search_names": [
         "（有）ナカムラアルミ",
         "（ 有） ナカムラアルミ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_29",
@@ -855,6 +855,7 @@
       "visit_count": 47,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-09",
+      "weight_kg": 960,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -864,8 +865,7 @@
         "第一サッシ工業（ 株）",
         "第一サッシ工業（ 株） バー材",
         "第一サッシ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_30",
@@ -881,14 +881,14 @@
       "visit_count": 56,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1106,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
       "search_names": [
         "（株）千種建窓",
         "（ 株） 千種建窓"
-      ],
-      "weight_kg": 138
+      ]
     },
     {
       "id": "site_31",
@@ -904,6 +904,7 @@
       "visit_count": 45,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-09",
+      "weight_kg": 537,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -911,8 +912,7 @@
         "さくら住建（株）（アルコスモ）",
         "さく ら住建（ 株） （ アルコスモ）",
         "さくら住建"
-      ],
-      "weight_kg": 62
+      ]
     },
     {
       "id": "site_32",
@@ -928,6 +928,7 @@
       "visit_count": 56,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1608,
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
@@ -935,8 +936,7 @@
         "（株）千葉アニマ （第二倉庫）",
         "（ 株） 千葉アニマ （ 第二倉庫）",
         "千葉アニマ第二"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_33",
@@ -952,6 +952,7 @@
       "visit_count": 49,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1093,
       "master_course": "柏3X",
       "map_course": "柏1H",
       "marker_shape": "circle",
@@ -961,8 +962,7 @@
         "（株）石川商会住宅機材",
         "（ 株） 石川商会住宅機材 Ｉ",
         "石川商会"
-      ],
-      "weight_kg": 225
+      ]
     },
     {
       "id": "site_34",
@@ -978,6 +978,7 @@
       "visit_count": 39,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 559,
       "master_course": "柏3X",
       "map_course": "柏1H",
       "marker_shape": "circle",
@@ -988,8 +989,7 @@
         "（ 有） 林ガラス店 Ｔ",
         "（ 有） 林ガラス店 Ｈ",
         "林ガラス"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_35",
@@ -1005,6 +1005,7 @@
       "visit_count": 26,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-07",
+      "weight_kg": 29,
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
@@ -1012,8 +1013,7 @@
         "（株）日新建商",
         "（株）日新建商 Ｉ",
         "（ 株） 日新建商 Ｉ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_36",
@@ -1029,6 +1029,7 @@
       "visit_count": 45,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 270,
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
@@ -1037,8 +1038,7 @@
         "（ 有） Ｔ ＳＲ建窓 Ｂ",
         "（有）ＴＳＲ建窓（Ｆ東総）",
         "（有）ＴＳＲ建窓　（東和建設）"
-      ],
-      "weight_kg": 1
+      ]
     },
     {
       "id": "site_37",
@@ -1054,14 +1054,14 @@
       "visit_count": 14,
       "first_visit": "2026-06-05",
       "last_visit": "2026-09-09",
+      "weight_kg": 2,
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
       "marker_shape": "circle",
       "search_names": [
         "（株）佐川材木店（通常）",
         "（ 株） 佐川材木店（ 通常）"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_38",
@@ -1077,11 +1077,11 @@
       "visit_count": 20,
       "first_visit": "2026-06-03",
       "last_visit": "2026-09-04",
+      "weight_kg": 36,
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_39",
@@ -1097,6 +1097,7 @@
       "visit_count": 59,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1530,
       "master_course": "柏5P",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
@@ -1117,8 +1118,7 @@
         "内山硝子（株）茂原佐藤アルミ建",
         "内山硝子（株）茂原山田硝子店",
         "内山硝子茂原"
-      ],
-      "weight_kg": 77
+      ]
     },
     {
       "id": "site_40",
@@ -1134,6 +1134,7 @@
       "visit_count": 38,
       "first_visit": "2026-06-04",
       "last_visit": "2026-09-03",
+      "weight_kg": 72,
       "master_course": "柏5P",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
@@ -1141,8 +1142,7 @@
         "（有）上総建具商会",
         "（有）上総建具商会 協和",
         "上総建具"
-      ],
-      "weight_kg": 39
+      ]
     },
     {
       "id": "site_41",
@@ -1158,6 +1158,7 @@
       "visit_count": 52,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1304,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -1165,8 +1166,7 @@
         "（株）林屋 市川（営）",
         "（ 株） 林屋 市川（ 営）",
         "林屋市川"
-      ],
-      "weight_kg": 26
+      ]
     },
     {
       "id": "site_42",
@@ -1182,11 +1182,11 @@
       "visit_count": 23,
       "first_visit": "2026-06-04",
       "last_visit": "2026-09-08",
+      "weight_kg": 252,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 4
+      "search_names": []
     },
     {
       "id": "site_43",
@@ -1202,14 +1202,14 @@
       "visit_count": 29,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-07",
+      "weight_kg": 139,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
       "search_names": [
         "ＨＡＭＡＹ Ａ 田中商会 東京",
         "ＨＡＭＡＹＡ田中商会埼玉店"
-      ],
-      "weight_kg": 44
+      ]
     },
     {
       "id": "site_44",
@@ -1225,13 +1225,13 @@
       "visit_count": 17,
       "first_visit": "2026-05-25",
       "last_visit": "2026-08-20",
+      "weight_kg": 0,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
       "search_names": [
         "藤田建具店（マイスターハウス）"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_45",
@@ -1247,6 +1247,7 @@
       "visit_count": 27,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-02",
+      "weight_kg": 100,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -1255,8 +1256,7 @@
         "ジューテック千葉北 ヤマリ送り",
         "大友産業（ 株） ヤマリ日軽送り",
         "ヤマリ第一"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_46",
@@ -1272,6 +1272,7 @@
       "visit_count": 36,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-03",
+      "weight_kg": 868,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -1280,8 +1281,7 @@
         "ＴＯＴＯエムテック（平和硝子）",
         "＊（ 有） 平和硝子店",
         "平和硝子"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_47",
@@ -1297,6 +1297,7 @@
       "visit_count": 59,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 791,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -1313,8 +1314,7 @@
         "内山硝子（ 株） 柏（ 営） 熊澤",
         "内山硝子（ 株） 柏（ 営）",
         "内山硝子（株）柏　たいちや"
-      ],
-      "weight_kg": 29
+      ]
     },
     {
       "id": "site_48",
@@ -1330,6 +1330,7 @@
       "visit_count": 47,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1077,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -1341,8 +1342,7 @@
         "マテックス特販イトウ ＦＳ",
         "マテックス特販イトウ　サン中央",
         "マテックスイトウ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_49",
@@ -1358,14 +1358,14 @@
       "visit_count": 39,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 225,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
       "search_names": [
         "大晴サッシ",
         "大晴SHスペースP流山"
-      ],
-      "weight_kg": 204
+      ]
     },
     {
       "id": "site_50",
@@ -1381,14 +1381,14 @@
       "visit_count": 14,
       "first_visit": "2026-06-08",
       "last_visit": "2026-08-27",
+      "weight_kg": 0,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
       "search_names": [
         "（有）小島アルミ",
         "（ 有） 小島アルミ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_51",
@@ -1404,6 +1404,7 @@
       "visit_count": 50,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 991,
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
@@ -1411,8 +1412,7 @@
         "協栄ジェネックス（株）柏支店",
         "協栄ジェネックス（ 株） 柏支店",
         "協栄ジェネックス"
-      ],
-      "weight_kg": 269
+      ]
     },
     {
       "id": "site_52",
@@ -1428,6 +1428,7 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 2596,
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
@@ -1444,8 +1445,7 @@
         "（ 有） 佐藤サッシ 広島建設",
         "（有）佐藤サッシ（ＳＦ）",
         "佐藤サッシ柏"
-      ],
-      "weight_kg": 104
+      ]
     },
     {
       "id": "site_53",
@@ -1461,6 +1461,7 @@
       "visit_count": 36,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-08",
+      "weight_kg": 278,
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
@@ -1474,8 +1475,7 @@
         "アベルコ アイナボ物流 柏",
         "（株）アベルコ水戸／千葉送り",
         "アベルコ千葉"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_54",
@@ -1491,13 +1491,13 @@
       "visit_count": 16,
       "first_visit": "2026-06-04",
       "last_visit": "2026-09-03",
+      "weight_kg": 24,
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
       "search_names": [
         "志水商店"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_55",
@@ -1513,6 +1513,7 @@
       "visit_count": 48,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-09",
+      "weight_kg": 593,
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
@@ -1520,8 +1521,7 @@
         "フジクレスト（株） 柏（営）",
         "フジクレスト （ 株） 柏（ 営）",
         "フジクレスト柏"
-      ],
-      "weight_kg": 23
+      ]
     },
     {
       "id": "site_56",
@@ -1537,6 +1537,7 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 7653,
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
@@ -1546,8 +1547,7 @@
         "（ 有） 佐藤サッシ第２倉庫送り",
         "佐藤サッシ第二",
         "佐藤サッシ第２"
-      ],
-      "weight_kg": 224
+      ]
     },
     {
       "id": "site_57",
@@ -1563,14 +1563,14 @@
       "visit_count": 11,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-09",
+      "weight_kg": 39,
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
       "search_names": [
         "（有）染谷建具店 野田",
         "（ 有） 染谷建具店 野田"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_58",
@@ -1586,14 +1586,14 @@
       "visit_count": 52,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-08",
+      "weight_kg": 587,
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
       "search_names": [
         "渡辺パイプ＊熊倉工業ＥＸ",
         "熊倉エクステリア"
-      ],
-      "weight_kg": 6
+      ]
     },
     {
       "id": "site_59",
@@ -1609,6 +1609,7 @@
       "visit_count": 39,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-07",
+      "weight_kg": 26,
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
@@ -1617,8 +1618,7 @@
         "渡辺パイプ市川配送センター",
         "渡辺パイプ（株） 市川住建ＤＰ",
         "エコーＳ渡辺Ｐ市川配送Ｃ"
-      ],
-      "weight_kg": 13
+      ]
     },
     {
       "id": "site_60",
@@ -1634,6 +1634,7 @@
       "visit_count": 30,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 211,
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
@@ -1646,8 +1647,7 @@
         "渡辺パイプ（アソシエトラスト）",
         "アベルコ東京サッシ　アソシエ送",
         "アソシエトラスト"
-      ],
-      "weight_kg": 163
+      ]
     },
     {
       "id": "site_61",
@@ -1663,6 +1663,7 @@
       "visit_count": 47,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 112,
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
@@ -1674,8 +1675,7 @@
         "（ 株） ナガオカ産業 ライズＨ",
         "（ 株） ナガオカ産業 ニッカ船橋",
         "（ 株） ナガオカ産業"
-      ],
-      "weight_kg": 31
+      ]
     },
     {
       "id": "site_62",
@@ -1691,11 +1691,11 @@
       "visit_count": 37,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-09",
+      "weight_kg": 440,
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 86
+      "search_names": []
     },
     {
       "id": "site_63",
@@ -1711,6 +1711,7 @@
       "visit_count": 54,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 461,
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
@@ -1721,8 +1722,7 @@
         "山崎サッシ産業（ 株） （ ＫＫＭ）",
         "山崎サッシ産業（ 株）",
         "（株）マルウ（山崎サッシ産業）"
-      ],
-      "weight_kg": 237
+      ]
     },
     {
       "id": "site_64",
@@ -1738,6 +1738,7 @@
       "visit_count": 47,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-09",
+      "weight_kg": 380,
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
@@ -1747,8 +1748,7 @@
         "ＨＡＭＡＹ Ａ埼玉（ 関東Ｈ）",
         "ＨＡＭＡＹ Ａ調布（ 関東Ｈ）",
         "ＨＡＭＡＹＡ関東"
-      ],
-      "weight_kg": 55
+      ]
     },
     {
       "id": "site_65",
@@ -1764,6 +1764,7 @@
       "visit_count": 55,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1068,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
@@ -1773,8 +1774,7 @@
         "ヤマトアルミ工業（ゆとりフォー",
         "（ 有） ヤマト アルミ 工業 Ｒ",
         "ヤマトアルミ"
-      ],
-      "weight_kg": 63
+      ]
     },
     {
       "id": "site_66",
@@ -1790,6 +1790,7 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 3018,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
@@ -1808,8 +1809,7 @@
         "亀山商店（ 積水ハウスリフォーム",
         "（株）亀山商店 ＳＫ",
         "（株）亀山商店"
-      ],
-      "weight_kg": 823
+      ]
     },
     {
       "id": "site_67",
@@ -1825,6 +1825,7 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 3088,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
@@ -1837,8 +1838,7 @@
         "（株）オビタス 千葉支店（足立",
         "（ 株） オビタス 千葉支店",
         "（株）オビタス 千葉支店（小平"
-      ],
-      "weight_kg": 530
+      ]
     },
     {
       "id": "site_68",
@@ -1854,6 +1854,7 @@
       "visit_count": 28,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 782,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
@@ -1865,8 +1866,7 @@
         "（ 株） 千葉西ト ーヨー住建",
         "千葉西トーヨー住建",
         "（株）千葉西トーヨー住器"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_69",
@@ -1882,6 +1882,7 @@
       "visit_count": 56,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1119,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
@@ -1892,8 +1893,7 @@
         "（ 合） 白亀",
         "（株）高硝（新栄エクステリア）",
         "白亀・高硝（新栄エクステリア）"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_70",
@@ -1909,6 +1909,7 @@
       "visit_count": 56,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 2619,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
@@ -1917,8 +1918,7 @@
         "Ａｎ ｄ ｏ ｎ ｅ （ ＫＫＭ）",
         "And one",
         "アンドワン"
-      ],
-      "weight_kg": 95
+      ]
     },
     {
       "id": "site_71",
@@ -1934,6 +1934,7 @@
       "visit_count": 58,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1096,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
@@ -1948,8 +1949,7 @@
         "（ 株） 総和 ＳＨ",
         "（ 株） 総和 ＡＫ",
         "（株）総和 角栄Ｈ"
-      ],
-      "weight_kg": 282
+      ]
     },
     {
       "id": "site_72",
@@ -1965,13 +1965,13 @@
       "visit_count": 4,
       "first_visit": "2026-06-05",
       "last_visit": "2026-09-01",
+      "weight_kg": 61,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
       "search_names": [
         "（株）亀山商店（エステック）"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_73",
@@ -1987,6 +1987,7 @@
       "visit_count": 46,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 561,
       "master_course": "千Cエ",
       "map_course": "千Cエ",
       "marker_shape": "circle",
@@ -1994,8 +1995,7 @@
         "幸田建窓",
         "幸田建窓 ＲＣ斉藤工務店",
         "幸田建窓"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_74",
@@ -2011,6 +2011,7 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 11970,
       "master_course": "千Cエ",
       "map_course": "千Cエ",
       "marker_shape": "circle",
@@ -2022,8 +2023,7 @@
         "（ 株） アルシス（ （ 有） 相建）",
         "マテックス特販イトウ 相建送り",
         "アルシス相建"
-      ],
-      "weight_kg": 884
+      ]
     },
     {
       "id": "site_75",
@@ -2039,6 +2039,7 @@
       "visit_count": 57,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1573,
       "master_course": "千Cエ",
       "map_course": "千Cエ",
       "marker_shape": "circle",
@@ -2056,8 +2057,7 @@
         "共栄流山・三郷",
         "共栄　千葉支店流山　全総",
         "共栄千葉支店流山"
-      ],
-      "weight_kg": 250
+      ]
     },
     {
       "id": "site_76",
@@ -2073,14 +2073,14 @@
       "visit_count": 13,
       "first_visit": "2026-06-03",
       "last_visit": "2026-09-09",
+      "weight_kg": 23,
       "master_course": "千Cオ",
       "map_course": "千Cオ",
       "marker_shape": "circle",
       "search_names": [
         "海老原ガラスＪＨＲ千葉ニュータ",
         "海老原ガラスＪＨＲ千葉ニュータ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_77",
@@ -2096,6 +2096,7 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 2556,
       "master_course": "千Cオ",
       "map_course": "千Cオ",
       "marker_shape": "circle",
@@ -2113,8 +2114,7 @@
         "（ 株） オビタス 柏支店（ 千葉）",
         "エクシーズ（オビタス柏送り）",
         "オビタス柏"
-      ],
-      "weight_kg": 765
+      ]
     },
     {
       "id": "site_78",
@@ -2130,6 +2130,7 @@
       "visit_count": 59,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1563,
       "master_course": "千Cオ",
       "map_course": "千Cオ",
       "marker_shape": "circle",
@@ -2137,8 +2138,7 @@
         "（株）メイク 柏支店",
         "（ 株） メイク 柏支店",
         "メイク柏"
-      ],
-      "weight_kg": 450
+      ]
     },
     {
       "id": "site_79",
@@ -2154,6 +2154,7 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 2010,
       "master_course": "千Cオ",
       "map_course": "千Cオ",
       "marker_shape": "circle",
@@ -2175,8 +2176,7 @@
         "マテックスさいたま　柏入れ",
         "マテックス柏",
         "マテックス（株）柏営業所"
-      ],
-      "weight_kg": 539
+      ]
     },
     {
       "id": "site_80",
@@ -2192,6 +2192,7 @@
       "visit_count": 58,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1121,
       "master_course": "千Cオ",
       "map_course": "千Cオ",
       "marker_shape": "circle",
@@ -2200,8 +2201,7 @@
         "Ｍ 大仙（群峰アクシア東関）",
         "大仙関東＊群峰アクシア東関東",
         "群峰アクシア　東関東支"
-      ],
-      "weight_kg": 229
+      ]
     },
     {
       "id": "site_81",
@@ -2217,6 +2217,7 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1452,
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
@@ -2237,8 +2238,7 @@
         "（ 株） 吉建商 Ｊ 成田",
         "（株）吉建商 Ｊ 新築",
         "（株）吉建商 Ｊ 佐倉"
-      ],
-      "weight_kg": 1
+      ]
     },
     {
       "id": "site_82",
@@ -2254,13 +2254,13 @@
       "visit_count": 3,
       "first_visit": "2026-07-07",
       "last_visit": "2026-09-07",
+      "weight_kg": 446,
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
       "search_names": [
         "ＤＡ （有）フジケンＥＸ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_83",
@@ -2276,14 +2276,14 @@
       "visit_count": 27,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-08",
+      "weight_kg": 137,
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
       "search_names": [
         "髙橋建具店（ＹＫＳ）ＭＡＤＯ",
         "髙橋建具店（ Ｙ ＫＳ） ＭＡＤＯ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_84",
@@ -2299,13 +2299,13 @@
       "visit_count": 15,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 49,
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
       "search_names": [
         "渡辺パイプ（株）佐原ＳＣ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_85",
@@ -2321,6 +2321,7 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1898,
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
@@ -2329,8 +2330,7 @@
         "（株）高硝 ＴＫ",
         "（株）高硝（桧家住宅北関東）",
         "（ 株） 高硝"
-      ],
-      "weight_kg": 650
+      ]
     },
     {
       "id": "site_86",
@@ -2346,11 +2346,11 @@
       "visit_count": 13,
       "first_visit": "2026-06-02",
       "last_visit": "2026-08-31",
+      "weight_kg": 119,
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 119
+      "search_names": []
     },
     {
       "id": "site_87",
@@ -2366,14 +2366,14 @@
       "visit_count": 53,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 541,
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
       "search_names": [
         "（有）高安硝子店（ビルダー）",
         "（ 有） 高安硝子店（ ビルダー）"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_88",
@@ -2389,6 +2389,7 @@
       "visit_count": 56,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1437,
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
@@ -2402,8 +2403,7 @@
         "ＮＢＰ日板佐原ＭＳＣ（ Ｊ Ｈ富里",
         "ＮＢＰ日板佐原　Ｓｈｉｎｙｕ",
         "日本板硝子Ｓ＆Ｓ　佐原入れ"
-      ],
-      "weight_kg": 342
+      ]
     },
     {
       "id": "site_89",
@@ -2419,14 +2419,14 @@
       "visit_count": 26,
       "first_visit": "2026-06-10",
       "last_visit": "2026-09-04",
+      "weight_kg": 31,
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
       "search_names": [
         "ＤＡ七栄４７７】 ジョ ンノビＥＸ",
         "ジョンノビ"
-      ],
-      "weight_kg": 18
+      ]
     },
     {
       "id": "site_90",
@@ -2442,6 +2442,7 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 2972,
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
@@ -2463,8 +2464,7 @@
         "キンセイ（ 家Ｃｏ リフォ八千代）",
         "キンセイ（家Ｃｏ新船橋）",
         "キンセイ商事"
-      ],
-      "weight_kg": 23
+      ]
     },
     {
       "id": "site_91",
@@ -2480,6 +2480,7 @@
       "visit_count": 49,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-09",
+      "weight_kg": 105,
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
@@ -2487,8 +2488,7 @@
         "コーエイ・デンカ（株）",
         "コーエイ・ デンカ（ 株）",
         "コーエイデンカ"
-      ],
-      "weight_kg": 74
+      ]
     },
     {
       "id": "site_92",
@@ -2504,14 +2504,14 @@
       "visit_count": 16,
       "first_visit": "2026-06-08",
       "last_visit": "2026-09-04",
+      "weight_kg": 2,
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
       "search_names": [
         "沢田サッシ（有）",
         "沢田サッシ（有）"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_93",
@@ -2527,6 +2527,7 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 2214,
       "master_course": "千E1",
       "map_course": "千E1",
       "marker_shape": "circle",
@@ -2558,8 +2559,7 @@
         "ＡＧＣ（フジセイコー八千代）",
         "ＡＧＣ硝子",
         "ＡＧＣ硝子"
-      ],
-      "weight_kg": 85
+      ]
     },
     {
       "id": "site_94",
@@ -2575,14 +2575,14 @@
       "visit_count": 20,
       "first_visit": "2026-06-04",
       "last_visit": "2026-09-08",
+      "weight_kg": 789,
       "master_course": "千E1",
       "map_course": "千E1",
       "marker_shape": "circle",
       "search_names": [
         "渡辺パイプ千葉住設",
         "渡辺パイプ千葉"
-      ],
-      "weight_kg": 536
+      ]
     },
     {
       "id": "site_95",
@@ -2598,6 +2598,7 @@
       "visit_count": 34,
       "first_visit": "2026-06-04",
       "last_visit": "2026-09-04",
+      "weight_kg": 254,
       "master_course": "千E1",
       "map_course": "千E1",
       "marker_shape": "circle",
@@ -2608,8 +2609,7 @@
         "（ 有） ホームぎあ",
         "（有）ホームぎあ 住不幕張",
         "（有）ホームぎあ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_96",
@@ -2625,6 +2625,7 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 5558,
       "master_course": "千E1",
       "map_course": "千E1",
       "marker_shape": "circle",
@@ -2639,8 +2640,7 @@
         "サタケ商事 （ 特需その他）",
         "（ 株） サタケ商事",
         "サタケ商事"
-      ],
-      "weight_kg": 498
+      ]
     },
     {
       "id": "site_97",
@@ -2656,6 +2656,7 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 14508,
       "master_course": "千F2",
       "map_course": "千F2",
       "marker_shape": "circle",
@@ -2697,8 +2698,7 @@
         "新（株）マルウ ＫＡ",
         "新マルウ ソレイユ 条供",
         "新（株）マルウ　ＭＩ"
-      ],
-      "weight_kg": 963
+      ]
     },
     {
       "id": "site_98",
@@ -2714,6 +2714,7 @@
       "visit_count": 54,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1621,
       "master_course": "千F2",
       "map_course": "千F2",
       "marker_shape": "circle",
@@ -2729,8 +2730,7 @@
         "エクシーズ千葉（島忠東京）ＯＶ",
         "エクシーズ千葉（島忠）ＯＶ",
         "エクシーズ千葉"
-      ],
-      "weight_kg": 431
+      ]
     },
     {
       "id": "site_99",
@@ -2746,6 +2746,7 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 9319,
       "master_course": "千G3",
       "map_course": "千G3",
       "marker_shape": "circle",
@@ -2760,8 +2761,7 @@
         "（ 株） 渡辺アルミ 建材（ 山万）",
         "渡辺アルミ 建材 ＳＨ",
         "渡辺アルミ"
-      ],
-      "weight_kg": 2988
+      ]
     },
     {
       "id": "site_100",
@@ -2777,6 +2777,7 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 2957,
       "master_course": "千G3",
       "map_course": "千G3",
       "marker_shape": "circle",
@@ -2793,8 +2794,7 @@
         "秋山木材産業（ 株） （ ＨＲ）",
         "秋山木材産業（ 株） （ 建築部）",
         "秋山木材"
-      ],
-      "weight_kg": 235
+      ]
     },
     {
       "id": "site_101",
@@ -2810,6 +2810,7 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 16953,
       "master_course": "千H4",
       "map_course": "千H4",
       "marker_shape": "circle",
@@ -2843,8 +2844,7 @@
         "一全柏入れ（株）ＦＧＫ",
         "（ 株） 一全",
         "一全柏"
-      ],
-      "weight_kg": 1628
+      ]
     },
     {
       "id": "site_102",
@@ -2860,6 +2860,7 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 3766,
       "master_course": "千J6",
       "map_course": "千J6",
       "marker_shape": "circle",
@@ -2872,8 +2873,7 @@
         "（株）関東 三郷支店",
         "（株）関東 柏三郷（ポラスＧＨ",
         "関東柏"
-      ],
-      "weight_kg": 548
+      ]
     },
     {
       "id": "site_103",
@@ -2889,14 +2889,14 @@
       "visit_count": 39,
       "first_visit": "2026-06-03",
       "last_visit": "2026-09-09",
+      "weight_kg": 324,
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
       "search_names": [
         "（株）早川（ＫＫＭ）",
         "（ 株） 早川（ ＫＫＭ）"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_104",
@@ -2912,14 +2912,14 @@
       "visit_count": 35,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-07",
+      "weight_kg": 102,
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
       "search_names": [
         "（有）吉川ガラス建材",
         "（ 有） 吉川ガラス建材"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_105",
@@ -2935,14 +2935,14 @@
       "visit_count": 23,
       "first_visit": "2026-06-03",
       "last_visit": "2026-09-09",
+      "weight_kg": 36,
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
       "search_names": [
         "（有）ウヤマアルミ工業",
         "（ 有） ウヤマアルミ 工業"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_106",
@@ -2958,6 +2958,7 @@
       "visit_count": 58,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1305,
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
@@ -2967,8 +2968,7 @@
         "大久保ガラス店（ 白幡興業）",
         "（有）大久保ガラス店",
         "（ 有） 大久保ガラス店 Ｍ・ Ｋ"
-      ],
-      "weight_kg": 1
+      ]
     },
     {
       "id": "site_107",
@@ -2984,6 +2984,7 @@
       "visit_count": 50,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 973,
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
@@ -2992,8 +2993,7 @@
         "（ 株） サクラホームサッシ（ Ｉ Ｓ",
         "サクラホームサッシオーダーワン",
         "サクラホームサッシＭＡＤＯ"
-      ],
-      "weight_kg": 14
+      ]
     },
     {
       "id": "site_108",
@@ -3009,6 +3009,7 @@
       "visit_count": 57,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-09",
+      "weight_kg": 788,
       "master_course": "房君3",
       "map_course": "房君3",
       "marker_shape": "circle",
@@ -3024,8 +3025,7 @@
         "『 倉庫Ｂ』 （ 株） ひらい君津店",
         "『倉庫Ａ』ひらい（リホプラ市原",
         "『倉庫Ａ』ひらい（アンジコア）"
-      ],
-      "weight_kg": 147
+      ]
     },
     {
       "id": "site_109",
@@ -3041,13 +3041,13 @@
       "visit_count": 23,
       "first_visit": "2026-06-03",
       "last_visit": "2026-09-08",
+      "weight_kg": 42,
       "master_course": "房君3",
       "map_course": "房君3",
       "marker_shape": "circle",
       "search_names": [
         "（株）金綱硝子店 千葉南ＴＦＣ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_110",
@@ -3063,6 +3063,7 @@
       "visit_count": 55,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 556,
       "master_course": "房木4",
       "map_course": "房木4",
       "marker_shape": "circle",
@@ -3075,8 +3076,7 @@
         "ＡＧＧ木更津 アークホーム",
         "ＡＧＧ木更津 アイＫ神奈川",
         "ＡＧＧ木更津 渡辺パイプ館山"
-      ],
-      "weight_kg": 82
+      ]
     },
     {
       "id": "site_111",
@@ -3092,6 +3092,7 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1857,
       "master_course": "房木4",
       "map_course": "房木4",
       "marker_shape": "circle",
@@ -3104,8 +3105,7 @@
         "（ 有） 長島サッシ工業 ＭＡＤＯ",
         "長島サッシ工業（ カインズ）",
         "（有）長島サッシ工業"
-      ],
-      "weight_kg": 117
+      ]
     },
     {
       "id": "site_112",
@@ -3121,6 +3121,7 @@
       "visit_count": 59,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 6648,
       "master_course": "房木5",
       "map_course": "房木5",
       "marker_shape": "circle",
@@ -3152,8 +3153,7 @@
         "コーホクトーヨー住器一全木更津",
         "（株）マルウ西東京　一全木更津",
         "石丸サッシ建材　一全木更津"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_113",
@@ -3169,13 +3169,13 @@
       "visit_count": 27,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-04",
+      "weight_kg": 111,
       "master_course": "房木5",
       "map_course": "房木5",
       "marker_shape": "circle",
       "search_names": [
         "ＤＡ （有）川名"
-      ],
-      "weight_kg": 88
+      ]
     },
     {
       "id": "site_114",
@@ -3191,13 +3191,13 @@
       "visit_count": 27,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-03",
+      "weight_kg": 191,
       "master_course": "房木5",
       "map_course": "房木5",
       "marker_shape": "circle",
       "search_names": [
         "（株）金綱硝子店（開拓）"
-      ],
-      "weight_kg": 36
+      ]
     },
     {
       "id": "site_115",
@@ -3213,14 +3213,14 @@
       "visit_count": 52,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 2209,
       "master_course": "房木5",
       "map_course": "房木5",
       "marker_shape": "circle",
       "search_names": [
         "（株）アルシス（ユウワ企画）",
         "（ 株） アルシス（ ユウワ企画）"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_116",
@@ -3236,14 +3236,14 @@
       "visit_count": 17,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-01",
+      "weight_kg": 61,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
       "search_names": [
         "（ 株） スミ 工業・ ト ーヨー住器",
         "（株）スミ工業 （ＳＰ）"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_117",
@@ -3259,11 +3259,11 @@
       "visit_count": 17,
       "first_visit": "2026-06-03",
       "last_visit": "2026-08-27",
+      "weight_kg": 0,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_118",
@@ -3279,11 +3279,11 @@
       "visit_count": 27,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-07",
+      "weight_kg": 20,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_119",
@@ -3299,13 +3299,13 @@
       "visit_count": 11,
       "first_visit": "2026-06-02",
       "last_visit": "2026-08-27",
+      "weight_kg": 0,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
       "search_names": [
         "Ｍ 大仙（ 三鈴建設資材置場）"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_120",
@@ -3321,13 +3321,13 @@
       "visit_count": 16,
       "first_visit": "2026-06-05",
       "last_visit": "2026-09-07",
+      "weight_kg": 86,
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
       "search_names": [
         "アベルコ高橋"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_121",
@@ -3343,6 +3343,7 @@
       "visit_count": 33,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-09",
+      "weight_kg": 1306,
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
@@ -3352,8 +3353,7 @@
         "（株）大仙＊コムテック",
         "Ｍ 大仙（コムテック）",
         "コムテック"
-      ],
-      "weight_kg": 95
+      ]
     },
     {
       "id": "site_122",
@@ -3369,14 +3369,14 @@
       "visit_count": 18,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-08",
+      "weight_kg": 70,
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
       "search_names": [
         "（ 株） 守甲 家具工房ナチュラル",
         "守甲家具"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_123",
@@ -3392,13 +3392,13 @@
       "visit_count": 16,
       "first_visit": "2026-06-08",
       "last_visit": "2026-09-04",
+      "weight_kg": 24,
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
       "search_names": [
         "渡辺パイプ（ 株） 船橋住設"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_124",
@@ -3414,13 +3414,13 @@
       "visit_count": 15,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-03",
+      "weight_kg": 12,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
       "search_names": [
         "ＤＡ三協鉄工"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_125",
@@ -3436,11 +3436,11 @@
       "visit_count": 1,
       "first_visit": "2026-07-08",
       "last_visit": "2026-07-08",
+      "weight_kg": 0,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_126",
@@ -3456,11 +3456,11 @@
       "visit_count": 8,
       "first_visit": "2026-06-05",
       "last_visit": "2026-09-03",
+      "weight_kg": 3,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_127",
@@ -3476,14 +3476,14 @@
       "visit_count": 50,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-09",
+      "weight_kg": 1267,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
       "search_names": [
         "アライト ーヨー住器（ 株）",
         "アライトーヨー"
-      ],
-      "weight_kg": 273
+      ]
     },
     {
       "id": "site_128",
@@ -3499,13 +3499,13 @@
       "visit_count": 18,
       "first_visit": "2026-06-04",
       "last_visit": "2026-09-08",
+      "weight_kg": 1676,
       "master_course": "千Cオ",
       "map_course": "千Cオ",
       "marker_shape": "circle",
       "search_names": [
         "マツイ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_129",
@@ -3521,11 +3521,11 @@
       "visit_count": 1,
       "first_visit": "2026-07-08",
       "last_visit": "2026-07-08",
+      "weight_kg": 0,
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_130",
@@ -3541,13 +3541,13 @@
       "visit_count": 5,
       "first_visit": "2026-06-10",
       "last_visit": "2026-09-09",
+      "weight_kg": 49,
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
       "search_names": [
         "ＤＡ越川緑地"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_131",
@@ -3563,6 +3563,7 @@
       "visit_count": 10,
       "first_visit": "2026-06-04",
       "last_visit": "2026-08-21",
+      "weight_kg": 0,
       "master_course": "千E1",
       "map_course": "千E1",
       "marker_shape": "circle",
@@ -3574,8 +3575,7 @@
         "DA緑区T‘Eｘterior",
         "ＤＡ緑区Ｔ‘Eｘterior",
         "DA緑区T'Eｘterior"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_132",
@@ -3591,14 +3591,14 @@
       "visit_count": 16,
       "first_visit": "2026-06-03",
       "last_visit": "2026-09-07",
+      "weight_kg": 121,
       "master_course": "千F2",
       "map_course": "千F2",
       "marker_shape": "circle",
       "search_names": [
         "（株）アベルコ 千葉北営業所",
         "（株）アベルコ 千葉中央支店"
-      ],
-      "weight_kg": 24
+      ]
     },
     {
       "id": "site_133",
@@ -3614,11 +3614,11 @@
       "visit_count": 4,
       "first_visit": "2026-07-08",
       "last_visit": "2026-08-18",
+      "weight_kg": 0,
       "master_course": "千F2",
       "map_course": "千F2",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_134",
@@ -3634,6 +3634,7 @@
       "visit_count": 7,
       "first_visit": "2026-07-08",
       "last_visit": "2026-09-03",
+      "weight_kg": 6,
       "master_course": "柏1H",
       "map_course": "柏1H",
       "marker_shape": "circle",
@@ -3641,8 +3642,7 @@
         "新（株）マルウ Ｙ",
         "（株）大仙＊カインズ八日市",
         "礒部硝子建材"
-      ],
-      "weight_kg": 1
+      ]
     },
     {
       "id": "site_135",
@@ -3658,13 +3658,13 @@
       "visit_count": 17,
       "first_visit": "2026-06-04",
       "last_visit": "2026-09-08",
+      "weight_kg": 1,
       "master_course": "柏1H",
       "map_course": "柏1H",
       "marker_shape": "circle",
       "search_names": [
         "（ 有） 片桐工業"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_136",
@@ -3680,13 +3680,13 @@
       "visit_count": 11,
       "first_visit": "2026-06-02",
       "last_visit": "2026-08-20",
+      "weight_kg": 0,
       "master_course": "柏1H",
       "map_course": "柏1H",
       "marker_shape": "circle",
       "search_names": [
         "（ 有） 松浦材木店（ ＫＫＭ）"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_137",
@@ -3702,11 +3702,11 @@
       "visit_count": 10,
       "first_visit": "2026-07-08",
       "last_visit": "2026-09-09",
+      "weight_kg": 208,
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": [],
-      "weight_kg": 25
+      "search_names": []
     },
     {
       "id": "site_138",
@@ -3722,14 +3722,14 @@
       "visit_count": 12,
       "first_visit": "2026-05-25",
       "last_visit": "2026-08-31",
+      "weight_kg": 1,
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
       "search_names": [
         "大仙茨城 クールサマー",
         "（株）大仙関東＊クールサマー"
-      ],
-      "weight_kg": 1
+      ]
     },
     {
       "id": "site_139",
@@ -3745,6 +3745,7 @@
       "visit_count": 56,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 829,
       "master_course": "柏2S",
       "map_course": "柏2S",
       "marker_shape": "circle",
@@ -3752,8 +3753,7 @@
         "フジクレスト （ 株） 千葉（ 営）",
         "フジクレスト千葉",
         "フジクレスト千葉"
-      ],
-      "weight_kg": 27
+      ]
     },
     {
       "id": "site_140",
@@ -3769,6 +3769,7 @@
       "visit_count": 54,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1282,
       "master_course": "柏3V",
       "map_course": "柏3V車立て",
       "marker_shape": "circle",
@@ -3779,8 +3780,7 @@
         "（ 株） 大仙関東＊ヨドハン千葉",
         "（株）ヨドハン 千葉（展示用",
         "ヨドハン千葉"
-      ],
-      "weight_kg": 104
+      ]
     },
     {
       "id": "site_141",
@@ -3796,13 +3796,13 @@
       "visit_count": 5,
       "first_visit": "2026-06-25",
       "last_visit": "2026-09-03",
+      "weight_kg": 159,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
       "search_names": [
         "ＩＧウインドウズ 大商千葉支店"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_142",
@@ -3818,14 +3818,14 @@
       "visit_count": 36,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-08",
+      "weight_kg": 974,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
       "search_names": [
         "（ 株） ＫＯＨＡＭＡ千葉倉庫",
         "ＫＯＨＡＭＡ千葉"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_143",
@@ -3841,6 +3841,7 @@
       "visit_count": 17,
       "first_visit": "2026-07-08",
       "last_visit": "2026-08-31",
+      "weight_kg": 92,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -3848,8 +3849,7 @@
         "ベイハウスサービス千葉 協栄Ｇ",
         "Ｍ 大仙（ベイハウス千葉）",
         "大仙Mベイハウス千葉"
-      ],
-      "weight_kg": 92
+      ]
     },
     {
       "id": "site_144",
@@ -3865,11 +3865,11 @@
       "visit_count": 12,
       "first_visit": "2026-06-17",
       "last_visit": "2026-09-07",
+      "weight_kg": 1,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_145",
@@ -3885,6 +3885,7 @@
       "visit_count": 32,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-07",
+      "weight_kg": 1211,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -3892,8 +3893,7 @@
         "ＤＡ （ 株） 匠工房【 四街道】",
         "DA（株）匠工房",
         "ＤＡ匠"
-      ],
-      "weight_kg": 490
+      ]
     },
     {
       "id": "site_146",
@@ -3909,6 +3909,7 @@
       "visit_count": 49,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 590,
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
@@ -3918,8 +3919,7 @@
         "越川アルミ 明和マテリアル",
         "越川アルミ ナミ カワ不動産",
         "越川アルミ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_147",
@@ -3935,13 +3935,13 @@
       "visit_count": 16,
       "first_visit": "2026-05-25",
       "last_visit": "2026-08-31",
+      "weight_kg": 37,
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
       "search_names": [
         "浅間木材 東葉建材商事"
-      ],
-      "weight_kg": 37
+      ]
     },
     {
       "id": "site_148",
@@ -3957,13 +3957,13 @@
       "visit_count": 25,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-07",
+      "weight_kg": 550,
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
       "search_names": [
         "内山サッシ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_149",
@@ -3979,14 +3979,14 @@
       "visit_count": 40,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-08",
+      "weight_kg": 321,
       "master_course": "柏3X",
       "map_course": "柏1H",
       "marker_shape": "circle",
       "search_names": [
         "（株）カワカトーヨー住器",
         "NBP日本板硝子Ｓ＆Ｓカワカ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_150",
@@ -4002,11 +4002,11 @@
       "visit_count": 18,
       "first_visit": "2026-06-04",
       "last_visit": "2026-09-04",
+      "weight_kg": 19,
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_151",
@@ -4022,13 +4022,13 @@
       "visit_count": 33,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 219,
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
       "search_names": [
         "石井ガラス"
-      ],
-      "weight_kg": 42
+      ]
     },
     {
       "id": "site_152",
@@ -4044,6 +4044,7 @@
       "visit_count": 54,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1299,
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
@@ -4054,8 +4055,7 @@
         "（ 株） スガサワＡ",
         "（株）スガサワＢ",
         "（株）島田硝子店"
-      ],
-      "weight_kg": 1
+      ]
     },
     {
       "id": "site_153",
@@ -4071,11 +4071,11 @@
       "visit_count": 19,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-07",
+      "weight_kg": 62,
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 12
+      "search_names": []
     },
     {
       "id": "site_154",
@@ -4091,11 +4091,11 @@
       "visit_count": 13,
       "first_visit": "2026-06-09",
       "last_visit": "2026-09-04",
+      "weight_kg": 1,
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_155",
@@ -4111,11 +4111,11 @@
       "visit_count": 11,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-03",
+      "weight_kg": 1,
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_156",
@@ -4131,13 +4131,13 @@
       "visit_count": 25,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-08",
+      "weight_kg": 257,
       "master_course": "房君3",
       "map_course": "房君3",
       "marker_shape": "circle",
       "search_names": [
         "安藤ガラス店 ＨＢ"
-      ],
-      "weight_kg": 11
+      ]
     },
     {
       "id": "site_157",
@@ -4153,11 +4153,11 @@
       "visit_count": 3,
       "first_visit": "2026-07-08",
       "last_visit": "2026-08-19",
+      "weight_kg": 0,
       "master_course": "房木4",
       "map_course": "房木4",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_158",
@@ -4173,11 +4173,11 @@
       "visit_count": 9,
       "first_visit": "2026-07-08",
       "last_visit": "2026-09-09",
+      "weight_kg": 186,
       "master_course": "房木5",
       "map_course": "房木5",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_159",
@@ -4193,11 +4193,11 @@
       "visit_count": 10,
       "first_visit": "2026-06-24",
       "last_visit": "2026-08-25",
+      "weight_kg": 0,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_160",
@@ -4213,11 +4213,11 @@
       "visit_count": 16,
       "first_visit": "2026-06-03",
       "last_visit": "2026-09-09",
+      "weight_kg": 7,
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_161",
@@ -4233,14 +4233,14 @@
       "visit_count": 43,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1062,
       "master_course": "千Cオ",
       "map_course": "千Cオ",
       "marker_shape": "circle",
       "search_names": [
         "（ 株） ＭＩ",
         "ＭＩ"
-      ],
-      "weight_kg": 724
+      ]
     },
     {
       "id": "site_162",
@@ -4256,6 +4256,7 @@
       "visit_count": 11,
       "first_visit": "2026-06-09",
       "last_visit": "2026-08-21",
+      "weight_kg": 0,
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
@@ -4263,8 +4264,7 @@
         "北総トーヨー",
         "北総スリーエフ",
         "相川スリーエフ　北総支店"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_163",
@@ -4280,14 +4280,14 @@
       "visit_count": 1,
       "first_visit": "2026-07-13",
       "last_visit": "2026-07-13",
+      "weight_kg": 0,
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
       "search_names": [
         "ＤＡポット",
         "DAポット"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_164",
@@ -4303,11 +4303,11 @@
       "visit_count": 16,
       "first_visit": "2026-06-04",
       "last_visit": "2026-09-09",
+      "weight_kg": 2,
       "master_course": "柏1H",
       "map_course": "柏1H",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_165",
@@ -4323,11 +4323,11 @@
       "visit_count": 6,
       "first_visit": "2026-06-29",
       "last_visit": "2026-09-09",
+      "weight_kg": 27,
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_166",
@@ -4343,11 +4343,11 @@
       "visit_count": 20,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-09",
+      "weight_kg": 62,
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_167",
@@ -4363,11 +4363,11 @@
       "visit_count": 3,
       "first_visit": "2026-06-29",
       "last_visit": "2026-08-31",
+      "weight_kg": 1,
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": [],
-      "weight_kg": 1
+      "search_names": []
     },
     {
       "id": "site_168",
@@ -4383,13 +4383,13 @@
       "visit_count": 13,
       "first_visit": "2026-06-11",
       "last_visit": "2026-08-31",
+      "weight_kg": 15,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
       "search_names": [
         "ＴＯＴＯエムテック（株）"
-      ],
-      "weight_kg": 15
+      ]
     },
     {
       "id": "site_169",
@@ -4405,14 +4405,14 @@
       "visit_count": 13,
       "first_visit": "2026-06-10",
       "last_visit": "2026-09-08",
+      "weight_kg": 209,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
       "search_names": [
         "（株）誠和 キロ〔村上茂俊４〕",
         "ＤＡ 【 大森倉庫】 イエクス"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_170",
@@ -4428,6 +4428,7 @@
       "visit_count": 32,
       "first_visit": "2026-06-03",
       "last_visit": "2026-09-09",
+      "weight_kg": 566,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -4439,8 +4440,7 @@
         "広海クラシオ 千葉（ ウッディ ）",
         "広海クラシオ 千葉（ ジャパン）",
         "広海クラシオ千葉（木下）"
-      ],
-      "weight_kg": 95
+      ]
     },
     {
       "id": "site_171",
@@ -4456,14 +4456,14 @@
       "visit_count": 17,
       "first_visit": "2026-06-04",
       "last_visit": "2026-09-09",
+      "weight_kg": 229,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
       "search_names": [
         "（ 株） 山一／四関工業入れ",
         "山一/四関工業"
-      ],
-      "weight_kg": 1
+      ]
     },
     {
       "id": "site_172",
@@ -4479,11 +4479,11 @@
       "visit_count": 29,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-09",
+      "weight_kg": 169,
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_173",
@@ -4499,14 +4499,14 @@
       "visit_count": 30,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-04",
+      "weight_kg": 259,
       "master_course": "房君3",
       "map_course": "房君3",
       "marker_shape": "circle",
       "search_names": [
         "（ 有） 杉田アルミ 工業",
         "（有）杉田アルミ（第一支店千葉"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_174",
@@ -4522,14 +4522,14 @@
       "visit_count": 39,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 145,
       "master_course": "房君3",
       "map_course": "房君3",
       "marker_shape": "circle",
       "search_names": [
         "渡辺パイプ千葉南住建",
         "渡辺パイプ千葉南 Ｊ Ｔ Ｍ商事"
-      ],
-      "weight_kg": 122
+      ]
     },
     {
       "id": "site_175",
@@ -4545,14 +4545,14 @@
       "visit_count": 17,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-08",
+      "weight_kg": 51,
       "master_course": "房君3",
       "map_course": "房君3",
       "marker_shape": "circle",
       "search_names": [
         "渡辺サッシ（コメリ）",
         "渡辺サッシ（ コメリ）"
-      ],
-      "weight_kg": 20
+      ]
     },
     {
       "id": "site_176",
@@ -4568,14 +4568,14 @@
       "visit_count": 10,
       "first_visit": "2026-06-02",
       "last_visit": "2026-08-17",
+      "weight_kg": 0,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
       "search_names": [
         "（ 有） 藤木工",
         "（有）藤木工 丸豊建設"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_177",
@@ -4591,14 +4591,14 @@
       "visit_count": 26,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-08",
+      "weight_kg": 22,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
       "search_names": [
         "エコーＳワタＰ柏送り",
         "渡辺パイプ 柏住建ＤＰ配送"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_178",
@@ -4614,13 +4614,13 @@
       "visit_count": 11,
       "first_visit": "2026-06-09",
       "last_visit": "2026-08-31",
+      "weight_kg": 438,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
       "search_names": [
         "末広ガラス"
-      ],
-      "weight_kg": 438
+      ]
     },
     {
       "id": "site_179",
@@ -4636,14 +4636,14 @@
       "visit_count": 26,
       "first_visit": "2026-06-03",
       "last_visit": "2026-09-07",
+      "weight_kg": 281,
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
       "search_names": [
         "ＮＢＰ日板佐原（ 千葉三協）",
         "千葉三協"
-      ],
-      "weight_kg": 175
+      ]
     },
     {
       "id": "site_180",
@@ -4659,13 +4659,13 @@
       "visit_count": 5,
       "first_visit": "2026-06-26",
       "last_visit": "2026-08-17",
+      "weight_kg": 0,
       "master_course": "千E1",
       "map_course": "千E1",
       "marker_shape": "circle",
       "search_names": [
         "相川スリーエフ千葉支店"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_181",
@@ -4681,11 +4681,11 @@
       "visit_count": 4,
       "first_visit": "2026-06-05",
       "last_visit": "2026-08-17",
+      "weight_kg": 0,
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_182",
@@ -4701,13 +4701,13 @@
       "visit_count": 34,
       "first_visit": "2026-06-03",
       "last_visit": "2026-09-09",
+      "weight_kg": 136,
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "circle",
       "search_names": [
         "日の出グリーン建商（ 株） ＨＢ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_183",
@@ -4723,13 +4723,13 @@
       "visit_count": 20,
       "first_visit": "2026-06-04",
       "last_visit": "2026-09-09",
+      "weight_kg": 54,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
       "search_names": [
         "黒沢硝子工業（ 株） 倉庫"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_184",
@@ -4745,11 +4745,11 @@
       "visit_count": 36,
       "first_visit": "2026-06-03",
       "last_visit": "2026-09-09",
+      "weight_kg": 849,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_185",
@@ -4765,11 +4765,11 @@
       "visit_count": 30,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-09",
+      "weight_kg": 587,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_186",
@@ -4785,13 +4785,13 @@
       "visit_count": 18,
       "first_visit": "2026-06-02",
       "last_visit": "2026-08-27",
+      "weight_kg": 0,
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
       "search_names": [
         "藤野トーヨー住器（株）ネクスト"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_187",
@@ -4807,13 +4807,13 @@
       "visit_count": 16,
       "first_visit": "2026-06-04",
       "last_visit": "2026-09-02",
+      "weight_kg": 15,
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
       "search_names": [
         "（ 有） 金高木工所"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_188",
@@ -4829,13 +4829,13 @@
       "visit_count": 16,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 37,
       "master_course": "房君3",
       "map_course": "房君3",
       "marker_shape": "circle",
       "search_names": [
         "元気悠遊 ＪＨ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_189",
@@ -4851,13 +4851,13 @@
       "visit_count": 11,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 1,
       "master_course": "房木4",
       "map_course": "房木4",
       "marker_shape": "circle",
       "search_names": [
         "山田木工（株）"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_190",
@@ -4873,6 +4873,7 @@
       "visit_count": 26,
       "first_visit": "2026-06-05",
       "last_visit": "2026-09-09",
+      "weight_kg": 974,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -4880,8 +4881,7 @@
         "関東Ｇ サンアベニューＭＡＤＯ",
         "（ 有） 関東ガラス店",
         "（有）関東ガラス店 ＭＡＤＯ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_191",
@@ -4897,13 +4897,13 @@
       "visit_count": 35,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 566,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
       "search_names": [
         "ＤＡ流山倉庫イエクス"
-      ],
-      "weight_kg": 49
+      ]
     },
     {
       "id": "site_192",
@@ -4919,13 +4919,13 @@
       "visit_count": 9,
       "first_visit": "2026-06-05",
       "last_visit": "2026-09-04",
+      "weight_kg": 199,
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
       "search_names": [
         "（ 株） 相川スリーエフ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_193",
@@ -4941,11 +4941,11 @@
       "visit_count": 11,
       "first_visit": "2026-05-25",
       "last_visit": "2026-08-19",
+      "weight_kg": 0,
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_194",
@@ -4961,13 +4961,13 @@
       "visit_count": 28,
       "first_visit": "2026-06-03",
       "last_visit": "2026-09-01",
+      "weight_kg": 27,
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
       "search_names": [
         "Ｇテリア"
-      ],
-      "weight_kg": 24
+      ]
     },
     {
       "id": "site_195",
@@ -4983,6 +4983,7 @@
       "visit_count": 20,
       "first_visit": "2026-06-03",
       "last_visit": "2026-09-09",
+      "weight_kg": 222,
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
@@ -4991,8 +4992,7 @@
         "内山硝子（ 株） 茂原十倉",
         "内山硝子十倉",
         "内山硝子 十倉"
-      ],
-      "weight_kg": 3
+      ]
     },
     {
       "id": "site_196",
@@ -5008,13 +5008,13 @@
       "visit_count": 5,
       "first_visit": "2026-06-10",
       "last_visit": "2026-07-09",
+      "weight_kg": 0,
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
       "search_names": [
         "ＤＡ 【 大清水】 伸栄総合物流"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_197",
@@ -5030,13 +5030,13 @@
       "visit_count": 9,
       "first_visit": "2026-06-24",
       "last_visit": "2026-09-03",
+      "weight_kg": 19,
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
       "search_names": [
         "日板佐原（千葉Ａ）"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_198",
@@ -5052,14 +5052,14 @@
       "visit_count": 10,
       "first_visit": "2026-06-11",
       "last_visit": "2026-09-03",
+      "weight_kg": 7,
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
       "search_names": [
         "ヨドハン（ＣＨＥＸ茂原店",
         "（株）大仙＊カインズ茂原"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_199",
@@ -5075,11 +5075,11 @@
       "visit_count": 8,
       "first_visit": "2026-05-25",
       "last_visit": "2026-07-15",
+      "weight_kg": 0,
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_200",
@@ -5095,13 +5095,13 @@
       "visit_count": 6,
       "first_visit": "2026-06-10",
       "last_visit": "2026-09-02",
+      "weight_kg": 4,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
       "search_names": [
         "（ 株） コメリ ＰＷ四街道"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_201",
@@ -5117,11 +5117,11 @@
       "visit_count": 2,
       "first_visit": "2026-06-25",
       "last_visit": "2026-07-16",
+      "weight_kg": 0,
       "master_course": "柏3V",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_202",
@@ -5137,11 +5137,11 @@
       "visit_count": 7,
       "first_visit": "2026-06-04",
       "last_visit": "2026-09-08",
+      "weight_kg": 35,
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_203",
@@ -5157,14 +5157,14 @@
       "visit_count": 13,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-09",
+      "weight_kg": 215,
       "master_course": "柏3X",
       "map_course": "柏1H",
       "marker_shape": "circle",
       "search_names": [
         "ヨドハン千葉（ＥＸ鏑木）",
         "ＥX鏑木"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_204",
@@ -5180,11 +5180,11 @@
       "visit_count": 2,
       "first_visit": "2026-06-04",
       "last_visit": "2026-06-25",
+      "weight_kg": 0,
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_205",
@@ -5200,11 +5200,11 @@
       "visit_count": 4,
       "first_visit": "2026-06-25",
       "last_visit": "2026-07-23",
+      "weight_kg": 0,
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_206",
@@ -5220,6 +5220,7 @@
       "visit_count": 31,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 283,
       "master_course": "房木5",
       "map_course": "房木5",
       "marker_shape": "circle",
@@ -5227,8 +5228,7 @@
         "（株）新明 ＭＡＤＯ",
         "（ 株） 新明 ＭＡＤＯ",
         "（ 株） 新明（ 開拓）"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_207",
@@ -5244,14 +5244,14 @@
       "visit_count": 10,
       "first_visit": "2026-06-11",
       "last_visit": "2026-08-19",
+      "weight_kg": 0,
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
       "search_names": [
         "コメリPW野田",
         "コメリＰＷ野田"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_208",
@@ -5267,14 +5267,14 @@
       "visit_count": 7,
       "first_visit": "2026-06-09",
       "last_visit": "2026-09-08",
+      "weight_kg": 1,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
       "search_names": [
         "ロイヤルHC習志野",
         "ロイヤル習志野"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_209",
@@ -5290,14 +5290,14 @@
       "visit_count": 18,
       "first_visit": "2026-06-10",
       "last_visit": "2026-08-31",
+      "weight_kg": 3,
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
       "search_names": [
         "内山硝子（ 株） 茂原大坂Ｄ",
         "内山硝子（株）茂原大坂Ｊ旭"
-      ],
-      "weight_kg": 3
+      ]
     },
     {
       "id": "site_210",
@@ -5313,13 +5313,13 @@
       "visit_count": 11,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-01",
+      "weight_kg": 7,
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
       "search_names": [
         "井上建装"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_211",
@@ -5335,13 +5335,13 @@
       "visit_count": 8,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-02",
+      "weight_kg": 1,
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
       "search_names": [
         "竹屋成田"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_212",
@@ -5357,6 +5357,7 @@
       "visit_count": 25,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-07",
+      "weight_kg": 756,
       "master_course": "千G3",
       "map_course": "千G3",
       "marker_shape": "circle",
@@ -5365,8 +5366,7 @@
         "（株）さとう商店（検見川Ｒ）",
         "（ 株） さとう商店",
         "（ 株） さとう商店 ニッカホーム"
-      ],
-      "weight_kg": 123
+      ]
     },
     {
       "id": "site_213",
@@ -5382,11 +5382,11 @@
       "visit_count": 11,
       "first_visit": "2026-05-25",
       "last_visit": "2026-08-28",
+      "weight_kg": 0,
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_214",
@@ -5402,11 +5402,11 @@
       "visit_count": 6,
       "first_visit": "2026-06-24",
       "last_visit": "2026-09-09",
+      "weight_kg": 78,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_215",
@@ -5422,11 +5422,11 @@
       "visit_count": 0,
       "first_visit": null,
       "last_visit": null,
+      "weight_kg": 0,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_216",
@@ -5442,11 +5442,11 @@
       "visit_count": 2,
       "first_visit": "2026-06-24",
       "last_visit": "2026-09-07",
+      "weight_kg": 3,
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_217",
@@ -5462,11 +5462,11 @@
       "visit_count": 3,
       "first_visit": "2026-06-17",
       "last_visit": "2026-08-25",
+      "weight_kg": 0,
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_218",
@@ -5482,14 +5482,14 @@
       "visit_count": 6,
       "first_visit": "2026-06-09",
       "last_visit": "2026-09-08",
+      "weight_kg": 15,
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
       "marker_shape": "circle",
       "search_names": [
         "（株）ひらい 特販課",
         "（株）ひらい　住宅部"
-      ],
-      "weight_kg": 14
+      ]
     },
     {
       "id": "site_219",
@@ -5505,11 +5505,11 @@
       "visit_count": 4,
       "first_visit": "2026-06-18",
       "last_visit": "2026-07-15",
+      "weight_kg": 0,
       "master_course": "房木4",
       "map_course": "房木4",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_220",
@@ -5525,11 +5525,11 @@
       "visit_count": 7,
       "first_visit": "2026-06-04",
       "last_visit": "2026-08-31",
+      "weight_kg": 163,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 163
+      "search_names": []
     },
     {
       "id": "site_221",
@@ -5545,11 +5545,11 @@
       "visit_count": 5,
       "first_visit": "2026-06-08",
       "last_visit": "2026-08-07",
+      "weight_kg": 0,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_222",
@@ -5565,13 +5565,13 @@
       "visit_count": 12,
       "first_visit": "2026-06-10",
       "last_visit": "2026-08-27",
+      "weight_kg": 0,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
       "search_names": [
         "日昭（ 株） 都賀入れ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_223",
@@ -5587,13 +5587,13 @@
       "visit_count": 22,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-04",
+      "weight_kg": 28,
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
       "search_names": [
         "大藤硝子"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_224",
@@ -5609,11 +5609,11 @@
       "visit_count": 11,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 35,
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_225",
@@ -5629,13 +5629,13 @@
       "visit_count": 18,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-09",
+      "weight_kg": 17,
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
       "search_names": [
         "ＡＧＧ木更津 広井ト ーヨー"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_226",
@@ -5651,11 +5651,11 @@
       "visit_count": 25,
       "first_visit": "2026-06-04",
       "last_visit": "2026-09-09",
+      "weight_kg": 182,
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_227",
@@ -5671,11 +5671,11 @@
       "visit_count": 13,
       "first_visit": "2026-05-25",
       "last_visit": "2026-08-28",
+      "weight_kg": 0,
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_228",
@@ -5691,14 +5691,14 @@
       "visit_count": 14,
       "first_visit": "2026-06-08",
       "last_visit": "2026-09-08",
+      "weight_kg": 234,
       "master_course": "房木5",
       "map_course": "房木5",
       "marker_shape": "circle",
       "search_names": [
         "（株）アルシス ユウワ企画送り",
         "（株）ユウワ企画（サンユー）"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_229",
@@ -5714,11 +5714,11 @@
       "visit_count": 16,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-08",
+      "weight_kg": 358,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_230",
@@ -5734,13 +5734,13 @@
       "visit_count": 11,
       "first_visit": "2026-06-03",
       "last_visit": "2026-09-04",
+      "weight_kg": 63,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
       "search_names": [
         "マテックス柏船橋トーヨー"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_231",
@@ -5756,13 +5756,13 @@
       "visit_count": 5,
       "first_visit": "2026-06-19",
       "last_visit": "2026-07-23",
+      "weight_kg": 0,
       "master_course": "千G3",
       "map_course": "千G3",
       "marker_shape": "circle",
       "search_names": [
         "カインズ 船橋習志野店 資材館"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_232",
@@ -5778,11 +5778,11 @@
       "visit_count": 4,
       "first_visit": "2026-05-25",
       "last_visit": "2026-07-21",
+      "weight_kg": 0,
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_233",
@@ -5798,11 +5798,11 @@
       "visit_count": 1,
       "first_visit": "2026-06-22",
       "last_visit": "2026-06-22",
+      "weight_kg": 0,
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_234",
@@ -5818,14 +5818,14 @@
       "visit_count": 10,
       "first_visit": "2026-06-04",
       "last_visit": "2026-09-03",
+      "weight_kg": 1,
       "master_course": "柏3X",
       "map_course": "柏1H",
       "marker_shape": "circle",
       "search_names": [
         "コメリＰＷ旭",
         "コメリ旭"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_235",
@@ -5841,11 +5841,11 @@
       "visit_count": 3,
       "first_visit": "2026-06-10",
       "last_visit": "2026-07-09",
+      "weight_kg": 0,
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_236",
@@ -5861,6 +5861,7 @@
       "visit_count": 18,
       "first_visit": "2026-06-04",
       "last_visit": "2026-09-03",
+      "weight_kg": 633,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
@@ -5868,8 +5869,7 @@
         "（ 株） イイダ",
         "（株）イイダ",
         "イイダ"
-      ],
-      "weight_kg": 396
+      ]
     },
     {
       "id": "site_237",
@@ -5885,11 +5885,11 @@
       "visit_count": 1,
       "first_visit": "2026-06-19",
       "last_visit": "2026-06-19",
+      "weight_kg": 0,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_238",
@@ -5905,11 +5905,11 @@
       "visit_count": 6,
       "first_visit": "2026-06-19",
       "last_visit": "2026-09-03",
+      "weight_kg": 12,
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_239",
@@ -5925,11 +5925,11 @@
       "visit_count": 11,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-07",
+      "weight_kg": 207,
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_240",
@@ -5945,11 +5945,11 @@
       "visit_count": 9,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-03",
+      "weight_kg": 3,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_241",
@@ -5965,11 +5965,11 @@
       "visit_count": 2,
       "first_visit": "2026-06-03",
       "last_visit": "2026-06-19",
+      "weight_kg": 0,
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_242",
@@ -5985,11 +5985,11 @@
       "visit_count": 19,
       "first_visit": "2026-06-18",
       "last_visit": "2026-09-07",
+      "weight_kg": 203,
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 14
+      "search_names": []
     },
     {
       "id": "site_243",
@@ -6005,13 +6005,13 @@
       "visit_count": 8,
       "first_visit": "2026-06-03",
       "last_visit": "2026-08-20",
+      "weight_kg": 0,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
       "search_names": [
         "渡辺パイプ佐倉"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_244",
@@ -6027,11 +6027,11 @@
       "visit_count": 2,
       "first_visit": "2026-06-18",
       "last_visit": "2026-09-03",
+      "weight_kg": 40,
       "master_course": "柏3V",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_245",
@@ -6047,13 +6047,13 @@
       "visit_count": 3,
       "first_visit": "2026-05-25",
       "last_visit": "2026-07-15",
+      "weight_kg": 0,
       "master_course": "柏3V",
       "map_course": "柏2T.5O",
       "marker_shape": "circle",
       "search_names": [
         "ヨドハン（ＣＨＥＸプラザ市原店"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_246",
@@ -6069,11 +6069,11 @@
       "visit_count": 1,
       "first_visit": "2026-06-18",
       "last_visit": "2026-06-18",
+      "weight_kg": 0,
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_247",
@@ -6089,11 +6089,11 @@
       "visit_count": 13,
       "first_visit": "2026-05-25",
       "last_visit": "2026-08-06",
+      "weight_kg": 0,
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_248",
@@ -6109,11 +6109,11 @@
       "visit_count": 1,
       "first_visit": "2026-06-17",
       "last_visit": "2026-06-17",
+      "weight_kg": 0,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_249",
@@ -6129,13 +6129,13 @@
       "visit_count": 3,
       "first_visit": "2026-06-17",
       "last_visit": "2026-08-06",
+      "weight_kg": 0,
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
       "search_names": [
         "DA伊藤建設"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_250",
@@ -6151,13 +6151,13 @@
       "visit_count": 3,
       "first_visit": "2026-06-12",
       "last_visit": "2026-06-29",
+      "weight_kg": 0,
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
       "search_names": [
         "渡辺パイプ佐原（ ミ ナミ 産業）"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_251",
@@ -6173,13 +6173,13 @@
       "visit_count": 5,
       "first_visit": "2026-05-25",
       "last_visit": "2026-08-26",
+      "weight_kg": 0,
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
       "search_names": [
         "リアルプロダクツ（コメリ野田）"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_252",
@@ -6195,11 +6195,11 @@
       "visit_count": 6,
       "first_visit": "2026-06-12",
       "last_visit": "2026-09-07",
+      "weight_kg": 153,
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 1
+      "search_names": []
     },
     {
       "id": "site_253",
@@ -6215,11 +6215,11 @@
       "visit_count": 2,
       "first_visit": "2026-06-12",
       "last_visit": "2026-09-09",
+      "weight_kg": 1,
       "master_course": "千G3",
       "map_course": "千G3",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_254",
@@ -6235,13 +6235,13 @@
       "visit_count": 16,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-07",
+      "weight_kg": 296,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
       "search_names": [
         "リオン（安井工業）"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_255",
@@ -6257,14 +6257,14 @@
       "visit_count": 6,
       "first_visit": "2026-06-12",
       "last_visit": "2026-08-27",
+      "weight_kg": 0,
       "master_course": "柏3X",
       "map_course": "柏1H",
       "marker_shape": "circle",
       "search_names": [
         "ＤＡエクステリアオオカワ",
         "オオカワ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_256",
@@ -6280,11 +6280,11 @@
       "visit_count": 5,
       "first_visit": "2026-06-11",
       "last_visit": "2026-08-31",
+      "weight_kg": 11,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 11
+      "search_names": []
     },
     {
       "id": "site_257",
@@ -6300,11 +6300,11 @@
       "visit_count": 1,
       "first_visit": "2026-06-11",
       "last_visit": "2026-06-11",
+      "weight_kg": 0,
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_258",
@@ -6320,11 +6320,11 @@
       "visit_count": 4,
       "first_visit": "2026-06-04",
       "last_visit": "2026-09-03",
+      "weight_kg": 1,
       "master_course": "柏1H",
       "map_course": "柏1H",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_259",
@@ -6340,11 +6340,11 @@
       "visit_count": 7,
       "first_visit": "2026-06-10",
       "last_visit": "2026-09-04",
+      "weight_kg": 3,
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_260",
@@ -6360,11 +6360,11 @@
       "visit_count": 4,
       "first_visit": "2026-06-04",
       "last_visit": "2026-08-27",
+      "weight_kg": 0,
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_261",
@@ -6380,14 +6380,14 @@
       "visit_count": 9,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-02",
+      "weight_kg": 102,
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
       "search_names": [
         "（有）リアルプロダクツ 倉庫",
         "ＤＡ（有）リアルプロダクツ中峠"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_262",
@@ -6403,13 +6403,13 @@
       "visit_count": 3,
       "first_visit": "2026-06-10",
       "last_visit": "2026-07-22",
+      "weight_kg": 0,
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
       "search_names": [
         "（有）篠塚木工"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_263",
@@ -6425,13 +6425,13 @@
       "visit_count": 5,
       "first_visit": "2026-06-02",
       "last_visit": "2026-06-10",
+      "weight_kg": 0,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
       "search_names": [
         "さくら住建（旧本社入れ）"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_264",
@@ -6447,6 +6447,7 @@
       "visit_count": 9,
       "first_visit": "2026-06-08",
       "last_visit": "2026-08-21",
+      "weight_kg": 0,
       "master_course": "千Cオ",
       "map_course": "千Cオ",
       "marker_shape": "circle",
@@ -6454,8 +6455,7 @@
         "（株）相川スリーエフ 柏支店",
         "相川スリーエフ　柏支店",
         "相川スリーエフ柏支店"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_265",
@@ -6471,11 +6471,11 @@
       "visit_count": 3,
       "first_visit": "2026-06-10",
       "last_visit": "2026-08-05",
+      "weight_kg": 0,
       "master_course": "柏1H",
       "map_course": "柏1H",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_266",
@@ -6491,13 +6491,13 @@
       "visit_count": 11,
       "first_visit": "2026-06-08",
       "last_visit": "2026-08-24",
+      "weight_kg": 0,
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
       "search_names": [
         "（株）オシダリ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_267",
@@ -6513,11 +6513,11 @@
       "visit_count": 2,
       "first_visit": "2026-06-09",
       "last_visit": "2026-09-04",
+      "weight_kg": 58,
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_268",
@@ -6533,13 +6533,13 @@
       "visit_count": 5,
       "first_visit": "2026-06-09",
       "last_visit": "2026-08-17",
+      "weight_kg": 0,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
       "search_names": [
         "セディアトランスポート千葉"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_269",
@@ -6555,11 +6555,11 @@
       "visit_count": 4,
       "first_visit": "2026-06-09",
       "last_visit": "2026-08-17",
+      "weight_kg": 0,
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_270",
@@ -6575,11 +6575,11 @@
       "visit_count": 2,
       "first_visit": "2026-06-08",
       "last_visit": "2026-08-04",
+      "weight_kg": 0,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_271",
@@ -6595,11 +6595,11 @@
       "visit_count": 2,
       "first_visit": "2026-06-08",
       "last_visit": "2026-07-31",
+      "weight_kg": 0,
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_272",
@@ -6615,11 +6615,11 @@
       "visit_count": 6,
       "first_visit": "2026-05-25",
       "last_visit": "2026-08-07",
+      "weight_kg": 0,
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_273",
@@ -6635,11 +6635,11 @@
       "visit_count": 11,
       "first_visit": "2026-06-08",
       "last_visit": "2026-09-08",
+      "weight_kg": 59,
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_274",
@@ -6655,11 +6655,11 @@
       "visit_count": 3,
       "first_visit": "2026-06-05",
       "last_visit": "2026-07-21",
+      "weight_kg": 0,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_275",
@@ -6675,11 +6675,11 @@
       "visit_count": 4,
       "first_visit": "2026-06-05",
       "last_visit": "2026-08-20",
+      "weight_kg": 0,
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_276",
@@ -6695,11 +6695,11 @@
       "visit_count": 1,
       "first_visit": "2026-06-05",
       "last_visit": "2026-06-05",
+      "weight_kg": 0,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_277",
@@ -6715,11 +6715,11 @@
       "visit_count": 2,
       "first_visit": "2026-06-02",
       "last_visit": "2026-06-05",
+      "weight_kg": 0,
       "master_course": "房君3",
       "map_course": "房君3",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_278",
@@ -6735,11 +6735,11 @@
       "visit_count": 4,
       "first_visit": "2026-06-04",
       "last_visit": "2026-08-28",
+      "weight_kg": 0,
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_279",
@@ -6755,13 +6755,13 @@
       "visit_count": 4,
       "first_visit": "2026-06-04",
       "last_visit": "2026-09-03",
+      "weight_kg": 1,
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
       "search_names": [
         "カインズホーム八街"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_280",
@@ -6777,11 +6777,11 @@
       "visit_count": 1,
       "first_visit": "2026-06-04",
       "last_visit": "2026-06-04",
+      "weight_kg": 0,
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_281",
@@ -6797,11 +6797,11 @@
       "visit_count": 9,
       "first_visit": "2026-06-03",
       "last_visit": "2026-09-08",
+      "weight_kg": 57,
       "master_course": "房木4",
       "map_course": "房木4",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_282",
@@ -6817,11 +6817,11 @@
       "visit_count": 2,
       "first_visit": "2026-06-04",
       "last_visit": "2026-08-27",
+      "weight_kg": 0,
       "master_course": "房木5",
       "map_course": "房木5",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_283",
@@ -6837,11 +6837,11 @@
       "visit_count": 2,
       "first_visit": "2026-06-03",
       "last_visit": "2026-07-21",
+      "weight_kg": 0,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_284",
@@ -6857,11 +6857,11 @@
       "visit_count": 8,
       "first_visit": "2026-06-03",
       "last_visit": "2026-08-25",
+      "weight_kg": 0,
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_285",
@@ -6877,11 +6877,11 @@
       "visit_count": 1,
       "first_visit": "2026-06-03",
       "last_visit": "2026-06-03",
+      "weight_kg": 0,
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_286",
@@ -6897,13 +6897,13 @@
       "visit_count": 3,
       "first_visit": "2026-06-02",
       "last_visit": "2026-08-31",
+      "weight_kg": 1,
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
       "search_names": [
         "（株）大仙＊カインズ千葉Ｎ"
-      ],
-      "weight_kg": 1
+      ]
     },
     {
       "id": "site_287",
@@ -6919,11 +6919,11 @@
       "visit_count": 2,
       "first_visit": "2026-06-02",
       "last_visit": "2026-07-31",
+      "weight_kg": 0,
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_288",
@@ -6939,11 +6939,11 @@
       "visit_count": 4,
       "first_visit": "2026-06-02",
       "last_visit": "2026-09-02",
+      "weight_kg": 267,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_289",
@@ -6959,14 +6959,14 @@
       "visit_count": 6,
       "first_visit": "2026-07-09",
       "last_visit": "2026-09-03",
+      "weight_kg": 64,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
       "search_names": [
         "日本梱包運輸倉庫（特需デポ）",
         "日本梱包"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_290",
@@ -6982,11 +6982,11 @@
       "visit_count": 2,
       "first_visit": "2026-07-09",
       "last_visit": "2026-07-24",
+      "weight_kg": 0,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_291",
@@ -7002,11 +7002,11 @@
       "visit_count": 5,
       "first_visit": "2026-07-10",
       "last_visit": "2026-09-04",
+      "weight_kg": 155,
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_292",
@@ -7022,11 +7022,11 @@
       "visit_count": 2,
       "first_visit": "2026-07-10",
       "last_visit": "2026-07-13",
+      "weight_kg": 0,
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_293",
@@ -7042,13 +7042,13 @@
       "visit_count": 4,
       "first_visit": "2026-05-25",
       "last_visit": "2026-08-17",
+      "weight_kg": 0,
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
       "search_names": [
         "ＤＡガーデンリフォーム自宅"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_294",
@@ -7064,11 +7064,11 @@
       "visit_count": 3,
       "first_visit": "2026-07-14",
       "last_visit": "2026-09-09",
+      "weight_kg": 683,
       "master_course": "房木5",
       "map_course": "房木5",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_295",
@@ -7084,11 +7084,11 @@
       "visit_count": 3,
       "first_visit": "2026-07-15",
       "last_visit": "2026-08-19",
+      "weight_kg": 0,
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_296",
@@ -7104,13 +7104,13 @@
       "visit_count": 1,
       "first_visit": "2026-07-16",
       "last_visit": "2026-07-16",
+      "weight_kg": 0,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
       "search_names": [
         "大仙ＪＨＲ八千代"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_297",
@@ -7126,11 +7126,11 @@
       "visit_count": 2,
       "first_visit": "2026-07-16",
       "last_visit": "2026-09-03",
+      "weight_kg": 2,
       "master_course": "房君3",
       "map_course": "房君3",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_298",
@@ -7146,11 +7146,11 @@
       "visit_count": 1,
       "first_visit": "2026-07-22",
       "last_visit": "2026-07-22",
+      "weight_kg": 0,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_299",
@@ -7166,11 +7166,11 @@
       "visit_count": 3,
       "first_visit": "2026-07-17",
       "last_visit": "2026-08-03",
+      "weight_kg": 0,
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_300",
@@ -7186,11 +7186,11 @@
       "visit_count": 1,
       "first_visit": "2026-07-22",
       "last_visit": "2026-07-22",
+      "weight_kg": 0,
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_301",
@@ -7206,13 +7206,13 @@
       "visit_count": 1,
       "first_visit": "2026-07-23",
       "last_visit": "2026-07-23",
+      "weight_kg": 0,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
       "search_names": [
         "カインズ佐倉"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_302",
@@ -7228,11 +7228,11 @@
       "visit_count": 1,
       "first_visit": "2026-07-23",
       "last_visit": "2026-07-23",
+      "weight_kg": 0,
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_303",
@@ -7248,11 +7248,11 @@
       "visit_count": 1,
       "first_visit": "2026-07-23",
       "last_visit": "2026-07-23",
+      "weight_kg": 0,
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_304",
@@ -7268,11 +7268,11 @@
       "visit_count": 2,
       "first_visit": "2026-07-27",
       "last_visit": "2026-08-06",
+      "weight_kg": 0,
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_305",
@@ -7288,11 +7288,11 @@
       "visit_count": 4,
       "first_visit": "2026-05-25",
       "last_visit": "2026-09-03",
+      "weight_kg": 101,
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_306",
@@ -7308,11 +7308,11 @@
       "visit_count": 1,
       "first_visit": "2026-07-28",
       "last_visit": "2026-07-28",
+      "weight_kg": 0,
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_307",
@@ -7328,11 +7328,11 @@
       "visit_count": 1,
       "first_visit": "2026-07-29",
       "last_visit": "2026-07-29",
+      "weight_kg": 0,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_308",
@@ -7348,11 +7348,11 @@
       "visit_count": 1,
       "first_visit": "2026-07-29",
       "last_visit": "2026-07-29",
+      "weight_kg": 0,
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_309",
@@ -7368,11 +7368,11 @@
       "visit_count": 4,
       "first_visit": "2026-07-30",
       "last_visit": "2026-08-06",
+      "weight_kg": 0,
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_310",
@@ -7388,6 +7388,7 @@
       "visit_count": 2,
       "first_visit": "2026-07-31",
       "last_visit": "2026-09-07",
+      "weight_kg": 3,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
@@ -7395,8 +7396,7 @@
         "さくら住建（株）Ａ",
         "さくら住建（株）上",
         "さくら住建（上）"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_311",
@@ -7412,11 +7412,11 @@
       "visit_count": 1,
       "first_visit": "2026-08-03",
       "last_visit": "2026-08-03",
+      "weight_kg": 0,
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_312",
@@ -7432,11 +7432,11 @@
       "visit_count": 3,
       "first_visit": "2026-08-04",
       "last_visit": "2026-08-17",
+      "weight_kg": 0,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_313",
@@ -7452,13 +7452,13 @@
       "visit_count": 1,
       "first_visit": "2026-08-04",
       "last_visit": "2026-08-04",
+      "weight_kg": 0,
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
       "search_names": [
         "吉丸製作所"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_314",
@@ -7474,13 +7474,13 @@
       "visit_count": 3,
       "first_visit": "2026-08-06",
       "last_visit": "2026-08-21",
+      "weight_kg": 0,
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
       "search_names": [
         "ＤＡ十余二FourthＧ"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_315",
@@ -7496,11 +7496,11 @@
       "visit_count": 2,
       "first_visit": "2026-08-06",
       "last_visit": "2026-09-07",
+      "weight_kg": 11,
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_316",
@@ -7516,11 +7516,11 @@
       "visit_count": 2,
       "first_visit": "2026-08-07",
       "last_visit": "2026-08-27",
+      "weight_kg": 0,
       "master_course": "房木4",
       "map_course": "房木4",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_317",
@@ -7536,11 +7536,11 @@
       "visit_count": 1,
       "first_visit": "2026-08-07",
       "last_visit": "2026-08-07",
+      "weight_kg": 0,
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_318",
@@ -7556,11 +7556,11 @@
       "visit_count": 6,
       "first_visit": "2026-08-17",
       "last_visit": "2026-09-02",
+      "weight_kg": 63,
       "master_course": "房木5",
       "map_course": "房木5",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 39
+      "search_names": []
     },
     {
       "id": "site_319",
@@ -7576,11 +7576,11 @@
       "visit_count": 2,
       "first_visit": "2026-08-19",
       "last_visit": "2026-09-08",
+      "weight_kg": 116,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_320",
@@ -7596,13 +7596,13 @@
       "visit_count": 3,
       "first_visit": "2026-07-17",
       "last_visit": "2026-08-27",
+      "weight_kg": 0,
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
       "search_names": [
         "嶋野木工"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_321",
@@ -7618,11 +7618,11 @@
       "visit_count": 1,
       "first_visit": "2026-08-20",
       "last_visit": "2026-08-20",
+      "weight_kg": 0,
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_322",
@@ -7638,11 +7638,11 @@
       "visit_count": 1,
       "first_visit": "2026-08-20",
       "last_visit": "2026-08-20",
+      "weight_kg": 0,
       "master_course": "柏1H",
       "map_course": "柏1H",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_323",
@@ -7658,11 +7658,11 @@
       "visit_count": 1,
       "first_visit": "2026-08-21",
       "last_visit": "2026-08-21",
+      "weight_kg": 0,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_324",
@@ -7678,11 +7678,11 @@
       "visit_count": 2,
       "first_visit": "2026-05-25",
       "last_visit": "2026-08-25",
+      "weight_kg": 0,
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_325",
@@ -7698,11 +7698,11 @@
       "visit_count": 5,
       "first_visit": "2026-08-26",
       "last_visit": "2026-09-08",
+      "weight_kg": 219,
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 49
+      "search_names": []
     },
     {
       "id": "site_326",
@@ -7718,11 +7718,11 @@
       "visit_count": 1,
       "first_visit": "2026-08-27",
       "last_visit": "2026-08-27",
+      "weight_kg": 0,
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_327",
@@ -7738,13 +7738,13 @@
       "visit_count": 1,
       "first_visit": "2026-08-28",
       "last_visit": "2026-08-28",
+      "weight_kg": 0,
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
       "search_names": [
         "DA習志野建材"
-      ],
-      "weight_kg": 0
+      ]
     },
     {
       "id": "site_328",
@@ -7760,11 +7760,11 @@
       "visit_count": 2,
       "first_visit": "2026-08-31",
       "last_visit": "2026-09-08",
+      "weight_kg": 302,
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 104
+      "search_names": []
     },
     {
       "id": "site_329",
@@ -7780,13 +7780,13 @@
       "visit_count": 1,
       "first_visit": "2026-08-31",
       "last_visit": "2026-08-31",
+      "weight_kg": 329,
       "master_course": "千E1",
       "map_course": "千E1",
       "marker_shape": "circle",
       "search_names": [
         "フジセイコー（株）千葉支店"
-      ],
-      "weight_kg": 329
+      ]
     },
     {
       "id": "site_330",
@@ -7802,11 +7802,11 @@
       "visit_count": 1,
       "first_visit": "2026-09-04",
       "last_visit": "2026-09-04",
+      "weight_kg": 95,
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "site_331",
@@ -7822,11 +7822,11 @@
       "visit_count": 1,
       "first_visit": "2026-09-09",
       "last_visit": "2026-09-09",
+      "weight_kg": 1,
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": [],
-      "weight_kg": 0
+      "search_names": []
     },
     {
       "id": "virtual_maruo_y",
@@ -7849,6 +7849,8 @@
   ],
   "visit_period_start": "2026-05-25",
   "visit_period_end": "2026-09-09",
+  "weight_period_start": "2026-09-01",
+  "weight_period_end": "2026-09-10",
   "course_merges": {
     "柏2T.5O": {
       "label": "柏2T+5O",
@@ -8084,7 +8086,5 @@
     "柏2T.5O",
     "柏1I.5P",
     "柏3V車立て"
-  ],
-  "weight_period_start": "2026-09-01",
-  "weight_period_end": "2026-09-01"
+  ]
 }
