@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-09T15:07:08",
+  "generated": "2026-09-09T17:19:05",
   "map_variant": "社内",
   "map_variant_label": "伊藤商事専用（社内）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
@@ -155,7 +155,8 @@
       "marker_shape": "circle",
       "search_names": [
         "共栄千葉流山 八日市場納"
-      ]
+      ],
+      "weight_kg": 351
     },
     {
       "id": "site_1",
@@ -187,7 +188,8 @@
         "（ 有） 小川ガラス店 Ｎ−Ｈ",
         "（ 有） 小川ガラス店（ Ｒ＋Ｔ Ｋ）",
         "（有）小川ガラス店（Ｒ＋ＴＫ）"
-      ]
+      ],
+      "weight_kg": 591
     },
     {
       "id": "site_2",
@@ -208,7 +210,8 @@
       "marker_shape": "circle",
       "search_names": [
         "（株）カネハン"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_3",
@@ -230,7 +233,8 @@
       "search_names": [
         "島田ガラス店（ＫＫＭ）ＭＡＤＯ",
         "島田ガラス店（ＫＫＭ）"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_4",
@@ -251,7 +255,8 @@
       "marker_shape": "triangle",
       "search_names": [
         "（有）丸八住建ＭＡＤＯ"
-      ]
+      ],
+      "weight_kg": 2
     },
     {
       "id": "site_5",
@@ -272,7 +277,8 @@
       "marker_shape": "triangle",
       "search_names": [
         "（株）誠和 キロ〔野老亮輔〕"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_6",
@@ -294,7 +300,8 @@
       "search_names": [
         "ＤＡ上林】 エクステリアＭｏ ｂ ｂ",
         "ＤＡ【上林】エクステリア小笠原"
-      ]
+      ],
+      "weight_kg": 76
     },
     {
       "id": "site_7",
@@ -322,7 +329,8 @@
         "イガリアルミ コサキ建設",
         "（株）イガリアルミ　ピカいち",
         "イガリアルミ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_8",
@@ -343,7 +351,8 @@
       "marker_shape": "triangle",
       "search_names": [
         "茂原市腰当"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_9",
@@ -362,7 +371,8 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 1
     },
     {
       "id": "site_10",
@@ -383,7 +393,8 @@
       "marker_shape": "triangle",
       "search_names": [
         "桶庄トーヨー住器（株）"
-      ]
+      ],
+      "weight_kg": 1
     },
     {
       "id": "site_11",
@@ -410,7 +421,8 @@
         "（ 有） 川商アルミ 建材",
         "（ 有） 川商アルミ 建材 御園建設",
         "（ 有） 川商アルミ 建材 モト ヨシ"
-      ]
+      ],
+      "weight_kg": 122
     },
     {
       "id": "site_12",
@@ -436,7 +448,8 @@
         "群峰アクシア千葉（ アーバンＥＸ",
         "Ｍ 大仙（ 群峰アクシア千葉）",
         "群峰アクシア千葉"
-      ]
+      ],
+      "weight_kg": 166
     },
     {
       "id": "site_13",
@@ -459,7 +472,8 @@
         "（株）関東 千葉支店",
         "（ 株） 関東 千葉支店",
         "関東千葉"
-      ]
+      ],
+      "weight_kg": 521
     },
     {
       "id": "site_14",
@@ -483,7 +497,8 @@
         "協栄ジェネックス（ 株） 千葉",
         "協栄ジェネックス",
         "協栄ジェネクス"
-      ]
+      ],
+      "weight_kg": 50
     },
     {
       "id": "site_15",
@@ -508,7 +523,8 @@
         "（ 株） 林屋 千葉営業所",
         "（株）林屋 ＴＭＴ",
         "林屋千葉"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_16",
@@ -532,7 +548,8 @@
         "（ 株） メイク東関東支店",
         "Ｍ 大仙（メイクヒガシカント）",
         "メイク東関東"
-      ]
+      ],
+      "weight_kg": 804
     },
     {
       "id": "site_17",
@@ -554,7 +571,8 @@
       "search_names": [
         "藤野トーヨー住器（株）市原支店",
         "藤野ト ーヨー住器（ 株） 市原支店"
-      ]
+      ],
+      "weight_kg": 159
     },
     {
       "id": "site_18",
@@ -587,7 +605,8 @@
         "ＮＢＰ日板Ｓ＆Ｓ千葉 ひらい",
         "ＮＢＰ日板千葉 フジセイコー",
         "ＮＢＰ日板Ｓ＆Ｓ千葉 フジコー"
-      ]
+      ],
+      "weight_kg": 424
     },
     {
       "id": "site_19",
@@ -606,7 +625,8 @@
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_20",
@@ -627,7 +647,8 @@
       "marker_shape": "circle",
       "search_names": [
         "（株）マルウ（唐沢エクステリア"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_21",
@@ -656,7 +677,8 @@
         "文化シヤッター／住建千葉工事",
         "文化シヤッター 住建千葉配送Ｃ",
         "文化シヤッター（タマ）住建千葉"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_22",
@@ -677,7 +699,8 @@
       "marker_shape": "circle",
       "search_names": [
         "フジ産業（株）千葉北事業所"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_23",
@@ -704,7 +727,8 @@
         "（株）山善（エヌ・イーＣ）",
         "山善エヌイー",
         "山善エヌ・イー"
-      ]
+      ],
+      "weight_kg": 8
     },
     {
       "id": "site_24",
@@ -725,7 +749,8 @@
       "marker_shape": "circle",
       "search_names": [
         "旭化成ホームズ"
-      ]
+      ],
+      "weight_kg": 64
     },
     {
       "id": "site_25",
@@ -746,7 +771,8 @@
       "marker_shape": "circle",
       "search_names": [
         "（株）小泉千葉北 ぱっと市原"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_26",
@@ -767,7 +793,8 @@
       "marker_shape": "circle",
       "search_names": [
         "群峰アクシア船橋（マルウ）"
-      ]
+      ],
+      "weight_kg": 187
     },
     {
       "id": "site_27",
@@ -788,7 +815,8 @@
       "marker_shape": "circle",
       "search_names": [
         "丸北運輸"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_28",
@@ -810,7 +838,8 @@
       "search_names": [
         "（有）ナカムラアルミ",
         "（ 有） ナカムラアルミ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_29",
@@ -835,7 +864,8 @@
         "第一サッシ工業（ 株）",
         "第一サッシ工業（ 株） バー材",
         "第一サッシ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_30",
@@ -857,7 +887,8 @@
       "search_names": [
         "（株）千種建窓",
         "（ 株） 千種建窓"
-      ]
+      ],
+      "weight_kg": 138
     },
     {
       "id": "site_31",
@@ -880,7 +911,8 @@
         "さくら住建（株）（アルコスモ）",
         "さく ら住建（ 株） （ アルコスモ）",
         "さくら住建"
-      ]
+      ],
+      "weight_kg": 62
     },
     {
       "id": "site_32",
@@ -903,7 +935,8 @@
         "（株）千葉アニマ （第二倉庫）",
         "（ 株） 千葉アニマ （ 第二倉庫）",
         "千葉アニマ第二"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_33",
@@ -928,7 +961,8 @@
         "（株）石川商会住宅機材",
         "（ 株） 石川商会住宅機材 Ｉ",
         "石川商会"
-      ]
+      ],
+      "weight_kg": 225
     },
     {
       "id": "site_34",
@@ -954,7 +988,8 @@
         "（ 有） 林ガラス店 Ｔ",
         "（ 有） 林ガラス店 Ｈ",
         "林ガラス"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_35",
@@ -977,7 +1012,8 @@
         "（株）日新建商",
         "（株）日新建商 Ｉ",
         "（ 株） 日新建商 Ｉ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_36",
@@ -1001,7 +1037,8 @@
         "（ 有） Ｔ ＳＲ建窓 Ｂ",
         "（有）ＴＳＲ建窓（Ｆ東総）",
         "（有）ＴＳＲ建窓　（東和建設）"
-      ]
+      ],
+      "weight_kg": 1
     },
     {
       "id": "site_37",
@@ -1023,7 +1060,8 @@
       "search_names": [
         "（株）佐川材木店（通常）",
         "（ 株） 佐川材木店（ 通常）"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_38",
@@ -1042,7 +1080,8 @@
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_39",
@@ -1078,7 +1117,8 @@
         "内山硝子（株）茂原佐藤アルミ建",
         "内山硝子（株）茂原山田硝子店",
         "内山硝子茂原"
-      ]
+      ],
+      "weight_kg": 77
     },
     {
       "id": "site_40",
@@ -1101,7 +1141,8 @@
         "（有）上総建具商会",
         "（有）上総建具商会 協和",
         "上総建具"
-      ]
+      ],
+      "weight_kg": 39
     },
     {
       "id": "site_41",
@@ -1124,7 +1165,8 @@
         "（株）林屋 市川（営）",
         "（ 株） 林屋 市川（ 営）",
         "林屋市川"
-      ]
+      ],
+      "weight_kg": 26
     },
     {
       "id": "site_42",
@@ -1143,7 +1185,8 @@
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 4
     },
     {
       "id": "site_43",
@@ -1165,7 +1208,8 @@
       "search_names": [
         "ＨＡＭＡＹ Ａ 田中商会 東京",
         "ＨＡＭＡＹＡ田中商会埼玉店"
-      ]
+      ],
+      "weight_kg": 44
     },
     {
       "id": "site_44",
@@ -1186,7 +1230,8 @@
       "marker_shape": "circle",
       "search_names": [
         "藤田建具店（マイスターハウス）"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_45",
@@ -1210,7 +1255,8 @@
         "ジューテック千葉北 ヤマリ送り",
         "大友産業（ 株） ヤマリ日軽送り",
         "ヤマリ第一"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_46",
@@ -1234,7 +1280,8 @@
         "ＴＯＴＯエムテック（平和硝子）",
         "＊（ 有） 平和硝子店",
         "平和硝子"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_47",
@@ -1266,7 +1313,8 @@
         "内山硝子（ 株） 柏（ 営） 熊澤",
         "内山硝子（ 株） 柏（ 営）",
         "内山硝子（株）柏　たいちや"
-      ]
+      ],
+      "weight_kg": 29
     },
     {
       "id": "site_48",
@@ -1293,7 +1341,8 @@
         "マテックス特販イトウ ＦＳ",
         "マテックス特販イトウ　サン中央",
         "マテックスイトウ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_49",
@@ -1315,7 +1364,8 @@
       "search_names": [
         "大晴サッシ",
         "大晴SHスペースP流山"
-      ]
+      ],
+      "weight_kg": 204
     },
     {
       "id": "site_50",
@@ -1337,7 +1387,8 @@
       "search_names": [
         "（有）小島アルミ",
         "（ 有） 小島アルミ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_51",
@@ -1360,7 +1411,8 @@
         "協栄ジェネックス（株）柏支店",
         "協栄ジェネックス（ 株） 柏支店",
         "協栄ジェネックス"
-      ]
+      ],
+      "weight_kg": 269
     },
     {
       "id": "site_52",
@@ -1392,7 +1444,8 @@
         "（ 有） 佐藤サッシ 広島建設",
         "（有）佐藤サッシ（ＳＦ）",
         "佐藤サッシ柏"
-      ]
+      ],
+      "weight_kg": 104
     },
     {
       "id": "site_53",
@@ -1421,7 +1474,8 @@
         "アベルコ アイナボ物流 柏",
         "（株）アベルコ水戸／千葉送り",
         "アベルコ千葉"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_54",
@@ -1442,7 +1496,8 @@
       "marker_shape": "circle",
       "search_names": [
         "志水商店"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_55",
@@ -1465,7 +1520,8 @@
         "フジクレスト（株） 柏（営）",
         "フジクレスト （ 株） 柏（ 営）",
         "フジクレスト柏"
-      ]
+      ],
+      "weight_kg": 23
     },
     {
       "id": "site_56",
@@ -1490,7 +1546,8 @@
         "（ 有） 佐藤サッシ第２倉庫送り",
         "佐藤サッシ第二",
         "佐藤サッシ第２"
-      ]
+      ],
+      "weight_kg": 224
     },
     {
       "id": "site_57",
@@ -1512,7 +1569,8 @@
       "search_names": [
         "（有）染谷建具店 野田",
         "（ 有） 染谷建具店 野田"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_58",
@@ -1534,7 +1592,8 @@
       "search_names": [
         "渡辺パイプ＊熊倉工業ＥＸ",
         "熊倉エクステリア"
-      ]
+      ],
+      "weight_kg": 6
     },
     {
       "id": "site_59",
@@ -1558,7 +1617,8 @@
         "渡辺パイプ市川配送センター",
         "渡辺パイプ（株） 市川住建ＤＰ",
         "エコーＳ渡辺Ｐ市川配送Ｃ"
-      ]
+      ],
+      "weight_kg": 13
     },
     {
       "id": "site_60",
@@ -1586,7 +1646,8 @@
         "渡辺パイプ（アソシエトラスト）",
         "アベルコ東京サッシ　アソシエ送",
         "アソシエトラスト"
-      ]
+      ],
+      "weight_kg": 163
     },
     {
       "id": "site_61",
@@ -1613,7 +1674,8 @@
         "（ 株） ナガオカ産業 ライズＨ",
         "（ 株） ナガオカ産業 ニッカ船橋",
         "（ 株） ナガオカ産業"
-      ]
+      ],
+      "weight_kg": 31
     },
     {
       "id": "site_62",
@@ -1632,7 +1694,8 @@
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 86
     },
     {
       "id": "site_63",
@@ -1658,7 +1721,8 @@
         "山崎サッシ産業（ 株） （ ＫＫＭ）",
         "山崎サッシ産業（ 株）",
         "（株）マルウ（山崎サッシ産業）"
-      ]
+      ],
+      "weight_kg": 237
     },
     {
       "id": "site_64",
@@ -1683,7 +1747,8 @@
         "ＨＡＭＡＹ Ａ埼玉（ 関東Ｈ）",
         "ＨＡＭＡＹ Ａ調布（ 関東Ｈ）",
         "ＨＡＭＡＹＡ関東"
-      ]
+      ],
+      "weight_kg": 55
     },
     {
       "id": "site_65",
@@ -1708,7 +1773,8 @@
         "ヤマトアルミ工業（ゆとりフォー",
         "（ 有） ヤマト アルミ 工業 Ｒ",
         "ヤマトアルミ"
-      ]
+      ],
+      "weight_kg": 63
     },
     {
       "id": "site_66",
@@ -1742,7 +1808,8 @@
         "亀山商店（ 積水ハウスリフォーム",
         "（株）亀山商店 ＳＫ",
         "（株）亀山商店"
-      ]
+      ],
+      "weight_kg": 823
     },
     {
       "id": "site_67",
@@ -1770,7 +1837,8 @@
         "（株）オビタス 千葉支店（足立",
         "（ 株） オビタス 千葉支店",
         "（株）オビタス 千葉支店（小平"
-      ]
+      ],
+      "weight_kg": 530
     },
     {
       "id": "site_68",
@@ -1797,7 +1865,8 @@
         "（ 株） 千葉西ト ーヨー住建",
         "千葉西トーヨー住建",
         "（株）千葉西トーヨー住器"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_69",
@@ -1823,7 +1892,8 @@
         "（ 合） 白亀",
         "（株）高硝（新栄エクステリア）",
         "白亀・高硝（新栄エクステリア）"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_70",
@@ -1847,7 +1917,8 @@
         "Ａｎ ｄ ｏ ｎ ｅ （ ＫＫＭ）",
         "And one",
         "アンドワン"
-      ]
+      ],
+      "weight_kg": 95
     },
     {
       "id": "site_71",
@@ -1877,7 +1948,8 @@
         "（ 株） 総和 ＳＨ",
         "（ 株） 総和 ＡＫ",
         "（株）総和 角栄Ｈ"
-      ]
+      ],
+      "weight_kg": 282
     },
     {
       "id": "site_72",
@@ -1898,7 +1970,8 @@
       "marker_shape": "circle",
       "search_names": [
         "（株）亀山商店（エステック）"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_73",
@@ -1921,7 +1994,8 @@
         "幸田建窓",
         "幸田建窓 ＲＣ斉藤工務店",
         "幸田建窓"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_74",
@@ -1948,7 +2022,8 @@
         "（ 株） アルシス（ （ 有） 相建）",
         "マテックス特販イトウ 相建送り",
         "アルシス相建"
-      ]
+      ],
+      "weight_kg": 884
     },
     {
       "id": "site_75",
@@ -1981,7 +2056,8 @@
         "共栄流山・三郷",
         "共栄　千葉支店流山　全総",
         "共栄千葉支店流山"
-      ]
+      ],
+      "weight_kg": 250
     },
     {
       "id": "site_76",
@@ -2003,7 +2079,8 @@
       "search_names": [
         "海老原ガラスＪＨＲ千葉ニュータ",
         "海老原ガラスＪＨＲ千葉ニュータ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_77",
@@ -2036,7 +2113,8 @@
         "（ 株） オビタス 柏支店（ 千葉）",
         "エクシーズ（オビタス柏送り）",
         "オビタス柏"
-      ]
+      ],
+      "weight_kg": 765
     },
     {
       "id": "site_78",
@@ -2059,7 +2137,8 @@
         "（株）メイク 柏支店",
         "（ 株） メイク 柏支店",
         "メイク柏"
-      ]
+      ],
+      "weight_kg": 450
     },
     {
       "id": "site_79",
@@ -2096,7 +2175,8 @@
         "マテックスさいたま　柏入れ",
         "マテックス柏",
         "マテックス（株）柏営業所"
-      ]
+      ],
+      "weight_kg": 539
     },
     {
       "id": "site_80",
@@ -2120,7 +2200,8 @@
         "Ｍ 大仙（群峰アクシア東関）",
         "大仙関東＊群峰アクシア東関東",
         "群峰アクシア　東関東支"
-      ]
+      ],
+      "weight_kg": 229
     },
     {
       "id": "site_81",
@@ -2156,7 +2237,8 @@
         "（ 株） 吉建商 Ｊ 成田",
         "（株）吉建商 Ｊ 新築",
         "（株）吉建商 Ｊ 佐倉"
-      ]
+      ],
+      "weight_kg": 1
     },
     {
       "id": "site_82",
@@ -2177,7 +2259,8 @@
       "marker_shape": "circle",
       "search_names": [
         "ＤＡ （有）フジケンＥＸ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_83",
@@ -2199,7 +2282,8 @@
       "search_names": [
         "髙橋建具店（ＹＫＳ）ＭＡＤＯ",
         "髙橋建具店（ Ｙ ＫＳ） ＭＡＤＯ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_84",
@@ -2220,7 +2304,8 @@
       "marker_shape": "circle",
       "search_names": [
         "渡辺パイプ（株）佐原ＳＣ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_85",
@@ -2244,7 +2329,8 @@
         "（株）高硝 ＴＫ",
         "（株）高硝（桧家住宅北関東）",
         "（ 株） 高硝"
-      ]
+      ],
+      "weight_kg": 650
     },
     {
       "id": "site_86",
@@ -2263,7 +2349,8 @@
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 119
     },
     {
       "id": "site_87",
@@ -2285,7 +2372,8 @@
       "search_names": [
         "（有）高安硝子店（ビルダー）",
         "（ 有） 高安硝子店（ ビルダー）"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_88",
@@ -2314,7 +2402,8 @@
         "ＮＢＰ日板佐原ＭＳＣ（ Ｊ Ｈ富里",
         "ＮＢＰ日板佐原　Ｓｈｉｎｙｕ",
         "日本板硝子Ｓ＆Ｓ　佐原入れ"
-      ]
+      ],
+      "weight_kg": 342
     },
     {
       "id": "site_89",
@@ -2336,7 +2425,8 @@
       "search_names": [
         "ＤＡ七栄４７７】 ジョ ンノビＥＸ",
         "ジョンノビ"
-      ]
+      ],
+      "weight_kg": 18
     },
     {
       "id": "site_90",
@@ -2373,7 +2463,8 @@
         "キンセイ（ 家Ｃｏ リフォ八千代）",
         "キンセイ（家Ｃｏ新船橋）",
         "キンセイ商事"
-      ]
+      ],
+      "weight_kg": 23
     },
     {
       "id": "site_91",
@@ -2396,7 +2487,8 @@
         "コーエイ・デンカ（株）",
         "コーエイ・ デンカ（ 株）",
         "コーエイデンカ"
-      ]
+      ],
+      "weight_kg": 74
     },
     {
       "id": "site_92",
@@ -2418,7 +2510,8 @@
       "search_names": [
         "沢田サッシ（有）",
         "沢田サッシ（有）"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_93",
@@ -2465,7 +2558,8 @@
         "ＡＧＣ（フジセイコー八千代）",
         "ＡＧＣ硝子",
         "ＡＧＣ硝子"
-      ]
+      ],
+      "weight_kg": 85
     },
     {
       "id": "site_94",
@@ -2487,7 +2581,8 @@
       "search_names": [
         "渡辺パイプ千葉住設",
         "渡辺パイプ千葉"
-      ]
+      ],
+      "weight_kg": 536
     },
     {
       "id": "site_95",
@@ -2513,7 +2608,8 @@
         "（ 有） ホームぎあ",
         "（有）ホームぎあ 住不幕張",
         "（有）ホームぎあ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_96",
@@ -2543,7 +2639,8 @@
         "サタケ商事 （ 特需その他）",
         "（ 株） サタケ商事",
         "サタケ商事"
-      ]
+      ],
+      "weight_kg": 498
     },
     {
       "id": "site_97",
@@ -2600,7 +2697,8 @@
         "新（株）マルウ ＫＡ",
         "新マルウ ソレイユ 条供",
         "新（株）マルウ　ＭＩ"
-      ]
+      ],
+      "weight_kg": 963
     },
     {
       "id": "site_98",
@@ -2631,7 +2729,8 @@
         "エクシーズ千葉（島忠東京）ＯＶ",
         "エクシーズ千葉（島忠）ＯＶ",
         "エクシーズ千葉"
-      ]
+      ],
+      "weight_kg": 431
     },
     {
       "id": "site_99",
@@ -2661,7 +2760,8 @@
         "（ 株） 渡辺アルミ 建材（ 山万）",
         "渡辺アルミ 建材 ＳＨ",
         "渡辺アルミ"
-      ]
+      ],
+      "weight_kg": 2988
     },
     {
       "id": "site_100",
@@ -2693,7 +2793,8 @@
         "秋山木材産業（ 株） （ ＨＲ）",
         "秋山木材産業（ 株） （ 建築部）",
         "秋山木材"
-      ]
+      ],
+      "weight_kg": 235
     },
     {
       "id": "site_101",
@@ -2742,7 +2843,8 @@
         "一全柏入れ（株）ＦＧＫ",
         "（ 株） 一全",
         "一全柏"
-      ]
+      ],
+      "weight_kg": 1628
     },
     {
       "id": "site_102",
@@ -2770,7 +2872,8 @@
         "（株）関東 三郷支店",
         "（株）関東 柏三郷（ポラスＧＨ",
         "関東柏"
-      ]
+      ],
+      "weight_kg": 548
     },
     {
       "id": "site_103",
@@ -2792,7 +2895,8 @@
       "search_names": [
         "（株）早川（ＫＫＭ）",
         "（ 株） 早川（ ＫＫＭ）"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_104",
@@ -2814,7 +2918,8 @@
       "search_names": [
         "（有）吉川ガラス建材",
         "（ 有） 吉川ガラス建材"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_105",
@@ -2836,7 +2941,8 @@
       "search_names": [
         "（有）ウヤマアルミ工業",
         "（ 有） ウヤマアルミ 工業"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_106",
@@ -2861,7 +2967,8 @@
         "大久保ガラス店（ 白幡興業）",
         "（有）大久保ガラス店",
         "（ 有） 大久保ガラス店 Ｍ・ Ｋ"
-      ]
+      ],
+      "weight_kg": 1
     },
     {
       "id": "site_107",
@@ -2885,7 +2992,8 @@
         "（ 株） サクラホームサッシ（ Ｉ Ｓ",
         "サクラホームサッシオーダーワン",
         "サクラホームサッシＭＡＤＯ"
-      ]
+      ],
+      "weight_kg": 14
     },
     {
       "id": "site_108",
@@ -2916,7 +3024,8 @@
         "『 倉庫Ｂ』 （ 株） ひらい君津店",
         "『倉庫Ａ』ひらい（リホプラ市原",
         "『倉庫Ａ』ひらい（アンジコア）"
-      ]
+      ],
+      "weight_kg": 147
     },
     {
       "id": "site_109",
@@ -2937,7 +3046,8 @@
       "marker_shape": "circle",
       "search_names": [
         "（株）金綱硝子店 千葉南ＴＦＣ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_110",
@@ -2965,7 +3075,8 @@
         "ＡＧＧ木更津 アークホーム",
         "ＡＧＧ木更津 アイＫ神奈川",
         "ＡＧＧ木更津 渡辺パイプ館山"
-      ]
+      ],
+      "weight_kg": 82
     },
     {
       "id": "site_111",
@@ -2993,7 +3104,8 @@
         "（ 有） 長島サッシ工業 ＭＡＤＯ",
         "長島サッシ工業（ カインズ）",
         "（有）長島サッシ工業"
-      ]
+      ],
+      "weight_kg": 117
     },
     {
       "id": "site_112",
@@ -3040,7 +3152,8 @@
         "コーホクトーヨー住器一全木更津",
         "（株）マルウ西東京　一全木更津",
         "石丸サッシ建材　一全木更津"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_113",
@@ -3061,7 +3174,8 @@
       "marker_shape": "circle",
       "search_names": [
         "ＤＡ （有）川名"
-      ]
+      ],
+      "weight_kg": 88
     },
     {
       "id": "site_114",
@@ -3082,7 +3196,8 @@
       "marker_shape": "circle",
       "search_names": [
         "（株）金綱硝子店（開拓）"
-      ]
+      ],
+      "weight_kg": 36
     },
     {
       "id": "site_115",
@@ -3104,7 +3219,8 @@
       "search_names": [
         "（株）アルシス（ユウワ企画）",
         "（ 株） アルシス（ ユウワ企画）"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_116",
@@ -3126,7 +3242,8 @@
       "search_names": [
         "（ 株） スミ 工業・ ト ーヨー住器",
         "（株）スミ工業 （ＳＰ）"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_117",
@@ -3145,7 +3262,8 @@
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_118",
@@ -3164,7 +3282,8 @@
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_119",
@@ -3185,7 +3304,8 @@
       "marker_shape": "circle",
       "search_names": [
         "Ｍ 大仙（ 三鈴建設資材置場）"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_120",
@@ -3206,7 +3326,8 @@
       "marker_shape": "circle",
       "search_names": [
         "アベルコ高橋"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_121",
@@ -3231,7 +3352,8 @@
         "（株）大仙＊コムテック",
         "Ｍ 大仙（コムテック）",
         "コムテック"
-      ]
+      ],
+      "weight_kg": 95
     },
     {
       "id": "site_122",
@@ -3253,7 +3375,8 @@
       "search_names": [
         "（ 株） 守甲 家具工房ナチュラル",
         "守甲家具"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_123",
@@ -3274,7 +3397,8 @@
       "marker_shape": "circle",
       "search_names": [
         "渡辺パイプ（ 株） 船橋住設"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_124",
@@ -3295,7 +3419,8 @@
       "marker_shape": "circle",
       "search_names": [
         "ＤＡ三協鉄工"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_125",
@@ -3314,7 +3439,8 @@
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_126",
@@ -3333,7 +3459,8 @@
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_127",
@@ -3355,7 +3482,8 @@
       "search_names": [
         "アライト ーヨー住器（ 株）",
         "アライトーヨー"
-      ]
+      ],
+      "weight_kg": 273
     },
     {
       "id": "site_128",
@@ -3376,7 +3504,8 @@
       "marker_shape": "circle",
       "search_names": [
         "マツイ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_129",
@@ -3395,7 +3524,8 @@
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_130",
@@ -3416,7 +3546,8 @@
       "marker_shape": "circle",
       "search_names": [
         "ＤＡ越川緑地"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_131",
@@ -3443,7 +3574,8 @@
         "DA緑区T‘Eｘterior",
         "ＤＡ緑区Ｔ‘Eｘterior",
         "DA緑区T'Eｘterior"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_132",
@@ -3465,7 +3597,8 @@
       "search_names": [
         "（株）アベルコ 千葉北営業所",
         "（株）アベルコ 千葉中央支店"
-      ]
+      ],
+      "weight_kg": 24
     },
     {
       "id": "site_133",
@@ -3484,7 +3617,8 @@
       "master_course": "千F2",
       "map_course": "千F2",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_134",
@@ -3507,7 +3641,8 @@
         "新（株）マルウ Ｙ",
         "（株）大仙＊カインズ八日市",
         "礒部硝子建材"
-      ]
+      ],
+      "weight_kg": 1
     },
     {
       "id": "site_135",
@@ -3528,7 +3663,8 @@
       "marker_shape": "circle",
       "search_names": [
         "（ 有） 片桐工業"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_136",
@@ -3549,7 +3685,8 @@
       "marker_shape": "circle",
       "search_names": [
         "（ 有） 松浦材木店（ ＫＫＭ）"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_137",
@@ -3568,7 +3705,8 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 25
     },
     {
       "id": "site_138",
@@ -3590,7 +3728,8 @@
       "search_names": [
         "大仙茨城 クールサマー",
         "（株）大仙関東＊クールサマー"
-      ]
+      ],
+      "weight_kg": 1
     },
     {
       "id": "site_139",
@@ -3613,7 +3752,8 @@
         "フジクレスト （ 株） 千葉（ 営）",
         "フジクレスト千葉",
         "フジクレスト千葉"
-      ]
+      ],
+      "weight_kg": 27
     },
     {
       "id": "site_140",
@@ -3639,7 +3779,8 @@
         "（ 株） 大仙関東＊ヨドハン千葉",
         "（株）ヨドハン 千葉（展示用",
         "ヨドハン千葉"
-      ]
+      ],
+      "weight_kg": 104
     },
     {
       "id": "site_141",
@@ -3660,7 +3801,8 @@
       "marker_shape": "circle",
       "search_names": [
         "ＩＧウインドウズ 大商千葉支店"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_142",
@@ -3682,7 +3824,8 @@
       "search_names": [
         "（ 株） ＫＯＨＡＭＡ千葉倉庫",
         "ＫＯＨＡＭＡ千葉"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_143",
@@ -3705,7 +3848,8 @@
         "ベイハウスサービス千葉 協栄Ｇ",
         "Ｍ 大仙（ベイハウス千葉）",
         "大仙Mベイハウス千葉"
-      ]
+      ],
+      "weight_kg": 92
     },
     {
       "id": "site_144",
@@ -3724,7 +3868,8 @@
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_145",
@@ -3747,7 +3892,8 @@
         "ＤＡ （ 株） 匠工房【 四街道】",
         "DA（株）匠工房",
         "ＤＡ匠"
-      ]
+      ],
+      "weight_kg": 490
     },
     {
       "id": "site_146",
@@ -3772,7 +3918,8 @@
         "越川アルミ 明和マテリアル",
         "越川アルミ ナミ カワ不動産",
         "越川アルミ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_147",
@@ -3793,7 +3940,8 @@
       "marker_shape": "circle",
       "search_names": [
         "浅間木材 東葉建材商事"
-      ]
+      ],
+      "weight_kg": 37
     },
     {
       "id": "site_148",
@@ -3814,7 +3962,8 @@
       "marker_shape": "circle",
       "search_names": [
         "内山サッシ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_149",
@@ -3836,7 +3985,8 @@
       "search_names": [
         "（株）カワカトーヨー住器",
         "NBP日本板硝子Ｓ＆Ｓカワカ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_150",
@@ -3855,7 +4005,8 @@
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_151",
@@ -3876,7 +4027,8 @@
       "marker_shape": "circle",
       "search_names": [
         "石井ガラス"
-      ]
+      ],
+      "weight_kg": 42
     },
     {
       "id": "site_152",
@@ -3902,7 +4054,8 @@
         "（ 株） スガサワＡ",
         "（株）スガサワＢ",
         "（株）島田硝子店"
-      ]
+      ],
+      "weight_kg": 1
     },
     {
       "id": "site_153",
@@ -3921,7 +4074,8 @@
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 12
     },
     {
       "id": "site_154",
@@ -3940,7 +4094,8 @@
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_155",
@@ -3959,7 +4114,8 @@
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_156",
@@ -3980,7 +4136,8 @@
       "marker_shape": "circle",
       "search_names": [
         "安藤ガラス店 ＨＢ"
-      ]
+      ],
+      "weight_kg": 11
     },
     {
       "id": "site_157",
@@ -3999,7 +4156,8 @@
       "master_course": "房木4",
       "map_course": "房木4",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_158",
@@ -4018,7 +4176,8 @@
       "master_course": "房木5",
       "map_course": "房木5",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_159",
@@ -4037,7 +4196,8 @@
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_160",
@@ -4056,7 +4216,8 @@
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_161",
@@ -4078,7 +4239,8 @@
       "search_names": [
         "（ 株） ＭＩ",
         "ＭＩ"
-      ]
+      ],
+      "weight_kg": 724
     },
     {
       "id": "site_162",
@@ -4101,7 +4263,8 @@
         "北総トーヨー",
         "北総スリーエフ",
         "相川スリーエフ　北総支店"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_163",
@@ -4123,7 +4286,8 @@
       "search_names": [
         "ＤＡポット",
         "DAポット"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_164",
@@ -4142,7 +4306,8 @@
       "master_course": "柏1H",
       "map_course": "柏1H",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_165",
@@ -4161,7 +4326,8 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_166",
@@ -4180,7 +4346,8 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_167",
@@ -4199,7 +4366,8 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 1
     },
     {
       "id": "site_168",
@@ -4220,7 +4388,8 @@
       "marker_shape": "circle",
       "search_names": [
         "ＴＯＴＯエムテック（株）"
-      ]
+      ],
+      "weight_kg": 15
     },
     {
       "id": "site_169",
@@ -4242,7 +4411,8 @@
       "search_names": [
         "（株）誠和 キロ〔村上茂俊４〕",
         "ＤＡ 【 大森倉庫】 イエクス"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_170",
@@ -4269,7 +4439,8 @@
         "広海クラシオ 千葉（ ウッディ ）",
         "広海クラシオ 千葉（ ジャパン）",
         "広海クラシオ千葉（木下）"
-      ]
+      ],
+      "weight_kg": 95
     },
     {
       "id": "site_171",
@@ -4291,7 +4462,8 @@
       "search_names": [
         "（ 株） 山一／四関工業入れ",
         "山一/四関工業"
-      ]
+      ],
+      "weight_kg": 1
     },
     {
       "id": "site_172",
@@ -4310,7 +4482,8 @@
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_173",
@@ -4332,7 +4505,8 @@
       "search_names": [
         "（ 有） 杉田アルミ 工業",
         "（有）杉田アルミ（第一支店千葉"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_174",
@@ -4354,7 +4528,8 @@
       "search_names": [
         "渡辺パイプ千葉南住建",
         "渡辺パイプ千葉南 Ｊ Ｔ Ｍ商事"
-      ]
+      ],
+      "weight_kg": 122
     },
     {
       "id": "site_175",
@@ -4376,7 +4551,8 @@
       "search_names": [
         "渡辺サッシ（コメリ）",
         "渡辺サッシ（ コメリ）"
-      ]
+      ],
+      "weight_kg": 20
     },
     {
       "id": "site_176",
@@ -4398,7 +4574,8 @@
       "search_names": [
         "（ 有） 藤木工",
         "（有）藤木工 丸豊建設"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_177",
@@ -4420,7 +4597,8 @@
       "search_names": [
         "エコーＳワタＰ柏送り",
         "渡辺パイプ 柏住建ＤＰ配送"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_178",
@@ -4441,7 +4619,8 @@
       "marker_shape": "circle",
       "search_names": [
         "末広ガラス"
-      ]
+      ],
+      "weight_kg": 438
     },
     {
       "id": "site_179",
@@ -4463,7 +4642,8 @@
       "search_names": [
         "ＮＢＰ日板佐原（ 千葉三協）",
         "千葉三協"
-      ]
+      ],
+      "weight_kg": 175
     },
     {
       "id": "site_180",
@@ -4484,7 +4664,8 @@
       "marker_shape": "circle",
       "search_names": [
         "相川スリーエフ千葉支店"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_181",
@@ -4503,7 +4684,8 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_182",
@@ -4524,7 +4706,8 @@
       "marker_shape": "square",
       "search_names": [
         "日の出グリーン建商（ 株） ＨＢ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_183",
@@ -4545,7 +4728,8 @@
       "marker_shape": "circle",
       "search_names": [
         "黒沢硝子工業（ 株） 倉庫"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_184",
@@ -4564,7 +4748,8 @@
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_185",
@@ -4583,7 +4768,8 @@
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_186",
@@ -4604,7 +4790,8 @@
       "marker_shape": "circle",
       "search_names": [
         "藤野トーヨー住器（株）ネクスト"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_187",
@@ -4625,7 +4812,8 @@
       "marker_shape": "circle",
       "search_names": [
         "（ 有） 金高木工所"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_188",
@@ -4646,7 +4834,8 @@
       "marker_shape": "circle",
       "search_names": [
         "元気悠遊 ＪＨ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_189",
@@ -4667,7 +4856,8 @@
       "marker_shape": "circle",
       "search_names": [
         "山田木工（株）"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_190",
@@ -4690,7 +4880,8 @@
         "関東Ｇ サンアベニューＭＡＤＯ",
         "（ 有） 関東ガラス店",
         "（有）関東ガラス店 ＭＡＤＯ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_191",
@@ -4711,7 +4902,8 @@
       "marker_shape": "circle",
       "search_names": [
         "ＤＡ流山倉庫イエクス"
-      ]
+      ],
+      "weight_kg": 49
     },
     {
       "id": "site_192",
@@ -4732,7 +4924,8 @@
       "marker_shape": "circle",
       "search_names": [
         "（ 株） 相川スリーエフ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_193",
@@ -4751,7 +4944,8 @@
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_194",
@@ -4772,7 +4966,8 @@
       "marker_shape": "circle",
       "search_names": [
         "Ｇテリア"
-      ]
+      ],
+      "weight_kg": 24
     },
     {
       "id": "site_195",
@@ -4796,7 +4991,8 @@
         "内山硝子（ 株） 茂原十倉",
         "内山硝子十倉",
         "内山硝子 十倉"
-      ]
+      ],
+      "weight_kg": 3
     },
     {
       "id": "site_196",
@@ -4817,7 +5013,8 @@
       "marker_shape": "circle",
       "search_names": [
         "ＤＡ 【 大清水】 伸栄総合物流"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_197",
@@ -4838,7 +5035,8 @@
       "marker_shape": "circle",
       "search_names": [
         "日板佐原（千葉Ａ）"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_198",
@@ -4860,7 +5058,8 @@
       "search_names": [
         "ヨドハン（ＣＨＥＸ茂原店",
         "（株）大仙＊カインズ茂原"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_199",
@@ -4879,7 +5078,8 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_200",
@@ -4900,7 +5100,8 @@
       "marker_shape": "circle",
       "search_names": [
         "（ 株） コメリ ＰＷ四街道"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_201",
@@ -4919,7 +5120,8 @@
       "master_course": "柏3V",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_202",
@@ -4938,7 +5140,8 @@
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_203",
@@ -4960,7 +5163,8 @@
       "search_names": [
         "ヨドハン千葉（ＥＸ鏑木）",
         "ＥX鏑木"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_204",
@@ -4979,7 +5183,8 @@
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_205",
@@ -4998,7 +5203,8 @@
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_206",
@@ -5021,7 +5227,8 @@
         "（株）新明 ＭＡＤＯ",
         "（ 株） 新明 ＭＡＤＯ",
         "（ 株） 新明（ 開拓）"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_207",
@@ -5043,7 +5250,8 @@
       "search_names": [
         "コメリPW野田",
         "コメリＰＷ野田"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_208",
@@ -5065,7 +5273,8 @@
       "search_names": [
         "ロイヤルHC習志野",
         "ロイヤル習志野"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_209",
@@ -5087,7 +5296,8 @@
       "search_names": [
         "内山硝子（ 株） 茂原大坂Ｄ",
         "内山硝子（株）茂原大坂Ｊ旭"
-      ]
+      ],
+      "weight_kg": 3
     },
     {
       "id": "site_210",
@@ -5108,7 +5318,8 @@
       "marker_shape": "circle",
       "search_names": [
         "井上建装"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_211",
@@ -5129,7 +5340,8 @@
       "marker_shape": "circle",
       "search_names": [
         "竹屋成田"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_212",
@@ -5153,7 +5365,8 @@
         "（株）さとう商店（検見川Ｒ）",
         "（ 株） さとう商店",
         "（ 株） さとう商店 ニッカホーム"
-      ]
+      ],
+      "weight_kg": 123
     },
     {
       "id": "site_213",
@@ -5172,7 +5385,8 @@
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_214",
@@ -5191,7 +5405,8 @@
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_215",
@@ -5210,7 +5425,8 @@
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_216",
@@ -5229,7 +5445,8 @@
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_217",
@@ -5248,7 +5465,8 @@
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_218",
@@ -5270,7 +5488,8 @@
       "search_names": [
         "（株）ひらい 特販課",
         "（株）ひらい　住宅部"
-      ]
+      ],
+      "weight_kg": 14
     },
     {
       "id": "site_219",
@@ -5289,7 +5508,8 @@
       "master_course": "房木4",
       "map_course": "房木4",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_220",
@@ -5308,7 +5528,8 @@
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 163
     },
     {
       "id": "site_221",
@@ -5327,7 +5548,8 @@
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_222",
@@ -5348,7 +5570,8 @@
       "marker_shape": "circle",
       "search_names": [
         "日昭（ 株） 都賀入れ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_223",
@@ -5369,7 +5592,8 @@
       "marker_shape": "circle",
       "search_names": [
         "大藤硝子"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_224",
@@ -5388,7 +5612,8 @@
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_225",
@@ -5409,7 +5634,8 @@
       "marker_shape": "circle",
       "search_names": [
         "ＡＧＧ木更津 広井ト ーヨー"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_226",
@@ -5428,7 +5654,8 @@
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_227",
@@ -5447,7 +5674,8 @@
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_228",
@@ -5469,7 +5697,8 @@
       "search_names": [
         "（株）アルシス ユウワ企画送り",
         "（株）ユウワ企画（サンユー）"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_229",
@@ -5488,7 +5717,8 @@
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_230",
@@ -5509,7 +5739,8 @@
       "marker_shape": "circle",
       "search_names": [
         "マテックス柏船橋トーヨー"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_231",
@@ -5530,7 +5761,8 @@
       "marker_shape": "circle",
       "search_names": [
         "カインズ 船橋習志野店 資材館"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_232",
@@ -5549,7 +5781,8 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_233",
@@ -5568,7 +5801,8 @@
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_234",
@@ -5590,7 +5824,8 @@
       "search_names": [
         "コメリＰＷ旭",
         "コメリ旭"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_235",
@@ -5609,7 +5844,8 @@
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_236",
@@ -5632,7 +5868,8 @@
         "（ 株） イイダ",
         "（株）イイダ",
         "イイダ"
-      ]
+      ],
+      "weight_kg": 396
     },
     {
       "id": "site_237",
@@ -5651,7 +5888,8 @@
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_238",
@@ -5670,7 +5908,8 @@
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_239",
@@ -5689,7 +5928,8 @@
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_240",
@@ -5708,7 +5948,8 @@
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_241",
@@ -5727,7 +5968,8 @@
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_242",
@@ -5746,7 +5988,8 @@
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 14
     },
     {
       "id": "site_243",
@@ -5767,7 +6010,8 @@
       "marker_shape": "circle",
       "search_names": [
         "渡辺パイプ佐倉"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_244",
@@ -5786,7 +6030,8 @@
       "master_course": "柏3V",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_245",
@@ -5807,7 +6052,8 @@
       "marker_shape": "square",
       "search_names": [
         "ヨドハン（ＣＨＥＸプラザ市原店"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_246",
@@ -5826,7 +6072,8 @@
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_247",
@@ -5845,7 +6092,8 @@
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_248",
@@ -5864,7 +6112,8 @@
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_249",
@@ -5885,7 +6134,8 @@
       "marker_shape": "circle",
       "search_names": [
         "DA伊藤建設"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_250",
@@ -5906,7 +6156,8 @@
       "marker_shape": "circle",
       "search_names": [
         "渡辺パイプ佐原（ ミ ナミ 産業）"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_251",
@@ -5927,7 +6178,8 @@
       "marker_shape": "circle",
       "search_names": [
         "リアルプロダクツ（コメリ野田）"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_252",
@@ -5946,7 +6198,8 @@
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 1
     },
     {
       "id": "site_253",
@@ -5965,7 +6218,8 @@
       "master_course": "千G3",
       "map_course": "千G3",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_254",
@@ -5986,7 +6240,8 @@
       "marker_shape": "circle",
       "search_names": [
         "リオン（安井工業）"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_255",
@@ -6008,7 +6263,8 @@
       "search_names": [
         "ＤＡエクステリアオオカワ",
         "オオカワ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_256",
@@ -6027,7 +6283,8 @@
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 11
     },
     {
       "id": "site_257",
@@ -6046,7 +6303,8 @@
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_258",
@@ -6065,7 +6323,8 @@
       "master_course": "柏1H",
       "map_course": "柏1H",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_259",
@@ -6084,7 +6343,8 @@
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_260",
@@ -6103,7 +6363,8 @@
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_261",
@@ -6125,7 +6386,8 @@
       "search_names": [
         "（有）リアルプロダクツ 倉庫",
         "ＤＡ（有）リアルプロダクツ中峠"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_262",
@@ -6146,7 +6408,8 @@
       "marker_shape": "circle",
       "search_names": [
         "（有）篠塚木工"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_263",
@@ -6167,7 +6430,8 @@
       "marker_shape": "circle",
       "search_names": [
         "さくら住建（旧本社入れ）"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_264",
@@ -6190,7 +6454,8 @@
         "（株）相川スリーエフ 柏支店",
         "相川スリーエフ　柏支店",
         "相川スリーエフ柏支店"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_265",
@@ -6209,7 +6474,8 @@
       "master_course": "柏1H",
       "map_course": "柏1H",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_266",
@@ -6230,7 +6496,8 @@
       "marker_shape": "circle",
       "search_names": [
         "（株）オシダリ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_267",
@@ -6249,7 +6516,8 @@
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_268",
@@ -6270,7 +6538,8 @@
       "marker_shape": "circle",
       "search_names": [
         "セディアトランスポート千葉"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_269",
@@ -6289,7 +6558,8 @@
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_270",
@@ -6308,7 +6578,8 @@
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_271",
@@ -6327,7 +6598,8 @@
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_272",
@@ -6346,7 +6618,8 @@
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_273",
@@ -6365,7 +6638,8 @@
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_274",
@@ -6384,7 +6658,8 @@
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_275",
@@ -6403,7 +6678,8 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_276",
@@ -6422,7 +6698,8 @@
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_277",
@@ -6441,7 +6718,8 @@
       "master_course": "房君3",
       "map_course": "房君3",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_278",
@@ -6460,7 +6738,8 @@
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_279",
@@ -6481,7 +6760,8 @@
       "marker_shape": "circle",
       "search_names": [
         "カインズホーム八街"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_280",
@@ -6500,7 +6780,8 @@
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_281",
@@ -6519,7 +6800,8 @@
       "master_course": "房木4",
       "map_course": "房木4",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_282",
@@ -6538,7 +6820,8 @@
       "master_course": "房木5",
       "map_course": "房木5",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_283",
@@ -6557,7 +6840,8 @@
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_284",
@@ -6576,7 +6860,8 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_285",
@@ -6595,7 +6880,8 @@
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_286",
@@ -6616,7 +6902,8 @@
       "marker_shape": "circle",
       "search_names": [
         "（株）大仙＊カインズ千葉Ｎ"
-      ]
+      ],
+      "weight_kg": 1
     },
     {
       "id": "site_287",
@@ -6635,7 +6922,8 @@
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_288",
@@ -6654,7 +6942,8 @@
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_289",
@@ -6676,7 +6965,8 @@
       "search_names": [
         "日本梱包運輸倉庫（特需デポ）",
         "日本梱包"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_290",
@@ -6695,7 +6985,8 @@
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_291",
@@ -6714,7 +7005,8 @@
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_292",
@@ -6733,7 +7025,8 @@
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_293",
@@ -6754,7 +7047,8 @@
       "marker_shape": "circle",
       "search_names": [
         "ＤＡガーデンリフォーム自宅"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_294",
@@ -6773,7 +7067,8 @@
       "master_course": "房木5",
       "map_course": "房木5",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_295",
@@ -6792,7 +7087,8 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_296",
@@ -6813,7 +7109,8 @@
       "marker_shape": "circle",
       "search_names": [
         "大仙ＪＨＲ八千代"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_297",
@@ -6832,7 +7129,8 @@
       "master_course": "房君3",
       "map_course": "房君3",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_298",
@@ -6851,7 +7149,8 @@
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_299",
@@ -6870,7 +7169,8 @@
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_300",
@@ -6889,7 +7189,8 @@
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_301",
@@ -6910,7 +7211,8 @@
       "marker_shape": "circle",
       "search_names": [
         "カインズ佐倉"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_302",
@@ -6929,7 +7231,8 @@
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_303",
@@ -6948,7 +7251,8 @@
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_304",
@@ -6967,7 +7271,8 @@
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_305",
@@ -6986,7 +7291,8 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_306",
@@ -7005,7 +7311,8 @@
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_307",
@@ -7024,7 +7331,8 @@
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_308",
@@ -7043,7 +7351,8 @@
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_309",
@@ -7062,7 +7371,8 @@
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_310",
@@ -7085,7 +7395,8 @@
         "さくら住建（株）Ａ",
         "さくら住建（株）上",
         "さくら住建（上）"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_311",
@@ -7104,7 +7415,8 @@
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_312",
@@ -7123,7 +7435,8 @@
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_313",
@@ -7144,7 +7457,8 @@
       "marker_shape": "circle",
       "search_names": [
         "吉丸製作所"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_314",
@@ -7165,7 +7479,8 @@
       "marker_shape": "circle",
       "search_names": [
         "ＤＡ十余二FourthＧ"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_315",
@@ -7184,7 +7499,8 @@
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_316",
@@ -7203,7 +7519,8 @@
       "master_course": "房木4",
       "map_course": "房木4",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_317",
@@ -7222,7 +7539,8 @@
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_318",
@@ -7241,7 +7559,8 @@
       "master_course": "房木5",
       "map_course": "房木5",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 39
     },
     {
       "id": "site_319",
@@ -7260,7 +7579,8 @@
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_320",
@@ -7281,7 +7601,8 @@
       "marker_shape": "circle",
       "search_names": [
         "嶋野木工"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_321",
@@ -7300,7 +7621,8 @@
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_322",
@@ -7319,7 +7641,8 @@
       "master_course": "柏1H",
       "map_course": "柏1H",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_323",
@@ -7338,7 +7661,8 @@
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_324",
@@ -7357,7 +7681,8 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_325",
@@ -7376,7 +7701,8 @@
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 49
     },
     {
       "id": "site_326",
@@ -7395,7 +7721,8 @@
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_327",
@@ -7416,7 +7743,8 @@
       "marker_shape": "circle",
       "search_names": [
         "DA習志野建材"
-      ]
+      ],
+      "weight_kg": 0
     },
     {
       "id": "site_328",
@@ -7435,7 +7763,8 @@
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 104
     },
     {
       "id": "site_329",
@@ -7456,7 +7785,8 @@
       "marker_shape": "circle",
       "search_names": [
         "フジセイコー（株）千葉支店"
-      ]
+      ],
+      "weight_kg": 329
     },
     {
       "id": "site_330",
@@ -7475,7 +7805,8 @@
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "site_331",
@@ -7494,7 +7825,8 @@
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [],
+      "weight_kg": 0
     },
     {
       "id": "virtual_maruo_y",
@@ -7511,7 +7843,8 @@
       "geocode_source": "map_override_near_pw_asahikawa",
       "marker_shape": "circle",
       "virtual": true,
-      "visit_count": 0
+      "visit_count": 0,
+      "weight_kg": 0
     }
   ],
   "visit_period_start": "2026-05-25",
@@ -7753,5 +8086,7 @@
     "柏2T.5O",
     "柏1I.5P",
     "柏3V車立て"
-  ]
+  ],
+  "weight_period_start": "2026-09-01",
+  "weight_period_end": "2026-09-01"
 }

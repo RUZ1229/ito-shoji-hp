@@ -24,7 +24,8 @@
   /** @type {Array<{key:string,type:string,label:string,siteId?:string,siteIds?:string[],course?:string,zoneKey?:string,yokomochiId?:string,warehouseId?:string}>} */
   let activeSelections = [];
 
-  const DEFAULT_SHOP_COLOR = "#3b9eff";
+  const DEFAULT_SHOP_COLOR = "#2488d4";
+  const WAREHOUSE_COLOR = "#ff4757";
   /** 通常青と被らないハイライト専用（青系・シアン系は使わない） */
   const HIGHLIGHT_PALETTE = [
     "#ffd54a", "#ff8c42", "#ff6348", "#e056fd", "#2ed573",
@@ -203,7 +204,8 @@
   }
 
   const SHOP_DOT_RADIUS = { circle: 7, square: 6.5, triangle: 7 };
-  const WH_DOT_RADIUS = 8;
+  const WH_DOT_RADIUS = 10;
+  const WAREHOUSE_PANE = "chibaWarehousePane";
 
   function getShopDotStyle(site, extraClass) {
     const color = getHighlightColor(site, extraClass) || DEFAULT_SHOP_COLOR;
@@ -213,9 +215,9 @@
     return {
       radius,
       fillColor: color,
-      fillOpacity: 0.95,
+      fillOpacity: 1,
       color,
-      weight: shape === "circle" ? 2 : 2.5,
+      weight: shape === "circle" ? 3 : 2.5,
       opacity: 1,
       className: cls,
     };
@@ -229,13 +231,36 @@
   function getWarehouseDotStyle() {
     return {
       radius: WH_DOT_RADIUS,
-      fillColor: "#ff4757",
+      fillColor: WAREHOUSE_COLOR,
       fillOpacity: 1,
-      color: "#ff4757",
-      weight: 2.5,
+      color: WAREHOUSE_COLOR,
+      weight: 4,
       opacity: 1,
       className: "chiba-wh-dot",
+      pane: WAREHOUSE_PANE,
+      zIndexOffset: 2000,
     };
+  }
+
+  function reinforceWarehouseMarker(marker) {
+    if (!marker) return;
+    marker.setStyle(getWarehouseDotStyle());
+    const el = marker.getElement?.();
+    if (el) {
+      el.setAttribute("fill", WAREHOUSE_COLOR);
+      el.setAttribute("stroke", WAREHOUSE_COLOR);
+      el.setAttribute("fill-opacity", "1");
+      el.setAttribute("stroke-opacity", "1");
+      el.setAttribute("stroke-width", "4");
+    }
+  }
+
+  function raiseWarehouseMarkers() {
+    Object.values(warehouseMarkers).forEach((marker) => {
+      if (!marker || !map?.hasLayer(marker)) return;
+      reinforceWarehouseMarker(marker);
+      marker.bringToFront();
+    });
   }
 
   const MAP_UI_PAD = {
@@ -448,6 +473,18 @@
     return `運送回数: ${n}回`;
   }
 
+  function formatWeightLine(site) {
+    if (site.weight_kg == null) return "配送重量: —";
+    const n = Number(site.weight_kg) || 0;
+    if (n === 0) return "配送重量: 0 kg";
+    const start = mapData?.weight_period_start;
+    const end = mapData?.weight_period_end;
+    if (start && end) {
+      return `配送重量: ${n.toLocaleString()} kg（${formatJpDate(start)}〜${formatJpDate(end)}）`;
+    }
+    return `配送重量: ${n.toLocaleString()} kg`;
+  }
+
   function getSiteCard(siteId) {
     return siteCardsById[siteId] || null;
   }
@@ -483,6 +520,10 @@
     fields.push({
       label: "運送",
       value: formatVisitLine(site).replace(/^運送回数:\s*/, ""),
+    });
+    fields.push({
+      label: "重量",
+      value: formatWeightLine(site).replace(/^配送重量:\s*/, ""),
     });
     fields.push({
       label: "配送カード",
@@ -803,6 +844,16 @@ html, body {
   function runMapPrintDialog(title, subtitle) {
     if (!map) return;
     closePhotoViewer();
+    // 工務店単体選択の印刷: コース絞り込みはしない。今の地図に出ている範囲のまま全ピン表示
+    if (selectionIsShopOnly()) {
+      shopMarkers.forEach(({ marker, site }) => {
+        const isSelected = activeSelections.some(
+          (s) => s.type === "shop" && s.siteId === site.id
+        );
+        applyShopMarkerStyle(marker, site, isSelected ? "is-shop-highlight" : "");
+        setMarkerVisible(marker, true);
+      });
+    }
     const printBounds = getPrintVisibleBounds();
     setMapPrintBanner(title, subtitle);
 
@@ -971,6 +1022,7 @@ html, body {
     const course = card?.course || getMapCourse(site);
     const address = card?.address || site.address || "";
     const visitLine = formatVisitLine(site);
+    const weightLine = formatWeightLine(site);
     const fields = hasDetail && card?.fields?.length ? card.fields : buildDefaultSiteFields(site);
     const cardLink = card?.card_html
       ? `<p class="site-card-panel__links"><a href="${escapeHtml(card.card_html)}" target="_blank" rel="noopener">印刷用カードを別タブで開く</a></p>`
@@ -985,6 +1037,7 @@ html, body {
       ${subtitle ? `<p class="site-card-panel__subtitle">${escapeHtml(subtitle)}</p>` : ""}
       <p class="site-card-panel__meta">${escapeHtml(course)}　${escapeHtml(address)}</p>
       <p class="site-card-panel__meta">${escapeHtml(visitLine)}</p>
+      <p class="site-card-panel__meta">${escapeHtml(weightLine)}</p>
       ${renderSiteCardFields(fields)}
       ${card?.aliases_note ? `<p class="site-card-panel__aliases"><span>PDF別名:</span> ${escapeHtml(card.aliases_note)}</p>` : ""}
       <h3 class="site-card-panel__sec">現場写真</h3>
@@ -1091,6 +1144,13 @@ html, body {
     );
   }
 
+  function selectionIsShopOnly() {
+    return (
+      activeSelections.length > 0 &&
+      activeSelections.every((sel) => sel.type === "shop")
+    );
+  }
+
   function applyAllSelections() {
     clearRoutes();
     renderSearchTags();
@@ -1167,6 +1227,22 @@ html, body {
             ? "yachiyo_dp"
             : "esr_kazo");
         drawHubToSites(hubId, matched, color);
+      } else if (sel.type === "shop") {
+        const site = mapData.sites.find((s) => s.id === sel.siteId);
+        if (site) {
+          const hubId = resolveSiteHubId(site);
+          const color = getCourseHighlightColor(getMapCourse(site));
+          drawHubToSites(hubId, [site], color);
+        }
+      } else if (sel.type === "shops") {
+        const sites = sel.siteIds
+          .map((id) => mapData.sites.find((s) => s.id === id))
+          .filter(Boolean);
+        sites.forEach((site) => {
+          const hubId = resolveSiteHubId(site);
+          const color = getCourseHighlightColor(getMapCourse(site));
+          drawHubToSites(hubId, [site], color);
+        });
       } else if (sel.type === "yokomochi") {
         const y = (mapData.yokomochi || []).find((x) => x.id === sel.yokomochiId);
         if (y) {
@@ -1213,7 +1289,11 @@ html, body {
       $("#statusText").textContent = `表示 ${visibleSites.length}件 / 検索 ${activeSelections.length}件`;
     }
     maybeShowSiteCardForSelections();
-    if (visibleSites.length) fitMapToSites(visibleSites);
+    raiseWarehouseMarkers();
+    // 工務店単体選択時は地図の表示範囲を変えない（周辺の別コース工務店もそのまま）
+    if (visibleSites.length && !selectionIsShopOnly()) {
+      fitMapToSites(visibleSites);
+    }
   }
 
   function findShops(query) {
@@ -1405,6 +1485,21 @@ html, body {
     }).addTo(map);
 
     routeLayers.push(line);
+  }
+
+  function resolveSiteHubId(site) {
+    if (!site) return null;
+    if (site.hub) return site.hub;
+    const zoneHub = mapData.zones?.[site.zone]?.hub;
+    if (zoneHub) return zoneHub;
+    const course = getMapCourse(site);
+    return (
+      mapData.course_merges?.[course]?.hub ||
+      mapData.new_courses?.[course]?.hub ||
+      (course && (course.startsWith("柏") || course.includes("千葉A"))
+        ? "yachiyo_dp"
+        : "esr_kazo")
+    );
   }
 
   function drawHubToSites(hubId, sites, color) {
@@ -1625,6 +1720,11 @@ html, body {
       maxZoom: 18,
     }).addTo(map);
 
+    map.createPane(WAREHOUSE_PANE);
+    const whPane = map.getPane(WAREHOUSE_PANE);
+    whPane.style.zIndex = "620";
+    whPane.style.pointerEvents = "auto";
+
     // 千葉県市町村界
     fetch(GEOJSON_URL)
       .then((r) => r.json())
@@ -1652,21 +1752,24 @@ html, body {
         map.setView([35.45, 140.25], 9);
       });
 
-    // 倉庫（常時表示・赤）
-    (mapData.warehouses || []).forEach((wh) => {
-      const marker = L.circleMarker([wh.lat, wh.lng], getWarehouseDotStyle())
-        .bindPopup(`<b>${escapeHtml(wh.name)}</b><br>${escapeHtml(wh.address)}`)
-        .addTo(map);
-      bindWarehouseLabel(marker, wh.name);
-      warehouseMarkers[wh.id] = marker;
-    });
-
     // 工務店（常時表示・青。調べる／クリックでハイライト色）
     (mapData.sites || []).forEach((site) => {
       const marker = L.circleMarker([site.lat, site.lng], getShopDotStyle(site)).addTo(map);
       wireShopMarker(marker, site);
       shopMarkers.push({ marker, site });
     });
+
+    // 倉庫（常時表示・赤。専用 pane で工務店より前面・加須と同色濃度）
+    (mapData.warehouses || []).forEach((wh) => {
+      const marker = L.circleMarker([wh.lat, wh.lng], getWarehouseDotStyle())
+        .bindPopup(`<b>${escapeHtml(wh.name)}</b><br>${escapeHtml(wh.address)}`)
+        .addTo(map);
+      marker.on("add", () => reinforceWarehouseMarker(marker));
+      bindWarehouseLabel(marker, wh.name);
+      warehouseMarkers[wh.id] = marker;
+      reinforceWarehouseMarker(marker);
+    });
+    raiseWarehouseMarkers();
 
     // ESR加須は千葉外 →  bounds に含める
     const allPts = [
@@ -1790,9 +1893,8 @@ html, body {
     if (!ver?.built) return;
 
     const pageBuild = pageBuildStamp();
-    const staleHtml = pageBuild && ver.built > pageBuild;
+    const staleHtml = !pageBuild || ver.built > pageBuild;
     if (staleHtml && reloadOnce("chiba-map-reloaded-for", ver.built)) {
-      window.location.reload();
       await new Promise((resolve) => setTimeout(resolve, 3000));
     }
   }
@@ -1819,13 +1921,10 @@ html, body {
         );
       }
       const data = await r.json();
-      if (IS_WEB_HOST) {
-        return data;
-      }
       const ver = await fetchLiveVersionMeta();
-      if (ver?.map_generated && data.generated && ver.map_generated > data.generated) {
-        if (reloadOnce("chiba-map-data-reloaded-for", ver.map_generated)) {
-          window.location.reload();
+      const pageBuild = pageBuildStamp();
+      if (ver?.built && (!pageBuild || ver.built > pageBuild)) {
+        if (reloadOnce("chiba-map-reloaded-for", ver.built)) {
           await new Promise((resolve) => setTimeout(resolve, 3000));
         }
       }
@@ -2000,7 +2099,7 @@ html, body {
     async function poll() {
       const v = await fetchLiveVersionMeta();
       if (!v?.built) return;
-      if (current && v.built > current) {
+      if (!current || v.built > current) {
         showHint("新しい版があります。再読込します…");
         setTimeout(() => {
           const url = new URL(window.location.href);

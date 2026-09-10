@@ -3,7 +3,7 @@
   --panel: rgba(18, 24, 32, 0.92);
   --text: #e8eef5;
   --muted: #8fa3b8;
-  --shop-blue: #3b9eff;
+  --shop-blue: #2488d4;
   --shop-yellow: #ffd54a;
   --warehouse-red: #ff4757;
   --border: rgba(255, 255, 255, 0.08);
@@ -348,39 +348,22 @@ button {
   fill: rgba(200, 220, 240, 0.7);
 }
 
-/* マーカー — circleMarker（座標＝丸の中心）+ tooltip 名称 */
+/* マーカー — circleMarker（軽さ優先: グローなし・実色 #2488d4 / #ffd54a / #ff4757） */
 circle.chiba-shop-dot,
 path.chiba-shop-dot {
-  filter: drop-shadow(0 0 4px rgba(80, 180, 255, 1))
-    drop-shadow(0 0 10px rgba(59, 158, 255, 0.9))
-    drop-shadow(0 0 20px rgba(59, 158, 255, 0.55));
-  animation: chiba-shop-glow 2.4s ease-in-out infinite;
   transform-origin: center;
   transform-box: fill-box;
-}
-
-circle.chiba-shop-dot.is-shop-highlight,
-circle.chiba-shop-dot.is-zone-highlight,
-path.chiba-shop-dot.is-shop-highlight,
-path.chiba-shop-dot.is-zone-highlight {
-  filter: drop-shadow(0 0 6px rgba(255, 213, 74, 0.95))
-    drop-shadow(0 0 14px rgba(255, 213, 74, 0.55));
-  animation: pulse-yellow 1.2s ease-in-out infinite;
-}
-
-circle.chiba-shop-dot.is-course-highlight,
-path.chiba-shop-dot.is-course-highlight {
-  filter: drop-shadow(0 0 8px rgba(255, 213, 74, 0.85));
-  animation: pulse-course 1.4s ease-in-out infinite;
 }
 
 circle.chiba-wh-dot,
 path.chiba-wh-dot {
-  filter: drop-shadow(0 0 4px rgba(255, 71, 87, 0.95))
-    drop-shadow(0 0 10px rgba(255, 71, 87, 0.5));
-  animation: pulse-red 2s ease-in-out infinite;
   transform-origin: center;
   transform-box: fill-box;
+  fill: var(--warehouse-red) !important;
+  stroke: var(--warehouse-red) !important;
+  fill-opacity: 1 !important;
+  stroke-opacity: 1 !important;
+  stroke-width: 4px !important;
 }
 
 .legend-swatch--circle {
@@ -470,7 +453,6 @@ path.chiba-wh-dot {
 .marker-shop.is-shop-highlight .marker-dot.shape-triangle,
 .marker-shop.is-zone-highlight .marker-dot.shape-triangle {
   border-top-color: var(--shop-yellow);
-  filter: drop-shadow(0 0 6px rgba(255, 213, 74, 0.95));
 }
 
 .marker-shop.is-course-highlight .marker-dot {
@@ -479,17 +461,16 @@ path.chiba-wh-dot {
 
 .marker-shop.is-course-highlight .marker-dot.shape-triangle {
   border-top-color: var(--mc, #ffd54a);
-  filter: drop-shadow(0 0 8px var(--mc, #ffd54a));
 }
 
 @keyframes pulse-blue {
   0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.15); opacity: 0.85; }
+  50% { transform: scale(1.15); opacity: 1; }
 }
 
 @keyframes chiba-shop-glow {
   0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.14); opacity: 1; }
+  50% { transform: scale(1.15); opacity: 1; }
 }
 
 @keyframes pulse-red {
