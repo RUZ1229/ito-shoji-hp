@@ -1,7 +1,7 @@
 {
   "version": 1,
   "note": "地図受信者の協調編集。build_chiba_map_data.py が map_data 生成時にマージ。",
-  "updated": "2026-09-11T09:04:28Z",
+  "updated": "2026-09-11T09:04:58Z",
   "updated_by": "地図ユーザー",
   "user_added_sites": [
     {
