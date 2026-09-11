@@ -6,7 +6,7 @@
 
   let api = null;
   let selectedSiteIds = new Set();
-  let allSitesForSelect = [];
+  let shopSearchCatalog = [];
 
   const HUBS = [
     { id: "yachiyo_dp", label: "八千代DP" },
@@ -141,18 +141,26 @@
         </section>
         <section data-panel="move" hidden>
           <label>工務店
-            <input id="collabMoveSiteSearch" type="search" placeholder="名前・コースで検索…" autocomplete="off">
-            <select id="collabMoveSite"></select>
+            <div class="search-box collab-site-search">
+              <input id="collabMoveSiteSearch" type="search" placeholder="工務店名・コースで検索…" autocomplete="off" aria-controls="collabMoveSiteSuggestions">
+              <ul id="collabMoveSiteSuggestions" class="search-suggestions" role="listbox" hidden></ul>
+            </div>
           </label>
+          <p id="collabMoveSitePicked" class="collab-picked" hidden></p>
+          <input type="hidden" id="collabMoveSiteId" value="">
           <label>新コース<select id="collabMoveCourse"></select></label>
           <p class="collab-note">※配車依頼書のコース（マスタ）は残し、地図・検索の表示コースだけ変わります。</p>
           <button type="button" id="collabConfirmMove" class="collab-btn collab-btn--primary">決定（全員に反映）</button>
         </section>
         <section data-panel="delete" hidden>
           <label>工務店
-            <input id="collabDeleteSiteSearch" type="search" placeholder="名前・コースで検索…" autocomplete="off">
-            <select id="collabDeleteSite"></select>
+            <div class="search-box collab-site-search">
+              <input id="collabDeleteSiteSearch" type="search" placeholder="工務店名・コースで検索…" autocomplete="off" aria-controls="collabDeleteSiteSuggestions">
+              <ul id="collabDeleteSiteSuggestions" class="search-suggestions" role="listbox" hidden></ul>
+            </div>
           </label>
+          <p id="collabDeleteSitePicked" class="collab-picked" hidden></p>
+          <input type="hidden" id="collabDeleteSiteId" value="">
           <p class="collab-note">※地図から消えます。配車依頼書のマスタは残ります（協調追加分は完全削除）。</p>
           <button type="button" id="collabConfirmDelete" class="collab-btn collab-btn--primary">消去（全員に反映）</button>
         </section>
@@ -179,62 +187,189 @@
     });
   }
 
-  function siteRowLabel(site) {
-    return `${site.name}（${api.getMapCourse(site)}）`;
+  function normSearchText(s) {
+    return (s || "").normalize("NFKC").trim().replace(/\s+/g, "");
   }
 
-  function siteSearchHaystack(site) {
-    const aliases = Array.isArray(site.search_names) ? site.search_names.join(" ") : "";
-    return `${site.name || ""} ${api.getMapCourse(site) || ""} ${site.address || ""} ${aliases}`.toLowerCase();
+  function escapeHtml(s) {
+    return String(s || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
   }
 
-  function siteMatchesQuery(site, query) {
-    const q = (query || "").trim().toLowerCase();
-    if (!q) return true;
-    return siteSearchHaystack(site).includes(q);
+  function buildShopSearchCatalog(sites) {
+    const items = [];
+    const seen = new Set();
+    for (const s of sites || []) {
+      const names = [s.name, ...(s.search_names || [])];
+      for (const name of names) {
+        const key = normSearchText(name);
+        if (!key || seen.has(key)) continue;
+        seen.add(key);
+        items.push({
+          value: name,
+          label: name,
+          meta: api.getMapCourse(s),
+          category: "工務店",
+          siteId: s.id,
+        });
+      }
+    }
+    shopSearchCatalog = items;
   }
 
-  function fillSiteSelect(selectId, query, selectedId) {
-    const sel = document.getElementById(selectId);
-    if (!sel) return;
-    const filtered = allSitesForSelect.filter((s) => siteMatchesQuery(s, query));
-    if (!filtered.length) {
-      sel.innerHTML = '<option value="">該当なし</option>';
-      sel.value = "";
+  function filterShopSuggestions(query) {
+    const q = normSearchText(query);
+    if (!q) return [];
+    return shopSearchCatalog
+      .filter((item) => {
+        const blob = normSearchText(`${item.value}${item.label}${item.meta}${item.category}`);
+        return blob.includes(q);
+      })
+      .slice(0, 18);
+  }
+
+  function hideShopSuggestions(listEl) {
+    if (!listEl) return;
+    listEl.hidden = true;
+    listEl.innerHTML = "";
+    listEl._items = [];
+    listEl._activeIndex = -1;
+  }
+
+  function renderShopSuggestions(listEl, items) {
+    if (!listEl) return;
+    const activeIndex = listEl._activeIndex ?? -1;
+    if (!items.length) {
+      hideShopSuggestions(listEl);
       return;
     }
-    sel.innerHTML = filtered
-      .map((s) => `<option value="${s.id}">${siteRowLabel(s)}</option>`)
+    listEl.innerHTML = items
+      .map(
+        (item, idx) =>
+          `<li class="search-suggestions__item${idx === activeIndex ? " is-active" : ""}" role="option" data-value="${escapeHtml(item.value)}">` +
+          `<span class="search-suggestions__cat">${escapeHtml(item.category)}</span>` +
+          `<span class="search-suggestions__label">${escapeHtml(item.label)}</span>` +
+          `<span class="search-suggestions__meta">${escapeHtml(item.meta)}</span>` +
+          `</li>`
+      )
       .join("");
-    const keep = selectedId || sel.value;
-    if (keep && filtered.some((s) => s.id === keep)) {
-      sel.value = keep;
-    } else if (filtered.length === 1) {
-      sel.value = filtered[0].id;
-    }
+    listEl.hidden = false;
+    listEl._items = items;
   }
 
-  function fillSiteSelects(sites) {
-    allSitesForSelect = (sites || [])
-      .slice()
-      .sort((a, b) => (a.name || "").localeCompare(b.name || "", "ja"));
-    const moveQ = document.getElementById("collabMoveSiteSearch")?.value || "";
-    const deleteQ = document.getElementById("collabDeleteSiteSearch")?.value || "";
-    fillSiteSelect("collabMoveSite", moveQ, document.getElementById("collabMoveSite")?.value);
-    fillSiteSelect("collabDeleteSite", deleteQ, document.getElementById("collabDeleteSite")?.value);
-  }
-
-  function bindSiteSearch(searchId, selectId) {
+  function clearShopPick({ hiddenId, pickedId, searchId, suggestionsId }) {
+    const hidden = document.getElementById(hiddenId);
+    const picked = document.getElementById(pickedId);
     const search = document.getElementById(searchId);
-    const sel = document.getElementById(selectId);
-    if (!search || !sel) return;
+    const list = document.getElementById(suggestionsId);
+    if (hidden) hidden.value = "";
+    if (picked) {
+      picked.hidden = true;
+      picked.textContent = "";
+    }
+    if (search) search.value = "";
+    hideShopSuggestions(list);
+  }
+
+  function pickShop({ item, hiddenId, pickedId, searchId, suggestionsId }) {
+    const hidden = document.getElementById(hiddenId);
+    const picked = document.getElementById(pickedId);
+    const search = document.getElementById(searchId);
+    const list = document.getElementById(suggestionsId);
+    if (!item?.siteId) return;
+    if (hidden) hidden.value = item.siteId;
+    if (picked) {
+      picked.hidden = false;
+      picked.textContent = `選択: ${item.label}（${item.meta}）`;
+    }
+    if (search) search.value = item.label;
+    hideShopSuggestions(list);
+    api.highlightSiteById(item.siteId, "#ffd54a");
+    if (api.flyToSite) api.flyToSite(item.siteId);
+  }
+
+  function bindShopPicker({ searchId, suggestionsId, hiddenId, pickedId }) {
+    const search = document.getElementById(searchId);
+    const list = document.getElementById(suggestionsId);
+    if (!search || !list) return;
+
+    list._activeIndex = -1;
+
+    const showSuggestions = () => {
+      list._activeIndex = -1;
+      renderShopSuggestions(list, filterShopSuggestions(search.value));
+    };
+
+    search.addEventListener("focus", showSuggestions);
     search.addEventListener("input", () => {
-      fillSiteSelect(selectId, search.value, sel.value);
+      const hidden = document.getElementById(hiddenId);
+      if (hidden) hidden.value = "";
+      const picked = document.getElementById(pickedId);
+      if (picked) {
+        picked.hidden = true;
+        picked.textContent = "";
+      }
+      showSuggestions();
     });
-    sel.addEventListener("change", () => {
-      const site = allSitesForSelect.find((s) => s.id === sel.value);
-      if (site) search.value = site.name || "";
+
+    list.addEventListener("mousedown", (e) => {
+      const li = e.target.closest(".search-suggestions__item");
+      if (!li) return;
+      e.preventDefault();
+      const item = (list._items || []).find((x) => x.value === li.dataset.value);
+      pickShop({ item, hiddenId, pickedId, searchId, suggestionsId });
     });
+
+    search.addEventListener("keydown", (e) => {
+      const items = list._items || [];
+      if (e.key === "ArrowDown") {
+        if (list.hidden) showSuggestions();
+        const visible = list._items || [];
+        if (!visible.length) return;
+        e.preventDefault();
+        list._activeIndex = Math.min((list._activeIndex ?? -1) + 1, visible.length - 1);
+        renderShopSuggestions(list, visible);
+        return;
+      }
+      if (e.key === "ArrowUp") {
+        const visible = list._items || [];
+        if (!visible.length) return;
+        e.preventDefault();
+        list._activeIndex = Math.max((list._activeIndex ?? 0) - 1, 0);
+        renderShopSuggestions(list, visible);
+        return;
+      }
+      if (e.key === "Escape") {
+        hideShopSuggestions(list);
+        return;
+      }
+      if (e.key === "Enter") {
+        if (!list.hidden && list._activeIndex >= 0 && items[list._activeIndex]) {
+          e.preventDefault();
+          pickShop({ item: items[list._activeIndex], hiddenId, pickedId, searchId, suggestionsId });
+        }
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(`#${searchId}`) && !e.target.closest(`#${suggestionsId}`)) {
+        hideShopSuggestions(list);
+      }
+    });
+  }
+
+  function ensureCollabSearchStyles() {
+    if (document.getElementById("collabSiteSearchStyles")) return;
+    const style = document.createElement("style");
+    style.id = "collabSiteSearchStyles";
+    style.textContent =
+      ".collab-editor .collab-site-search { margin-top: 4px; }" +
+      ".collab-editor .search-suggestions { z-index: 1200; max-height: 220px; }" +
+      ".collab-picked { margin: 4px 0 8px; font-size: 0.75rem; color: var(--text); }";
+    document.head.appendChild(style);
   }
 
   async function refreshCreateStats() {
@@ -264,9 +399,20 @@
   function bindPanel(panel) {
     const groups = api.allCourseGroups();
     fillCourseSelects(groups);
-    fillSiteSelects(api.getMapData().sites);
-    bindSiteSearch("collabMoveSiteSearch", "collabMoveSite");
-    bindSiteSearch("collabDeleteSiteSearch", "collabDeleteSite");
+    ensureCollabSearchStyles();
+    buildShopSearchCatalog(api.getMapData().sites);
+    bindShopPicker({
+      searchId: "collabMoveSiteSearch",
+      suggestionsId: "collabMoveSiteSuggestions",
+      hiddenId: "collabMoveSiteId",
+      pickedId: "collabMoveSitePicked",
+    });
+    bindShopPicker({
+      searchId: "collabDeleteSiteSearch",
+      suggestionsId: "collabDeleteSiteSuggestions",
+      hiddenId: "collabDeleteSiteId",
+      pickedId: "collabDeleteSitePicked",
+    });
     const status = document.getElementById("collabStatus");
 
     panel.querySelector(".collab-editor__close").addEventListener("click", () => {
@@ -288,6 +434,22 @@
         } else {
           api.resetMarkerStyles();
         }
+        if (tab === "move") {
+          clearShopPick({
+            hiddenId: "collabMoveSiteId",
+            pickedId: "collabMoveSitePicked",
+            searchId: "collabMoveSiteSearch",
+            suggestionsId: "collabMoveSiteSuggestions",
+          });
+        }
+        if (tab === "delete") {
+          clearShopPick({
+            hiddenId: "collabDeleteSiteId",
+            pickedId: "collabDeleteSitePicked",
+            searchId: "collabDeleteSiteSearch",
+            suggestionsId: "collabDeleteSiteSuggestions",
+          });
+        }
       });
     });
 
@@ -303,9 +465,9 @@
     });
 
     document.getElementById("collabConfirmDelete").addEventListener("click", async () => {
-      const site_id = document.getElementById("collabDeleteSite").value;
+      const site_id = document.getElementById("collabDeleteSiteId").value;
       if (!site_id) {
-        status.textContent = "消去する工務店を選んでください";
+        status.textContent = "候補から工務店を選んでください";
         return;
       }
       const sites = api.getMapData().sites || [];
@@ -316,10 +478,10 @@
     });
 
     document.getElementById("collabConfirmMove").addEventListener("click", async () => {
-      const site_id = document.getElementById("collabMoveSite").value;
+      const site_id = document.getElementById("collabMoveSiteId").value;
       const map_course = document.getElementById("collabMoveCourse").value;
       if (!site_id || !map_course) {
-        status.textContent = "工務店とコースを選んでください";
+        status.textContent = "候補から工務店とコースを選んでください";
         return;
       }
       await submitActions([{ type: "move_course", site_id, map_course }], status);
