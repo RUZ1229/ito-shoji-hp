@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta name="chiba-map-build" content="2026-09-11T15:05:31">
+  <meta name="chiba-map-build" content="2026-09-11T16:50:07">
   <meta name="chiba-map-live-base" content="https://ruz1229.github.io/ito-shoji-hp/chiba-map-shain">
   <meta name="chiba-map-access-required" content="1">
   <meta name="chiba-map-access-keys" content="PK9aQfI-vc1efEizC-Sm2w,PK9aQfl-vc1efEizC-Sm2w">
@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>伊藤商事 千葉配送地図</title>
   <link rel="stylesheet" href="vendor/leaflet.css?v=6">
-  <link rel="stylesheet" href="css/chiba-map.css?v=20260911T15053">
+  <link rel="stylesheet" href="css/chiba-map.css?v=20260911T16500">
 </head>
 <body>
   <header class="header">
@@ -570,14 +570,58 @@
     return site.zone;
   }
 
+  function courseSpecNote(course, site) {
+    const m = mapData?.course_merges?.[course];
+    const n = mapData?.new_courses?.[course];
+    if (m?.label && m.label !== course) return m.label;
+    if (m?.truck_t === 2) return "2t専用";
+    if (m?.truck_t === 4) return "4t専用";
+    const shape = m?.marker_shape || n?.marker_shape || site?.marker_shape;
+    if (shape === "triangle") return "2t（三角）";
+    if (shape === "square") return "4t（四角）";
+    return "";
+  }
+
+  function formatMapCourseValue(site) {
+    const mc = getMapCourse(site);
+    const spec = courseSpecNote(mc, site);
+    return spec ? `${mc}（${spec}）` : mc;
+  }
+
+  function patchSiteCardFields(site, fields) {
+    const mc = getMapCourse(site);
+    const master = site.master_course || site.course || "";
+    const out = (fields || []).map((f) => ({ ...f }));
+    const mapVal = formatMapCourseValue(site);
+    let mapIdx = out.findIndex((f) => /地図コース/.test(f.label || ""));
+    if (mapIdx >= 0) {
+      out[mapIdx] = { label: "地図コース", value: mapVal };
+    } else {
+      const nameIdx = out.findIndex((f) => /配送先名|正式名称/.test(f.label || ""));
+      out.splice(nameIdx >= 0 ? nameIdx + 1 : 0, 0, { label: "地図コース", value: mapVal });
+    }
+    const masterIdx = out.findIndex((f) => /マスタコース/.test(f.label || ""));
+    if (master && master !== mc) {
+      const mv = { label: "マスタコース（配車依頼書）", value: master };
+      if (masterIdx >= 0) out[masterIdx] = mv;
+      else {
+        const idx = out.findIndex((f) => f.label === "地図コース");
+        out.splice(idx >= 0 ? idx + 1 : 1, 0, mv);
+      }
+    } else if (masterIdx >= 0) {
+      out.splice(masterIdx, 1);
+    }
+    return out;
+  }
+
   function buildDefaultSiteFields(site) {
     const mc = getMapCourse(site);
     const fields = [
       { label: "配送先名", value: site.name },
-      { label: "地図コース", value: mc },
+      { label: "地図コース", value: formatMapCourseValue(site) },
     ];
     if (site.master_course && site.master_course !== mc) {
-      fields.push({ label: "マスタコース", value: site.master_course });
+      fields.push({ label: "マスタコース（配車依頼書）", value: site.master_course });
     }
     const zl = zoneLabel(site);
     if (zl) fields.push({ label: "区域", value: zl });
@@ -1084,11 +1128,13 @@ html, body {
     const body = root.querySelector("#siteCardPanelBody");
     const title = card?.title || site.name || "配送先";
     const subtitle = card?.subtitle || "";
-    const course = card?.course || getMapCourse(site);
+    const course = formatMapCourseValue(site);
     const address = card?.address || site.address || "";
     const visitLine = formatVisitLine(site);
     const weightLine = formatWeightLine(site);
-    const fields = hasDetail && card?.fields?.length ? card.fields : buildDefaultSiteFields(site);
+    const baseFields =
+      hasDetail && card?.fields?.length ? card.fields : buildDefaultSiteFields(site);
+    const fields = patchSiteCardFields(site, baseFields);
     const cardLink = card?.card_html
       ? `<p class="site-card-panel__links"><a href="${escapeHtml(card.card_html)}" target="_blank" rel="noopener">印刷用カードを別タブで開く</a></p>`
       : "";
@@ -2211,6 +2257,27 @@ html, body {
       bindEvents();
       window.addEventListener("load", scheduleMapInvalidate);
       window.addEventListener("resize", scheduleMapInvalidate);
+      window.__chibaMapApi = {
+        getMapData: () => mapData,
+        getMap: () => map,
+        getShopMarkers: () => shopMarkers,
+        allCourseGroups,
+        getMapCourse,
+        setStatus,
+        showHint,
+        highlightSiteById(siteId, color) {
+          const hit = shopMarkers.find((m) => m.site?.id === siteId);
+          if (hit?.marker) applyShopMarkerStyle(hit.marker, hit.site, color || "#ffd54a");
+        },
+        resetMarkerStyles() {
+          showAllShopMarkers();
+        },
+        flyToSite(siteId) {
+          const hit = shopMarkers.find((m) => m.site?.id === siteId);
+          if (hit?.marker && map) map.flyTo(hit.marker.getLatLng(), 14, { duration: 0.6 });
+        },
+      };
+      if (window.__chibaMapCollabInit) window.__chibaMapCollabInit(window.__chibaMapApi);
       const ver = await fetchLiveVersionMeta();
       startLiveVersionWatch(ver?.built || data.generated);
     } catch (err) {

@@ -1,9 +1,10 @@
 {
-  "generated": "2026-09-11T15:05:30",
+  "generated": "2026-09-11T16:50:06",
   "map_variant": "他社",
   "map_variant_label": "他社向け",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図_他社/data/map_overrides.json",
+  "map_collaborative": "2026-09-11T07:50:06Z",
   "site_count": 334,
   "zones": {
     "chiba_a": {
@@ -254,6 +255,7 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": [
         "（有）丸八住建ＭＡＤＯ"
       ]
@@ -276,6 +278,7 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": [
         "（株）誠和 キロ〔野老亮輔〕"
       ]
@@ -298,6 +301,7 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": [
         "ＤＡ上林】 エクステリアＭｏ ｂ ｂ",
         "ＤＡ【上林】エクステリア小笠原"
@@ -321,6 +325,7 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": [
         "（株）イガリアルミトーヨー住器",
         "イガリアルミ ハウジング重兵衛",
@@ -350,6 +355,7 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": [
         "茂原市腰当"
       ]
@@ -372,6 +378,7 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": []
     },
     {
@@ -392,6 +399,7 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": [
         "桶庄トーヨー住器（株）"
       ]
@@ -414,6 +422,7 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": [
         "（有）川商アルミ建材",
         "（有）川商アルミ建材 御園建設",
@@ -1102,6 +1111,7 @@
       "master_course": "柏5P",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": [
         "内山硝子（株）茂原 アロウズ",
         "内山硝子（株）茂原営業所",
@@ -1139,6 +1149,7 @@
       "master_course": "柏5P",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": [
         "（有）上総建具商会",
         "（有）上総建具商会 協和",
@@ -1697,7 +1708,9 @@
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
-      "search_names": []
+      "search_names": [
+        "マチダマーケティング"
+      ]
     },
     {
       "id": "site_63",
@@ -3709,6 +3722,7 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": []
     },
     {
@@ -3729,6 +3743,7 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": [
         "大仙茨城 クールサマー",
         "（株）大仙関東＊クールサマー"
@@ -4330,6 +4345,7 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": []
     },
     {
@@ -4350,6 +4366,7 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": []
     },
     {
@@ -4370,6 +4387,7 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": []
     },
     {
@@ -4688,6 +4706,7 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": []
     },
     {
@@ -5059,6 +5078,7 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": [
         "ヨドハン（ＣＨＥＸ茂原店",
         "（株）大仙＊カインズ茂原"
@@ -5082,6 +5102,7 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": []
     },
     {
@@ -5124,6 +5145,7 @@
       "master_course": "柏3V",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": []
     },
     {
@@ -5785,6 +5807,7 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": []
     },
     {
@@ -6034,6 +6057,7 @@
       "master_course": "柏3V",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": []
     },
     {
@@ -6682,6 +6706,7 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": []
     },
     {
@@ -6864,6 +6889,7 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": []
     },
     {
@@ -7091,6 +7117,7 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": []
     },
     {
@@ -7295,6 +7322,7 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": []
     },
     {
@@ -7685,6 +7713,7 @@
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
+      "truck_t": 2,
       "search_names": []
     },
     {
@@ -7856,18 +7885,18 @@
     {
       "id": "virtual_maruo_y",
       "master_course": "柏3X",
-      "map_course": "柏1H",
       "course": "柏3X",
-      "zone": "chiba_a",
-      "hub": "yachiyo_dp",
       "name": "新（株）マルウ Ｙ",
       "address": "千葉県 旭市（柏3X→1H・地図表示のみ）",
       "lat": 35.7168,
       "lng": 140.6542,
-      "color": "hsl(180, 72%, 46%)",
       "geocode_source": "map_override_near_pw_asahikawa",
-      "marker_shape": "circle",
       "virtual": true,
+      "map_course": "柏1H",
+      "marker_shape": "circle",
+      "zone": "chiba_a",
+      "hub": "yachiyo_dp",
+      "color": "hsl(180, 72%, 46%)",
       "visit_count": 0,
       "weight_kg": 0
     }
