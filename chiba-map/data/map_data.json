@@ -1,10 +1,10 @@
 {
-  "generated": "2026-09-11T17:51:57",
+  "generated": "2026-09-11T17:53:25",
   "map_variant": "他社",
   "map_variant_label": "他社向け",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図_他社/data/map_overrides.json",
-  "map_collaborative": "2026-09-11T08:51:57Z",
+  "map_collaborative": "2026-09-11T08:53:25Z",
   "site_count": 335,
   "zones": {
     "chiba_a": {
