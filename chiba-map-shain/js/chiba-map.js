@@ -63,8 +63,24 @@
     });
   }
 
+  function isKnownCourse(course) {
+    if (!course || !mapData) return false;
+    if ((mapData.display_courses || []).includes(course)) return true;
+    if (mapData.course_merges?.[course]) return true;
+    if (mapData.new_courses?.[course]) return true;
+    return false;
+  }
+
   function getMapCourse(site) {
-    return site.map_course || site.course;
+    const master = site.master_course || site.course || "";
+    const mc = site.map_course || master;
+    if (mc === master) return mc;
+    if (!isKnownCourse(mc)) return master;
+    const memberIds = mapData.new_courses?.[mc]?.site_ids;
+    if (Array.isArray(memberIds) && memberIds.length && site.id && !memberIds.includes(site.id)) {
+      return master;
+    }
+    return mc;
   }
 
   function resolveMapCourse(course) {
@@ -1581,8 +1597,24 @@ html, body {
           category: "コース",
           priority: 2,
           group: group.title,
+          course: c,
         });
       }
+    }
+
+    for (const [c, cfg] of Object.entries(mapData.new_courses || {})) {
+      const key = norm(c);
+      if (seen.has(key)) continue;
+      seen.add(key);
+      items.push({
+        value: c,
+        label: cfg?.label || c,
+        meta: courseSearchMeta(c),
+        category: "コース",
+        priority: 2,
+        group: "協調作成",
+        course: c,
+      });
     }
 
     for (const s of mapData.sites || []) {
@@ -1660,6 +1692,10 @@ html, body {
     hideSuggestions();
     if (item?.siteId) {
       addSelection({ type: "shop", siteId: item.siteId, label: item.label });
+      return;
+    }
+    if (item?.course) {
+      addSelection({ type: "course", course: item.course, label: item.label });
       return;
     }
     addSelectionFromQuery(value);

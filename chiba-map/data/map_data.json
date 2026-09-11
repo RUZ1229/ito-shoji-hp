@@ -1,10 +1,10 @@
 {
-  "generated": "2026-09-11T17:53:25",
+  "generated": "2026-09-11T18:04:28",
   "map_variant": "他社",
   "map_variant_label": "他社向け",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図_他社/data/map_overrides.json",
-  "map_collaborative": "2026-09-11T08:53:25Z",
+  "map_collaborative": "2026-09-11T09:04:28Z",
   "site_count": 335,
   "zones": {
     "chiba_a": {
@@ -539,7 +539,7 @@
       "id": "site_16",
       "course": "柏2S",
       "zone": "chiba_b",
-      "hub": "esr_kazo",
+      "hub": "yachiyo_dp",
       "name": "メイク東関東支店",
       "address": "千葉県 船橋市習志野４ー７ー６",
       "lat": 35.7024,
@@ -1939,7 +1939,7 @@
       "id": "site_71",
       "course": "千Bキ",
       "zone": "chiba_b",
-      "hub": "esr_kazo",
+      "hub": "yachiyo_dp",
       "name": "総和",
       "address": "千葉県 習志野市東習志野６ー１ー１３",
       "lat": 35.697777,
@@ -3916,7 +3916,7 @@
     {
       "id": "site_146",
       "course": "柏3X",
-      "zone": "chiba_a",
+      "zone": "chiba_b",
       "hub": "yachiyo_dp",
       "name": "（有）越川アルミ",
       "address": "千葉県 山武市松尾町大堤９５ー１",
@@ -3929,7 +3929,7 @@
       "last_visit": "2026-09-11",
       "weight_kg": 884,
       "master_course": "柏3X",
-      "map_course": "柏3X",
+      "map_course": "柏4V",
       "marker_shape": "circle",
       "search_names": [
         "越川アルミ ナミカワ不動産",
@@ -7959,12 +7959,12 @@
     "柏4V": {
       "label": "柏4V",
       "marker_shape": "circle",
-      "hub": "esr_kazo",
+      "hub": "yachiyo_dp",
       "zone": "chiba_b",
       "color": null,
       "site_ids": [
-        "site_71",
-        "site_16"
+        "site_16",
+        "site_146"
       ]
     }
   },

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "note": "地図受信者の協調編集。build_chiba_map_data.py が map_data 生成時にマージ。",
-  "updated": "2026-09-11T08:53:25Z",
+  "updated": "2026-09-11T09:04:28Z",
   "updated_by": "地図ユーザー",
   "user_added_sites": [
     {
@@ -21,13 +21,6 @@
   ],
   "course_moves": [
     {
-      "site_id": "site_146",
-      "map_course": "柏3X",
-      "reason": "地図でコース変更",
-      "moved_at": "2026-09-11T07:58:15Z",
-      "moved_by": "地図ユーザー"
-    },
-    {
       "site_id": "site_71",
       "map_course": "柏4V",
       "reason": "カスタムコース",
@@ -38,7 +31,14 @@
       "site_id": "site_16",
       "map_course": "柏4V",
       "reason": "カスタムコース",
-      "moved_at": "2026-09-11T08:51:57Z",
+      "moved_at": "2026-09-11T09:04:28Z",
+      "moved_by": "地図ユーザー"
+    },
+    {
+      "site_id": "site_146",
+      "map_course": "柏4V",
+      "reason": "カスタムコース",
+      "moved_at": "2026-09-11T09:04:28Z",
       "moved_by": "地図ユーザー"
     }
   ],
@@ -46,13 +46,13 @@
     "柏4V": {
       "label": "柏4V",
       "site_ids": [
-        "site_71",
-        "site_16"
+        "site_16",
+        "site_146"
       ],
-      "hub": "esr_kazo",
+      "hub": "yachiyo_dp",
       "zone": "chiba_b",
       "marker_shape": "circle",
-      "created_at": "2026-09-11T08:51:57Z",
+      "created_at": "2026-09-11T09:04:28Z",
       "created_by": "地図ユーザー"
     }
   },
@@ -138,6 +138,67 @@
           }
         ],
         "custom_courses": {}
+      }
+    },
+    {
+      "at": "2026-09-11T09:04:28Z",
+      "by": "地図ユーザー",
+      "action": "create_course",
+      "detail": "柏4V (2店)",
+      "snapshot": {
+        "user_added_sites": [
+          {
+            "id": "collab_0001",
+            "name": "伊藤建材",
+            "address": "千葉県市川市高石神36-14",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.715641,
+            "lng": 139.941147,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-11T08:00:10Z",
+            "added_by": "地図ユーザー"
+          }
+        ],
+        "course_moves": [
+          {
+            "site_id": "site_146",
+            "map_course": "柏3X",
+            "reason": "地図でコース変更",
+            "moved_at": "2026-09-11T07:58:15Z",
+            "moved_by": "地図ユーザー"
+          },
+          {
+            "site_id": "site_71",
+            "map_course": "柏4V",
+            "reason": "カスタムコース",
+            "moved_at": "2026-09-11T08:51:57Z",
+            "moved_by": "地図ユーザー"
+          },
+          {
+            "site_id": "site_16",
+            "map_course": "柏4V",
+            "reason": "カスタムコース",
+            "moved_at": "2026-09-11T08:51:57Z",
+            "moved_by": "地図ユーザー"
+          }
+        ],
+        "custom_courses": {
+          "柏4V": {
+            "label": "柏4V",
+            "site_ids": [
+              "site_71",
+              "site_16"
+            ],
+            "hub": "esr_kazo",
+            "zone": "chiba_b",
+            "marker_shape": "circle",
+            "created_at": "2026-09-11T08:51:57Z",
+            "created_by": "地図ユーザー"
+          }
+        }
       }
     }
   ],

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta name="chiba-map-build" content="2026-09-11T17:53:26">
+  <meta name="chiba-map-build" content="2026-09-11T18:04:29">
   <meta name="chiba-map-live-base" content="https://ruz1229.github.io/ito-shoji-hp/chiba-map-shain">
   <meta name="chiba-map-access-required" content="1">
   <meta name="chiba-map-access-keys" content="PK9aQfI-vc1efEizC-Sm2w,PK9aQfl-vc1efEizC-Sm2w">
@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>伊藤商事 千葉配送地図</title>
   <link rel="stylesheet" href="vendor/leaflet.css?v=6">
-  <link rel="stylesheet" href="css/chiba-map.css?v=20260911T17532">
+  <link rel="stylesheet" href="css/chiba-map.css?v=20260911T18042">
 </head>
 <body>
   <header class="header">
@@ -128,8 +128,24 @@
     });
   }
 
+  function isKnownCourse(course) {
+    if (!course || !mapData) return false;
+    if ((mapData.display_courses || []).includes(course)) return true;
+    if (mapData.course_merges?.[course]) return true;
+    if (mapData.new_courses?.[course]) return true;
+    return false;
+  }
+
   function getMapCourse(site) {
-    return site.map_course || site.course;
+    const master = site.master_course || site.course || "";
+    const mc = site.map_course || master;
+    if (mc === master) return mc;
+    if (!isKnownCourse(mc)) return master;
+    const memberIds = mapData.new_courses?.[mc]?.site_ids;
+    if (Array.isArray(memberIds) && memberIds.length && site.id && !memberIds.includes(site.id)) {
+      return master;
+    }
+    return mc;
   }
 
   function resolveMapCourse(course) {
@@ -1646,8 +1662,24 @@ html, body {
           category: "コース",
           priority: 2,
           group: group.title,
+          course: c,
         });
       }
+    }
+
+    for (const [c, cfg] of Object.entries(mapData.new_courses || {})) {
+      const key = norm(c);
+      if (seen.has(key)) continue;
+      seen.add(key);
+      items.push({
+        value: c,
+        label: cfg?.label || c,
+        meta: courseSearchMeta(c),
+        category: "コース",
+        priority: 2,
+        group: "協調作成",
+        course: c,
+      });
     }
 
     for (const s of mapData.sites || []) {
@@ -1725,6 +1757,10 @@ html, body {
     hideSuggestions();
     if (item?.siteId) {
       addSelection({ type: "shop", siteId: item.siteId, label: item.label });
+      return;
+    }
+    if (item?.course) {
+      addSelection({ type: "course", course: item.course, label: item.label });
       return;
     }
     addSelectionFromQuery(value);
