@@ -1,10 +1,10 @@
 {
-  "generated": "2026-09-11T16:50:06",
+  "generated": "2026-09-11T16:50:33",
   "map_variant": "他社",
   "map_variant_label": "他社向け",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図_他社/data/map_overrides.json",
-  "map_collaborative": "2026-09-11T07:50:06Z",
+  "map_collaborative": "2026-09-11T07:50:33Z",
   "site_count": 334,
   "zones": {
     "chiba_a": {
@@ -153,7 +153,7 @@
       "last_visit": "2026-09-11",
       "weight_kg": 1036,
       "master_course": "柏1H",
-      "map_course": "柏1H",
+      "map_course": "柏2V",
       "marker_shape": "circle",
       "search_names": [
         "共栄千葉流山 八日市場納"
