@@ -1,16 +1,16 @@
 {
   "version": 1,
   "note": "地図受信者の協調編集。build_chiba_map_data.py が map_data 生成時にマージ。",
-  "updated": "2026-09-11T07:50:33Z",
-  "updated_by": "test2",
+  "updated": "2026-09-11T07:52:27Z",
+  "updated_by": "test-revert",
   "user_added_sites": [],
   "course_moves": [
     {
       "site_id": "site_0",
-      "map_course": "柏2V",
+      "map_course": "柏1H",
       "reason": "地図でコース変更",
-      "moved_at": "2026-09-11T07:50:33Z",
-      "moved_by": "test2"
+      "moved_at": "2026-09-11T07:52:27Z",
+      "moved_by": "test-revert"
     }
   ],
   "custom_courses": {},
@@ -40,6 +40,25 @@
             "reason": "地図でコース変更",
             "moved_at": "2026-09-11T07:50:06Z",
             "moved_by": "test"
+          }
+        ],
+        "custom_courses": {}
+      }
+    },
+    {
+      "at": "2026-09-11T07:52:27Z",
+      "by": "test-revert",
+      "action": "move_course",
+      "detail": "site_0 → 柏1H",
+      "snapshot": {
+        "user_added_sites": [],
+        "course_moves": [
+          {
+            "site_id": "site_0",
+            "map_course": "柏2V",
+            "reason": "地図でコース変更",
+            "moved_at": "2026-09-11T07:50:33Z",
+            "moved_by": "test2"
           }
         ],
         "custom_courses": {}

@@ -14,13 +14,33 @@
     { id: "kashiwa_dc", label: "柏DC" },
   ];
 
-  function apiBase() {
+  let cachedApiBase = null;
+
+  async function resolveApiBase() {
+    if (cachedApiBase !== null) return cachedApiBase;
     const meta = document.querySelector('meta[name="chiba-map-collab-api"]');
-    if (meta?.content?.trim()) return meta.content.trim().replace(/\/$/, "");
-    if (/localhost|127\.0\.0\.1/.test(window.location.hostname)) {
-      return "http://127.0.0.1:8767";
+    if (meta?.content?.trim()) {
+      cachedApiBase = meta.content.trim().replace(/\/$/, "");
+      return cachedApiBase;
     }
-    return "";
+    const origin = window.location.origin.replace(/\/$/, "");
+    if (/^https?:/.test(window.location.protocol)) {
+      try {
+        const r = await fetch(`${origin}/api/map-collab/health`, { cache: "no-store" });
+        if (r.ok) {
+          cachedApiBase = origin;
+          return cachedApiBase;
+        }
+      } catch (_) {
+        /* fall through */
+      }
+    }
+    if (/localhost|127\.0\.0\.1/.test(window.location.hostname)) {
+      cachedApiBase = `http://${window.location.hostname}:8767`;
+      return cachedApiBase;
+    }
+    cachedApiBase = "";
+    return cachedApiBase;
   }
 
   function editKey() {
@@ -32,15 +52,31 @@
   }
 
   async function postJson(path, body) {
-    const base = apiBase();
-    if (!base) throw new Error("編集APIに接続できません。map_collab_server.py を起動してください。");
-    const r = await fetch(`${base}${path}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "X-Map-Edit-Key": editKey() },
-      body: JSON.stringify({ ...body, edit_key: editKey() }),
-    });
+    const base = await resolveApiBase();
+    if (!base) {
+      throw new Error(
+        "編集APIに接続できません。地図を一度閉じ、デスクトップの「千葉配送地図を開く」から開き直してください。"
+      );
+    }
+    let r;
+    try {
+      r = await fetch(`${base}${path}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "X-Map-Edit-Key": editKey() },
+        body: JSON.stringify({ ...body, edit_key: editKey() }),
+      });
+    } catch (_) {
+      throw new Error(
+        "編集APIに接続できません。地図を一度閉じ、デスクトップの「千葉配送地図を開く」から開き直してください。"
+      );
+    }
     const data = await r.json().catch(() => ({}));
-    if (!r.ok) throw new Error(data.error || `HTTP ${r.status}`);
+    if (!r.ok) {
+      if (data.error === "invalid_edit_key") {
+        throw new Error("合言葉が違います。編集を開き直して合言葉を入れ直してください。");
+      }
+      throw new Error(data.error || `HTTP ${r.status}`);
+    }
     return data;
   }
 
@@ -58,8 +94,8 @@
     try {
       const res = await postJson("/api/map-collab", { actions, by: "地図ユーザー" });
       statusEl.textContent = res.message || "反映しました";
-      api.setStatus("全員反映中…再読込します");
-      setTimeout(() => window.location.reload(), 4000);
+      api.setStatus("反映しました。再読込します…");
+      setTimeout(() => window.location.reload(), 1200);
     } catch (err) {
       statusEl.textContent = err.message || String(err);
     }
@@ -201,7 +237,7 @@
       const address = document.getElementById("collabAddAddr").value.trim();
       const map_course = document.getElementById("collabAddCourse").value;
       if (!name || !address) {
-        setStatus("名前と住所を入力してください");
+        status.textContent = "名前と住所を入力してください";
         return;
       }
       await submitActions([{ type: "add_site", name, address, map_course }], status);
@@ -211,7 +247,7 @@
       const site_id = document.getElementById("collabMoveSite").value;
       const map_course = document.getElementById("collabMoveCourse").value;
       if (!site_id || !map_course) {
-        setStatus("工務店とコースを選んでください");
+        status.textContent = "工務店とコースを選んでください";
         return;
       }
       await submitActions([{ type: "move_course", site_id, map_course }], status);
@@ -221,7 +257,7 @@
       const course_name = document.getElementById("collabCourseName").value.trim();
       const hub = document.getElementById("collabCourseHub").value;
       if (!course_name || selectedSiteIds.size === 0) {
-        setStatus("コース名と工務店（1件以上）を選んでください");
+        status.textContent = "コース名と工務店（1件以上）を選んでください";
         return;
       }
       await submitActions(
