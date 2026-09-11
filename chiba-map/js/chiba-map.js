@@ -2211,6 +2211,17 @@ html, body {
           const hit = shopMarkers.find((m) => m.site?.id === siteId);
           if (hit?.marker && map) map.flyTo(hit.marker.getLatLng(), 14, { duration: 0.6 });
         },
+        getWarehouseMarkers() {
+          return Object.entries(warehouseMarkers).map(([id, marker]) => ({
+            id,
+            marker,
+            warehouse: getWarehouse(id),
+          }));
+        },
+        flyToWarehouse(warehouseId) {
+          const wh = getWarehouse(warehouseId);
+          if (wh && map) map.flyTo([wh.lat, wh.lng], 12, { duration: 0.6 });
+        },
       };
       if (window.__chibaMapCollabInit) window.__chibaMapCollabInit(window.__chibaMapApi);
       const ver = await fetchLiveVersionMeta();
