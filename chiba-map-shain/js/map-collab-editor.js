@@ -6,6 +6,7 @@
 
   let api = null;
   let selectedSiteIds = new Set();
+  let allSitesForSelect = [];
 
   const HUBS = [
     { id: "yachiyo_dp", label: "八千代DP" },
@@ -128,6 +129,7 @@
       <div class="collab-editor__tabs">
         <button type="button" data-tab="add" class="is-active">工務店追加</button>
         <button type="button" data-tab="move">コース変更</button>
+        <button type="button" data-tab="delete">工務店消去</button>
         <button type="button" data-tab="create">コース作成</button>
       </div>
       <div class="collab-editor__body">
@@ -138,10 +140,21 @@
           <button type="button" id="collabConfirmAdd" class="collab-btn collab-btn--primary">決定（全員に反映）</button>
         </section>
         <section data-panel="move" hidden>
-          <label>工務店<select id="collabMoveSite"></select></label>
+          <label>工務店
+            <input id="collabMoveSiteSearch" type="search" placeholder="名前・コースで検索…" autocomplete="off">
+            <select id="collabMoveSite"></select>
+          </label>
           <label>新コース<select id="collabMoveCourse"></select></label>
           <p class="collab-note">※配車依頼書のコース（マスタ）は残し、地図・検索の表示コースだけ変わります。</p>
           <button type="button" id="collabConfirmMove" class="collab-btn collab-btn--primary">決定（全員に反映）</button>
+        </section>
+        <section data-panel="delete" hidden>
+          <label>工務店
+            <input id="collabDeleteSiteSearch" type="search" placeholder="名前・コースで検索…" autocomplete="off">
+            <select id="collabDeleteSite"></select>
+          </label>
+          <p class="collab-note">※地図から消えます。配車依頼書のマスタは残ります（協調追加分は完全削除）。</p>
+          <button type="button" id="collabConfirmDelete" class="collab-btn collab-btn--primary">消去（全員に反映）</button>
         </section>
         <section data-panel="create" hidden>
           <label>新コース名<input id="collabCourseName" type="text" placeholder="例：柏3V+3X"></label>
@@ -166,18 +179,62 @@
     });
   }
 
-  function fillSiteSelect(sites) {
-    const sel = document.getElementById("collabMoveSite");
+  function siteRowLabel(site) {
+    return `${site.name}（${api.getMapCourse(site)}）`;
+  }
+
+  function siteSearchHaystack(site) {
+    const aliases = Array.isArray(site.search_names) ? site.search_names.join(" ") : "";
+    return `${site.name || ""} ${api.getMapCourse(site) || ""} ${site.address || ""} ${aliases}`.toLowerCase();
+  }
+
+  function siteMatchesQuery(site, query) {
+    const q = (query || "").trim().toLowerCase();
+    if (!q) return true;
+    return siteSearchHaystack(site).includes(q);
+  }
+
+  function fillSiteSelect(selectId, query, selectedId) {
+    const sel = document.getElementById(selectId);
     if (!sel) return;
-    const rows = (sites || [])
+    const filtered = allSitesForSelect.filter((s) => siteMatchesQuery(s, query));
+    if (!filtered.length) {
+      sel.innerHTML = '<option value="">該当なし</option>';
+      sel.value = "";
+      return;
+    }
+    sel.innerHTML = filtered
+      .map((s) => `<option value="${s.id}">${siteRowLabel(s)}</option>`)
+      .join("");
+    const keep = selectedId || sel.value;
+    if (keep && filtered.some((s) => s.id === keep)) {
+      sel.value = keep;
+    } else if (filtered.length === 1) {
+      sel.value = filtered[0].id;
+    }
+  }
+
+  function fillSiteSelects(sites) {
+    allSitesForSelect = (sites || [])
       .slice()
       .sort((a, b) => (a.name || "").localeCompare(b.name || "", "ja"));
-    sel.innerHTML = rows
-      .map(
-        (s) =>
-          `<option value="${s.id}">${s.name}（${api.getMapCourse(s)}）</option>`
-      )
-      .join("");
+    const moveQ = document.getElementById("collabMoveSiteSearch")?.value || "";
+    const deleteQ = document.getElementById("collabDeleteSiteSearch")?.value || "";
+    fillSiteSelect("collabMoveSite", moveQ, document.getElementById("collabMoveSite")?.value);
+    fillSiteSelect("collabDeleteSite", deleteQ, document.getElementById("collabDeleteSite")?.value);
+  }
+
+  function bindSiteSearch(searchId, selectId) {
+    const search = document.getElementById(searchId);
+    const sel = document.getElementById(selectId);
+    if (!search || !sel) return;
+    search.addEventListener("input", () => {
+      fillSiteSelect(selectId, search.value, sel.value);
+    });
+    sel.addEventListener("change", () => {
+      const site = allSitesForSelect.find((s) => s.id === sel.value);
+      if (site) search.value = site.name || "";
+    });
   }
 
   async function refreshCreateStats() {
@@ -207,7 +264,9 @@
   function bindPanel(panel) {
     const groups = api.allCourseGroups();
     fillCourseSelects(groups);
-    fillSiteSelect(api.getMapData().sites);
+    fillSiteSelects(api.getMapData().sites);
+    bindSiteSearch("collabMoveSiteSearch", "collabMoveSite");
+    bindSiteSearch("collabDeleteSiteSearch", "collabDeleteSite");
     const status = document.getElementById("collabStatus");
 
     panel.querySelector(".collab-editor__close").addEventListener("click", () => {
@@ -241,6 +300,19 @@
         return;
       }
       await submitActions([{ type: "add_site", name, address, map_course }], status);
+    });
+
+    document.getElementById("collabConfirmDelete").addEventListener("click", async () => {
+      const site_id = document.getElementById("collabDeleteSite").value;
+      if (!site_id) {
+        status.textContent = "消去する工務店を選んでください";
+        return;
+      }
+      const sites = api.getMapData().sites || [];
+      const site = sites.find((s) => s.id === site_id);
+      const label = site?.name || site_id;
+      if (!confirm(`「${label}」を地図から消去します。よろしいですか？`)) return;
+      await submitActions([{ type: "delete_site", site_id }], status);
     });
 
     document.getElementById("collabConfirmMove").addEventListener("click", async () => {

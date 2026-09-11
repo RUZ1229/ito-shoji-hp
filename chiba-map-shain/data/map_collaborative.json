@@ -1,8 +1,8 @@
 {
   "version": 1,
   "note": "地図受信者の協調編集。build_chiba_map_data.py が map_data 生成時にマージ。",
-  "updated": "2026-09-11T08:00:10Z",
-  "updated_by": "地図ユーザー",
+  "updated": "2026-09-11T08:02:21Z",
+  "updated_by": "test",
   "user_added_sites": [
     {
       "id": "collab_0001",
@@ -79,5 +79,6 @@
         "custom_courses": {}
       }
     }
-  ]
+  ],
+  "deleted_sites": []
 }
