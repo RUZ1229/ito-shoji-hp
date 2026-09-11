@@ -1,10 +1,10 @@
 {
-  "generated": "2026-09-11T16:53:33",
+  "generated": "2026-09-11T16:57:36",
   "map_variant": "社内",
   "map_variant_label": "伊藤商事専用（社内）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図/data/map_overrides.json",
-  "map_collaborative": "2026-09-11T07:53:33Z",
+  "map_collaborative": "2026-09-11T07:57:36Z",
   "site_count": 334,
   "zones": {
     "chiba_a": {
@@ -3935,7 +3935,7 @@
       "last_visit": "2026-09-11",
       "weight_kg": 743,
       "master_course": "柏3X",
-      "map_course": "柏3X",
+      "map_course": "柏1H",
       "marker_shape": "circle",
       "search_names": [
         "越川アルミ ナミカワ不動産",
