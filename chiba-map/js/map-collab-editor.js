@@ -90,6 +90,15 @@
     statusEl.textContent = "反映中…";
     try {
       const res = await postJson("/api/map-collab", { actions, by: "地図ユーザー" });
+      const wantsDeleteCourse = actions.some((a) => a.type === "delete_course");
+      if (wantsDeleteCourse && !(res.log || []).some((line) => String(line).includes("コース削除"))) {
+        throw new Error("コース削除が反映されませんでした。地図を開き直してから再試行してください。");
+      }
+      if (wantsDeleteCourse && res.rebuilt === false) {
+        throw new Error(
+          "コースは削除しましたが地図データの更新に失敗しました。地図を一度閉じて「千葉配送地図を開く」から開き直してください。"
+        );
+      }
       statusEl.textContent = res.message || "反映しました";
       api.setStatus("反映しました。再読込します…");
       setTimeout(() => {
