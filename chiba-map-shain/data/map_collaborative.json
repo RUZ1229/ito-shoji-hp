@@ -1,23 +1,9 @@
 {
   "version": 1,
   "note": "地図受信者の協調編集。build_chiba_map_data.py が map_data 生成時にマージ。",
-  "updated": "2026-09-14T04:30:24Z",
+  "updated": "2026-09-14T04:34:33Z",
   "updated_by": "地図ユーザー",
   "user_added_sites": [
-    {
-      "id": "collab_0001",
-      "name": "伊藤建材",
-      "address": "千葉県市川市高石神36-14",
-      "map_course": "柏1H",
-      "hub": null,
-      "lat": 35.715641,
-      "lng": 139.941147,
-      "geocode_source": "gsi",
-      "visit_count": 0,
-      "weight_kg": 0,
-      "added_at": "2026-09-11T08:00:10Z",
-      "added_by": "地図ユーザー"
-    },
     {
       "id": "collab_0002",
       "name": "伊藤建材",
@@ -931,6 +917,47 @@
             "created_by": "地図ユーザー"
           }
         },
+        "deleted_sites": []
+      }
+    },
+    {
+      "at": "2026-09-14T04:34:33Z",
+      "by": "地図ユーザー",
+      "action": "delete_site",
+      "detail": "collab_0001",
+      "snapshot": {
+        "user_added_sites": [
+          {
+            "id": "collab_0001",
+            "name": "伊藤建材",
+            "address": "千葉県市川市高石神36-14",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.715641,
+            "lng": 139.941147,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-11T08:00:10Z",
+            "added_by": "地図ユーザー"
+          },
+          {
+            "id": "collab_0002",
+            "name": "伊藤建材",
+            "address": "千葉県市川市高石神36-14",
+            "map_course": "千Aア",
+            "hub": null,
+            "lat": 35.715641,
+            "lng": 139.941147,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-11T12:40:44Z",
+            "added_by": "地図ユーザー"
+          }
+        ],
+        "course_moves": [],
+        "custom_courses": {},
         "deleted_sites": []
       }
     }
