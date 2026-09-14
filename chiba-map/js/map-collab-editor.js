@@ -13,27 +13,32 @@
 
   let cachedApiBase = null;
 
+  async function collabHealthOk(base) {
+    try {
+      const r = await fetch(`${base}/api/map-collab/health`, { cache: "no-store" });
+      if (!r.ok) return false;
+      const data = await r.json().catch(() => ({}));
+      if (!data.ok) return false;
+      const caps = data.capabilities;
+      return Array.isArray(caps) && caps.includes("delete_course");
+    } catch (_) {
+      return false;
+    }
+  }
+
   async function resolveApiBase() {
     if (cachedApiBase !== null) return cachedApiBase;
     const meta = document.querySelector('meta[name="chiba-map-collab-api"]');
     if (meta?.content?.trim()) {
-      cachedApiBase = meta.content.trim().replace(/\/$/, "");
-      return cachedApiBase;
-    }
-    const origin = window.location.origin.replace(/\/$/, "");
-    if (/^https?:/.test(window.location.protocol)) {
-      try {
-        const r = await fetch(`${origin}/api/map-collab/health`, { cache: "no-store" });
-        if (r.ok) {
-          cachedApiBase = origin;
-          return cachedApiBase;
-        }
-      } catch (_) {
-        /* fall through */
+      const metaBase = meta.content.trim().replace(/\/$/, "");
+      if (await collabHealthOk(metaBase)) {
+        cachedApiBase = metaBase;
+        return cachedApiBase;
       }
     }
-    if (/localhost|127\.0\.0\.1/.test(window.location.hostname)) {
-      cachedApiBase = `http://${window.location.hostname}:8767`;
+    const origin = window.location.origin.replace(/\/$/, "");
+    if (/^https?:/.test(window.location.protocol) && (await collabHealthOk(origin))) {
+      cachedApiBase = origin;
       return cachedApiBase;
     }
     cachedApiBase = "";
@@ -71,6 +76,11 @@
     if (!r.ok) {
       if (data.error === "invalid_edit_key") {
         throw new Error("合言葉が違います。編集を開き直して合言葉を入れ直してください。");
+      }
+      if (String(data.error || "").startsWith("unknown_action:")) {
+        throw new Error(
+          "編集サーバーが古いバージョンです。地図を一度閉じ、デスクトップの「千葉配送地図を開く」から開き直してください。"
+        );
       }
       throw new Error(data.error || `HTTP ${r.status}`);
     }
