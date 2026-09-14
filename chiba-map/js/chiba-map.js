@@ -63,11 +63,21 @@
     });
   }
 
+  function isCollabCustomCourse(name) {
+    const nc = mapData?.new_courses?.[name];
+    return Array.isArray(nc?.site_ids);
+  }
+
+  function isActiveCollabCustomCourse(name) {
+    if (!isCollabCustomCourse(name)) return true;
+    return Object.prototype.hasOwnProperty.call(mapData.collab_custom_courses || {}, name);
+  }
+
   function isKnownCourse(course) {
     if (!course || !mapData) return false;
-    if ((mapData.display_courses || []).includes(course)) return true;
     if (mapData.course_merges?.[course]) return true;
-    if (mapData.new_courses?.[course]) return true;
+    if (mapData.new_courses?.[course]) return isActiveCollabCustomCourse(course);
+    if ((mapData.display_courses || []).includes(course)) return isActiveCollabCustomCourse(course);
     return false;
   }
 
@@ -160,10 +170,12 @@
     if (aliases[q]) return resolveMapCourse(aliases[q]);
 
     for (const c of mapData.display_courses || []) {
+      if (!isActiveCollabCustomCourse(c)) continue;
       if (norm(c) === q) return resolveMapCourse(c);
     }
 
     for (const c of mapData.display_courses || []) {
+      if (!isActiveCollabCustomCourse(c)) continue;
       const cn = norm(c);
       if (cn.includes(q) || q.includes(cn)) return resolveMapCourse(c);
     }
@@ -175,6 +187,7 @@
     }
     if (mapData.new_courses) {
       for (const name of Object.keys(mapData.new_courses)) {
+        if (!isActiveCollabCustomCourse(name)) continue;
         if (norm(name) === q || norm(name).includes(q)) return name;
       }
     }
@@ -1603,6 +1616,7 @@ html, body {
     }
 
     for (const [c, cfg] of Object.entries(mapData.new_courses || {})) {
+      if (!isActiveCollabCustomCourse(c)) continue;
       const key = norm(c);
       if (seen.has(key)) continue;
       seen.add(key);

@@ -92,7 +92,11 @@
       const res = await postJson("/api/map-collab", { actions, by: "地図ユーザー" });
       statusEl.textContent = res.message || "反映しました";
       api.setStatus("反映しました。再読込します…");
-      setTimeout(() => window.location.reload(), 1200);
+      setTimeout(() => {
+        const url = new URL(window.location.href);
+        url.searchParams.set("_", String(Date.now()));
+        window.location.replace(url.toString());
+      }, 1200);
     } catch (err) {
       statusEl.textContent = err.message || String(err);
     }
@@ -416,13 +420,16 @@
 
   async function fillDeletableCourses() {
     const sel = document.getElementById("collabDeleteCourse");
+    const btn = document.getElementById("collabConfirmDeleteCourse");
     if (!sel) return;
+    if (btn) btn.disabled = true;
     sel.innerHTML = '<option value="">読込中…</option>';
     const collab = await fetchCollabData();
     const custom = collab?.custom_courses || {};
     const names = Object.keys(custom).sort((a, b) => a.localeCompare(b, "ja"));
     if (!names.length) {
       sel.innerHTML = '<option value="">削除できるコースがありません</option>';
+      if (btn) btn.disabled = true;
       return;
     }
     sel.innerHTML = names
@@ -431,6 +438,7 @@
         return `<option value="${escapeHtml(n)}">${escapeHtml(n)}（${nshop}店）</option>`;
       })
       .join("");
+    if (btn) btn.disabled = false;
   }
 
   function bindMultiShopSearch({ searchId, suggestionsId }) {

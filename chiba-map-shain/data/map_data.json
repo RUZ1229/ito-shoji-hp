@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-11T18:05:26",
+  "generated": "2026-09-14T11:39:25",
   "map_variant": "社内",
   "map_variant_label": "伊藤商事専用（社内）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図/data/map_overrides.json",
-  "map_collaborative": "2026-09-11T09:05:26Z",
-  "site_count": 335,
+  "map_collaborative": "2026-09-14T02:39:25Z",
+  "site_count": 336,
   "zones": {
     "chiba_a": {
       "label": "千葉A",
@@ -643,7 +643,7 @@
     {
       "id": "site_20",
       "course": "柏3V",
-      "zone": "chiba_a",
+      "zone": "chiba_b",
       "hub": "yachiyo_dp",
       "name": "唐沢エクステリア",
       "address": "千葉県 千葉市稲毛区山王町１１４ー１",
@@ -656,7 +656,7 @@
       "last_visit": "2026-09-11",
       "weight_kg": 1136,
       "master_course": "柏3V",
-      "map_course": "柏3V",
+      "map_course": "柏4V",
       "marker_shape": "circle",
       "search_names": [
         "（株）マルウ（唐沢エクステリア"
@@ -3922,7 +3922,7 @@
     {
       "id": "site_146",
       "course": "柏3X",
-      "zone": "chiba_b",
+      "zone": "chiba_a",
       "hub": "yachiyo_dp",
       "name": "（有）越川アルミ",
       "address": "千葉県 山武市松尾町大堤９５ー１",
@@ -3935,7 +3935,7 @@
       "last_visit": "2026-09-11",
       "weight_kg": 884,
       "master_course": "柏3X",
-      "map_course": "柏4V",
+      "map_course": "柏3X",
       "marker_shape": "circle",
       "search_names": [
         "越川アルミ ナミカワ不動産",
@@ -7917,6 +7917,26 @@
       "marker_shape": "circle"
     },
     {
+      "id": "collab_0002",
+      "course": "千Aア",
+      "master_course": "千Aア",
+      "map_course": "千Aア",
+      "zone": "chiba_b",
+      "hub": "esr_kazo",
+      "name": "伊藤建材",
+      "address": "千葉県市川市高石神36-14",
+      "lat": 35.715641,
+      "lng": 139.941147,
+      "color": "hsl(0, 72%, 46%)",
+      "geocode_source": "gsi",
+      "visit_count": 0,
+      "weight_kg": 0.0,
+      "first_visit": null,
+      "last_visit": null,
+      "collab_added": true,
+      "marker_shape": "circle"
+    },
+    {
       "id": "virtual_maruo_y",
       "master_course": "柏3X",
       "course": "柏3X",
@@ -7979,7 +7999,8 @@
       "color": null,
       "site_ids": [
         "site_16",
-        "site_146"
+        "site_71",
+        "site_20"
       ]
     }
   },

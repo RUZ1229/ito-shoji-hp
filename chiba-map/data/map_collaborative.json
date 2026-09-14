@@ -1,7 +1,7 @@
 {
   "version": 1,
   "note": "地図受信者の協調編集。build_chiba_map_data.py が map_data 生成時にマージ。",
-  "updated": "2026-09-11T09:05:26Z",
+  "updated": "2026-09-14T02:39:25Z",
   "updated_by": "地図ユーザー",
   "user_added_sites": [
     {
@@ -17,28 +17,42 @@
       "weight_kg": 0,
       "added_at": "2026-09-11T08:00:10Z",
       "added_by": "地図ユーザー"
+    },
+    {
+      "id": "collab_0002",
+      "name": "伊藤建材",
+      "address": "千葉県市川市高石神36-14",
+      "map_course": "千Aア",
+      "hub": null,
+      "lat": 35.715641,
+      "lng": 139.941147,
+      "geocode_source": "gsi",
+      "visit_count": 0,
+      "weight_kg": 0,
+      "added_at": "2026-09-11T12:40:44Z",
+      "added_by": "地図ユーザー"
     }
   ],
   "course_moves": [
     {
-      "site_id": "site_71",
-      "map_course": "柏4V",
-      "reason": "カスタムコース",
-      "moved_at": "2026-09-11T08:51:57Z",
-      "moved_by": "地図ユーザー"
-    },
-    {
       "site_id": "site_16",
       "map_course": "柏4V",
       "reason": "カスタムコース",
-      "moved_at": "2026-09-11T09:04:28Z",
+      "moved_at": "2026-09-14T02:39:25Z",
       "moved_by": "地図ユーザー"
     },
     {
-      "site_id": "site_146",
+      "site_id": "site_71",
       "map_course": "柏4V",
       "reason": "カスタムコース",
-      "moved_at": "2026-09-11T09:04:28Z",
+      "moved_at": "2026-09-14T02:39:25Z",
+      "moved_by": "地図ユーザー"
+    },
+    {
+      "site_id": "site_20",
+      "map_course": "柏4V",
+      "reason": "カスタムコース",
+      "moved_at": "2026-09-14T02:39:25Z",
       "moved_by": "地図ユーザー"
     }
   ],
@@ -47,12 +61,13 @@
       "label": "柏4V",
       "site_ids": [
         "site_16",
-        "site_146"
+        "site_71",
+        "site_20"
       ],
       "hub": "yachiyo_dp",
       "zone": "chiba_b",
       "marker_shape": "circle",
-      "created_at": "2026-09-11T09:04:28Z",
+      "created_at": "2026-09-14T02:39:25Z",
       "created_by": "地図ユーザー"
     }
   },
@@ -199,6 +214,134 @@
             "created_by": "地図ユーザー"
           }
         }
+      }
+    },
+    {
+      "at": "2026-09-11T09:07:25Z",
+      "by": "test",
+      "action": "delete_course",
+      "detail": "柏4V",
+      "snapshot": {
+        "user_added_sites": [
+          {
+            "id": "collab_0001",
+            "name": "伊藤建材",
+            "address": "千葉県市川市高石神36-14",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.715641,
+            "lng": 139.941147,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-11T08:00:10Z",
+            "added_by": "地図ユーザー"
+          }
+        ],
+        "course_moves": [
+          {
+            "site_id": "site_71",
+            "map_course": "柏4V",
+            "reason": "カスタムコース",
+            "moved_at": "2026-09-11T08:51:57Z",
+            "moved_by": "地図ユーザー"
+          },
+          {
+            "site_id": "site_16",
+            "map_course": "柏4V",
+            "reason": "カスタムコース",
+            "moved_at": "2026-09-11T09:04:28Z",
+            "moved_by": "地図ユーザー"
+          },
+          {
+            "site_id": "site_146",
+            "map_course": "柏4V",
+            "reason": "カスタムコース",
+            "moved_at": "2026-09-11T09:04:28Z",
+            "moved_by": "地図ユーザー"
+          }
+        ],
+        "custom_courses": {
+          "柏4V": {
+            "label": "柏4V",
+            "site_ids": [
+              "site_16",
+              "site_146"
+            ],
+            "hub": "yachiyo_dp",
+            "zone": "chiba_b",
+            "marker_shape": "circle",
+            "created_at": "2026-09-11T09:04:28Z",
+            "created_by": "地図ユーザー"
+          }
+        },
+        "deleted_sites": []
+      }
+    },
+    {
+      "at": "2026-09-11T12:40:44Z",
+      "by": "地図ユーザー",
+      "action": "add_site",
+      "detail": "伊藤建材 → 千Aア",
+      "snapshot": {
+        "user_added_sites": [
+          {
+            "id": "collab_0001",
+            "name": "伊藤建材",
+            "address": "千葉県市川市高石神36-14",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.715641,
+            "lng": 139.941147,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-11T08:00:10Z",
+            "added_by": "地図ユーザー"
+          }
+        ],
+        "course_moves": [],
+        "custom_courses": {}
+      }
+    },
+    {
+      "at": "2026-09-14T02:39:25Z",
+      "by": "地図ユーザー",
+      "action": "create_course",
+      "detail": "柏4V (3店)",
+      "snapshot": {
+        "user_added_sites": [
+          {
+            "id": "collab_0001",
+            "name": "伊藤建材",
+            "address": "千葉県市川市高石神36-14",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.715641,
+            "lng": 139.941147,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-11T08:00:10Z",
+            "added_by": "地図ユーザー"
+          },
+          {
+            "id": "collab_0002",
+            "name": "伊藤建材",
+            "address": "千葉県市川市高石神36-14",
+            "map_course": "千Aア",
+            "hub": null,
+            "lat": 35.715641,
+            "lng": 139.941147,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-11T12:40:44Z",
+            "added_by": "地図ユーザー"
+          }
+        ],
+        "course_moves": [],
+        "custom_courses": {}
       }
     }
   ],
