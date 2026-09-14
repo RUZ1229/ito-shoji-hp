@@ -1,23 +1,9 @@
 {
   "version": 1,
   "note": "地図受信者の協調編集。build_chiba_map_data.py が map_data 生成時にマージ。",
-  "updated": "2026-09-14T06:18:18Z",
+  "updated": "2026-09-14T06:26:09Z",
   "updated_by": "地図ユーザー",
   "user_added_sites": [
-    {
-      "id": "collab_0001",
-      "name": "伊藤建材",
-      "address": "千葉県市川市高石神36-14",
-      "map_course": "柏1H",
-      "hub": null,
-      "lat": 35.715641,
-      "lng": 139.941147,
-      "geocode_source": "gsi",
-      "visit_count": 0,
-      "weight_kg": 0,
-      "added_at": "2026-09-14T05:46:01Z",
-      "added_by": "地図ユーザー"
-    },
     {
       "id": "collab_0002",
       "name": "伊藤建材",
@@ -86,25 +72,6 @@
   ],
   "custom_courses": {},
   "history": [
-    {
-      "at": "2026-09-11T07:58:15Z",
-      "by": "地図ユーザー",
-      "action": "move_course",
-      "detail": "site_146 → 柏3X",
-      "snapshot": {
-        "user_added_sites": [],
-        "course_moves": [
-          {
-            "site_id": "site_146",
-            "map_course": "柏1H",
-            "reason": "地図でコース変更",
-            "moved_at": "2026-09-11T07:57:36Z",
-            "moved_by": "地図ユーザー"
-          }
-        ],
-        "custom_courses": {}
-      }
-    },
     {
       "at": "2026-09-11T08:00:04Z",
       "by": "地図ユーザー",
@@ -1361,6 +1328,97 @@
       "by": "test-verify",
       "action": "delete_site",
       "detail": "site_5",
+      "snapshot": {
+        "user_added_sites": [
+          {
+            "id": "collab_0001",
+            "name": "伊藤建材",
+            "address": "千葉県市川市高石神36-14",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.715641,
+            "lng": 139.941147,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-14T05:46:01Z",
+            "added_by": "地図ユーザー"
+          },
+          {
+            "id": "collab_0002",
+            "name": "伊藤建材",
+            "address": "千葉県市川市高石神36-14",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.715641,
+            "lng": 139.941147,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-14T05:49:01Z",
+            "added_by": "地図ユーザー"
+          },
+          {
+            "id": "collab_0003",
+            "name": "伊藤建材",
+            "address": "千葉県市川市高石神36-14",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.715641,
+            "lng": 139.941147,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-14T05:50:08Z",
+            "added_by": "地図ユーザー"
+          },
+          {
+            "id": "collab_0004",
+            "name": "伊藤建材",
+            "address": "千葉県市川市高石神36-14",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.715641,
+            "lng": 139.941147,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-14T05:57:28Z",
+            "added_by": "地図ユーザー"
+          },
+          {
+            "id": "collab_0005",
+            "name": "伊藤建材",
+            "address": "千葉県市川市高石神36-14",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.715641,
+            "lng": 139.941147,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-14T05:58:13Z",
+            "added_by": "地図ユーザー"
+          }
+        ],
+        "course_moves": [
+          {
+            "site_id": "site_66",
+            "map_course": "千Bキ",
+            "reason": "地図でコース変更",
+            "moved_at": "2026-09-14T04:37:51Z",
+            "moved_by": "地図ユーザー"
+          }
+        ],
+        "custom_courses": {},
+        "deleted_sites": []
+      }
+    },
+    {
+      "at": "2026-09-14T06:26:09Z",
+      "by": "地図ユーザー",
+      "action": "delete_site",
+      "detail": "collab_0001",
       "snapshot": {
         "user_added_sites": [
           {
