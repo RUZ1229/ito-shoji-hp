@@ -1,10 +1,10 @@
 {
-  "generated": "2026-09-14T15:05:13",
+  "generated": "2026-09-14T15:18:18",
   "map_variant": "社内",
   "map_variant_label": "伊藤商事専用（社内）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図/data/map_overrides.json",
-  "map_collaborative": "2026-09-14T05:58:13Z",
+  "map_collaborative": "2026-09-14T06:18:18Z",
   "collab_custom_courses": {},
   "site_count": 339,
   "zones": {
@@ -1970,7 +1970,8 @@
         "（ 株） 総和 ＭＡＤＯ",
         "（ 株） 総和 ＳＨ",
         "（ 株） 総和 ＡＫ",
-        "（株）総和 角栄Ｈ"
+        "（株）総和 角栄Ｈ",
+        "（株）総和　ＮＡ"
       ]
     },
     {
