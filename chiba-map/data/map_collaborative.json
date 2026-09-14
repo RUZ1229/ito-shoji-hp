@@ -1,9 +1,24 @@
 {
   "version": 1,
   "note": "地図受信者の協調編集。build_chiba_map_data.py が map_data 生成時にマージ。",
-  "updated": "2026-09-14T04:37:51Z",
-  "updated_by": "地図ユーザー",
-  "user_added_sites": [],
+  "updated": "2026-09-14T05:39:32Z",
+  "updated_by": "test",
+  "user_added_sites": [
+    {
+      "id": "collab_0001",
+      "name": "テスト確認店",
+      "address": "千葉県市川市1-1",
+      "map_course": "千Aア",
+      "hub": null,
+      "lat": 35.721855,
+      "lng": 139.931061,
+      "geocode_source": "gsi",
+      "visit_count": 0,
+      "weight_kg": 0,
+      "added_at": "2026-09-14T05:39:32Z",
+      "added_by": "test"
+    }
+  ],
   "course_moves": [
     {
       "site_id": "site_66",
@@ -1045,6 +1060,26 @@
             "map_course": "柏1H",
             "reason": "地図でコース変更",
             "moved_at": "2026-09-14T04:37:16Z",
+            "moved_by": "地図ユーザー"
+          }
+        ],
+        "custom_courses": {},
+        "deleted_sites": []
+      }
+    },
+    {
+      "at": "2026-09-14T05:39:32Z",
+      "by": "test",
+      "action": "add_site",
+      "detail": "テスト確認店 → 千Aア",
+      "snapshot": {
+        "user_added_sites": [],
+        "course_moves": [
+          {
+            "site_id": "site_66",
+            "map_course": "千Bキ",
+            "reason": "地図でコース変更",
+            "moved_at": "2026-09-14T04:37:51Z",
             "moved_by": "地図ユーザー"
           }
         ],
