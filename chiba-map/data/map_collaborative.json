@@ -1,38 +1,9 @@
 {
   "version": 1,
   "note": "地図受信者の協調編集。build_chiba_map_data.py が map_data 生成時にマージ。",
-  "updated": "2026-09-14T07:05:45Z",
+  "updated": "2026-09-14T07:05:51Z",
   "updated_by": "e2e-test",
-  "user_added_sites": [
-    {
-      "id": "collab_0002",
-      "name": "協調E2Eテスト",
-      "address": "千葉県千葉市中央区中央2-1-1",
-      "map_course": "柏1H",
-      "hub": null,
-      "lat": 35.609062,
-      "lng": 140.120193,
-      "geocode_source": "gsi",
-      "visit_count": 0,
-      "weight_kg": 0,
-      "added_at": "2026-09-14T07:03:32Z",
-      "added_by": "e2e-test"
-    },
-    {
-      "id": "collab_0003",
-      "name": "協調E2Eテスト",
-      "address": "千葉県千葉市中央区中央2-1-1",
-      "map_course": "柏1H",
-      "hub": null,
-      "lat": 35.609062,
-      "lng": 140.120193,
-      "geocode_source": "gsi",
-      "visit_count": 0,
-      "weight_kg": 0,
-      "added_at": "2026-09-14T07:05:45Z",
-      "added_by": "e2e-test"
-    }
-  ],
+  "user_added_sites": [],
   "course_moves": [
     {
       "site_id": "site_66",
@@ -44,226 +15,6 @@
   ],
   "custom_courses": {},
   "history": [
-    {
-      "at": "2026-09-14T03:03:00Z",
-      "by": "restore",
-      "action": "create_course",
-      "detail": "柏4V (2店)",
-      "snapshot": {
-        "user_added_sites": [
-          {
-            "id": "collab_0001",
-            "name": "伊藤建材",
-            "address": "千葉県市川市高石神36-14",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.715641,
-            "lng": 139.941147,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-11T08:00:10Z",
-            "added_by": "地図ユーザー"
-          },
-          {
-            "id": "collab_0002",
-            "name": "伊藤建材",
-            "address": "千葉県市川市高石神36-14",
-            "map_course": "千Aア",
-            "hub": null,
-            "lat": 35.715641,
-            "lng": 139.941147,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-11T12:40:44Z",
-            "added_by": "地図ユーザー"
-          }
-        ],
-        "course_moves": [],
-        "custom_courses": {},
-        "deleted_sites": []
-      }
-    },
-    {
-      "at": "2026-09-14T03:03:09Z",
-      "by": "verify-delete",
-      "action": "delete_course",
-      "detail": "柏4V",
-      "snapshot": {
-        "user_added_sites": [
-          {
-            "id": "collab_0001",
-            "name": "伊藤建材",
-            "address": "千葉県市川市高石神36-14",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.715641,
-            "lng": 139.941147,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-11T08:00:10Z",
-            "added_by": "地図ユーザー"
-          },
-          {
-            "id": "collab_0002",
-            "name": "伊藤建材",
-            "address": "千葉県市川市高石神36-14",
-            "map_course": "千Aア",
-            "hub": null,
-            "lat": 35.715641,
-            "lng": 139.941147,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-11T12:40:44Z",
-            "added_by": "地図ユーザー"
-          }
-        ],
-        "course_moves": [
-          {
-            "site_id": "site_16",
-            "map_course": "柏4V",
-            "reason": "カスタムコース",
-            "moved_at": "2026-09-14T03:03:00Z",
-            "moved_by": "restore"
-          },
-          {
-            "site_id": "site_71",
-            "map_course": "柏4V",
-            "reason": "カスタムコース",
-            "moved_at": "2026-09-14T03:03:00Z",
-            "moved_by": "restore"
-          }
-        ],
-        "custom_courses": {
-          "柏4V": {
-            "label": "柏4V",
-            "site_ids": [
-              "site_16",
-              "site_71"
-            ],
-            "hub": "yachiyo_dp",
-            "zone": "chiba_b",
-            "marker_shape": "circle",
-            "created_at": "2026-09-14T03:03:00Z",
-            "created_by": "restore"
-          }
-        },
-        "deleted_sites": []
-      }
-    },
-    {
-      "at": "2026-09-14T03:03:13Z",
-      "by": "restore",
-      "action": "create_course",
-      "detail": "柏4V (2店)",
-      "snapshot": {
-        "user_added_sites": [
-          {
-            "id": "collab_0001",
-            "name": "伊藤建材",
-            "address": "千葉県市川市高石神36-14",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.715641,
-            "lng": 139.941147,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-11T08:00:10Z",
-            "added_by": "地図ユーザー"
-          },
-          {
-            "id": "collab_0002",
-            "name": "伊藤建材",
-            "address": "千葉県市川市高石神36-14",
-            "map_course": "千Aア",
-            "hub": null,
-            "lat": 35.715641,
-            "lng": 139.941147,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-11T12:40:44Z",
-            "added_by": "地図ユーザー"
-          }
-        ],
-        "course_moves": [],
-        "custom_courses": {},
-        "deleted_sites": []
-      }
-    },
-    {
-      "at": "2026-09-14T03:17:51Z",
-      "by": "verify-shain",
-      "action": "delete_course",
-      "detail": "柏4V",
-      "snapshot": {
-        "user_added_sites": [
-          {
-            "id": "collab_0001",
-            "name": "伊藤建材",
-            "address": "千葉県市川市高石神36-14",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.715641,
-            "lng": 139.941147,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-11T08:00:10Z",
-            "added_by": "地図ユーザー"
-          },
-          {
-            "id": "collab_0002",
-            "name": "伊藤建材",
-            "address": "千葉県市川市高石神36-14",
-            "map_course": "千Aア",
-            "hub": null,
-            "lat": 35.715641,
-            "lng": 139.941147,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-11T12:40:44Z",
-            "added_by": "地図ユーザー"
-          }
-        ],
-        "course_moves": [
-          {
-            "site_id": "site_16",
-            "map_course": "柏4V",
-            "reason": "カスタムコース",
-            "moved_at": "2026-09-14T03:03:13Z",
-            "moved_by": "restore"
-          },
-          {
-            "site_id": "site_71",
-            "map_course": "柏4V",
-            "reason": "カスタムコース",
-            "moved_at": "2026-09-14T03:03:13Z",
-            "moved_by": "restore"
-          }
-        ],
-        "custom_courses": {
-          "柏4V": {
-            "label": "柏4V",
-            "site_ids": [
-              "site_16",
-              "site_71"
-            ],
-            "hub": "yachiyo_dp",
-            "zone": "chiba_b",
-            "marker_shape": "circle",
-            "created_at": "2026-09-14T03:03:13Z",
-            "created_by": "restore"
-          }
-        },
-        "deleted_sites": []
-      }
-    },
     {
       "at": "2026-09-14T03:17:54Z",
       "by": "restore",
@@ -1542,6 +1293,256 @@
           }
         ]
       }
+    },
+    {
+      "at": "2026-09-14T07:05:51Z",
+      "by": "e2e-test",
+      "action": "move_course",
+      "detail": "collab_0002 → 柏2S",
+      "snapshot": {
+        "user_added_sites": [
+          {
+            "id": "collab_0002",
+            "name": "協調E2Eテスト",
+            "address": "千葉県千葉市中央区中央2-1-1",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.609062,
+            "lng": 140.120193,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-14T07:03:32Z",
+            "added_by": "e2e-test"
+          },
+          {
+            "id": "collab_0003",
+            "name": "協調E2Eテスト",
+            "address": "千葉県千葉市中央区中央2-1-1",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.609062,
+            "lng": 140.120193,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-14T07:05:45Z",
+            "added_by": "e2e-test"
+          }
+        ],
+        "course_moves": [
+          {
+            "site_id": "site_66",
+            "map_course": "千Bキ",
+            "reason": "地図でコース変更",
+            "moved_at": "2026-09-14T04:37:51Z",
+            "moved_by": "地図ユーザー"
+          }
+        ],
+        "custom_courses": {},
+        "deleted_sites": [
+          {
+            "site_id": "collab_0001",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-14T06:53:04Z",
+            "deleted_by": "地図ユーザー"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-14T07:05:51Z",
+      "by": "e2e-test",
+      "action": "create_course",
+      "detail": "E2Eテストコース (1店)",
+      "snapshot": {
+        "user_added_sites": [
+          {
+            "id": "collab_0002",
+            "name": "協調E2Eテスト",
+            "address": "千葉県千葉市中央区中央2-1-1",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.609062,
+            "lng": 140.120193,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-14T07:03:32Z",
+            "added_by": "e2e-test"
+          },
+          {
+            "id": "collab_0003",
+            "name": "協調E2Eテスト",
+            "address": "千葉県千葉市中央区中央2-1-1",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.609062,
+            "lng": 140.120193,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-14T07:05:45Z",
+            "added_by": "e2e-test"
+          }
+        ],
+        "course_moves": [
+          {
+            "site_id": "site_66",
+            "map_course": "千Bキ",
+            "reason": "地図でコース変更",
+            "moved_at": "2026-09-14T04:37:51Z",
+            "moved_by": "地図ユーザー"
+          },
+          {
+            "site_id": "collab_0002",
+            "map_course": "柏2S",
+            "reason": "地図でコース変更",
+            "moved_at": "2026-09-14T07:05:51Z",
+            "moved_by": "e2e-test"
+          }
+        ],
+        "custom_courses": {},
+        "deleted_sites": [
+          {
+            "site_id": "collab_0001",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-14T06:53:04Z",
+            "deleted_by": "地図ユーザー"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-14T07:05:51Z",
+      "by": "e2e-test",
+      "action": "delete_course",
+      "detail": "E2Eテストコース",
+      "snapshot": {
+        "user_added_sites": [
+          {
+            "id": "collab_0002",
+            "name": "協調E2Eテスト",
+            "address": "千葉県千葉市中央区中央2-1-1",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.609062,
+            "lng": 140.120193,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-14T07:03:32Z",
+            "added_by": "e2e-test"
+          },
+          {
+            "id": "collab_0003",
+            "name": "協調E2Eテスト",
+            "address": "千葉県千葉市中央区中央2-1-1",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.609062,
+            "lng": 140.120193,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-14T07:05:45Z",
+            "added_by": "e2e-test"
+          }
+        ],
+        "course_moves": [
+          {
+            "site_id": "site_66",
+            "map_course": "千Bキ",
+            "reason": "地図でコース変更",
+            "moved_at": "2026-09-14T04:37:51Z",
+            "moved_by": "地図ユーザー"
+          },
+          {
+            "site_id": "collab_0002",
+            "map_course": "E2Eテストコース",
+            "reason": "カスタムコース",
+            "moved_at": "2026-09-14T07:05:51Z",
+            "moved_by": "e2e-test"
+          }
+        ],
+        "custom_courses": {
+          "E2Eテストコース": {
+            "label": "E2Eテストコース",
+            "site_ids": [
+              "collab_0002"
+            ],
+            "hub": "yachiyo_dp",
+            "zone": "chiba_a",
+            "marker_shape": "circle",
+            "created_at": "2026-09-14T07:05:51Z",
+            "created_by": "e2e-test"
+          }
+        },
+        "deleted_sites": [
+          {
+            "site_id": "collab_0001",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-14T06:53:04Z",
+            "deleted_by": "地図ユーザー"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-14T07:05:51Z",
+      "by": "e2e-test",
+      "action": "delete_site",
+      "detail": "collab_0002",
+      "snapshot": {
+        "user_added_sites": [
+          {
+            "id": "collab_0002",
+            "name": "協調E2Eテスト",
+            "address": "千葉県千葉市中央区中央2-1-1",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.609062,
+            "lng": 140.120193,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-14T07:03:32Z",
+            "added_by": "e2e-test"
+          },
+          {
+            "id": "collab_0003",
+            "name": "協調E2Eテスト",
+            "address": "千葉県千葉市中央区中央2-1-1",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.609062,
+            "lng": 140.120193,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-14T07:05:45Z",
+            "added_by": "e2e-test"
+          }
+        ],
+        "course_moves": [
+          {
+            "site_id": "site_66",
+            "map_course": "千Bキ",
+            "reason": "地図でコース変更",
+            "moved_at": "2026-09-14T04:37:51Z",
+            "moved_by": "地図ユーザー"
+          }
+        ],
+        "custom_courses": {},
+        "deleted_sites": [
+          {
+            "site_id": "collab_0001",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-14T06:53:04Z",
+            "deleted_by": "地図ユーザー"
+          }
+        ]
+      }
     }
   ],
   "deleted_sites": [
@@ -1550,6 +1551,18 @@
       "reason": "地図で消去",
       "deleted_at": "2026-09-14T06:53:04Z",
       "deleted_by": "地図ユーザー"
+    },
+    {
+      "site_id": "collab_0002",
+      "reason": "地図で消去",
+      "deleted_at": "2026-09-14T07:05:51Z",
+      "deleted_by": "e2e-test"
+    },
+    {
+      "site_id": "collab_0003",
+      "reason": "地図で消去",
+      "deleted_at": "2026-09-14T07:05:51Z",
+      "deleted_by": "e2e-test"
     }
   ]
 }

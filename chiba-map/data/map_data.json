@@ -4,9 +4,9 @@
   "map_variant_label": "他社向け",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図_他社/data/map_overrides.json",
-  "map_collaborative": "2026-09-14T07:05:45Z",
+  "map_collaborative": "2026-09-14T07:05:51Z",
   "collab_custom_courses": {},
-  "site_count": 317,
+  "site_count": 315,
   "zones": {
     "chiba_a": {
       "label": "千葉A",
@@ -7428,46 +7428,6 @@
       "search_names": [
         "吉丸製作所"
       ]
-    },
-    {
-      "id": "collab_0002",
-      "course": "柏1H",
-      "master_course": "柏1H",
-      "map_course": "柏1H",
-      "zone": "chiba_a",
-      "hub": "yachiyo_dp",
-      "name": "協調E2Eテスト",
-      "address": "千葉県千葉市中央区中央2-1-1",
-      "lat": 35.609062,
-      "lng": 140.120193,
-      "color": "hsl(180, 72%, 46%)",
-      "geocode_source": "gsi",
-      "visit_count": 0,
-      "weight_kg": 0.0,
-      "first_visit": null,
-      "last_visit": null,
-      "collab_added": true,
-      "marker_shape": "circle"
-    },
-    {
-      "id": "collab_0003",
-      "course": "柏1H",
-      "master_course": "柏1H",
-      "map_course": "柏1H",
-      "zone": "chiba_a",
-      "hub": "yachiyo_dp",
-      "name": "協調E2Eテスト",
-      "address": "千葉県千葉市中央区中央2-1-1",
-      "lat": 35.609062,
-      "lng": 140.120193,
-      "color": "hsl(180, 72%, 46%)",
-      "geocode_source": "gsi",
-      "visit_count": 0,
-      "weight_kg": 0.0,
-      "first_visit": null,
-      "last_visit": null,
-      "collab_added": true,
-      "marker_shape": "circle"
     },
     {
       "id": "virtual_maruo_y",
