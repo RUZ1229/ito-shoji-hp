@@ -70,7 +70,10 @@
 
   function isActiveCollabCustomCourse(name) {
     if (!isCollabCustomCourse(name)) return true;
-    return Object.prototype.hasOwnProperty.call(mapData.collab_custom_courses || {}, name);
+    const active = mapData.collab_custom_courses;
+    // 旧 map_data（フィールド未同梱）や作成直後は new_courses を正とする
+    if (active == null) return true;
+    return Object.prototype.hasOwnProperty.call(active, name);
   }
 
   function isKnownCourse(course) {
