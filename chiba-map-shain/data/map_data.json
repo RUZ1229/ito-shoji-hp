@@ -1,12 +1,12 @@
 {
-  "generated": "2026-09-14T13:35:17",
+  "generated": "2026-09-14T13:35:52",
   "map_variant": "社内",
   "map_variant_label": "伊藤商事専用（社内）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図/data/map_overrides.json",
-  "map_collaborative": "2026-09-14T04:35:16Z",
+  "map_collaborative": "2026-09-14T04:35:52Z",
   "collab_custom_courses": {},
-  "site_count": 334,
+  "site_count": 335,
   "zones": {
     "chiba_a": {
       "label": "千葉A",
@@ -7896,6 +7896,26 @@
       "search_names": [
         "ヤマリ日軽住建（第三倉庫）"
       ]
+    },
+    {
+      "id": "collab_0001",
+      "course": "千Aア",
+      "master_course": "千Aア",
+      "map_course": "千Aア",
+      "zone": "chiba_b",
+      "hub": "esr_kazo",
+      "name": "伊藤建材",
+      "address": "千葉県市川市高石神36-14",
+      "lat": 35.715641,
+      "lng": 139.941147,
+      "color": "hsl(0, 72%, 46%)",
+      "geocode_source": "gsi",
+      "visit_count": 0,
+      "weight_kg": 0.0,
+      "first_visit": null,
+      "last_visit": null,
+      "collab_added": true,
+      "marker_shape": "circle"
     },
     {
       "id": "virtual_maruo_y",
