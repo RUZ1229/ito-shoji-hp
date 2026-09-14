@@ -71,9 +71,15 @@
   function isActiveCollabCustomCourse(name) {
     if (!isCollabCustomCourse(name)) return true;
     const active = mapData.collab_custom_courses;
-    // 旧 map_data（フィールド未同梱）や作成直後は new_courses を正とする
-    if (active == null) return true;
-    return Object.prototype.hasOwnProperty.call(active, name);
+    if (active && typeof active === "object" && Object.prototype.hasOwnProperty.call(active, name)) {
+      return true;
+    }
+    if (active != null) {
+      // フィールドあり（空{}含む）で名前が無い → 削除済み
+      return false;
+    }
+    // 旧 map_data（フィールド未同梱）のみ new_courses を正とする
+    return Boolean(mapData.new_courses?.[name]);
   }
 
   function isKnownCourse(course) {

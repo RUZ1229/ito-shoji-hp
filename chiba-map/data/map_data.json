@@ -1,10 +1,10 @@
 {
-  "generated": "2026-09-14T11:45:24",
+  "generated": "2026-09-14T11:51:22",
   "map_variant": "他社",
   "map_variant_label": "他社向け",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図_他社/data/map_overrides.json",
-  "map_collaborative": "2026-09-14T02:45:24Z",
+  "map_collaborative": "2026-09-14T02:51:21Z",
   "site_count": 336,
   "zones": {
     "chiba_a": {
@@ -640,7 +640,7 @@
     {
       "id": "site_20",
       "course": "柏3V",
-      "zone": "chiba_b",
+      "zone": "chiba_a",
       "hub": "yachiyo_dp",
       "name": "唐沢エクステリア",
       "address": "千葉県 千葉市稲毛区山王町１１４ー１",
@@ -653,7 +653,7 @@
       "last_visit": "2026-09-11",
       "weight_kg": 1136,
       "master_course": "柏3V",
-      "map_course": "柏4V",
+      "map_course": "柏3V",
       "marker_shape": "circle",
       "search_names": [
         "（株）マルウ（唐沢エクステリア"
@@ -7984,8 +7984,7 @@
       "color": null,
       "site_ids": [
         "site_16",
-        "site_71",
-        "site_20"
+        "site_71"
       ]
     }
   },
