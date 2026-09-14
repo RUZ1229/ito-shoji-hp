@@ -1,10 +1,10 @@
 {
-  "generated": "2026-09-14T13:36:37",
+  "generated": "2026-09-14T13:37:16",
   "map_variant": "社内",
   "map_variant_label": "伊藤商事専用（社内）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図/data/map_overrides.json",
-  "map_collaborative": "2026-09-14T04:36:37Z",
+  "map_collaborative": "2026-09-14T04:37:16Z",
   "collab_custom_courses": {},
   "site_count": 334,
   "zones": {
@@ -1801,7 +1801,7 @@
     {
       "id": "site_66",
       "course": "千Bキ",
-      "zone": "chiba_b",
+      "zone": "chiba_a",
       "hub": "esr_kazo",
       "name": "亀山商店",
       "address": "千葉県 八千代市佐山２２５２",
@@ -1814,7 +1814,7 @@
       "last_visit": "2026-09-11",
       "weight_kg": 2772,
       "master_course": "千Bキ",
-      "map_course": "千Bキ",
+      "map_course": "柏1H",
       "marker_shape": "circle",
       "search_names": [
         "（株）亀山商店 ＧＬ",
