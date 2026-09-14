@@ -13,12 +13,13 @@
 
   let cachedApiBase = null;
 
-  async function collabHealthOk(base) {
+  async function collabHealthOk(base, { requireDelete = false } = {}) {
     try {
       const r = await fetch(`${base}/api/map-collab/health`, { cache: "no-store" });
       if (!r.ok) return false;
       const data = await r.json().catch(() => ({}));
       if (!data.ok) return false;
+      if (!requireDelete) return true;
       const caps = data.capabilities;
       return Array.isArray(caps) && caps.includes("delete_course");
     } catch (_) {
@@ -26,23 +27,23 @@
     }
   }
 
-  async function resolveApiBase() {
-    if (cachedApiBase !== null) return cachedApiBase;
+  async function resolveApiBase({ requireDelete = false } = {}) {
+    if (!requireDelete && cachedApiBase !== null) return cachedApiBase;
     const meta = document.querySelector('meta[name="chiba-map-collab-api"]');
     if (meta?.content?.trim()) {
       const metaBase = meta.content.trim().replace(/\/$/, "");
-      if (await collabHealthOk(metaBase)) {
-        cachedApiBase = metaBase;
-        return cachedApiBase;
+      if (await collabHealthOk(metaBase, { requireDelete })) {
+        if (!requireDelete) cachedApiBase = metaBase;
+        return metaBase;
       }
     }
     const origin = window.location.origin.replace(/\/$/, "");
-    if (/^https?:/.test(window.location.protocol) && (await collabHealthOk(origin))) {
-      cachedApiBase = origin;
-      return cachedApiBase;
+    if (/^https?:/.test(window.location.protocol) && (await collabHealthOk(origin, { requireDelete }))) {
+      if (!requireDelete) cachedApiBase = origin;
+      return origin;
     }
-    cachedApiBase = "";
-    return cachedApiBase;
+    if (!requireDelete) cachedApiBase = "";
+    return "";
   }
 
   function editKey() {
@@ -54,10 +55,14 @@
   }
 
   async function postJson(path, body) {
-    const base = await resolveApiBase();
+    const actions = body?.actions || [];
+    const requireDelete = actions.some((a) => a.type === "delete_course");
+    const base = await resolveApiBase({ requireDelete });
     if (!base) {
       throw new Error(
-        "編集APIに接続できません。地図を一度閉じ、デスクトップの「千葉配送地図を開く」から開き直してください。"
+        requireDelete
+          ? "編集サーバーが古いバージョンです。地図を一度閉じ、デスクトップの「千葉配送地図を開く」から開き直してください。"
+          : "編集APIに接続できません。地図を一度閉じ、デスクトップの「千葉配送地図を開く」から開き直してください。"
       );
     }
     let r;
@@ -444,7 +449,10 @@
     if (btn) btn.disabled = true;
     sel.innerHTML = '<option value="">読込中…</option>';
     const collab = await fetchCollabData();
-    const custom = collab?.custom_courses || {};
+    const custom =
+      collab?.custom_courses ||
+      api?.getMapData()?.collab_custom_courses ||
+      {};
     const names = Object.keys(custom).sort((a, b) => a.localeCompare(b, "ja"));
     if (!names.length) {
       sel.innerHTML = '<option value="">削除できるコースがありません</option>';

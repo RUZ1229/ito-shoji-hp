@@ -1,10 +1,11 @@
 {
-  "generated": "2026-09-14T12:16:40",
+  "generated": "2026-09-14T12:17:51",
   "map_variant": "社内",
   "map_variant_label": "伊藤商事専用（社内）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図/data/map_overrides.json",
-  "map_collaborative": "2026-09-14T03:16:40Z",
+  "map_collaborative": "2026-09-14T03:17:51Z",
+  "collab_custom_courses": {},
   "site_count": 336,
   "zones": {
     "chiba_a": {
@@ -538,7 +539,7 @@
     {
       "id": "site_16",
       "course": "柏2S",
-      "zone": "chiba_b",
+      "zone": "chiba_a",
       "hub": "yachiyo_dp",
       "name": "メイク東関東支店",
       "address": "千葉県 船橋市習志野４ー７ー６",
@@ -551,7 +552,7 @@
       "last_visit": "2026-09-11",
       "weight_kg": 5638,
       "master_course": "柏2S",
-      "map_course": "柏4V",
+      "map_course": "柏2S",
       "marker_shape": "circle",
       "search_names": [
         "（株）メイク東関東支店",
@@ -1945,7 +1946,7 @@
       "id": "site_71",
       "course": "千Bキ",
       "zone": "chiba_b",
-      "hub": "yachiyo_dp",
+      "hub": "esr_kazo",
       "name": "総和",
       "address": "千葉県 習志野市東習志野６ー１ー１３",
       "lat": 35.697777,
@@ -1957,7 +1958,7 @@
       "last_visit": "2026-09-11",
       "weight_kg": 1045,
       "master_course": "千Bキ",
-      "map_course": "柏4V",
+      "map_course": "千Bキ",
       "marker_shape": "circle",
       "search_names": [
         "（株）総和",
@@ -7990,17 +7991,6 @@
       "hub": "yachiyo_dp",
       "zone": "chiba_a",
       "color": "hsl(200, 75%, 48%)"
-    },
-    "柏4V": {
-      "label": "柏4V",
-      "marker_shape": "circle",
-      "hub": "yachiyo_dp",
-      "zone": "chiba_b",
-      "color": null,
-      "site_ids": [
-        "site_16",
-        "site_71"
-      ]
     }
   },
   "marker_legend": {
@@ -8206,7 +8196,6 @@
     "房木5",
     "柏2T.5O",
     "柏1I.5P",
-    "柏3V車立て",
-    "柏4V"
+    "柏3V車立て"
   ]
 }
