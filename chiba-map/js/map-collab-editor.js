@@ -54,7 +54,7 @@
   }
 
   function editKey() {
-    return sessionStorage.getItem("chiba-map-edit-key") || "";
+    return normalizeEditKey(sessionStorage.getItem("chiba-map-edit-key") || "");
   }
 
   function setEditKey(k) {
