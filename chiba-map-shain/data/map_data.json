@@ -1,10 +1,10 @@
 {
-  "generated": "2026-09-15T13:16:55",
+  "generated": "2026-09-15T13:17:17",
   "map_variant": "社内",
   "map_variant_label": "伊藤商事専用（社内）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図/data/map_overrides.json",
-  "map_collaborative": "2026-09-15T04:16:55Z",
+  "map_collaborative": "2026-09-15T04:17:17Z",
   "collab_custom_courses": {},
   "site_count": 322,
   "zones": {
@@ -7446,7 +7446,7 @@
       "id": "collab_0002",
       "course": "柏1H",
       "master_course": "柏1H",
-      "map_course": "柏1H",
+      "map_course": "柏3V",
       "zone": "chiba_a",
       "hub": "yachiyo_dp",
       "name": "伊藤建材",
