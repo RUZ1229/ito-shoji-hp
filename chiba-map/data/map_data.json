@@ -1,12 +1,12 @@
 {
-  "generated": "2026-09-15T07:10:01",
+  "generated": "2026-09-15T07:11:19",
   "map_variant": "他社",
   "map_variant_label": "他社向け",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図_他社/data/map_overrides.json",
-  "map_collaborative": "2026-09-15T07:10:00Z",
+  "map_collaborative": "2026-09-15T07:11:17Z",
   "collab_custom_courses": {},
-  "site_count": 315,
+  "site_count": 314,
   "zones": {
     "chiba_a": {
       "label": "千葉A",
@@ -7428,24 +7428,6 @@
       "search_names": [
         "吉丸製作所"
       ]
-    },
-    {
-      "id": "virtual_maruo_y",
-      "master_course": "柏3X",
-      "course": "柏3X",
-      "name": "新（株）マルウ Ｙ",
-      "address": "千葉県 旭市（柏3X→1H・地図表示のみ）",
-      "lat": 35.7168,
-      "lng": 140.6542,
-      "geocode_source": "map_override_near_pw_asahikawa",
-      "virtual": true,
-      "map_course": "柏1H",
-      "marker_shape": "circle",
-      "zone": "chiba_a",
-      "hub": "yachiyo_dp",
-      "color": "hsl(180, 72%, 46%)",
-      "visit_count": 0,
-      "weight_kg": 0
     }
   ],
   "visit_period_start": "2026-05-25",
