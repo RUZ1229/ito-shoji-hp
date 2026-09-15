@@ -104,16 +104,11 @@
     return data;
   }
 
-  async function ensureEditKey() {
-    if (editKey()) return true;
-    const k = prompt("編集用合言葉（合言葉.txt と同じ）");
-    if (!k) return false;
-    setEditKey(k);
-    return true;
-  }
-
   async function submitActions(actions, statusEl) {
-    if (!(await ensureEditKey())) return;
+    if (!editKey()) {
+      statusEl.textContent = "合言葉未入力。「編集」を一度閉じて、もう一度「編集」から合言葉を入れてください。";
+      return;
+    }
     statusEl.textContent = "反映中…";
     try {
       const res = await postJson("/api/map-collab", { actions, by: "地図ユーザー" });
@@ -134,17 +129,7 @@
         window.location.replace(url.toString());
       }, 1200);
     } catch (err) {
-      const msg = err.message || String(err);
-      if (msg.includes("合言葉が違います")) {
-        clearEditKey();
-        const k = prompt("編集用合言葉（合言葉.txt と同じ）");
-        if (k) {
-          setEditKey(k);
-          statusEl.textContent = "合言葉を更新しました。もう一度「決定」を押してください。";
-          return;
-        }
-      }
-      statusEl.textContent = msg;
+      statusEl.textContent = err.message || String(err);
     }
   }
 
