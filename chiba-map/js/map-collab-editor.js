@@ -46,12 +46,23 @@
     return "";
   }
 
+  function normalizeEditKey(k) {
+    let key = (k || "").trim();
+    // 再発防止: l（エル）↔ I（アイ） typo（合言葉.txt / chiba-map.js と同じ）
+    key = key.replace(/PK9aQfl/i, "PK9aQfI");
+    return key;
+  }
+
   function editKey() {
     return sessionStorage.getItem("chiba-map-edit-key") || "";
   }
 
   function setEditKey(k) {
-    sessionStorage.setItem("chiba-map-edit-key", k);
+    sessionStorage.setItem("chiba-map-edit-key", normalizeEditKey(k));
+  }
+
+  function clearEditKey() {
+    sessionStorage.removeItem("chiba-map-edit-key");
   }
 
   async function postJson(path, body) {
@@ -80,7 +91,8 @@
     const data = await r.json().catch(() => ({}));
     if (!r.ok) {
       if (data.error === "invalid_edit_key") {
-        throw new Error("合言葉が違います。編集を開き直して合言葉を入れ直してください。");
+        clearEditKey();
+        throw new Error("合言葉が違います。合言葉.txt の文字を入れ直してください（Qf の次は大文字 I）。");
       }
       if (String(data.error || "").startsWith("unknown_action:")) {
         throw new Error(
@@ -94,7 +106,7 @@
 
   async function ensureEditKey() {
     if (editKey()) return true;
-    const k = prompt("編集用合言葉を入力（地図と同じ合言葉）");
+    const k = prompt("編集用合言葉（合言葉.txt と同じ）");
     if (!k) return false;
     setEditKey(k);
     return true;
@@ -122,7 +134,17 @@
         window.location.replace(url.toString());
       }, 1200);
     } catch (err) {
-      statusEl.textContent = err.message || String(err);
+      const msg = err.message || String(err);
+      if (msg.includes("合言葉が違います")) {
+        clearEditKey();
+        const k = prompt("編集用合言葉（合言葉.txt と同じ）");
+        if (k) {
+          setEditKey(k);
+          statusEl.textContent = "合言葉を更新しました。もう一度「決定」を押してください。";
+          return;
+        }
+      }
+      statusEl.textContent = msg;
     }
   }
 
@@ -853,7 +875,7 @@
 
     fab.addEventListener("click", () => {
       if (!editKey()) {
-        const k = prompt("編集用合言葉を入力（地図と同じ合言葉）");
+        const k = prompt("編集用合言葉（合言葉.txt と同じ）");
         if (!k) return;
         setEditKey(k);
       }
