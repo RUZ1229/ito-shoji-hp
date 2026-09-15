@@ -1,12 +1,12 @@
 {
-  "generated": "2026-09-15T07:08:13",
+  "generated": "2026-09-15T07:10:01",
   "map_variant": "他社",
   "map_variant_label": "他社向け",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図_他社/data/map_overrides.json",
-  "map_collaborative": "2026-09-15T07:08:11Z",
+  "map_collaborative": "2026-09-15T07:10:00Z",
   "collab_custom_courses": {},
-  "site_count": 316,
+  "site_count": 315,
   "zones": {
     "chiba_a": {
       "label": "千葉A",
@@ -7428,26 +7428,6 @@
       "search_names": [
         "吉丸製作所"
       ]
-    },
-    {
-      "id": "collab_0009",
-      "course": "柏1H",
-      "master_course": "柏1H",
-      "map_course": "柏1H",
-      "zone": "chiba_a",
-      "hub": "yachiyo_dp",
-      "name": "test",
-      "address": "千葉県我孫子市1-1",
-      "lat": 35.864166,
-      "lng": 140.028336,
-      "color": "hsl(180, 72%, 46%)",
-      "geocode_source": "gsi",
-      "visit_count": 0,
-      "weight_kg": 0.0,
-      "first_visit": null,
-      "last_visit": null,
-      "collab_added": true,
-      "marker_shape": "circle"
     },
     {
       "id": "virtual_maruo_y",
