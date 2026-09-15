@@ -1,7 +1,7 @@
 {
   "version": 1,
   "note": "地図受信者の協調編集。build_chiba_map_data.py が map_data 生成時にマージ。",
-  "updated": "2026-09-15T23:23:02Z",
+  "updated": "2026-09-15T23:23:07Z",
   "updated_by": "e2e-test",
   "user_added_sites": [
     {
@@ -17,34 +17,6 @@
       "weight_kg": 0,
       "added_at": "2026-09-15T09:29:31Z",
       "added_by": "地図ユーザー"
-    },
-    {
-      "id": "collab_0023",
-      "name": "協調E2Eテスト",
-      "address": "千葉県千葉市中央区中央2-1-1",
-      "map_course": "柏1H",
-      "hub": null,
-      "lat": 35.609062,
-      "lng": 140.120193,
-      "geocode_source": "gsi",
-      "visit_count": 0,
-      "weight_kg": 0,
-      "added_at": "2026-09-15T23:22:19Z",
-      "added_by": "e2e-test"
-    },
-    {
-      "id": "collab_0024",
-      "name": "E2Eマスタ重複",
-      "address": "千葉県 匝瑳市平木７８１７ー１",
-      "map_course": "柏1H",
-      "hub": null,
-      "lat": 35.697624,
-      "lng": 140.590515,
-      "geocode_source": "gsi",
-      "visit_count": 0,
-      "weight_kg": 0,
-      "added_at": "2026-09-15T23:23:02Z",
-      "added_by": "e2e-test"
     }
   ],
   "course_moves": [
@@ -84,1023 +56,6 @@
     }
   },
   "history": [
-    {
-      "at": "2026-09-15T07:59:23Z",
-      "by": "e2e-test",
-      "action": "add_site",
-      "detail": "E2Eマスタ重複 → 柏1H",
-      "snapshot": {
-        "user_added_sites": [
-          {
-            "id": "collab_0012",
-            "name": "伊藤建材",
-            "address": "千葉県市川市高石神36-14",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.715641,
-            "lng": 139.941147,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:46:15Z",
-            "added_by": "地図ユーザー"
-          },
-          {
-            "id": "collab_0014",
-            "name": "伊藤建材",
-            "address": "千葉県市川市高石神36-14",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.715641,
-            "lng": 139.941147,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:49:11Z",
-            "added_by": "test-e2e"
-          },
-          {
-            "id": "collab_0015",
-            "name": "重複テスト",
-            "address": "千葉県匝瑳市平木７８１７ー１",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.697624,
-            "lng": 140.590515,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:51:20Z",
-            "added_by": "test"
-          },
-          {
-            "id": "collab_0016",
-            "name": "重複テスト2",
-            "address": "千葉県匝瑳市平木７８１７ー１",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.697624,
-            "lng": 140.590515,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:52:48Z",
-            "added_by": "test-verify41"
-          },
-          {
-            "id": "collab_0017",
-            "name": "協調E2Eテスト",
-            "address": "千葉県千葉市中央区中央2-1-1",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.609062,
-            "lng": 140.120193,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:58:40Z",
-            "added_by": "e2e-test"
-          }
-        ],
-        "course_moves": [
-          {
-            "site_id": "site_66",
-            "map_course": "千Bキ",
-            "reason": "地図でコース変更",
-            "moved_at": "2026-09-14T04:37:51Z",
-            "moved_by": "地図ユーザー"
-          }
-        ],
-        "custom_courses": {},
-        "deleted_sites": [
-          {
-            "site_id": "collab_9999",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:14:16Z",
-            "deleted_by": "probe"
-          },
-          {
-            "site_id": "collab_0001",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0002",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0003",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0004",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0005",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0006",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0007",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0008",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:05:24Z",
-            "deleted_by": "地図ユーザー"
-          },
-          {
-            "site_id": "collab_0009",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:10:00Z",
-            "deleted_by": "e2e-verify",
-            "address": "千葉県我孫子市1-1"
-          },
-          {
-            "site_id": "virtual_maruo_y",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:11:17Z",
-            "deleted_by": "e2e-verify",
-            "address": "千葉県 旭市（柏3X→1H・地図表示のみ）"
-          },
-          {
-            "site_id": "collab_0010",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:39:54Z",
-            "deleted_by": "ジョブス"
-          },
-          {
-            "site_id": "collab_0011",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:40:22Z",
-            "deleted_by": "ジョブス",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0013",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:53:41Z",
-            "deleted_by": "test-verify41b",
-            "address": "千葉県柏市若柴1-1"
-          }
-        ]
-      }
-    },
-    {
-      "at": "2026-09-15T07:59:27Z",
-      "by": "e2e-test",
-      "action": "move_course",
-      "detail": "collab_0017 → 柏2S",
-      "snapshot": {
-        "user_added_sites": [
-          {
-            "id": "collab_0012",
-            "name": "伊藤建材",
-            "address": "千葉県市川市高石神36-14",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.715641,
-            "lng": 139.941147,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:46:15Z",
-            "added_by": "地図ユーザー"
-          },
-          {
-            "id": "collab_0014",
-            "name": "伊藤建材",
-            "address": "千葉県市川市高石神36-14",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.715641,
-            "lng": 139.941147,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:49:11Z",
-            "added_by": "test-e2e"
-          },
-          {
-            "id": "collab_0015",
-            "name": "重複テスト",
-            "address": "千葉県匝瑳市平木７８１７ー１",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.697624,
-            "lng": 140.590515,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:51:20Z",
-            "added_by": "test"
-          },
-          {
-            "id": "collab_0016",
-            "name": "重複テスト2",
-            "address": "千葉県匝瑳市平木７８１７ー１",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.697624,
-            "lng": 140.590515,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:52:48Z",
-            "added_by": "test-verify41"
-          },
-          {
-            "id": "collab_0017",
-            "name": "協調E2Eテスト",
-            "address": "千葉県千葉市中央区中央2-1-1",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.609062,
-            "lng": 140.120193,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:58:40Z",
-            "added_by": "e2e-test"
-          },
-          {
-            "id": "collab_0018",
-            "name": "E2Eマスタ重複",
-            "address": "千葉県 匝瑳市平木７８１７ー１",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.697624,
-            "lng": 140.590515,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:59:23Z",
-            "added_by": "e2e-test"
-          }
-        ],
-        "course_moves": [
-          {
-            "site_id": "site_66",
-            "map_course": "千Bキ",
-            "reason": "地図でコース変更",
-            "moved_at": "2026-09-14T04:37:51Z",
-            "moved_by": "地図ユーザー"
-          }
-        ],
-        "custom_courses": {},
-        "deleted_sites": [
-          {
-            "site_id": "collab_9999",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:14:16Z",
-            "deleted_by": "probe"
-          },
-          {
-            "site_id": "collab_0001",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0002",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0003",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0004",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0005",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0006",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0007",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0008",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:05:24Z",
-            "deleted_by": "地図ユーザー"
-          },
-          {
-            "site_id": "collab_0009",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:10:00Z",
-            "deleted_by": "e2e-verify",
-            "address": "千葉県我孫子市1-1"
-          },
-          {
-            "site_id": "virtual_maruo_y",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:11:17Z",
-            "deleted_by": "e2e-verify",
-            "address": "千葉県 旭市（柏3X→1H・地図表示のみ）"
-          },
-          {
-            "site_id": "collab_0010",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:39:54Z",
-            "deleted_by": "ジョブス"
-          },
-          {
-            "site_id": "collab_0011",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:40:22Z",
-            "deleted_by": "ジョブス",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0013",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:53:41Z",
-            "deleted_by": "test-verify41b",
-            "address": "千葉県柏市若柴1-1"
-          }
-        ]
-      }
-    },
-    {
-      "at": "2026-09-15T07:59:27Z",
-      "by": "e2e-test",
-      "action": "create_course",
-      "detail": "E2Eテストコース (1店)",
-      "snapshot": {
-        "user_added_sites": [
-          {
-            "id": "collab_0012",
-            "name": "伊藤建材",
-            "address": "千葉県市川市高石神36-14",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.715641,
-            "lng": 139.941147,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:46:15Z",
-            "added_by": "地図ユーザー"
-          },
-          {
-            "id": "collab_0014",
-            "name": "伊藤建材",
-            "address": "千葉県市川市高石神36-14",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.715641,
-            "lng": 139.941147,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:49:11Z",
-            "added_by": "test-e2e"
-          },
-          {
-            "id": "collab_0015",
-            "name": "重複テスト",
-            "address": "千葉県匝瑳市平木７８１７ー１",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.697624,
-            "lng": 140.590515,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:51:20Z",
-            "added_by": "test"
-          },
-          {
-            "id": "collab_0016",
-            "name": "重複テスト2",
-            "address": "千葉県匝瑳市平木７８１７ー１",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.697624,
-            "lng": 140.590515,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:52:48Z",
-            "added_by": "test-verify41"
-          },
-          {
-            "id": "collab_0017",
-            "name": "協調E2Eテスト",
-            "address": "千葉県千葉市中央区中央2-1-1",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.609062,
-            "lng": 140.120193,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:58:40Z",
-            "added_by": "e2e-test"
-          },
-          {
-            "id": "collab_0018",
-            "name": "E2Eマスタ重複",
-            "address": "千葉県 匝瑳市平木７８１７ー１",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.697624,
-            "lng": 140.590515,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:59:23Z",
-            "added_by": "e2e-test"
-          }
-        ],
-        "course_moves": [
-          {
-            "site_id": "site_66",
-            "map_course": "千Bキ",
-            "reason": "地図でコース変更",
-            "moved_at": "2026-09-14T04:37:51Z",
-            "moved_by": "地図ユーザー"
-          },
-          {
-            "site_id": "collab_0017",
-            "map_course": "柏2S",
-            "reason": "地図でコース変更",
-            "moved_at": "2026-09-15T07:59:27Z",
-            "moved_by": "e2e-test"
-          }
-        ],
-        "custom_courses": {},
-        "deleted_sites": [
-          {
-            "site_id": "collab_9999",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:14:16Z",
-            "deleted_by": "probe"
-          },
-          {
-            "site_id": "collab_0001",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0002",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0003",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0004",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0005",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0006",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0007",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0008",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:05:24Z",
-            "deleted_by": "地図ユーザー"
-          },
-          {
-            "site_id": "collab_0009",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:10:00Z",
-            "deleted_by": "e2e-verify",
-            "address": "千葉県我孫子市1-1"
-          },
-          {
-            "site_id": "virtual_maruo_y",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:11:17Z",
-            "deleted_by": "e2e-verify",
-            "address": "千葉県 旭市（柏3X→1H・地図表示のみ）"
-          },
-          {
-            "site_id": "collab_0010",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:39:54Z",
-            "deleted_by": "ジョブス"
-          },
-          {
-            "site_id": "collab_0011",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:40:22Z",
-            "deleted_by": "ジョブス",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0013",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:53:41Z",
-            "deleted_by": "test-verify41b",
-            "address": "千葉県柏市若柴1-1"
-          }
-        ]
-      }
-    },
-    {
-      "at": "2026-09-15T07:59:27Z",
-      "by": "e2e-test",
-      "action": "delete_course",
-      "detail": "E2Eテストコース",
-      "snapshot": {
-        "user_added_sites": [
-          {
-            "id": "collab_0012",
-            "name": "伊藤建材",
-            "address": "千葉県市川市高石神36-14",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.715641,
-            "lng": 139.941147,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:46:15Z",
-            "added_by": "地図ユーザー"
-          },
-          {
-            "id": "collab_0014",
-            "name": "伊藤建材",
-            "address": "千葉県市川市高石神36-14",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.715641,
-            "lng": 139.941147,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:49:11Z",
-            "added_by": "test-e2e"
-          },
-          {
-            "id": "collab_0015",
-            "name": "重複テスト",
-            "address": "千葉県匝瑳市平木７８１７ー１",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.697624,
-            "lng": 140.590515,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:51:20Z",
-            "added_by": "test"
-          },
-          {
-            "id": "collab_0016",
-            "name": "重複テスト2",
-            "address": "千葉県匝瑳市平木７８１７ー１",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.697624,
-            "lng": 140.590515,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:52:48Z",
-            "added_by": "test-verify41"
-          },
-          {
-            "id": "collab_0017",
-            "name": "協調E2Eテスト",
-            "address": "千葉県千葉市中央区中央2-1-1",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.609062,
-            "lng": 140.120193,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:58:40Z",
-            "added_by": "e2e-test"
-          },
-          {
-            "id": "collab_0018",
-            "name": "E2Eマスタ重複",
-            "address": "千葉県 匝瑳市平木７８１７ー１",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.697624,
-            "lng": 140.590515,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:59:23Z",
-            "added_by": "e2e-test"
-          }
-        ],
-        "course_moves": [
-          {
-            "site_id": "site_66",
-            "map_course": "千Bキ",
-            "reason": "地図でコース変更",
-            "moved_at": "2026-09-14T04:37:51Z",
-            "moved_by": "地図ユーザー"
-          },
-          {
-            "site_id": "collab_0017",
-            "map_course": "E2Eテストコース",
-            "reason": "カスタムコース",
-            "moved_at": "2026-09-15T07:59:27Z",
-            "moved_by": "e2e-test"
-          }
-        ],
-        "custom_courses": {
-          "E2Eテストコース": {
-            "label": "E2Eテストコース",
-            "site_ids": [
-              "collab_0017"
-            ],
-            "hub": "yachiyo_dp",
-            "zone": "chiba_a",
-            "marker_shape": "circle",
-            "created_at": "2026-09-15T07:59:27Z",
-            "created_by": "e2e-test"
-          }
-        },
-        "deleted_sites": [
-          {
-            "site_id": "collab_9999",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:14:16Z",
-            "deleted_by": "probe"
-          },
-          {
-            "site_id": "collab_0001",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0002",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0003",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0004",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0005",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0006",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0007",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0008",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:05:24Z",
-            "deleted_by": "地図ユーザー"
-          },
-          {
-            "site_id": "collab_0009",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:10:00Z",
-            "deleted_by": "e2e-verify",
-            "address": "千葉県我孫子市1-1"
-          },
-          {
-            "site_id": "virtual_maruo_y",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:11:17Z",
-            "deleted_by": "e2e-verify",
-            "address": "千葉県 旭市（柏3X→1H・地図表示のみ）"
-          },
-          {
-            "site_id": "collab_0010",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:39:54Z",
-            "deleted_by": "ジョブス"
-          },
-          {
-            "site_id": "collab_0011",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:40:22Z",
-            "deleted_by": "ジョブス",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0013",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:53:41Z",
-            "deleted_by": "test-verify41b",
-            "address": "千葉県柏市若柴1-1"
-          }
-        ]
-      }
-    },
-    {
-      "at": "2026-09-15T07:59:27Z",
-      "by": "e2e-test",
-      "action": "delete_site",
-      "detail": "collab_0017",
-      "snapshot": {
-        "user_added_sites": [
-          {
-            "id": "collab_0012",
-            "name": "伊藤建材",
-            "address": "千葉県市川市高石神36-14",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.715641,
-            "lng": 139.941147,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:46:15Z",
-            "added_by": "地図ユーザー"
-          },
-          {
-            "id": "collab_0014",
-            "name": "伊藤建材",
-            "address": "千葉県市川市高石神36-14",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.715641,
-            "lng": 139.941147,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:49:11Z",
-            "added_by": "test-e2e"
-          },
-          {
-            "id": "collab_0015",
-            "name": "重複テスト",
-            "address": "千葉県匝瑳市平木７８１７ー１",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.697624,
-            "lng": 140.590515,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:51:20Z",
-            "added_by": "test"
-          },
-          {
-            "id": "collab_0016",
-            "name": "重複テスト2",
-            "address": "千葉県匝瑳市平木７８１７ー１",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.697624,
-            "lng": 140.590515,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:52:48Z",
-            "added_by": "test-verify41"
-          },
-          {
-            "id": "collab_0017",
-            "name": "協調E2Eテスト",
-            "address": "千葉県千葉市中央区中央2-1-1",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.609062,
-            "lng": 140.120193,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:58:40Z",
-            "added_by": "e2e-test"
-          },
-          {
-            "id": "collab_0018",
-            "name": "E2Eマスタ重複",
-            "address": "千葉県 匝瑳市平木７８１７ー１",
-            "map_course": "柏1H",
-            "hub": null,
-            "lat": 35.697624,
-            "lng": 140.590515,
-            "geocode_source": "gsi",
-            "visit_count": 0,
-            "weight_kg": 0,
-            "added_at": "2026-09-15T07:59:23Z",
-            "added_by": "e2e-test"
-          }
-        ],
-        "course_moves": [
-          {
-            "site_id": "site_66",
-            "map_course": "千Bキ",
-            "reason": "地図でコース変更",
-            "moved_at": "2026-09-14T04:37:51Z",
-            "moved_by": "地図ユーザー"
-          }
-        ],
-        "custom_courses": {},
-        "deleted_sites": [
-          {
-            "site_id": "collab_9999",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:14:16Z",
-            "deleted_by": "probe"
-          },
-          {
-            "site_id": "collab_0001",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0002",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0003",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0004",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0005",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0006",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0007",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T04:17:46Z",
-            "deleted_by": "地図ユーザー",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0008",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:05:24Z",
-            "deleted_by": "地図ユーザー"
-          },
-          {
-            "site_id": "collab_0009",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:10:00Z",
-            "deleted_by": "e2e-verify",
-            "address": "千葉県我孫子市1-1"
-          },
-          {
-            "site_id": "virtual_maruo_y",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:11:17Z",
-            "deleted_by": "e2e-verify",
-            "address": "千葉県 旭市（柏3X→1H・地図表示のみ）"
-          },
-          {
-            "site_id": "collab_0010",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:39:54Z",
-            "deleted_by": "ジョブス"
-          },
-          {
-            "site_id": "collab_0011",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:40:22Z",
-            "deleted_by": "ジョブス",
-            "address": "千葉県市川市高石神36-14"
-          },
-          {
-            "site_id": "collab_0013",
-            "reason": "地図で消去",
-            "deleted_at": "2026-09-15T07:53:41Z",
-            "deleted_by": "test-verify41b",
-            "address": "千葉県柏市若柴1-1"
-          }
-        ]
-      }
-    },
     {
       "at": "2026-09-15T07:59:27Z",
       "by": "e2e-test",
@@ -5884,6 +4839,1264 @@
           }
         ]
       }
+    },
+    {
+      "at": "2026-09-15T23:23:07Z",
+      "by": "e2e-test",
+      "action": "move_course",
+      "detail": "collab_0023 → 柏2S",
+      "snapshot": {
+        "user_added_sites": [
+          {
+            "id": "collab_0022",
+            "name": "伊藤建材",
+            "address": "千葉県市川市高石神36-14",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.715641,
+            "lng": 139.941147,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-15T09:29:31Z",
+            "added_by": "地図ユーザー"
+          },
+          {
+            "id": "collab_0023",
+            "name": "協調E2Eテスト",
+            "address": "千葉県千葉市中央区中央2-1-1",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.609062,
+            "lng": 140.120193,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-15T23:22:19Z",
+            "added_by": "e2e-test"
+          },
+          {
+            "id": "collab_0024",
+            "name": "E2Eマスタ重複",
+            "address": "千葉県 匝瑳市平木７８１７ー１",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.697624,
+            "lng": 140.590515,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-15T23:23:02Z",
+            "added_by": "e2e-test"
+          }
+        ],
+        "course_moves": [
+          {
+            "site_id": "site_66",
+            "map_course": "千Bキ",
+            "reason": "地図でコース変更",
+            "moved_at": "2026-09-14T04:37:51Z",
+            "moved_by": "地図ユーザー"
+          },
+          {
+            "site_id": "site_71",
+            "map_course": "柏４V",
+            "reason": "カスタムコース",
+            "moved_at": "2026-09-15T09:28:34Z",
+            "moved_by": "地図ユーザー"
+          },
+          {
+            "site_id": "site_16",
+            "map_course": "柏1H",
+            "reason": "地図でコース変更",
+            "moved_at": "2026-09-15T09:30:16Z",
+            "moved_by": "地図ユーザー"
+          }
+        ],
+        "custom_courses": {
+          "柏４V": {
+            "label": "柏４V",
+            "site_ids": [
+              "site_71"
+            ],
+            "hub": "yachiyo_dp",
+            "zone": "chiba_b",
+            "marker_shape": "circle",
+            "created_at": "2026-09-15T09:28:34Z",
+            "created_by": "地図ユーザー"
+          }
+        },
+        "deleted_sites": [
+          {
+            "site_id": "collab_9999",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:14:16Z",
+            "deleted_by": "probe"
+          },
+          {
+            "site_id": "collab_0001",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0002",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0003",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0004",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0005",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0006",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0007",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0008",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:05:24Z",
+            "deleted_by": "地図ユーザー"
+          },
+          {
+            "site_id": "collab_0009",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:10:00Z",
+            "deleted_by": "e2e-verify",
+            "address": "千葉県我孫子市1-1"
+          },
+          {
+            "site_id": "virtual_maruo_y",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:11:17Z",
+            "deleted_by": "e2e-verify",
+            "address": "千葉県 旭市（柏3X→1H・地図表示のみ）"
+          },
+          {
+            "site_id": "collab_0010",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:39:54Z",
+            "deleted_by": "ジョブス"
+          },
+          {
+            "site_id": "collab_0011",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:40:22Z",
+            "deleted_by": "ジョブス",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0013",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:53:41Z",
+            "deleted_by": "test-verify41b",
+            "address": "千葉県柏市若柴1-1"
+          },
+          {
+            "site_id": "collab_0017",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:59:27Z",
+            "deleted_by": "e2e-test",
+            "address": "千葉県千葉市中央区中央2-1-1"
+          },
+          {
+            "site_id": "collab_0015",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:59:27Z",
+            "deleted_by": "e2e-test",
+            "address": "千葉県 匝瑳市平木７８１７ー１"
+          },
+          {
+            "site_id": "collab_0016",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:59:27Z",
+            "deleted_by": "e2e-test",
+            "address": "千葉県 匝瑳市平木７８１７ー１"
+          },
+          {
+            "site_id": "collab_0018",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:59:27Z",
+            "deleted_by": "e2e-test",
+            "address": "千葉県 匝瑳市平木７８１７ー１"
+          },
+          {
+            "site_id": "collab_0012",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T08:20:12Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0014",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T08:20:12Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0019",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T08:37:32Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0020",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T08:53:54Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0021",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T09:11:12Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-15T23:23:07Z",
+      "by": "e2e-test",
+      "action": "create_course",
+      "detail": "E2Eテストコース (1店)",
+      "snapshot": {
+        "user_added_sites": [
+          {
+            "id": "collab_0022",
+            "name": "伊藤建材",
+            "address": "千葉県市川市高石神36-14",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.715641,
+            "lng": 139.941147,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-15T09:29:31Z",
+            "added_by": "地図ユーザー"
+          },
+          {
+            "id": "collab_0023",
+            "name": "協調E2Eテスト",
+            "address": "千葉県千葉市中央区中央2-1-1",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.609062,
+            "lng": 140.120193,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-15T23:22:19Z",
+            "added_by": "e2e-test"
+          },
+          {
+            "id": "collab_0024",
+            "name": "E2Eマスタ重複",
+            "address": "千葉県 匝瑳市平木７８１７ー１",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.697624,
+            "lng": 140.590515,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-15T23:23:02Z",
+            "added_by": "e2e-test"
+          }
+        ],
+        "course_moves": [
+          {
+            "site_id": "site_66",
+            "map_course": "千Bキ",
+            "reason": "地図でコース変更",
+            "moved_at": "2026-09-14T04:37:51Z",
+            "moved_by": "地図ユーザー"
+          },
+          {
+            "site_id": "site_71",
+            "map_course": "柏４V",
+            "reason": "カスタムコース",
+            "moved_at": "2026-09-15T09:28:34Z",
+            "moved_by": "地図ユーザー"
+          },
+          {
+            "site_id": "site_16",
+            "map_course": "柏1H",
+            "reason": "地図でコース変更",
+            "moved_at": "2026-09-15T09:30:16Z",
+            "moved_by": "地図ユーザー"
+          },
+          {
+            "site_id": "collab_0023",
+            "map_course": "柏2S",
+            "reason": "地図でコース変更",
+            "moved_at": "2026-09-15T23:23:07Z",
+            "moved_by": "e2e-test"
+          }
+        ],
+        "custom_courses": {
+          "柏４V": {
+            "label": "柏４V",
+            "site_ids": [
+              "site_71"
+            ],
+            "hub": "yachiyo_dp",
+            "zone": "chiba_b",
+            "marker_shape": "circle",
+            "created_at": "2026-09-15T09:28:34Z",
+            "created_by": "地図ユーザー"
+          }
+        },
+        "deleted_sites": [
+          {
+            "site_id": "collab_9999",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:14:16Z",
+            "deleted_by": "probe"
+          },
+          {
+            "site_id": "collab_0001",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0002",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0003",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0004",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0005",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0006",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0007",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0008",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:05:24Z",
+            "deleted_by": "地図ユーザー"
+          },
+          {
+            "site_id": "collab_0009",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:10:00Z",
+            "deleted_by": "e2e-verify",
+            "address": "千葉県我孫子市1-1"
+          },
+          {
+            "site_id": "virtual_maruo_y",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:11:17Z",
+            "deleted_by": "e2e-verify",
+            "address": "千葉県 旭市（柏3X→1H・地図表示のみ）"
+          },
+          {
+            "site_id": "collab_0010",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:39:54Z",
+            "deleted_by": "ジョブス"
+          },
+          {
+            "site_id": "collab_0011",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:40:22Z",
+            "deleted_by": "ジョブス",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0013",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:53:41Z",
+            "deleted_by": "test-verify41b",
+            "address": "千葉県柏市若柴1-1"
+          },
+          {
+            "site_id": "collab_0017",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:59:27Z",
+            "deleted_by": "e2e-test",
+            "address": "千葉県千葉市中央区中央2-1-1"
+          },
+          {
+            "site_id": "collab_0015",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:59:27Z",
+            "deleted_by": "e2e-test",
+            "address": "千葉県 匝瑳市平木７８１７ー１"
+          },
+          {
+            "site_id": "collab_0016",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:59:27Z",
+            "deleted_by": "e2e-test",
+            "address": "千葉県 匝瑳市平木７８１７ー１"
+          },
+          {
+            "site_id": "collab_0018",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:59:27Z",
+            "deleted_by": "e2e-test",
+            "address": "千葉県 匝瑳市平木７８１７ー１"
+          },
+          {
+            "site_id": "collab_0012",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T08:20:12Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0014",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T08:20:12Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0019",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T08:37:32Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0020",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T08:53:54Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0021",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T09:11:12Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-15T23:23:07Z",
+      "by": "e2e-test",
+      "action": "delete_course",
+      "detail": "E2Eテストコース",
+      "snapshot": {
+        "user_added_sites": [
+          {
+            "id": "collab_0022",
+            "name": "伊藤建材",
+            "address": "千葉県市川市高石神36-14",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.715641,
+            "lng": 139.941147,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-15T09:29:31Z",
+            "added_by": "地図ユーザー"
+          },
+          {
+            "id": "collab_0023",
+            "name": "協調E2Eテスト",
+            "address": "千葉県千葉市中央区中央2-1-1",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.609062,
+            "lng": 140.120193,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-15T23:22:19Z",
+            "added_by": "e2e-test"
+          },
+          {
+            "id": "collab_0024",
+            "name": "E2Eマスタ重複",
+            "address": "千葉県 匝瑳市平木７８１７ー１",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.697624,
+            "lng": 140.590515,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-15T23:23:02Z",
+            "added_by": "e2e-test"
+          }
+        ],
+        "course_moves": [
+          {
+            "site_id": "site_66",
+            "map_course": "千Bキ",
+            "reason": "地図でコース変更",
+            "moved_at": "2026-09-14T04:37:51Z",
+            "moved_by": "地図ユーザー"
+          },
+          {
+            "site_id": "site_71",
+            "map_course": "柏４V",
+            "reason": "カスタムコース",
+            "moved_at": "2026-09-15T09:28:34Z",
+            "moved_by": "地図ユーザー"
+          },
+          {
+            "site_id": "site_16",
+            "map_course": "柏1H",
+            "reason": "地図でコース変更",
+            "moved_at": "2026-09-15T09:30:16Z",
+            "moved_by": "地図ユーザー"
+          },
+          {
+            "site_id": "collab_0023",
+            "map_course": "E2Eテストコース",
+            "reason": "カスタムコース",
+            "moved_at": "2026-09-15T23:23:07Z",
+            "moved_by": "e2e-test"
+          }
+        ],
+        "custom_courses": {
+          "柏４V": {
+            "label": "柏４V",
+            "site_ids": [
+              "site_71"
+            ],
+            "hub": "yachiyo_dp",
+            "zone": "chiba_b",
+            "marker_shape": "circle",
+            "created_at": "2026-09-15T09:28:34Z",
+            "created_by": "地図ユーザー"
+          },
+          "E2Eテストコース": {
+            "label": "E2Eテストコース",
+            "site_ids": [
+              "collab_0023"
+            ],
+            "hub": "yachiyo_dp",
+            "zone": "chiba_a",
+            "marker_shape": "circle",
+            "created_at": "2026-09-15T23:23:07Z",
+            "created_by": "e2e-test"
+          }
+        },
+        "deleted_sites": [
+          {
+            "site_id": "collab_9999",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:14:16Z",
+            "deleted_by": "probe"
+          },
+          {
+            "site_id": "collab_0001",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0002",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0003",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0004",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0005",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0006",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0007",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0008",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:05:24Z",
+            "deleted_by": "地図ユーザー"
+          },
+          {
+            "site_id": "collab_0009",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:10:00Z",
+            "deleted_by": "e2e-verify",
+            "address": "千葉県我孫子市1-1"
+          },
+          {
+            "site_id": "virtual_maruo_y",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:11:17Z",
+            "deleted_by": "e2e-verify",
+            "address": "千葉県 旭市（柏3X→1H・地図表示のみ）"
+          },
+          {
+            "site_id": "collab_0010",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:39:54Z",
+            "deleted_by": "ジョブス"
+          },
+          {
+            "site_id": "collab_0011",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:40:22Z",
+            "deleted_by": "ジョブス",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0013",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:53:41Z",
+            "deleted_by": "test-verify41b",
+            "address": "千葉県柏市若柴1-1"
+          },
+          {
+            "site_id": "collab_0017",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:59:27Z",
+            "deleted_by": "e2e-test",
+            "address": "千葉県千葉市中央区中央2-1-1"
+          },
+          {
+            "site_id": "collab_0015",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:59:27Z",
+            "deleted_by": "e2e-test",
+            "address": "千葉県 匝瑳市平木７８１７ー１"
+          },
+          {
+            "site_id": "collab_0016",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:59:27Z",
+            "deleted_by": "e2e-test",
+            "address": "千葉県 匝瑳市平木７８１７ー１"
+          },
+          {
+            "site_id": "collab_0018",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:59:27Z",
+            "deleted_by": "e2e-test",
+            "address": "千葉県 匝瑳市平木７８１７ー１"
+          },
+          {
+            "site_id": "collab_0012",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T08:20:12Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0014",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T08:20:12Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0019",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T08:37:32Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0020",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T08:53:54Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0021",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T09:11:12Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-15T23:23:07Z",
+      "by": "e2e-test",
+      "action": "delete_site",
+      "detail": "collab_0023",
+      "snapshot": {
+        "user_added_sites": [
+          {
+            "id": "collab_0022",
+            "name": "伊藤建材",
+            "address": "千葉県市川市高石神36-14",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.715641,
+            "lng": 139.941147,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-15T09:29:31Z",
+            "added_by": "地図ユーザー"
+          },
+          {
+            "id": "collab_0023",
+            "name": "協調E2Eテスト",
+            "address": "千葉県千葉市中央区中央2-1-1",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.609062,
+            "lng": 140.120193,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-15T23:22:19Z",
+            "added_by": "e2e-test"
+          },
+          {
+            "id": "collab_0024",
+            "name": "E2Eマスタ重複",
+            "address": "千葉県 匝瑳市平木７８１７ー１",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.697624,
+            "lng": 140.590515,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-15T23:23:02Z",
+            "added_by": "e2e-test"
+          }
+        ],
+        "course_moves": [
+          {
+            "site_id": "site_66",
+            "map_course": "千Bキ",
+            "reason": "地図でコース変更",
+            "moved_at": "2026-09-14T04:37:51Z",
+            "moved_by": "地図ユーザー"
+          },
+          {
+            "site_id": "site_71",
+            "map_course": "柏４V",
+            "reason": "カスタムコース",
+            "moved_at": "2026-09-15T09:28:34Z",
+            "moved_by": "地図ユーザー"
+          },
+          {
+            "site_id": "site_16",
+            "map_course": "柏1H",
+            "reason": "地図でコース変更",
+            "moved_at": "2026-09-15T09:30:16Z",
+            "moved_by": "地図ユーザー"
+          }
+        ],
+        "custom_courses": {
+          "柏４V": {
+            "label": "柏４V",
+            "site_ids": [
+              "site_71"
+            ],
+            "hub": "yachiyo_dp",
+            "zone": "chiba_b",
+            "marker_shape": "circle",
+            "created_at": "2026-09-15T09:28:34Z",
+            "created_by": "地図ユーザー"
+          }
+        },
+        "deleted_sites": [
+          {
+            "site_id": "collab_9999",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:14:16Z",
+            "deleted_by": "probe"
+          },
+          {
+            "site_id": "collab_0001",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0002",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0003",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0004",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0005",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0006",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0007",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0008",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:05:24Z",
+            "deleted_by": "地図ユーザー"
+          },
+          {
+            "site_id": "collab_0009",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:10:00Z",
+            "deleted_by": "e2e-verify",
+            "address": "千葉県我孫子市1-1"
+          },
+          {
+            "site_id": "virtual_maruo_y",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:11:17Z",
+            "deleted_by": "e2e-verify",
+            "address": "千葉県 旭市（柏3X→1H・地図表示のみ）"
+          },
+          {
+            "site_id": "collab_0010",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:39:54Z",
+            "deleted_by": "ジョブス"
+          },
+          {
+            "site_id": "collab_0011",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:40:22Z",
+            "deleted_by": "ジョブス",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0013",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:53:41Z",
+            "deleted_by": "test-verify41b",
+            "address": "千葉県柏市若柴1-1"
+          },
+          {
+            "site_id": "collab_0017",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:59:27Z",
+            "deleted_by": "e2e-test",
+            "address": "千葉県千葉市中央区中央2-1-1"
+          },
+          {
+            "site_id": "collab_0015",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:59:27Z",
+            "deleted_by": "e2e-test",
+            "address": "千葉県 匝瑳市平木７８１７ー１"
+          },
+          {
+            "site_id": "collab_0016",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:59:27Z",
+            "deleted_by": "e2e-test",
+            "address": "千葉県 匝瑳市平木７８１７ー１"
+          },
+          {
+            "site_id": "collab_0018",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:59:27Z",
+            "deleted_by": "e2e-test",
+            "address": "千葉県 匝瑳市平木７８１７ー１"
+          },
+          {
+            "site_id": "collab_0012",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T08:20:12Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0014",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T08:20:12Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0019",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T08:37:32Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0020",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T08:53:54Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0021",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T09:11:12Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-15T23:23:07Z",
+      "by": "e2e-test",
+      "action": "delete_site",
+      "detail": "collab_0024",
+      "snapshot": {
+        "user_added_sites": [
+          {
+            "id": "collab_0022",
+            "name": "伊藤建材",
+            "address": "千葉県市川市高石神36-14",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.715641,
+            "lng": 139.941147,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-15T09:29:31Z",
+            "added_by": "地図ユーザー"
+          },
+          {
+            "id": "collab_0024",
+            "name": "E2Eマスタ重複",
+            "address": "千葉県 匝瑳市平木７８１７ー１",
+            "map_course": "柏1H",
+            "hub": null,
+            "lat": 35.697624,
+            "lng": 140.590515,
+            "geocode_source": "gsi",
+            "visit_count": 0,
+            "weight_kg": 0,
+            "added_at": "2026-09-15T23:23:02Z",
+            "added_by": "e2e-test"
+          }
+        ],
+        "course_moves": [
+          {
+            "site_id": "site_66",
+            "map_course": "千Bキ",
+            "reason": "地図でコース変更",
+            "moved_at": "2026-09-14T04:37:51Z",
+            "moved_by": "地図ユーザー"
+          },
+          {
+            "site_id": "site_71",
+            "map_course": "柏４V",
+            "reason": "カスタムコース",
+            "moved_at": "2026-09-15T09:28:34Z",
+            "moved_by": "地図ユーザー"
+          },
+          {
+            "site_id": "site_16",
+            "map_course": "柏1H",
+            "reason": "地図でコース変更",
+            "moved_at": "2026-09-15T09:30:16Z",
+            "moved_by": "地図ユーザー"
+          }
+        ],
+        "custom_courses": {
+          "柏４V": {
+            "label": "柏４V",
+            "site_ids": [
+              "site_71"
+            ],
+            "hub": "yachiyo_dp",
+            "zone": "chiba_b",
+            "marker_shape": "circle",
+            "created_at": "2026-09-15T09:28:34Z",
+            "created_by": "地図ユーザー"
+          }
+        },
+        "deleted_sites": [
+          {
+            "site_id": "collab_9999",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:14:16Z",
+            "deleted_by": "probe"
+          },
+          {
+            "site_id": "collab_0001",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0002",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0003",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0004",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0005",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0006",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0007",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T04:17:46Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0008",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:05:24Z",
+            "deleted_by": "地図ユーザー"
+          },
+          {
+            "site_id": "collab_0009",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:10:00Z",
+            "deleted_by": "e2e-verify",
+            "address": "千葉県我孫子市1-1"
+          },
+          {
+            "site_id": "virtual_maruo_y",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:11:17Z",
+            "deleted_by": "e2e-verify",
+            "address": "千葉県 旭市（柏3X→1H・地図表示のみ）"
+          },
+          {
+            "site_id": "collab_0010",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:39:54Z",
+            "deleted_by": "ジョブス"
+          },
+          {
+            "site_id": "collab_0011",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:40:22Z",
+            "deleted_by": "ジョブス",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0013",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:53:41Z",
+            "deleted_by": "test-verify41b",
+            "address": "千葉県柏市若柴1-1"
+          },
+          {
+            "site_id": "collab_0017",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:59:27Z",
+            "deleted_by": "e2e-test",
+            "address": "千葉県千葉市中央区中央2-1-1"
+          },
+          {
+            "site_id": "collab_0015",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:59:27Z",
+            "deleted_by": "e2e-test",
+            "address": "千葉県 匝瑳市平木７８１７ー１"
+          },
+          {
+            "site_id": "collab_0016",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:59:27Z",
+            "deleted_by": "e2e-test",
+            "address": "千葉県 匝瑳市平木７８１７ー１"
+          },
+          {
+            "site_id": "collab_0018",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T07:59:27Z",
+            "deleted_by": "e2e-test",
+            "address": "千葉県 匝瑳市平木７８１７ー１"
+          },
+          {
+            "site_id": "collab_0012",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T08:20:12Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0014",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T08:20:12Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0019",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T08:37:32Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0020",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T08:53:54Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0021",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T09:11:12Z",
+            "deleted_by": "地図ユーザー",
+            "address": "千葉県市川市高石神36-14"
+          },
+          {
+            "site_id": "collab_0023",
+            "reason": "地図で消去",
+            "deleted_at": "2026-09-15T23:23:07Z",
+            "deleted_by": "e2e-test",
+            "address": "千葉県千葉市中央区中央2-1-1"
+          }
+        ]
+      }
     }
   ],
   "deleted_sites": [
@@ -6044,6 +6257,20 @@
       "deleted_at": "2026-09-15T09:11:12Z",
       "deleted_by": "地図ユーザー",
       "address": "千葉県市川市高石神36-14"
+    },
+    {
+      "site_id": "collab_0023",
+      "reason": "地図で消去",
+      "deleted_at": "2026-09-15T23:23:07Z",
+      "deleted_by": "e2e-test",
+      "address": "千葉県千葉市中央区中央2-1-1"
+    },
+    {
+      "site_id": "collab_0024",
+      "reason": "地図で消去",
+      "deleted_at": "2026-09-15T23:23:07Z",
+      "deleted_by": "e2e-test",
+      "address": "千葉県 匝瑳市平木７８１７ー１"
     }
   ]
 }
