@@ -91,6 +91,45 @@
     sessionStorage.removeItem("chiba-map-edit-key");
   }
 
+  function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  async function getJson(path) {
+    const base = await resolveApiBase({});
+    if (!base) {
+      throw new Error(editServerHint("connect"));
+    }
+    const r = await fetch(`${base}${path}`, {
+      headers: { "X-Map-Edit-Key": editKey() },
+    });
+    const data = await r.json().catch(() => ({}));
+    if (!r.ok) {
+      const errText = data.message || data.error || `HTTP ${r.status}`;
+      if (String(errText).includes("online_publish_failed")) {
+        throw new Error("保存しましたが共有URLへの反映に失敗しました。1〜2分待ってから再試行してください。");
+      }
+      throw new Error(errText);
+    }
+    return data;
+  }
+
+  async function pollCollabResult(requestId, statusEl) {
+    for (let i = 0; i < 120; i++) {
+      if (i > 0) {
+        statusEl.textContent = `反映中…（${i * 2}秒）`;
+        await sleep(2000);
+      }
+      const res = await getJson(
+        `/api/map-collab/status?request_id=${encodeURIComponent(requestId)}`
+      );
+      if (!res.pending) {
+        return res;
+      }
+    }
+    throw new Error("反映がタイムアウトしました。1〜2分待ってからページを再読込してください。");
+  }
+
   async function postJson(path, body) {
     const actions = body?.actions || [];
     const requireDelete = actions.some((a) => isDeleteAction(a.type));
@@ -134,7 +173,10 @@
     }
     statusEl.textContent = "反映中…";
     try {
-      const res = await postJson("/api/map-collab", { actions, by: "地図ユーザー" });
+      let res = await postJson("/api/map-collab", { actions, by: "地図ユーザー" });
+      if (res.pending && res.request_id) {
+        res = await pollCollabResult(res.request_id, statusEl);
+      }
       const wantsDeleteCourse = actions.some((a) => a.type === "delete_course");
       const wantsDeleteSite = actions.some((a) => a.type === "delete_site");
       if (wantsDeleteCourse && !(res.log || []).some((line) => String(line).includes("コース削除"))) {
