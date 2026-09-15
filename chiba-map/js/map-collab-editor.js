@@ -13,6 +13,24 @@
 
   let cachedApiBase = null;
 
+  function isOnlineSharedMap() {
+    if (document.querySelector('meta[name="chiba-map-collab-api"]')?.content?.trim()) return true;
+    return /github\.io$/i.test(window.location.hostname);
+  }
+
+  function editServerHint(kind) {
+    if (isOnlineSharedMap()) {
+      if (kind === "old") {
+        return "編集サーバーが古いバージョンです。1〜2分待ってからページを再読込し、再試行してください。";
+      }
+      return "編集サーバーに接続できません。ネットワークを確認するか、1〜2分待ってから再試行してください。";
+    }
+    if (kind === "old") {
+      return "編集サーバーが古いバージョンです。地図を一度閉じ、デスクトップの「千葉配送地図を開く」から開き直してください。";
+    }
+    return "編集APIに接続できません。地図を一度閉じ、デスクトップの「千葉配送地図を開く」から開き直してください。";
+  }
+
   async function collabHealthOk(base, { requireDelete = false } = {}) {
     try {
       const r = await fetch(`${base}/api/map-collab/health`, { cache: "no-store" });
@@ -46,12 +64,23 @@
     return "";
   }
 
+  function normalizeEditKey(k) {
+    let key = (k || "").trim();
+    // 再発防止: l（エル）↔ I（アイ） typo（合言葉.txt / chiba-map.js と同じ）
+    key = key.replace(/PK9aQfl/i, "PK9aQfI");
+    return key;
+  }
+
   function editKey() {
-    return sessionStorage.getItem("chiba-map-edit-key") || "";
+    return normalizeEditKey(sessionStorage.getItem("chiba-map-edit-key") || "");
   }
 
   function setEditKey(k) {
-    sessionStorage.setItem("chiba-map-edit-key", k);
+    sessionStorage.setItem("chiba-map-edit-key", normalizeEditKey(k));
+  }
+
+  function clearEditKey() {
+    sessionStorage.removeItem("chiba-map-edit-key");
   }
 
   async function postJson(path, body) {
@@ -59,11 +88,7 @@
     const requireDelete = actions.some((a) => a.type === "delete_course");
     const base = await resolveApiBase({ requireDelete });
     if (!base) {
-      throw new Error(
-        requireDelete
-          ? "編集サーバーが古いバージョンです。地図を一度閉じ、デスクトップの「千葉配送地図を開く」から開き直してください。"
-          : "編集APIに接続できません。地図を一度閉じ、デスクトップの「千葉配送地図を開く」から開き直してください。"
-      );
+      throw new Error(editServerHint(requireDelete ? "old" : "connect"));
     }
     let r;
     try {
@@ -73,45 +98,45 @@
         body: JSON.stringify({ ...body, edit_key: editKey() }),
       });
     } catch (_) {
-      throw new Error(
-        "編集APIに接続できません。地図を一度閉じ、デスクトップの「千葉配送地図を開く」から開き直してください。"
-      );
+      throw new Error(editServerHint("connect"));
     }
     const data = await r.json().catch(() => ({}));
     if (!r.ok) {
       if (data.error === "invalid_edit_key") {
-        throw new Error("合言葉が違います。編集を開き直して合言葉を入れ直してください。");
+        clearEditKey();
+        throw new Error("合言葉が違います。合言葉.txt の文字を入れ直してください（Qf の次は大文字 I）。");
       }
       if (String(data.error || "").startsWith("unknown_action:")) {
-        throw new Error(
-          "編集サーバーが古いバージョンです。地図を一度閉じ、デスクトップの「千葉配送地図を開く」から開き直してください。"
-        );
+        throw new Error(editServerHint("old"));
       }
-      throw new Error(data.error || `HTTP ${r.status}`);
+      const errText = data.message || data.error || `HTTP ${r.status}`;
+      if (String(errText).includes("online_publish_failed")) {
+        throw new Error("保存しましたが共有URLへの反映に失敗しました。1〜2分待ってから再試行してください。");
+      }
+      throw new Error(errText);
     }
     return data;
   }
 
-  async function ensureEditKey() {
-    if (editKey()) return true;
-    const k = prompt("編集用合言葉を入力（地図と同じ合言葉）");
-    if (!k) return false;
-    setEditKey(k);
-    return true;
-  }
-
   async function submitActions(actions, statusEl) {
-    if (!(await ensureEditKey())) return;
+    if (!editKey()) {
+      statusEl.textContent = "合言葉未入力。「編集」を一度閉じて、もう一度「編集」から合言葉を入れてください。";
+      return;
+    }
     statusEl.textContent = "反映中…";
     try {
       const res = await postJson("/api/map-collab", { actions, by: "地図ユーザー" });
+      if (res.ok === false) {
+        throw new Error(res.message || res.error || "反映に失敗しました");
+      }
       const wantsDeleteCourse = actions.some((a) => a.type === "delete_course");
       if (wantsDeleteCourse && !(res.log || []).some((line) => String(line).includes("コース削除"))) {
         throw new Error("コース削除が反映されませんでした。地図を開き直してから再試行してください。");
       }
-      if (wantsDeleteCourse && res.rebuilt === false) {
+      if (res.rebuilt === false || res.published === false) {
         throw new Error(
-          "コースは削除しましたが地図データの更新に失敗しました。地図を一度閉じて「千葉配送地図を開く」から開き直してください。"
+          res.message ||
+            "保存しましたが共有URLへの反映に失敗しました。1〜2分待ってから再試行してください。"
         );
       }
       statusEl.textContent = res.message || "反映しました";
@@ -853,7 +878,7 @@
 
     fab.addEventListener("click", () => {
       if (!editKey()) {
-        const k = prompt("編集用合言葉を入力（地図と同じ合言葉）");
+        const k = prompt("編集用合言葉（合言葉.txt と同じ）");
         if (!k) return;
         setEditKey(k);
       }
