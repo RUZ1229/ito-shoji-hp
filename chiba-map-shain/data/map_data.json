@@ -1,12 +1,12 @@
 {
-  "generated": "2026-09-15T13:19:12",
+  "generated": "2026-09-15T05:50:10",
   "map_variant": "社内",
   "map_variant_label": "伊藤商事専用（社内）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図/data/map_overrides.json",
-  "map_collaborative": "2026-09-15T04:19:12Z",
+  "map_collaborative": "2026-09-15T05:50:08Z",
   "collab_custom_courses": {},
-  "site_count": 315,
+  "site_count": 316,
   "zones": {
     "chiba_a": {
       "label": "千葉A",
@@ -7443,6 +7443,26 @@
       ]
     },
     {
+      "id": "collab_0008",
+      "course": "柏1H",
+      "master_course": "柏1H",
+      "map_course": "柏1H",
+      "zone": "chiba_a",
+      "hub": "yachiyo_dp",
+      "name": "伊藤建材",
+      "address": "千葉県市川市高石神36-14",
+      "lat": 35.715641,
+      "lng": 139.941147,
+      "color": "hsl(180, 72%, 46%)",
+      "geocode_source": "gsi",
+      "visit_count": 0,
+      "weight_kg": 0.0,
+      "first_visit": null,
+      "last_visit": null,
+      "collab_added": true,
+      "marker_shape": "circle"
+    },
+    {
       "id": "virtual_maruo_y",
       "master_course": "柏3X",
       "course": "柏3X",
@@ -7463,8 +7483,8 @@
   ],
   "visit_period_start": "2026-05-25",
   "visit_period_end": "2026-09-14",
-  "weight_period_start": "2026-09-01",
-  "weight_period_end": "2026-09-14",
+  "weight_period_start": null,
+  "weight_period_end": null,
   "course_merges": {
     "柏2T.5O": {
       "label": "柏2T+5O（4t）",
