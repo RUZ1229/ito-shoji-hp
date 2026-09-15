@@ -46,23 +46,12 @@
     return "";
   }
 
-  function normalizeEditKey(k) {
-    let key = (k || "").trim();
-    // 再発防止: l（エル）↔ I（アイ） typo（合言葉.txt / chiba-map.js と同じ）
-    key = key.replace(/PK9aQfl/i, "PK9aQfI");
-    return key;
-  }
-
   function editKey() {
-    return normalizeEditKey(sessionStorage.getItem("chiba-map-edit-key") || "");
+    return sessionStorage.getItem("chiba-map-edit-key") || "";
   }
 
   function setEditKey(k) {
-    sessionStorage.setItem("chiba-map-edit-key", normalizeEditKey(k));
-  }
-
-  function clearEditKey() {
-    sessionStorage.removeItem("chiba-map-edit-key");
+    sessionStorage.setItem("chiba-map-edit-key", k);
   }
 
   async function postJson(path, body) {
@@ -91,8 +80,7 @@
     const data = await r.json().catch(() => ({}));
     if (!r.ok) {
       if (data.error === "invalid_edit_key") {
-        clearEditKey();
-        throw new Error("合言葉が違います。合言葉.txt の文字を入れ直してください（Qf の次は大文字 I）。");
+        throw new Error("合言葉が違います。編集を開き直して合言葉を入れ直してください。");
       }
       if (String(data.error || "").startsWith("unknown_action:")) {
         throw new Error(
@@ -104,11 +92,16 @@
     return data;
   }
 
+  async function ensureEditKey() {
+    if (editKey()) return true;
+    const k = prompt("編集用合言葉を入力（地図と同じ合言葉）");
+    if (!k) return false;
+    setEditKey(k);
+    return true;
+  }
+
   async function submitActions(actions, statusEl) {
-    if (!editKey()) {
-      statusEl.textContent = "合言葉未入力。「編集」を一度閉じて、もう一度「編集」から合言葉を入れてください。";
-      return;
-    }
+    if (!(await ensureEditKey())) return;
     statusEl.textContent = "反映中…";
     try {
       const res = await postJson("/api/map-collab", { actions, by: "地図ユーザー" });
@@ -860,7 +853,7 @@
 
     fab.addEventListener("click", () => {
       if (!editKey()) {
-        const k = prompt("編集用合言葉（合言葉.txt と同じ）");
+        const k = prompt("編集用合言葉を入力（地図と同じ合言葉）");
         if (!k) return;
         setEditKey(k);
       }
