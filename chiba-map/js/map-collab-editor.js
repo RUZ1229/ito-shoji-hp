@@ -18,10 +18,6 @@
     return /github\.io$/i.test(window.location.hostname);
   }
 
-  function isDeleteAction(type) {
-    return type === "delete_course" || type === "delete_site";
-  }
-
   function editServerHint(kind) {
     if (isOnlineSharedMap()) {
       if (kind === "old") {
@@ -43,11 +39,7 @@
       if (!data.ok) return false;
       if (!requireDelete) return true;
       const caps = data.capabilities;
-      return (
-        Array.isArray(caps) &&
-        caps.includes("delete_course") &&
-        caps.includes("delete_site")
-      );
+      return Array.isArray(caps) && caps.includes("delete_course");
     } catch (_) {
       return false;
     }
@@ -93,8 +85,7 @@
 
   async function postJson(path, body) {
     const actions = body?.actions || [];
-    const requireDelete = actions.some((a) => isDeleteAction(a.type));
-    if (requireDelete) cachedApiBase = null;
+    const requireDelete = actions.some((a) => a.type === "delete_course");
     const base = await resolveApiBase({ requireDelete });
     if (!base) {
       throw new Error(editServerHint(requireDelete ? "old" : "connect"));
@@ -136,12 +127,8 @@
     try {
       const res = await postJson("/api/map-collab", { actions, by: "地図ユーザー" });
       const wantsDeleteCourse = actions.some((a) => a.type === "delete_course");
-      const wantsDeleteSite = actions.some((a) => a.type === "delete_site");
       if (wantsDeleteCourse && !(res.log || []).some((line) => String(line).includes("コース削除"))) {
         throw new Error("コース削除が反映されませんでした。地図を開き直してから再試行してください。");
-      }
-      if (wantsDeleteSite && !(res.log || []).some((line) => String(line).includes("工務店消去"))) {
-        throw new Error("工務店消去が反映されませんでした。1〜2分待ってから再試行してください。");
       }
       if (res.ok === false) {
         throw new Error(res.message || res.error || "反映に失敗しました");
