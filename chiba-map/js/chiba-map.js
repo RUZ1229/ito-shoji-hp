@@ -6,14 +6,11 @@
   "use strict";
 
   const DATA_URL = "data/map_data.json";
-  const SITE_CARDS_URL = "data/site_cards.json";
   const GEOJSON_URL = "data/chiba_cities.geojson";
   const IS_WEB_HOST = /github\.io$/i.test(window.location.hostname);
 
   let map;
   let mapData;
-  /** @type {Record<string, object>} */
-  let siteCardsById = {};
   let shopMarkers = [];
   let warehouseMarkers = {};
   let routeLayers = [];
@@ -24,8 +21,7 @@
   /** @type {Array<{key:string,type:string,label:string,siteId?:string,siteIds?:string[],course?:string,zoneKey?:string,yokomochiId?:string,warehouseId?:string}>} */
   let activeSelections = [];
 
-  const DEFAULT_SHOP_COLOR = "#2488d4";
-  const WAREHOUSE_COLOR = "#ff4757";
+  const DEFAULT_SHOP_COLOR = "#3b9eff";
   /** 通常青と被らないハイライト専用（青系・シアン系は使わない） */
   const HIGHLIGHT_PALETTE = [
     "#ffd54a", "#ff8c42", "#ff6348", "#e056fd", "#2ed573",
@@ -58,48 +54,13 @@
 
   function showAllShopMarkers() {
     shopMarkers.forEach(({ marker, site }) => {
-      applyShopMarkerStyle(marker, site, "");
+      marker.setIcon(createShopIcon(site));
       setMarkerVisible(marker, true);
     });
   }
 
-  function isCollabCustomCourse(name) {
-    const nc = mapData?.new_courses?.[name];
-    return Array.isArray(nc?.site_ids);
-  }
-
-  function isActiveCollabCustomCourse(name) {
-    if (!isCollabCustomCourse(name)) return true;
-    const active = mapData.collab_custom_courses;
-    if (active && typeof active === "object" && Object.prototype.hasOwnProperty.call(active, name)) {
-      return true;
-    }
-    if (active != null) {
-      // フィールドあり（空{}含む）で名前が無い → 削除済み
-      return false;
-    }
-    // 旧 map_data（フィールド未同梱）のみ new_courses を正とする
-    return Boolean(mapData.new_courses?.[name]);
-  }
-
-  function isKnownCourse(course) {
-    if (!course || !mapData) return false;
-    if (mapData.course_merges?.[course]) return true;
-    if (mapData.new_courses?.[course]) return isActiveCollabCustomCourse(course);
-    if ((mapData.display_courses || []).includes(course)) return isActiveCollabCustomCourse(course);
-    return false;
-  }
-
   function getMapCourse(site) {
-    const master = site.master_course || site.course || "";
-    const mc = site.map_course || master;
-    if (mc === master) return mc;
-    if (!isKnownCourse(mc)) return master;
-    const memberIds = mapData.new_courses?.[mc]?.site_ids;
-    if (Array.isArray(memberIds) && memberIds.length && site.id && !memberIds.includes(site.id)) {
-      return master;
-    }
-    return mc;
+    return site.map_course || site.course;
   }
 
   function resolveMapCourse(course) {
@@ -179,12 +140,10 @@
     if (aliases[q]) return resolveMapCourse(aliases[q]);
 
     for (const c of mapData.display_courses || []) {
-      if (!isActiveCollabCustomCourse(c)) continue;
       if (norm(c) === q) return resolveMapCourse(c);
     }
 
     for (const c of mapData.display_courses || []) {
-      if (!isActiveCollabCustomCourse(c)) continue;
       const cn = norm(c);
       if (cn.includes(q) || q.includes(cn)) return resolveMapCourse(c);
     }
@@ -196,7 +155,6 @@
     }
     if (mapData.new_courses) {
       for (const name of Object.keys(mapData.new_courses)) {
-        if (!isActiveCollabCustomCourse(name)) continue;
         if (norm(name) === q || norm(name).includes(q)) return name;
       }
     }
@@ -233,7 +191,6 @@
 
   function getHighlightColor(site, extraClass) {
     if (!extraClass) return null;
-    if (extraClass.includes("is-shop-highlight")) return "#ffd54a";
     if (extraClass.includes("is-zone-highlight")) return "#ffd54a";
     if (extraClass.includes("is-course-highlight")) {
       return getCourseHighlightColor(getMapCourse(site));
@@ -241,220 +198,36 @@
     return null;
   }
 
-  const SHOP_DOT_RADIUS = { circle: 7, square: 6.5, triangle: 7 };
-  const WH_DOT_RADIUS = 10;
-  const WAREHOUSE_PANE = "chibaWarehousePane";
-
-  function getShopDotStyle(site, extraClass) {
+  function createShopIcon(site, extraClass) {
     const color = getHighlightColor(site, extraClass) || DEFAULT_SHOP_COLOR;
     const shape = site.marker_shape || "circle";
-    const radius = SHOP_DOT_RADIUS[shape] || SHOP_DOT_RADIUS.circle;
-    const cls = ["chiba-shop-dot", `shape-${shape}`, extraClass].filter(Boolean).join(" ");
-    return {
-      radius,
-      fillColor: color,
-      fillOpacity: 1,
-      color,
-      weight: shape === "circle" ? 3 : 2.5,
-      opacity: 1,
-      className: cls,
-    };
-  }
-
-  function applyShopMarkerStyle(marker, site, extraClass) {
-    if (!marker) return;
-    marker.setStyle(getShopDotStyle(site, extraClass || ""));
-  }
-
-  function getWarehouseDotStyle() {
-    return {
-      radius: WH_DOT_RADIUS,
-      fillColor: WAREHOUSE_COLOR,
-      fillOpacity: 1,
-      color: WAREHOUSE_COLOR,
-      weight: 4,
-      opacity: 1,
-      className: "chiba-wh-dot",
-      pane: WAREHOUSE_PANE,
-      zIndexOffset: 2000,
-    };
-  }
-
-  function reinforceWarehouseMarker(marker) {
-    if (!marker) return;
-    marker.setStyle(getWarehouseDotStyle());
-    const el = marker.getElement?.();
-    if (el) {
-      el.setAttribute("fill", WAREHOUSE_COLOR);
-      el.setAttribute("stroke", WAREHOUSE_COLOR);
-      el.setAttribute("fill-opacity", "1");
-      el.setAttribute("stroke-opacity", "1");
-      el.setAttribute("stroke-width", "4");
-    }
-  }
-
-  function raiseWarehouseMarkers() {
-    Object.values(warehouseMarkers).forEach((marker) => {
-      if (!marker || !map?.hasLayer(marker)) return;
-      reinforceWarehouseMarker(marker);
-      marker.bringToFront();
+    const cls = ["marker-shop", extraClass].filter(Boolean).join(" ");
+    const shapeCls = `shape-${shape}`;
+    const html = `
+      <div class="${cls}" data-id="${site.id}">
+        <div class="marker-dot ${shapeCls}" style="--mc:${color}"></div>
+        <div class="marker-label">${escapeHtml(site.name)}</div>
+      </div>`;
+    return L.divIcon({
+      html,
+      className: "marker-wrap",
+      iconSize: [0, 0],
+      iconAnchor: [0, 0],
     });
   }
 
-  const MAP_UI_PAD = {
-    topLeft: [260, 128],
-    bottomRight: [460, 80],
-  };
-
-  function getMapUiPad() {
-    const topLeft = [260, 128];
-    let bottomRight = [72, 80];
-    const panel = document.getElementById("siteCardPanel");
-    if (
-      document.body.classList.contains("site-card-panel-open") &&
-      panel &&
-      !panel.hidden
-    ) {
-      bottomRight[0] = Math.round(panel.getBoundingClientRect().width + 28);
-    }
-    if (map) {
-      const w = map.getSize().x;
-      topLeft[0] = Math.min(topLeft[0], Math.round(w * 0.38));
-      bottomRight[0] = Math.min(bottomRight[0], Math.round(w * 0.58));
-    }
-    return { topLeft, bottomRight };
-  }
-
-  function focusMapOnLatLng(latlng, zoom) {
-    if (!map) return;
-    map.setView(latlng, zoom, { animate: false });
-    const pad = getMapUiPad();
-    const dx = Math.round((pad.bottomRight[0] - pad.topLeft[0]) / 2);
-    const dy = Math.round((pad.topLeft[1] - pad.bottomRight[1]) / 2);
-    if (dx || dy) map.panBy([dx, dy], { animate: false });
-  }
-
-  function fitMapToSites(sites) {
-    if (!map || !sites.length) return;
-    if (sites.length === 1) {
-      focusMapOnLatLng([sites[0].lat, sites[0].lng], 14);
-      return;
-    }
-    const pad = getMapUiPad();
-    map.fitBounds(
-      L.latLngBounds(sites.map((s) => [s.lat, s.lng])),
-      {
-        paddingTopLeft: L.point(pad.topLeft[0], pad.topLeft[1]),
-        paddingBottomRight: L.point(pad.bottomRight[0], pad.bottomRight[1]),
-        maxZoom: 12,
-        animate: false,
-      }
-    );
-  }
-
-  function attachTooltipTap(marker, onTap) {
-    const bind = () => {
-      const el = marker.getTooltip()?.getElement?.();
-      if (!el) return;
-      if (el.dataset.tapBound === "1") return;
-      el.dataset.tapBound = "1";
-      el.classList.add("is-map-tappable");
-      el.addEventListener("click", (ev) => {
-        L.DomEvent.stop(ev);
-        onTap();
-      });
-    };
-    marker.on("add", bind);
-    marker.on("tooltipopen", bind);
-    bind();
-  }
-
-  function bindShopLabel(marker, name, onTap) {
-    marker.unbindTooltip();
-    marker.bindTooltip(name, {
-      permanent: true,
-      direction: "bottom",
-      offset: L.point(0, 5),
-      className: "chiba-shop-tooltip",
-      opacity: 1,
-      interactive: true,
+  function createWarehouseIcon(wh) {
+    const html = `
+      <div class="marker-warehouse" data-id="${wh.id}">
+        <div class="marker-dot"></div>
+        <div class="marker-label">${escapeHtml(wh.name)}</div>
+      </div>`;
+    return L.divIcon({
+      html,
+      className: "marker-wrap",
+      iconSize: [0, 0],
+      iconAnchor: [0, 0],
     });
-    if (onTap) attachTooltipTap(marker, onTap);
-  }
-
-  function bindWarehouseLabel(marker, name, onTap) {
-    marker.unbindTooltip();
-    marker.bindTooltip(name, {
-      permanent: true,
-      direction: "bottom",
-      offset: L.point(0, 6),
-      className: "chiba-wh-tooltip",
-      opacity: 1,
-      interactive: true,
-    });
-    if (onTap) attachTooltipTap(marker, onTap);
-  }
-
-  function wireShopMarker(marker, site) {
-    const open = () => highlightSingleShop(site);
-    marker.off("click");
-    marker.on("click", open);
-    bindShopLabel(marker, site.name, open);
-  }
-
-  let printMapLayoutRestore = null;
-
-  function beginPrintMapLayout() {
-    const mapEl = document.getElementById("map");
-    if (!mapEl) return;
-    printMapLayoutRestore = {
-      height: mapEl.style.height,
-      width: mapEl.style.width,
-      position: mapEl.style.position,
-      margin: mapEl.style.margin,
-      left: mapEl.style.left,
-      top: mapEl.style.top,
-    };
-    mapEl.style.width = "100%";
-    mapEl.style.height = "175mm";
-    mapEl.style.position = "relative";
-    mapEl.style.margin = "0";
-    mapEl.style.left = "0";
-    mapEl.style.top = "0";
-  }
-
-  function endPrintMapLayout() {
-    const mapEl = document.getElementById("map");
-    if (!mapEl || !printMapLayoutRestore) return;
-    mapEl.style.height = printMapLayoutRestore.height;
-    mapEl.style.width = printMapLayoutRestore.width;
-    mapEl.style.position = printMapLayoutRestore.position;
-    mapEl.style.margin = printMapLayoutRestore.margin;
-    mapEl.style.left = printMapLayoutRestore.left;
-    mapEl.style.top = printMapLayoutRestore.top;
-    printMapLayoutRestore = null;
-  }
-
-  function syncMapAfterLayout(bounds, maxZoom, done) {
-    if (!map) {
-      done();
-      return;
-    }
-    let finished = false;
-    const finish = () => {
-      if (finished) return;
-      finished = true;
-      map.invalidateSize({ animate: false });
-      setTimeout(done, 120);
-    };
-    map.invalidateSize({ animate: false });
-    if (bounds && bounds.isValid()) {
-      map.once("moveend", finish);
-      map.fitBounds(bounds, { padding: [36, 36], maxZoom, animate: false });
-      setTimeout(finish, 900);
-      return;
-    }
-    finish();
   }
 
   function escapeHtml(s) {
@@ -511,648 +284,16 @@
     return `運送回数: ${n}回`;
   }
 
-  function formatWeightLine(site) {
-    if (site.weight_kg == null) return "配送重量: —";
-    const n = Number(site.weight_kg) || 0;
-    if (n === 0) return "配送重量: 0 kg";
-    const start = mapData?.weight_period_start;
-    const end = mapData?.weight_period_end;
-    if (start && end) {
-      return `配送重量: ${n.toLocaleString()} kg（${formatJpDate(start)}〜${formatJpDate(end)}）`;
-    }
-    return `配送重量: ${n.toLocaleString()} kg`;
-  }
-
-  function getSiteCard(siteId) {
-    return siteCardsById[siteId] || null;
-  }
-
-  function siteHasDetailCard(card) {
-    if (!card) return false;
-    if (card.card_html) return true;
-    if (card.fields?.length) return true;
-    if (card.photos?.some((p) => p.src)) return true;
-    return false;
-  }
-
-  function zoneLabel(site) {
-    if (!site?.zone) return "";
-    if (site.zone === "chiba_a") return "千葉A";
-    if (site.zone === "chiba_b") return "千葉B";
-    if (site.zone === "funa") return "房";
-    return site.zone;
-  }
-
-  function courseSpecNote(course, site) {
-    const m = mapData?.course_merges?.[course];
-    const n = mapData?.new_courses?.[course];
-    if (m?.label && m.label !== course) return m.label;
-    if (m?.truck_t === 2) return "2t専用";
-    if (m?.truck_t === 4) return "4t専用";
-    const shape = m?.marker_shape || n?.marker_shape || site?.marker_shape;
-    if (shape === "triangle") return "2t（三角）";
-    if (shape === "square") return "4t（四角）";
-    return "";
-  }
-
-  function formatMapCourseValue(site) {
+  function formatSitePopup(site) {
     const mc = getMapCourse(site);
-    const spec = courseSpecNote(mc, site);
-    return spec ? `${mc}（${spec}）` : mc;
-  }
-
-  function patchSiteCardFields(site, fields) {
-    const mc = getMapCourse(site);
-    const master = site.master_course || site.course || "";
-    const out = (fields || []).map((f) => ({ ...f }));
-    const mapVal = formatMapCourseValue(site);
-    let mapIdx = out.findIndex((f) => /地図コース/.test(f.label || ""));
-    if (mapIdx >= 0) {
-      out[mapIdx] = { label: "地図コース", value: mapVal };
-    } else {
-      const nameIdx = out.findIndex((f) => /配送先名|正式名称/.test(f.label || ""));
-      out.splice(nameIdx >= 0 ? nameIdx + 1 : 0, 0, { label: "地図コース", value: mapVal });
-    }
-    const masterIdx = out.findIndex((f) => /マスタコース/.test(f.label || ""));
-    if (master && master !== mc) {
-      const mv = { label: "マスタコース（配車依頼書）", value: master };
-      if (masterIdx >= 0) out[masterIdx] = mv;
-      else {
-        const idx = out.findIndex((f) => f.label === "地図コース");
-        out.splice(idx >= 0 ? idx + 1 : 1, 0, mv);
-      }
-    } else if (masterIdx >= 0) {
-      out.splice(masterIdx, 1);
-    }
-    return out;
-  }
-
-  function buildDefaultSiteFields(site) {
-    const mc = getMapCourse(site);
-    const fields = [
-      { label: "配送先名", value: site.name },
-      { label: "地図コース", value: formatMapCourseValue(site) },
-    ];
+    let html = `<b>${escapeHtml(site.name)}</b><br>`;
+    html += `地図コース: ${escapeHtml(mc)}`;
     if (site.master_course && site.master_course !== mc) {
-      fields.push({ label: "マスタコース（配車依頼書）", value: site.master_course });
+      html += `<br>マスタ: ${escapeHtml(site.master_course)}`;
     }
-    const zl = zoneLabel(site);
-    if (zl) fields.push({ label: "区域", value: zl });
-    fields.push({ label: "住所", value: site.address || "—" });
-    fields.push({
-      label: "運送",
-      value: formatVisitLine(site).replace(/^運送回数:\s*/, ""),
-    });
-    fields.push({
-      label: "重量",
-      value: formatWeightLine(site).replace(/^配送重量:\s*/, ""),
-    });
-    fields.push({
-      label: "配送カード",
-      value: "順次追加予定（現時点は基本情報のみ）",
-    });
-    return fields;
-  }
-
-  function ensurePhotoViewer() {
-    let root = document.getElementById("photoViewer");
-    if (root) return root;
-    root = document.createElement("div");
-    root.id = "photoViewer";
-    root.className = "photo-viewer";
-    root.hidden = true;
-    root.innerHTML = `
-      <div class="photo-viewer__backdrop" data-close-photo-viewer></div>
-      <div class="photo-viewer__panel" role="dialog" aria-modal="true">
-        <div class="photo-viewer__toolbar">
-          <button type="button" class="photo-viewer__nav" data-photo-prev aria-label="前の写真">◀</button>
-          <p id="photoViewerCaption" class="photo-viewer__caption"></p>
-          <button type="button" class="photo-viewer__print" data-photo-print>🖨 印刷</button>
-          <button type="button" class="photo-viewer__nav" data-photo-next aria-label="次の写真">▶</button>
-          <button type="button" class="photo-viewer__close" data-close-photo-viewer aria-label="閉じる">×</button>
-        </div>
-        <div class="photo-viewer__stage">
-          <p class="photo-viewer__print-title"></p>
-          <img id="photoViewerImg" alt="">
-        </div>
-        <p id="photoViewerCounter" class="photo-viewer__counter"></p>
-      </div>`;
-    document.body.appendChild(root);
-    root.querySelectorAll("[data-close-photo-viewer]").forEach((el) => {
-      el.addEventListener("click", closePhotoViewer);
-    });
-    root.querySelector("[data-photo-prev]").addEventListener("click", () => stepPhotoViewer(-1));
-    root.querySelector("[data-photo-next]").addEventListener("click", () => stepPhotoViewer(1));
-    root.querySelector("[data-photo-print]").addEventListener("click", printPhotoViewerImage);
-    if (!window.__photoViewerKeyBound) {
-      window.__photoViewerKeyBound = true;
-      document.addEventListener("keydown", (ev) => {
-        const viewer = document.getElementById("photoViewer");
-        if (!viewer || viewer.hidden) return;
-        if (ev.key === "Escape") {
-          closePhotoViewer();
-        } else if (ev.key === "ArrowLeft") {
-          stepPhotoViewer(-1);
-        } else if (ev.key === "ArrowRight") {
-          stepPhotoViewer(1);
-        }
-      });
-    }
-    return root;
-  }
-
-  /** @type {{src:string,label:string}[]} */
-  let photoViewerItems = [];
-  let photoViewerIndex = 0;
-
-  function renderPhotoViewerFrame() {
-    const root = document.getElementById("photoViewer");
-    if (!root || root.hidden || !photoViewerItems.length) return;
-    const item = photoViewerItems[photoViewerIndex];
-    const img = root.querySelector("#photoViewerImg");
-    const caption = root.querySelector("#photoViewerCaption");
-    const counter = root.querySelector("#photoViewerCounter");
-    if (img) {
-      img.src = item.src;
-      img.alt = item.label;
-    }
-    if (caption) caption.textContent = item.label;
-    const printTitle = root.querySelector(".photo-viewer__print-title");
-    if (printTitle) printTitle.textContent = item.label;
-    if (counter) {
-      counter.textContent = `${photoViewerIndex + 1} / ${photoViewerItems.length}`;
-    }
-    const prevBtn = root.querySelector("[data-photo-prev]");
-    const nextBtn = root.querySelector("[data-photo-next]");
-    if (prevBtn) prevBtn.disabled = photoViewerIndex <= 0;
-    if (nextBtn) nextBtn.disabled = photoViewerIndex >= photoViewerItems.length - 1;
-  }
-
-  function openPhotoViewer(items, startIndex = 0) {
-    if (!items?.length) return;
-    photoViewerItems = items;
-    photoViewerIndex = Math.max(0, Math.min(startIndex, items.length - 1));
-    const root = ensurePhotoViewer();
-    renderPhotoViewerFrame();
-    root.hidden = false;
-    document.body.classList.add("photo-viewer-open");
-  }
-
-  function closePhotoViewer() {
-    const root = document.getElementById("photoViewer");
-    if (!root) return;
-    root.hidden = true;
-    document.body.classList.remove("photo-viewer-open");
-  }
-
-  function stepPhotoViewer(delta) {
-    if (!photoViewerItems.length) return;
-    const next = photoViewerIndex + delta;
-    if (next < 0 || next >= photoViewerItems.length) return;
-    photoViewerIndex = next;
-    renderPhotoViewerFrame();
-  }
-
-  function printPhotoViewerImage() {
-    const item = photoViewerItems[photoViewerIndex];
-    if (!item) return;
-
-    const absSrc = new URL(item.src, window.location.href).href;
-    const title = escapeHtml(item.label || "現場写真");
-
-    let frame = document.getElementById("photoViewerPrintFrame");
-    if (!frame) {
-      frame = document.createElement("iframe");
-      frame.id = "photoViewerPrintFrame";
-      frame.setAttribute("title", "印刷プレビュー");
-      frame.style.cssText =
-        "position:fixed;width:0;height:0;border:0;opacity:0;pointer-events:none";
-      document.body.appendChild(frame);
-    }
-
-    const win = frame.contentWindow;
-    const doc = win.document;
-    doc.open();
-    doc.write(`<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="utf-8">
-<title>${title}</title>
-<style>
-@page { size: A4 portrait; margin: 8mm; }
-html, body {
-  margin: 0;
-  padding: 0;
-  background: #fff;
-  color: #000;
-  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
-}
-.print-page {
-  width: 100%;
-  max-width: 190mm;
-  margin: 0 auto;
-  page-break-after: avoid;
-  page-break-inside: avoid;
-}
-.print-title {
-  margin: 0 0 6mm;
-  font-size: 13pt;
-  font-weight: 700;
-  text-align: center;
-  line-height: 1.35;
-}
-.print-photo {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 268mm;
-  object-fit: contain;
-  page-break-inside: avoid;
-}
-</style>
-</head>
-<body>
-<div class="print-page">
-  <h1 class="print-title">${title}</h1>
-  <img class="print-photo" src="${absSrc.replace(/"/g, "&quot;")}" alt="${title}">
-</div>
-</body>
-</html>`);
-    doc.close();
-
-    const runPrint = () => {
-      try {
-        win.focus();
-        win.print();
-      } catch (_) {
-        alert("印刷できませんでした。もう一度お試しください。");
-      }
-    };
-
-    const img = doc.querySelector(".print-photo");
-    if (!img) {
-      runPrint();
-      return;
-    }
-    if (img.complete) {
-      setTimeout(runPrint, 80);
-    } else {
-      img.onload = () => setTimeout(runPrint, 80);
-      img.onerror = () => alert("写真を読み込めませんでした。");
-    }
-  }
-
-  function formatPrintDate() {
-    const d = new Date();
-    const y = d.getFullYear();
-    const m = String(d.getMonth() + 1).padStart(2, "0");
-    const day = String(d.getDate()).padStart(2, "0");
-    return `${y}/${m}/${day}`;
-  }
-
-  function buildMapPrintTitle() {
-    if (!activeSelections.length) return "伊藤商事 千葉配送地図（全体表示）";
-    const labels = activeSelections.map((sel) => sel.label).filter(Boolean);
-    if (labels.length === 1) return `伊藤商事 千葉配送地図 — ${labels[0]}`;
-    return `伊藤商事 千葉配送地図 — ${labels.join("・")}`;
-  }
-
-  function buildMapPrintSubtitle() {
-    const visibleCount = shopMarkers.filter(({ marker }) => map && map.hasLayer(marker)).length;
-    const parts = [`表示 ${visibleCount} 箇所`, formatPrintDate(), "© OpenStreetMap"];
-    const periodEl = $("#visitPeriodText");
-    if (periodEl && periodEl.textContent.trim()) {
-      parts.unshift(periodEl.textContent.trim());
-    }
-    return parts.join(" ／ ");
-  }
-
-  function buildCoursePrintSubtitle(course) {
-    const count = shopMarkers.filter(({ site }) => getMapCourse(site) === course).length;
-    const meta = courseSearchMeta(course);
-    return `${meta} ／ ${count} 箇所 ／ ${formatPrintDate()} ／ © OpenStreetMap`;
-  }
-
-  function setMapPrintBanner(title, subtitle) {
-    const banner = $("#mapPrintBanner");
-    const titleEl = $("#mapPrintTitle");
-    const subEl = $("#mapPrintSubtitle");
-    if (!banner || !titleEl || !subEl) return;
-    titleEl.textContent = title || "伊藤商事 千葉配送地図";
-    subEl.textContent = subtitle || buildMapPrintSubtitle();
-    banner.hidden = false;
-  }
-
-  function clearMapPrintBanner() {
-    const banner = $("#mapPrintBanner");
-    if (banner) banner.hidden = true;
-  }
-
-  function waitForMapSettled(callback) {
-    if (!map) {
-      callback();
-      return;
-    }
-    let done = false;
-    const finish = () => {
-      if (done) return;
-      done = true;
-      setTimeout(callback, 280);
-    };
-    map.once("moveend", finish);
-    map.once("zoomend", finish);
-    setTimeout(finish, 1200);
-  }
-
-  function printFocusBounds() {
-    const pts = [];
-    activeSelections.forEach((sel) => {
-      if (sel.type === "shop") {
-        const site = mapData.sites.find((s) => s.id === sel.siteId);
-        if (site) pts.push([site.lat, site.lng]);
-      } else if (sel.type === "shops") {
-        sel.siteIds.forEach((id) => {
-          const site = mapData.sites.find((s) => s.id === id);
-          if (site) pts.push([site.lat, site.lng]);
-        });
-      } else if (sel.type === "course") {
-        shopMarkers.forEach(({ site }) => {
-          if (getMapCourse(site) === sel.course) pts.push([site.lat, site.lng]);
-        });
-      } else if (sel.type === "zone") {
-        shopMarkers.forEach(({ site }) => {
-          if (site.zone === sel.zoneKey) pts.push([site.lat, site.lng]);
-        });
-      }
-    });
-    if (!pts.length) return null;
-    return L.latLngBounds(pts);
-  }
-
-  function refitMapForPrint(done) {
-    const bounds = printFocusBounds();
-    const maxZoom =
-      bounds && bounds.isValid() && bounds.getNorth() === bounds.getSouth() ? 14 : 12;
-    syncMapAfterLayout(bounds, maxZoom, done);
-  }
-
-  function getPrintVisibleBounds() {
-    if (!map) return null;
-    const size = map.getSize();
-    if (!size.x || !size.y) return null;
-    const pad = getMapUiPad();
-    const x1 = Math.max(0, pad.topLeft[0]);
-    const y1 = Math.max(0, pad.topLeft[1]);
-    const x2 = Math.min(size.x, size.x - pad.bottomRight[0]);
-    const y2 = Math.min(size.y, size.y - pad.bottomRight[1]);
-    if (x2 - x1 < 40 || y2 - y1 < 40) return map.getBounds();
-    const nw = map.containerPointToLatLng([x1, y1]);
-    const se = map.containerPointToLatLng([x2, y2]);
-    return L.latLngBounds(nw, se);
-  }
-
-  function lockMapPrintView(bounds) {
-    if (!map || !bounds || !bounds.isValid()) return;
-    const maxZoom = map.getZoom();
-    map.invalidateSize({ animate: false });
-    map.fitBounds(bounds, { padding: [0, 0], animate: false, maxZoom });
-    const nw = bounds.getNorthWest();
-    const pt = map.latLngToContainerPoint(nw);
-    const dx = Math.round(pt.x);
-    const dy = Math.round(pt.y);
-    if (dx || dy) map.panBy([dx, dy], { animate: false });
-  }
-
-  function runMapPrintDialog(title, subtitle) {
-    if (!map) return;
-    closePhotoViewer();
-    // 工務店単体選択の印刷: コース絞り込みはしない。今の地図に出ている範囲のまま全ピン表示
-    if (selectionIsShopOnly()) {
-      shopMarkers.forEach(({ marker, site }) => {
-        const isSelected = activeSelections.some(
-          (s) => s.type === "shop" && s.siteId === site.id
-        );
-        applyShopMarkerStyle(marker, site, isSelected ? "is-shop-highlight" : "");
-        setMarkerVisible(marker, true);
-      });
-    }
-    const printBounds = getPrintVisibleBounds();
-    setMapPrintBanner(title, subtitle);
-
-    const cleanup = () => {
-      clearMapPrintBanner();
-      applyAllSelections();
-      map.invalidateSize({ animate: false });
-      window.removeEventListener("afterprint", cleanup);
-      window.removeEventListener("beforeprint", onBeforePrint);
-    };
-    const onBeforePrint = () => {
-      lockMapPrintView(printBounds);
-    };
-    window.addEventListener("beforeprint", onBeforePrint);
-    window.addEventListener("afterprint", cleanup);
-
-    let printed = false;
-    const launchPrint = () => {
-      if (printed) return;
-      printed = true;
-      lockMapPrintView(printBounds);
-      setTimeout(() => {
-        try {
-          window.print();
-        } catch (_) {
-          cleanup();
-          alert("印刷できませんでした。もう一度お試しください。");
-        }
-      }, 180);
-    };
-
-    requestAnimationFrame(() => {
-      requestAnimationFrame(launchPrint);
-    });
-  }
-
-  function printCurrentMapView() {
-    runMapPrintDialog(buildMapPrintTitle(), buildMapPrintSubtitle());
-  }
-
-  function printCourseMap(course) {
-    if (!course || !map) return;
-    activeSelections = [];
-    renderSearchTags();
-    $("#searchInput").value = "";
-    hideSuggestions();
-    addSelection({ type: "course", course, label: course });
-    waitForMapSettled(() => {
-      runMapPrintDialog(
-        `伊藤商事 千葉配送地図 — ${course}`,
-        buildCoursePrintSubtitle(course)
-      );
-    });
-  }
-
-  function bindSiteCardPhotoClicks(body) {
-    const items = [];
-    body.querySelectorAll(".site-card-panel__photo img").forEach((img) => {
-      const fig = img.closest(".site-card-panel__photo");
-      const label = fig?.querySelector("figcaption")?.textContent?.trim() || img.alt || "現場写真";
-      items.push({ src: img.src, label });
-    });
-    body.querySelectorAll(".site-card-panel__photo").forEach((fig, i) => {
-      const img = fig.querySelector("img");
-      if (!img) return;
-      fig.classList.add("is-clickable");
-      fig.addEventListener("click", (ev) => {
-        ev.preventDefault();
-        ev.stopPropagation();
-        openPhotoViewer(items, i);
-      });
-    });
-  }
-
-  function ensureSiteCardPanel() {
-    let root = document.getElementById("siteCardPanel");
-    if (root) return root;
-    root = document.createElement("aside");
-    root.id = "siteCardPanel";
-    root.className = "site-card-panel";
-    root.hidden = true;
-    root.innerHTML = `
-      <div class="site-card-panel__head">
-        <h2 id="siteCardPanelTitle" class="site-card-panel__title"></h2>
-        <button type="button" class="site-card-panel__close" data-close-site-card aria-label="閉じる">×</button>
-      </div>
-      <div id="siteCardPanelBody" class="site-card-panel__body"></div>`;
-    document.body.appendChild(root);
-    root.querySelector("[data-close-site-card]").addEventListener("click", closeSiteCardPanelAndResetShopTap);
-    if (!window.__siteCardPanelKeyBound) {
-      window.__siteCardPanelKeyBound = true;
-      document.addEventListener("keydown", (ev) => {
-        if (ev.key !== "Escape") return;
-        const viewer = document.getElementById("photoViewer");
-        if (viewer && !viewer.hidden) return;
-        const panel = document.getElementById("siteCardPanel");
-        if (panel && !panel.hidden) closeSiteCardPanelAndResetShopTap();
-      });
-    }
-    return root;
-  }
-
-  function closeSiteCardPanel() {
-    const root = document.getElementById("siteCardPanel");
-    if (!root) return;
-    root.hidden = true;
-    document.body.classList.remove("site-card-panel-open");
-  }
-
-  function closeSiteCardPanelAndResetShopTap() {
-    closeSiteCardPanel();
-    if (
-      activeSelections.length &&
-      activeSelections.every((s) => s.type === "shop")
-    ) {
-      activeSelections = [];
-      clearRoutes();
-      hideHint();
-      renderSearchTags();
-      showAllShopMarkers();
-      $("#statusText").textContent = defaultStatusText();
-    }
-  }
-
-  function renderSiteCardFields(fields) {
-    if (!fields?.length) return "";
-    const rows = fields
-      .map(
-        (f) =>
-          `<tr><th>${escapeHtml(f.label)}</th><td>${escapeHtml(f.value || "—")}</td></tr>`
-      )
-      .join("");
-    return `<table class="site-card-panel__table"><tbody>${rows}</tbody></table>`;
-  }
-
-  function renderSiteCardPhotos(photos) {
-    if (!photos?.length) {
-      return `<p class="site-card-panel__empty">現場写真は準備中です。</p>`;
-    }
-    const cards = photos
-      .map((p) => {
-        const hasSrc = Boolean(p.src);
-        const img = hasSrc
-          ? `<img src="${escapeHtml(p.src)}" alt="${escapeHtml(p.label || "")}" loading="lazy">`
-          : `<div class="site-card-panel__photo-placeholder">写真準備中</div>`;
-        const memo = p.memo
-          ? `<p class="site-card-panel__photo-memo">${escapeHtml(p.memo)}</p>`
-          : "";
-        return `<figure class="site-card-panel__photo">${img}<figcaption>${escapeHtml(p.label || "")}</figcaption>${memo}</figure>`;
-      })
-      .join("");
-    return `<div class="site-card-panel__photos">${cards}</div>`;
-  }
-
-  function showSiteCardPanel(siteId) {
-    const site = (mapData.sites || []).find((s) => s.id === siteId);
-    if (!site) return;
-
-    const card = getSiteCard(siteId);
-    const hasDetail = siteHasDetailCard(card);
-    const root = ensureSiteCardPanel();
-    const titleEl = root.querySelector("#siteCardPanelTitle");
-    const body = root.querySelector("#siteCardPanelBody");
-    const title = card?.title || site.name || "配送先";
-    const subtitle = card?.subtitle || "";
-    const course = formatMapCourseValue(site);
-    const address = card?.address || site.address || "";
-    const visitLine = formatVisitLine(site);
-    const weightLine = formatWeightLine(site);
-    const baseFields =
-      hasDetail && card?.fields?.length ? card.fields : buildDefaultSiteFields(site);
-    const fields = patchSiteCardFields(site, baseFields);
-    const cardLink = card?.card_html
-      ? `<p class="site-card-panel__links"><a href="${escapeHtml(card.card_html)}" target="_blank" rel="noopener">印刷用カードを別タブで開く</a></p>`
-      : "";
-    const statusBadge = hasDetail
-      ? `<span class="site-card-panel__badge site-card-panel__badge--ready">詳細カードあり</span>`
-      : `<span class="site-card-panel__badge">基本情報（カード追加予定）</span>`;
-
-    titleEl.textContent = title;
-    body.innerHTML = `
-      ${statusBadge}
-      ${subtitle ? `<p class="site-card-panel__subtitle">${escapeHtml(subtitle)}</p>` : ""}
-      <p class="site-card-panel__meta">${escapeHtml(course)}　${escapeHtml(address)}</p>
-      <p class="site-card-panel__meta">${escapeHtml(visitLine)}</p>
-      <p class="site-card-panel__meta">${escapeHtml(weightLine)}</p>
-      ${renderSiteCardFields(fields)}
-      ${card?.aliases_note ? `<p class="site-card-panel__aliases"><span>PDF別名:</span> ${escapeHtml(card.aliases_note)}</p>` : ""}
-      <h3 class="site-card-panel__sec">現場写真</h3>
-      ${renderSiteCardPhotos(hasDetail ? card?.photos : [])}
-      ${cardLink}`;
-
-    bindSiteCardPhotoClicks(body);
-
-    root.hidden = false;
-    document.body.classList.add("site-card-panel-open");
-  }
-
-  function maybeShowSiteCardForSelections() {
-    const shopSels = activeSelections.filter((s) => s.type === "shop");
-    if (shopSels.length === 1) {
-      showSiteCardPanel(shopSels[0].siteId);
-      return;
-    }
-    if (shopSels.length !== 1) closeSiteCardPanel();
-  }
-
-  async function loadSiteCards() {
-    siteCardsById = { ...(mapData?.site_cards || {}) };
-    try {
-      const r = await fetch(`${SITE_CARDS_URL}?v=${Date.now()}`, { cache: "no-store" });
-      if (!r.ok) return;
-      const data = await r.json();
-      siteCardsById = { ...siteCardsById, ...(data.sites || {}) };
-    } catch {
-      /* map_data.site_cards が正本フォールバック */
-    }
+    html += `<br>${escapeHtml(site.address)}`;
+    html += `<br>${escapeHtml(formatVisitLine(site))}`;
+    return html;
   }
 
   function clearRoutes() {
@@ -1217,24 +358,6 @@ html, body {
     });
   }
 
-  function selectionFiltersShopMarkers() {
-    return activeSelections.some(
-      (sel) =>
-        sel.type === "course" ||
-        sel.type === "zone" ||
-        sel.type === "shops" ||
-        sel.type === "yokomochi" ||
-        sel.type === "warehouse"
-    );
-  }
-
-  function selectionIsShopOnly() {
-    return (
-      activeSelections.length > 0 &&
-      activeSelections.every((sel) => sel.type === "shop")
-    );
-  }
-
   function applyAllSelections() {
     clearRoutes();
     renderSearchTags();
@@ -1242,7 +365,6 @@ html, body {
     if (!activeSelections.length) {
       showAllShopMarkers();
       hideHint();
-      closeSiteCardPanel();
       $("#statusText").textContent = defaultStatusText();
       return;
     }
@@ -1276,25 +398,16 @@ html, body {
       }
     });
 
-    const filterMarkers = selectionFiltersShopMarkers();
-
     shopMarkers.forEach(({ marker, site }) => {
-      if (filterMarkers) {
-        if (visibleIds.has(site.id)) {
-          const mode = highlightMode.get(site.id);
-          const extra =
-            mode === "course" ? "is-course-highlight" : "is-zone-highlight";
-          applyShopMarkerStyle(marker, site, extra);
-          setMarkerVisible(marker, true);
-        } else {
-          setMarkerVisible(marker, false);
-        }
-        return;
+      if (visibleIds.has(site.id)) {
+        const mode = highlightMode.get(site.id);
+        const extra =
+          mode === "course" ? "is-course-highlight" : "is-zone-highlight";
+        marker.setIcon(createShopIcon(site, extra));
+        setMarkerVisible(marker, true);
+      } else {
+        setMarkerVisible(marker, false);
       }
-
-      const isSelected = visibleIds.has(site.id);
-      applyShopMarkerStyle(marker, site, isSelected ? "is-shop-highlight" : "");
-      setMarkerVisible(marker, true);
     });
 
     activeSelections.forEach((sel) => {
@@ -1314,24 +427,19 @@ html, body {
       } else if (sel.type === "shop") {
         const site = mapData.sites.find((s) => s.id === sel.siteId);
         if (site) {
-          const hubId = resolveSiteHubId(site);
-          const color = getCourseHighlightColor(getMapCourse(site));
-          drawHubToSites(hubId, [site], color);
+          const hubId = site.hub || "yachiyo_dp";
+          drawRoute(
+            getWarehouse(hubId),
+            site,
+            getCourseHighlightColor(getMapCourse(site)),
+            { weight: 3 }
+          );
         }
-      } else if (sel.type === "shops") {
-        const sites = sel.siteIds
-          .map((id) => mapData.sites.find((s) => s.id === id))
-          .filter(Boolean);
-        sites.forEach((site) => {
-          const hubId = resolveSiteHubId(site);
-          const color = getCourseHighlightColor(getMapCourse(site));
-          drawHubToSites(hubId, [site], color);
-        });
       } else if (sel.type === "yokomochi") {
         const y = (mapData.yokomochi || []).find((x) => x.id === sel.yokomochiId);
         if (y) {
-          const from = warehouseMarkers[y.from] || getWarehouse(y.from);
-          const to = warehouseMarkers[y.to] || getWarehouse(y.to);
+          const from = getWarehouse(y.from);
+          const to = getWarehouse(y.to);
           drawRoute(from, to, YOKOMOCHI_COLOR, { weight: 5 });
         }
       } else if (sel.type === "warehouse") {
@@ -1348,7 +456,12 @@ html, body {
       .map(({ site }) => site)
       .filter((s) => visibleIds.has(s.id));
 
-    if (!visibleSites.length) {
+    if (visibleSites.length) {
+      map.fitBounds(
+        L.latLngBounds(visibleSites.map((s) => [s.lat, s.lng])),
+        { padding: [60, 60], maxZoom: visibleSites.length === 1 ? 14 : 12 }
+      );
+    } else {
       activeSelections.forEach((sel) => {
         if (sel.type !== "yokomochi") return;
         const y = (mapData.yokomochi || []).find((x) => x.id === sel.yokomochiId);
@@ -1364,20 +477,8 @@ html, body {
     }
 
     const labels = activeSelections.map((s) => s.label).join("、");
-    const totalShops = shopMarkers.length;
-    if (!filterMarkers && visibleSites.length) {
-      showHint(`${totalShops}件表示中（${visibleSites.length}件選択） … ${labels}`);
-      $("#statusText").textContent = `表示 ${totalShops}件（選択 ${visibleSites.length}件）`;
-    } else {
-      showHint(`${visibleSites.length}件表示中 … ${labels}`);
-      $("#statusText").textContent = `表示 ${visibleSites.length}件 / 検索 ${activeSelections.length}件`;
-    }
-    maybeShowSiteCardForSelections();
-    raiseWarehouseMarkers();
-    // 工務店単体選択時は地図の表示範囲を変えない（周辺の別コース工務店もそのまま）
-    if (visibleSites.length && !selectionIsShopOnly()) {
-      fitMapToSites(visibleSites);
-    }
+    showHint(`${visibleSites.length}件表示中 … ${labels}`);
+    $("#statusText").textContent = `表示 ${visibleSites.length}件 / 検索 ${activeSelections.length}件`;
   }
 
   function findShops(query) {
@@ -1498,12 +599,10 @@ html, body {
   }
 
   function highlightSingleShop(site) {
-    const key = selectionKey({ type: "shop", siteId: site.id });
-    if (!activeSelections.some((s) => s.key === key)) {
-      addSelection({ type: "shop", siteId: site.id, label: site.name });
-    }
-    if (map) map.closePopup();
-    showSiteCardPanel(site.id);
+    addSelection({ type: "shop", siteId: site.id, label: site.name });
+    shopMarkers.forEach(({ marker, site: s }) => {
+      if (s.id === site.id) marker.openPopup();
+    });
   }
 
   function showYokomochi(type) {
@@ -1543,47 +642,29 @@ html, body {
     return (mapData.warehouses || []).find((w) => w.id === id);
   }
 
-  function getShopMarker(siteId) {
-    return shopMarkers.find(({ site }) => site.id === siteId)?.marker || null;
-  }
-
-  function resolveRouteLatLng(ref) {
-    if (!ref) return null;
-    if (ref.lat != null && ref.lng != null && typeof ref.getLatLng !== "function") {
-      return L.latLng(ref.lat, ref.lng);
-    }
-    if (ref.getLatLng) return ref.getLatLng();
-    if (ref.lat != null && ref.lng != null) return L.latLng(ref.lat, ref.lng);
-    return null;
-  }
-
   function drawRoute(from, to, color, opts = {}) {
-    const fromLl = resolveRouteLatLng(from);
-    const toLl = resolveRouteLatLng(to);
-    if (!fromLl || !toLl) return;
-    const line = L.polyline([fromLl, toLl], {
+    if (!from || !to) return;
+    const latlngs = [
+      [from.lat, from.lng],
+      [to.lat, to.lng],
+    ];
+    const line = L.polyline(latlngs, {
       color,
-      weight: opts.weight || 4,
-      opacity: 0.85,
-      className: "chiba-route-line",
+      weight: opts.weight || 3,
+      opacity: 0.35,
+      dashArray: "6 8",
     }).addTo(map);
 
-    routeLayers.push(line);
-  }
+    const ant = L.polyline.antPath(latlngs, {
+      delay: 280,
+      dashArray: [12, 18],
+      weight: opts.weight || 4,
+      color,
+      pulseColor: "#ffffff",
+      opacity: 0.9,
+    }).addTo(map);
 
-  function resolveSiteHubId(site) {
-    if (!site) return null;
-    if (site.hub) return site.hub;
-    const zoneHub = mapData.zones?.[site.zone]?.hub;
-    if (zoneHub) return zoneHub;
-    const course = getMapCourse(site);
-    return (
-      mapData.course_merges?.[course]?.hub ||
-      mapData.new_courses?.[course]?.hub ||
-      (course && (course.startsWith("柏") || course.includes("千葉A"))
-        ? "yachiyo_dp"
-        : "esr_kazo")
-    );
+    routeLayers.push(line, ant);
   }
 
   function drawHubToSites(hubId, sites, color) {
@@ -1619,25 +700,8 @@ html, body {
           category: "コース",
           priority: 2,
           group: group.title,
-          course: c,
         });
       }
-    }
-
-    for (const [c, cfg] of Object.entries(mapData.new_courses || {})) {
-      if (!isActiveCollabCustomCourse(c)) continue;
-      const key = norm(c);
-      if (seen.has(key)) continue;
-      seen.add(key);
-      items.push({
-        value: c,
-        label: cfg?.label || c,
-        meta: courseSearchMeta(c),
-        category: "コース",
-        priority: 2,
-        group: "協調作成",
-        course: c,
-      });
     }
 
     for (const s of mapData.sites || []) {
@@ -1717,10 +781,6 @@ html, body {
       addSelection({ type: "shop", siteId: item.siteId, label: item.label });
       return;
     }
-    if (item?.course) {
-      addSelection({ type: "course", course: item.course, label: item.label });
-      return;
-    }
     addSelectionFromQuery(value);
   }
 
@@ -1787,9 +847,7 @@ html, body {
     let html = "<h3>区分・形状</h3>";
     html += `<div class="legend-row"><span class="legend-swatch legend-swatch--circle"></span>${ml.circle || "通常（丸）"}</div>`;
     html += `<div class="legend-row"><span class="legend-swatch legend-swatch--triangle"></span>${ml.triangle || "2t（三角）"}</div>`;
-    if (ml.square) {
-      html += `<div class="legend-row"><span class="legend-swatch legend-swatch--square"></span>${ml.square}</div>`;
-    }
+    html += `<div class="legend-row"><span class="legend-swatch legend-swatch--square"></span>${ml.square || "4t（四角）"}</div>`;
     html += `<div class="legend-row"><span class="legend-swatch" style="background:#ff4757"></span>倉庫（赤）</div>`;
     html += "<h3 style='margin-top:10px'>コース一覧</h3>";
     for (const group of allCourseGroups()) {
@@ -1825,11 +883,6 @@ html, body {
       maxZoom: 18,
     }).addTo(map);
 
-    map.createPane(WAREHOUSE_PANE);
-    const whPane = map.getPane(WAREHOUSE_PANE);
-    whPane.style.zIndex = "620";
-    whPane.style.pointerEvents = "auto";
-
     // 千葉県市町村界
     fetch(GEOJSON_URL)
       .then((r) => r.json())
@@ -1857,24 +910,28 @@ html, body {
         map.setView([35.45, 140.25], 9);
       });
 
-    // 工務店（常時表示・青。調べる／クリックでハイライト色）
-    (mapData.sites || []).forEach((site) => {
-      const marker = L.circleMarker([site.lat, site.lng], getShopDotStyle(site)).addTo(map);
-      wireShopMarker(marker, site);
-      shopMarkers.push({ marker, site });
-    });
-
-    // 倉庫（常時表示・赤。専用 pane で工務店より前面・加須と同色濃度）
+    // 倉庫（常時表示・赤）
     (mapData.warehouses || []).forEach((wh) => {
-      const marker = L.circleMarker([wh.lat, wh.lng], getWarehouseDotStyle())
+      const marker = L.marker([wh.lat, wh.lng], {
+        icon: createWarehouseIcon(wh),
+        zIndexOffset: 1000,
+      })
         .bindPopup(`<b>${escapeHtml(wh.name)}</b><br>${escapeHtml(wh.address)}`)
         .addTo(map);
-      marker.on("add", () => reinforceWarehouseMarker(marker));
-      bindWarehouseLabel(marker, wh.name);
       warehouseMarkers[wh.id] = marker;
-      reinforceWarehouseMarker(marker);
     });
-    raiseWarehouseMarkers();
+
+    // 工務店（常時表示・青。調べる／クリックでハイライト色）
+    (mapData.sites || []).forEach((site) => {
+      const marker = L.marker([site.lat, site.lng], {
+        icon: createShopIcon(site),
+        zIndexOffset: 100,
+      })
+        .bindPopup(formatSitePopup(site))
+        .addTo(map);
+      marker.on("click", () => highlightSingleShop(site));
+      shopMarkers.push({ marker, site });
+    });
 
     // ESR加須は千葉外 →  bounds に含める
     const allPts = [
@@ -1913,10 +970,6 @@ html, body {
       resetHighlight();
       $("#statusText").textContent = defaultStatusText();
     });
-    const printBtn = $("#printBtn");
-    if (printBtn) {
-      printBtn.addEventListener("click", () => printCurrentMapView());
-    }
     bindSearchSuggestions();
   }
 
@@ -1925,52 +978,15 @@ html, body {
     if (el) el.textContent = text;
   }
 
-  function safeSessionGet(key) {
-    try {
-      return sessionStorage.getItem(key);
-    } catch (_) {
-      return null;
-    }
-  }
-
-  function safeSessionSet(key, value) {
-    try {
-      sessionStorage.setItem(key, value);
-      return true;
-    } catch (_) {
-      return false;
-    }
-  }
-
-  /** GitHub Pages は .version.json を 404 にするため version.json を正とする */
-  function liveVersionCandidates() {
-    const candidates = [];
-    if (IS_WEB_HOST) {
-      const here = new URL("./", window.location.href).toString().replace(/\/?$/, "/");
-      candidates.push(`${here}version.json`, `${here}.version.json`);
-    }
+  function liveVersionUrl() {
     const meta = document.querySelector('meta[name="chiba-map-live-base"]');
     if (meta?.content?.trim()) {
-      const base = meta.content.trim().replace(/\/?$/, "/");
-      candidates.push(`${base}version.json`, `${base}.version.json`);
+      return meta.content.trim().replace(/\/?$/, "/") + ".version.json";
     }
-    if (!IS_WEB_HOST) {
-      candidates.push("./version.json", "./.version.json");
+    if (IS_WEB_HOST) {
+      return new URL(".version.json", window.location.href).toString();
     }
-    return [...new Set(candidates)];
-  }
-
-  function reloadOnce(reloadKey, marker) {
-    if (safeSessionGet(reloadKey) === marker) return false;
-    const url = new URL(window.location.href);
-    if (url.searchParams.get(reloadKey) === marker) return false;
-    if (!safeSessionSet(reloadKey, marker)) {
-      url.searchParams.set(reloadKey, marker);
-    } else {
-      url.searchParams.set("_", String(Date.now()));
-    }
-    window.location.replace(url.toString());
-    return true;
+    return ".version.json";
   }
 
   function pageBuildStamp() {
@@ -1978,16 +994,13 @@ html, body {
   }
 
   async function fetchLiveVersionMeta() {
-    for (const url of liveVersionCandidates()) {
-      try {
-        const r = await fetch(`${url}?v=${Date.now()}`, { cache: "no-store" });
-        if (!r.ok) continue;
-        return await r.json();
-      } catch (_) {
-        /* try next candidate */
-      }
+    try {
+      const r = await fetch(`${liveVersionUrl()}?v=${Date.now()}`, { cache: "no-store" });
+      if (!r.ok) return null;
+      return await r.json();
+    } catch (_) {
+      return null;
     }
-    return null;
   }
 
   async function maybeReloadForLatestBuild() {
@@ -1998,9 +1011,14 @@ html, body {
     if (!ver?.built) return;
 
     const pageBuild = pageBuildStamp();
-    const staleHtml = !pageBuild || ver.built > pageBuild;
-    if (staleHtml && reloadOnce("chiba-map-reloaded-for", ver.built)) {
-      await new Promise((resolve) => setTimeout(resolve, 3000));
+    const staleHtml = pageBuild && ver.built > pageBuild;
+    const reloadKey = "chiba-map-reloaded-for";
+    if (staleHtml && sessionStorage.getItem(reloadKey) !== ver.built) {
+      sessionStorage.setItem(reloadKey, ver.built);
+      const url = new URL(window.location.href);
+      url.searchParams.set("_", String(Date.now()));
+      window.location.replace(url.toString());
+      await new Promise(() => {});
     }
   }
 
@@ -2027,10 +1045,14 @@ html, body {
       }
       const data = await r.json();
       const ver = await fetchLiveVersionMeta();
-      const pageBuild = pageBuildStamp();
-      if (ver?.built && (!pageBuild || ver.built > pageBuild)) {
-        if (reloadOnce("chiba-map-reloaded-for", ver.built)) {
-          await new Promise((resolve) => setTimeout(resolve, 3000));
+      if (ver?.map_generated && data.generated && ver.map_generated > data.generated) {
+        const reloadKey = "chiba-map-data-reloaded-for";
+        if (sessionStorage.getItem(reloadKey) !== ver.map_generated) {
+          sessionStorage.setItem(reloadKey, ver.map_generated);
+          const url = new URL(window.location.href);
+          url.searchParams.set("_", String(Date.now()));
+          window.location.replace(url.toString());
+          await new Promise(() => {});
         }
       }
       return data;
@@ -2069,131 +1091,16 @@ html, body {
     throw lastErr;
   }
 
-  async function sha256Hex(text) {
-    if (!window.crypto?.subtle) {
+  function enforceLiveAccess() {
+    const meta = document.querySelector('meta[name="chiba-map-access-key"]');
+    if (!meta?.content?.trim()) return;
+    const required = meta.content.trim();
+    const got = new URLSearchParams(window.location.search).get("k") || "";
+    if (got !== required) {
       throw new Error(
-        "合言葉の確認に HTTPS が必要です。URL が https:// で始まっているか確認してください。"
+        "この地図は共有URLから開いてください。開く.bat または社長から受け取ったリンクをご利用ください。"
       );
     }
-    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
-    return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
-  }
-
-  function isLiveAccessRequired() {
-    return (
-      document.querySelector('meta[name="chiba-map-access-required"]')?.content === "1"
-    );
-  }
-
-  function accessStorageKey() {
-    const hashMeta = document.querySelector('meta[name="chiba-map-access-hash"]');
-    if (hashMeta?.content?.trim()) {
-      return `chiba-map-ok-${hashMeta.content.trim().slice(0, 16)}`;
-    }
-    const keyMeta = document.querySelector('meta[name="chiba-map-access-key"]');
-    if (keyMeta?.content?.trim()) {
-      return `chiba-map-ok-legacy-${keyMeta.content.trim().slice(0, 8)}`;
-    }
-    if (isLiveAccessRequired()) {
-      return "chiba-map-ok-live-gate";
-    }
-    return null;
-  }
-
-  async function verifyAccessKey(key) {
-    const trimmed = normalizeAccessKey(key || "");
-    if (!trimmed) return false;
-    const aliases = accessKeyAliases();
-    if (aliases.length && aliases.includes(trimmed)) return true;
-    const hashMeta = document.querySelector('meta[name="chiba-map-access-hash"]');
-    if (hashMeta?.content?.trim()) {
-      try {
-        return (await sha256Hex(trimmed)) === hashMeta.content.trim();
-      } catch (_) {
-        return false;
-      }
-    }
-    const keyMeta = document.querySelector('meta[name="chiba-map-access-key"]');
-    if (keyMeta?.content?.trim()) {
-      return trimmed === normalizeAccessKey(keyMeta.content.trim());
-    }
-    return true;
-  }
-
-  function normalizeAccessKey(key) {
-    let k = (key || "").trim();
-    // よくある typo: l（エル）↔ I（アイ）
-    k = k.replace(/PK9aQfl/i, "PK9aQfI");
-    return k;
-  }
-
-  function accessKeyAliases() {
-    const raw = document.querySelector('meta[name="chiba-map-access-keys"]')?.content || "";
-    return raw
-      .split(/[,;\s]+/)
-      .map((k) => normalizeAccessKey(k))
-      .filter(Boolean);
-  }
-
-  function showAccessGate() {
-    return new Promise((resolve) => {
-      const overlay = document.createElement("div");
-      overlay.className = "access-gate";
-      overlay.innerHTML = `
-        <div class="access-gate__panel">
-          <div class="access-gate__icon" aria-hidden="true">🔒</div>
-          <h2 class="access-gate__title">千葉配送地図</h2>
-          <p class="access-gate__lead">共有された合言葉を入力してください</p>
-          <label class="access-gate__label" for="accessKeyInput">合言葉</label>
-          <input id="accessKeyInput" class="access-gate__input" type="password" placeholder="合言葉を入力" autocomplete="off">
-          <button id="accessKeyBtn" type="button" class="access-gate__btn">地図を開く</button>
-          <p id="accessKeyErr" class="access-gate__err" hidden></p>
-        </div>
-      `;
-      document.body.appendChild(overlay);
-      document.body.classList.add("access-gate-open");
-      setStatus("合言葉を入力してください");
-
-      const input = overlay.querySelector("#accessKeyInput");
-      const btn = overlay.querySelector("#accessKeyBtn");
-      const err = overlay.querySelector("#accessKeyErr");
-
-      async function tryKey() {
-        if (!(await verifyAccessKey(input.value))) {
-          err.textContent =
-            "合言葉が違います。社長から受け取ったリンク・合言葉をご確認ください。";
-          err.hidden = false;
-          input.focus();
-          input.select();
-          return;
-        }
-        const sk = accessStorageKey();
-        if (sk) sessionStorage.setItem(sk, "1");
-        overlay.remove();
-        document.body.classList.remove("access-gate-open");
-        resolve();
-      }
-
-      btn.addEventListener("click", tryKey);
-      input.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") tryKey();
-      });
-      input.focus();
-    });
-  }
-
-  async function ensureLiveAccess() {
-    if (!isLiveAccessRequired()) return;
-    const sk = accessStorageKey();
-    if (sk && sessionStorage.getItem(sk) === "1") return;
-
-    const urlKey = new URLSearchParams(window.location.search).get("k") || "";
-    if (urlKey && (await verifyAccessKey(urlKey))) {
-      if (sk) sessionStorage.setItem(sk, "1");
-      return;
-    }
-
-    await showAccessGate();
   }
 
   function startLiveVersionWatch(initialBuilt) {
@@ -2204,7 +1111,7 @@ html, body {
     async function poll() {
       const v = await fetchLiveVersionMeta();
       if (!v?.built) return;
-      if (!current || v.built > current) {
+      if (current && v.built > current) {
         showHint("新しい版があります。再読込します…");
         setTimeout(() => {
           const url = new URL(window.location.href);
@@ -2227,16 +1134,11 @@ html, body {
   }
 
   async function bootstrap() {
-    window.__chibaMapBooted = true;
     try {
-      setStatus("合言葉を確認中…");
-      await ensureLiveAccess();
-      setStatus("最新版を確認中…");
+      enforceLiveAccess();
       await maybeReloadForLatestBuild();
-      setStatus("地図データを読込中…");
       const data = await loadMapDataWithRetry();
       mapData = data;
-      await loadSiteCards();
       const hasVisit = (data.sites || []).some((s) => "visit_count" in s);
       if ((data.sites || []).length && !hasVisit) {
         throw new Error(
@@ -2251,38 +1153,6 @@ html, body {
       bindEvents();
       window.addEventListener("load", scheduleMapInvalidate);
       window.addEventListener("resize", scheduleMapInvalidate);
-      window.__chibaMapApi = {
-        getMapData: () => mapData,
-        getMap: () => map,
-        getShopMarkers: () => shopMarkers,
-        allCourseGroups,
-        getMapCourse,
-        setStatus,
-        showHint,
-        highlightSiteById(siteId, color) {
-          const hit = shopMarkers.find((m) => m.site?.id === siteId);
-          if (hit?.marker) applyShopMarkerStyle(hit.marker, hit.site, color || "#ffd54a");
-        },
-        resetMarkerStyles() {
-          showAllShopMarkers();
-        },
-        flyToSite(siteId) {
-          const hit = shopMarkers.find((m) => m.site?.id === siteId);
-          if (hit?.marker && map) map.flyTo(hit.marker.getLatLng(), 14, { duration: 0.6 });
-        },
-        getWarehouseMarkers() {
-          return Object.entries(warehouseMarkers).map(([id, marker]) => ({
-            id,
-            marker,
-            warehouse: getWarehouse(id),
-          }));
-        },
-        flyToWarehouse(warehouseId) {
-          const wh = getWarehouse(warehouseId);
-          if (wh && map) map.flyTo([wh.lat, wh.lng], 12, { duration: 0.6 });
-        },
-      };
-      if (window.__chibaMapCollabInit) window.__chibaMapCollabInit(window.__chibaMapApi);
       const ver = await fetchLiveVersionMeta();
       startLiveVersionWatch(ver?.built || data.generated);
     } catch (err) {
