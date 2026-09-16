@@ -1990,6 +1990,28 @@ html, body {
     return null;
   }
 
+  function liveMapDataUrl() {
+    const meta = document.querySelector('meta[name="chiba-map-live-base"]');
+    if (!meta?.content?.trim()) return null;
+    return `${meta.content.trim().replace(/\/?$/, "/")}data/map_data.json`;
+  }
+
+  function isLiveMapDataStale(liveVer, localData) {
+    if (!localData) return true;
+    const liveGen = String(liveVer?.map_generated || liveVer?.built || "");
+    const localGen = String(localData.generated || "");
+    if (liveGen && localGen && liveGen !== localGen) return true;
+    const liveCount = Number(liveVer?.site_count);
+    const localCount = Number(localData.site_count) || (localData.sites || []).length;
+    return Number.isFinite(liveCount) && liveCount !== localCount;
+  }
+
+  async function fetchRemoteMapData(url, signal) {
+    const r = await fetch(`${url}?v=${Date.now()}`, { signal, cache: "no-store" });
+    if (!r.ok) throw new Error(`remote map_data HTTP ${r.status}`);
+    return r.json();
+  }
+
   async function maybeReloadForLatestBuild() {
     if (!IS_WEB_HOST && !document.querySelector('meta[name="chiba-map-live-base"]')) {
       return;
@@ -2013,6 +2035,24 @@ html, body {
     const timer = setTimeout(() => controller.abort(), 15000);
 
     try {
+      const liveUrl = !IS_WEB_HOST ? liveMapDataUrl() : null;
+      if (liveUrl) {
+        try {
+          const remote = await fetchRemoteMapData(liveUrl, controller.signal);
+          clearTimeout(timer);
+          const ver = await fetchLiveVersionMeta();
+          const pageBuild = pageBuildStamp();
+          if (ver?.built && (!pageBuild || ver.built > pageBuild)) {
+            if (reloadOnce("chiba-map-reloaded-for", ver.built)) {
+              await new Promise((resolve) => setTimeout(resolve, 3000));
+            }
+          }
+          return remote;
+        } catch (_) {
+          /* オフライン時はローカル map_data へ */
+        }
+      }
+
       const r = await fetch(`${DATA_URL}?v=${Date.now()}`, {
         signal: controller.signal,
         cache: "no-store",
@@ -2031,6 +2071,13 @@ html, body {
       if (ver?.built && (!pageBuild || ver.built > pageBuild)) {
         if (reloadOnce("chiba-map-reloaded-for", ver.built)) {
           await new Promise((resolve) => setTimeout(resolve, 3000));
+        }
+      }
+      if (liveUrl && isLiveMapDataStale(ver, data)) {
+        try {
+          return await fetchRemoteMapData(liveUrl, controller.signal);
+        } catch (_) {
+          /* ローカル維持 */
         }
       }
       return data;

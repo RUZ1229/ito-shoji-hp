@@ -12,45 +12,6 @@
   let activeTab = "add";
 
   let cachedApiBase = null;
-  let collabBusy = false;
-
-  const COLLAB_CONFIRM_IDS = [
-    "collabConfirmAdd",
-    "collabConfirmMove",
-    "collabConfirmDelete",
-    "collabConfirmDeleteCourse",
-    "collabConfirmCreate",
-  ];
-
-  function setCollabBusy(busy) {
-    collabBusy = busy;
-    for (const id of COLLAB_CONFIRM_IDS) {
-      const el = document.getElementById(id);
-      if (el) el.disabled = busy;
-    }
-  }
-
-  function isOnlineSharedMap() {
-    if (document.querySelector('meta[name="chiba-map-collab-api"]')?.content?.trim()) return true;
-    return /github\.io$/i.test(window.location.hostname);
-  }
-
-  function isDeleteAction(type) {
-    return type === "delete_course" || type === "delete_site";
-  }
-
-  function editServerHint(kind) {
-    if (isOnlineSharedMap()) {
-      if (kind === "old") {
-        return "編集サーバーが古いバージョンです。1〜2分待ってからページを再読込し、再試行してください。";
-      }
-      return "編集サーバーに接続できません。ネットワークを確認するか、1〜2分待ってから再試行してください。";
-    }
-    if (kind === "old") {
-      return "編集サーバーが古いバージョンです。地図を一度閉じ、デスクトップの「千葉配送地図を開く」から開き直してください。";
-    }
-    return "編集APIに接続できません。地図を一度閉じ、デスクトップの「千葉配送地図を開く」から開き直してください。";
-  }
 
   async function collabHealthOk(base, { requireDelete = false } = {}) {
     try {
@@ -60,11 +21,7 @@
       if (!data.ok) return false;
       if (!requireDelete) return true;
       const caps = data.capabilities;
-      return (
-        Array.isArray(caps) &&
-        caps.includes("delete_course") &&
-        caps.includes("delete_site")
-      );
+      return Array.isArray(caps) && caps.includes("delete_course");
     } catch (_) {
       return false;
     }
@@ -108,58 +65,16 @@
     sessionStorage.removeItem("chiba-map-edit-key");
   }
 
-  function sleep(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
-
-  async function getJson(path) {
-    const base = await resolveApiBase({});
-    if (!base) {
-      throw new Error(editServerHint("connect"));
-    }
-    const r = await fetch(`${base}${path}`, {
-      headers: { "X-Map-Edit-Key": editKey() },
-    });
-    const data = await r.json().catch(() => ({}));
-    if (!r.ok) {
-      const errText = data.message || data.error || `HTTP ${r.status}`;
-      if (String(errText).includes("online_publish_failed")) {
-        throw new Error("保存しましたが共有URLへの反映に失敗しました。1〜2分待ってから再試行してください。");
-      }
-      throw new Error(errText);
-    }
-    return data;
-  }
-
-  function isCollabTerminalSuccess(res) {
-    return res.ok === true && res.rebuilt === true && res.published === true;
-  }
-
-  async function pollCollabResult(requestId, statusEl) {
-    for (let i = 0; i < 120; i++) {
-      if (i > 0) {
-        statusEl.textContent = `反映中…（${i * 2}秒）`;
-        await sleep(2000);
-      }
-      const res = await getJson(
-        `/api/map-collab/status?request_id=${encodeURIComponent(requestId)}`
-      );
-      if (res.pending) continue;
-      if (isCollabTerminalSuccess(res)) return res;
-      if (res.ok === false || res.error) {
-        throw new Error(res.message || res.error || "反映に失敗しました");
-      }
-    }
-    throw new Error("反映がタイムアウトしました。1〜2分待ってからページを再読込してください。");
-  }
-
   async function postJson(path, body) {
     const actions = body?.actions || [];
-    const requireDelete = actions.some((a) => isDeleteAction(a.type));
-    if (requireDelete) cachedApiBase = null;
+    const requireDelete = actions.some((a) => a.type === "delete_course");
     const base = await resolveApiBase({ requireDelete });
     if (!base) {
-      throw new Error(editServerHint(requireDelete ? "old" : "connect"));
+      throw new Error(
+        requireDelete
+          ? "編集サーバーが古いバージョンです。地図を一度閉じ、デスクトップの「千葉配送地図を開く」から開き直してください。"
+          : "編集APIに接続できません。地図を一度閉じ、デスクトップの「千葉配送地図を開く」から開き直してください。"
+      );
     }
     let r;
     try {
@@ -169,7 +84,9 @@
         body: JSON.stringify({ ...body, edit_key: editKey() }),
       });
     } catch (_) {
-      throw new Error(editServerHint("connect"));
+      throw new Error(
+        "編集APIに接続できません。地図を一度閉じ、デスクトップの「千葉配送地図を開く」から開き直してください。"
+      );
     }
     const data = await r.json().catch(() => ({}));
     if (!r.ok) {
@@ -178,40 +95,30 @@
         throw new Error("合言葉が違います。合言葉.txt の文字を入れ直してください（Qf の次は大文字 I）。");
       }
       if (String(data.error || "").startsWith("unknown_action:")) {
-        throw new Error(editServerHint("old"));
+        throw new Error(
+          "編集サーバーが古いバージョンです。地図を一度閉じ、デスクトップの「千葉配送地図を開く」から開き直してください。"
+        );
       }
-      const errText = data.message || data.error || `HTTP ${r.status}`;
-      if (String(errText).includes("online_publish_failed")) {
-        throw new Error("保存しましたが共有URLへの反映に失敗しました。1〜2分待ってから再試行してください。");
-      }
-      throw new Error(errText);
+      throw new Error(data.error || `HTTP ${r.status}`);
     }
     return data;
   }
 
   async function submitActions(actions, statusEl) {
-    if (collabBusy) {
-      statusEl.textContent = "反映中です。完了するまでお待ちください。";
-      return;
-    }
     if (!editKey()) {
       statusEl.textContent = "合言葉未入力。「編集」を一度閉じて、もう一度「編集」から合言葉を入れてください。";
       return;
     }
-    setCollabBusy(true);
     statusEl.textContent = "反映中…";
     try {
-      let res = await postJson("/api/map-collab", { actions, by: "地図ユーザー" });
-      if (res.pending && res.request_id) {
-        res = await pollCollabResult(res.request_id, statusEl);
+      const res = await postJson("/api/map-collab", { actions, by: "地図ユーザー" });
+      const wantsDeleteCourse = actions.some((a) => a.type === "delete_course");
+      if (wantsDeleteCourse && !(res.log || []).some((line) => String(line).includes("コース削除"))) {
+        throw new Error("コース削除が反映されませんでした。地図を開き直してから再試行してください。");
       }
-      if (res.ok === false) {
-        throw new Error(res.message || res.error || "反映に失敗しました");
-      }
-      if (!isCollabTerminalSuccess(res)) {
+      if (wantsDeleteCourse && res.rebuilt === false) {
         throw new Error(
-          res.message ||
-            "保存しましたが共有URLへの反映に失敗しました。1〜2分待ってから再試行してください。"
+          "コースは削除しましたが地図データの更新に失敗しました。地図を一度閉じて「千葉配送地図を開く」から開き直してください。"
         );
       }
       statusEl.textContent = res.message || "反映しました";
@@ -223,7 +130,6 @@
       }, 1200);
     } catch (err) {
       statusEl.textContent = err.message || String(err);
-      setCollabBusy(false);
     }
   }
 
@@ -566,7 +472,7 @@
         return `<option value="${escapeHtml(n)}">${escapeHtml(n)}（${nshop}店）</option>`;
       })
       .join("");
-    if (btn) btn.disabled = collabBusy;
+    if (btn) btn.disabled = false;
   }
 
   function bindMultiShopSearch({ searchId, suggestionsId }) {
