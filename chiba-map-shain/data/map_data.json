@@ -1,10 +1,10 @@
 {
-  "generated": "2026-09-16T05:22:13",
+  "generated": "2026-09-16T05:23:14",
   "map_variant": "社内",
   "map_variant_label": "伊藤商事専用（社内）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図/data/map_overrides.json",
-  "map_collaborative": "2026-09-16T05:22:12Z",
+  "map_collaborative": "2026-09-16T05:23:13Z",
   "collab_custom_courses": {},
   "site_count": 317,
   "zones": {
@@ -550,7 +550,7 @@
       "last_visit": "2026-09-15",
       "weight_kg": 5095,
       "master_course": "柏2S",
-      "map_course": "柏1H",
+      "map_course": "柏2S",
       "marker_shape": "circle",
       "search_names": [
         "（株）メイク東関東支店",
