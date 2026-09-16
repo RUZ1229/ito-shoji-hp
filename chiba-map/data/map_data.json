@@ -1,10 +1,10 @@
 {
-  "generated": "2026-09-16T08:30:11",
+  "generated": "2026-09-16T08:31:52",
   "map_variant": "社内",
   "map_variant_label": "伊藤商事専用（社内）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図/data/map_overrides.json",
-  "map_collaborative": "2026-09-16T08:30:09Z",
+  "map_collaborative": "2026-09-16T08:31:47Z",
   "collab_custom_courses": {
     "柏4V": {
       "label": "柏4V",
@@ -18,7 +18,7 @@
       "created_by": "地図ユーザー"
     }
   },
-  "site_count": 319,
+  "site_count": 318,
   "zones": {
     "chiba_a": {
       "label": "千葉A",
@@ -589,11 +589,11 @@
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
+      "truck_t": 4,
       "search_names": [
         "藤野トーヨー住器（株）市原支店",
         "藤野ト ーヨー住器（ 株） 市原支店"
-      ],
-      "truck_t": 4
+      ]
     },
     {
       "id": "site_18",
@@ -613,6 +613,7 @@
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
+      "truck_t": 4,
       "search_names": [
         "ＮＢＰ日板Ｓ＆Ｓ（トップＥ工場",
         "ＮＢＰ日板千葉（ＪＨＲＭＡＤＯ",
@@ -627,8 +628,7 @@
         "ＮＢＰ日板Ｓ＆Ｓ千葉 ひらい",
         "ＮＢＰ日板千葉 フジセイコー",
         "ＮＢＰ日板Ｓ＆Ｓ千葉 フジコー"
-      ],
-      "truck_t": 4
+      ]
     },
     {
       "id": "site_19",
@@ -648,8 +648,8 @@
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
-      "search_names": [],
-      "truck_t": 4
+      "truck_t": 4,
+      "search_names": []
     },
     {
       "id": "site_20",
@@ -743,6 +743,7 @@
       "master_course": "柏3V",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
+      "truck_t": 4,
       "search_names": [
         "（株）山善 （エヌ・イー）",
         "（株）エヌ・イー",
@@ -751,8 +752,7 @@
         "（株）山善（エヌ・イーＣ）",
         "山善エヌイー",
         "山善エヌ・イー"
-      ],
-      "truck_t": 4
+      ]
     },
     {
       "id": "site_24",
@@ -1077,11 +1077,11 @@
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
+      "truck_t": 4,
       "search_names": [
         "（株）佐川材木店（通常）",
         "（ 株） 佐川材木店（ 通常）"
-      ],
-      "truck_t": 4
+      ]
     },
     {
       "id": "site_38",
@@ -1101,8 +1101,8 @@
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
-      "search_names": [],
-      "truck_t": 4
+      "truck_t": 4,
+      "search_names": []
     },
     {
       "id": "site_39",
@@ -4707,10 +4707,10 @@
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
+      "truck_t": 4,
       "search_names": [
         "日の出グリーン建商（ 株） ＨＢ"
-      ],
-      "truck_t": 4
+      ]
     },
     {
       "id": "site_183",
@@ -5385,8 +5385,8 @@
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
-      "search_names": [],
-      "truck_t": 4
+      "truck_t": 4,
+      "search_names": []
     },
     {
       "id": "site_214",
@@ -5486,10 +5486,10 @@
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
+      "truck_t": 4,
       "search_names": [
         "（株）ひらい 特販課"
-      ],
-      "truck_t": 4
+      ]
     },
     {
       "id": "site_219",
@@ -5908,8 +5908,8 @@
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
-      "search_names": [],
-      "truck_t": 4
+      "truck_t": 4,
+      "search_names": []
     },
     {
       "id": "site_239",
@@ -5929,8 +5929,8 @@
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
-      "search_names": [],
-      "truck_t": 4
+      "truck_t": 4,
+      "search_names": []
     },
     {
       "id": "site_240",
@@ -6074,8 +6074,8 @@
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
-      "search_names": [],
-      "truck_t": 4
+      "truck_t": 4,
+      "search_names": []
     },
     {
       "id": "site_247",
@@ -6095,8 +6095,8 @@
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
-      "search_names": [],
-      "truck_t": 4
+      "truck_t": 4,
+      "search_names": []
     },
     {
       "id": "site_248",
@@ -7528,26 +7528,6 @@
       "address": "千葉県市川市高石神36-14",
       "lat": 35.715641,
       "lng": 139.941147,
-      "color": "hsl(180, 72%, 46%)",
-      "geocode_source": "gsi",
-      "visit_count": 0,
-      "weight_kg": 0.0,
-      "first_visit": null,
-      "last_visit": null,
-      "collab_added": true,
-      "marker_shape": "circle"
-    },
-    {
-      "id": "collab_0036",
-      "course": "柏1H",
-      "master_course": "柏1H",
-      "map_course": "柏1H",
-      "zone": "chiba_a",
-      "hub": "yachiyo_dp",
-      "name": "協調E2Eテスト",
-      "address": "千葉県千葉市中央区中央2-1-1",
-      "lat": 35.609062,
-      "lng": 140.120193,
       "color": "hsl(180, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 0,
