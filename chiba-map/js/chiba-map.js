@@ -2182,16 +2182,24 @@ html, body {
     });
   }
 
+  function stripAccessKeyFromUrl() {
+    if (!window.history?.replaceState) return;
+    const params = new URLSearchParams(window.location.search);
+    if (!params.has("k")) return;
+    params.delete("k");
+    const qs = params.toString();
+    const clean =
+      window.location.pathname + (qs ? `?${qs}` : "") + window.location.hash;
+    history.replaceState(null, "", clean);
+  }
+
   async function ensureLiveAccess() {
     if (!isLiveAccessRequired()) return;
     const sk = accessStorageKey();
     if (sk && sessionStorage.getItem(sk) === "1") return;
 
-    const urlKey = new URLSearchParams(window.location.search).get("k") || "";
-    if (urlKey && (await verifyAccessKey(urlKey))) {
-      if (sk) sessionStorage.setItem(sk, "1");
-      return;
-    }
+    // URL の ?k= では自動通過させない（合言葉入力必須）。古いリンク対策で URL から除去。
+    stripAccessKeyFromUrl();
 
     await showAccessGate();
   }
