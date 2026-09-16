@@ -1,11 +1,23 @@
 {
-  "generated": "2026-09-16T05:34:12",
+  "generated": "2026-09-16T05:34:46",
   "map_variant": "他社",
   "map_variant_label": "他社向け",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図_他社/data/map_overrides.json",
-  "map_collaborative": "2026-09-16T05:34:11Z",
-  "collab_custom_courses": {},
+  "map_collaborative": "2026-09-16T05:34:45Z",
+  "collab_custom_courses": {
+    "柏４V": {
+      "label": "柏４V",
+      "site_ids": [
+        "site_71"
+      ],
+      "hub": "yachiyo_dp",
+      "zone": "chiba_b",
+      "marker_shape": "circle",
+      "created_at": "2026-09-16T05:34:45Z",
+      "created_by": "地図ユーザー"
+    }
+  },
   "site_count": 318,
   "zones": {
     "chiba_a": {
@@ -1934,7 +1946,7 @@
       "last_visit": "2026-09-15",
       "weight_kg": 1057,
       "master_course": "千Bキ",
-      "map_course": "千Bキ",
+      "map_course": "柏４V",
       "marker_shape": "circle",
       "search_names": [
         "（株）総和",
@@ -7547,6 +7559,16 @@
       "hub": "yachiyo_dp",
       "zone": "chiba_a",
       "color": "hsl(200, 75%, 48%)"
+    },
+    "柏４V": {
+      "label": "柏４V",
+      "marker_shape": "circle",
+      "hub": "yachiyo_dp",
+      "zone": "chiba_b",
+      "color": null,
+      "site_ids": [
+        "site_71"
+      ]
     }
   },
   "marker_legend": {
@@ -7602,6 +7624,7 @@
     "房木5",
     "柏2T.5O",
     "柏1I.5P",
-    "柏3V車立て"
+    "柏3V車立て",
+    "柏４V"
   ]
 }
