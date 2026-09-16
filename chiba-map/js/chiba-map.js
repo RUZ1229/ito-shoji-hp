@@ -2095,7 +2095,7 @@ html, body {
       return `chiba-map-ok-legacy-${keyMeta.content.trim().slice(0, 8)}`;
     }
     if (isLiveAccessRequired()) {
-      return "chiba-map-ok-live-gate";
+      return "chiba-map-ok-live-gate-v2";
     }
     return null;
   }
@@ -2104,7 +2104,9 @@ html, body {
     const trimmed = normalizeAccessKey(key || "");
     if (!trimmed) return false;
     const aliases = accessKeyAliases();
-    if (aliases.length && aliases.includes(trimmed)) return true;
+    if (aliases.length) {
+      return aliases.includes(trimmed);
+    }
     const hashMeta = document.querySelector('meta[name="chiba-map-access-hash"]');
     if (hashMeta?.content?.trim()) {
       try {
@@ -2117,7 +2119,7 @@ html, body {
     if (keyMeta?.content?.trim()) {
       return trimmed === normalizeAccessKey(keyMeta.content.trim());
     }
-    return true;
+    return false;
   }
 
   function normalizeAccessKey(key) {
