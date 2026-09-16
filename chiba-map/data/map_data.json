@@ -1,10 +1,10 @@
 {
-  "generated": "2026-09-16T08:34:54",
+  "generated": "2026-09-16T08:35:18",
   "map_variant": "社内",
   "map_variant_label": "伊藤商事専用（社内）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図/data/map_overrides.json",
-  "map_collaborative": "2026-09-16T08:34:42Z",
+  "map_collaborative": "2026-09-16T08:35:16Z",
   "collab_custom_courses": {
     "柏4V": {
       "label": "柏4V",
@@ -7538,7 +7538,7 @@
       "marker_shape": "circle"
     },
     {
-      "id": "collab_0037",
+      "id": "collab_0038",
       "course": "柏1H",
       "master_course": "柏1H",
       "map_course": "柏1H",
