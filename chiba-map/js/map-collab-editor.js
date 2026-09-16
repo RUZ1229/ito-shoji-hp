@@ -91,6 +91,51 @@
     sessionStorage.removeItem("chiba-map-edit-key");
   }
 
+  function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  async function getJson(path) {
+    const base = await resolveApiBase({});
+    if (!base) {
+      throw new Error(editServerHint("connect"));
+    }
+    const r = await fetch(`${base}${path}`, {
+      headers: { "X-Map-Edit-Key": editKey() },
+    });
+    const data = await r.json().catch(() => ({}));
+    if (!r.ok) {
+      const errText = data.message || data.error || `HTTP ${r.status}`;
+      if (String(errText).includes("online_publish_failed")) {
+        throw new Error("保存しましたが共有URLへの反映に失敗しました。1〜2分待ってから再試行してください。");
+      }
+      throw new Error(errText);
+    }
+    return data;
+  }
+
+  function isCollabTerminalSuccess(res) {
+    return res.ok === true && res.rebuilt === true && res.published === true;
+  }
+
+  async function pollCollabResult(requestId, statusEl) {
+    for (let i = 0; i < 120; i++) {
+      if (i > 0) {
+        statusEl.textContent = `反映中…（${i * 2}秒）`;
+        await sleep(2000);
+      }
+      const res = await getJson(
+        `/api/map-collab/status?request_id=${encodeURIComponent(requestId)}`
+      );
+      if (res.pending) continue;
+      if (isCollabTerminalSuccess(res)) return res;
+      if (res.ok === false || res.error) {
+        throw new Error(res.message || res.error || "反映に失敗しました");
+      }
+    }
+    throw new Error("反映がタイムアウトしました。1〜2分待ってからページを再読込してください。");
+  }
+
   async function postJson(path, body) {
     const actions = body?.actions || [];
     const requireDelete = actions.some((a) => isDeleteAction(a.type));
@@ -134,19 +179,14 @@
     }
     statusEl.textContent = "反映中…";
     try {
-      const res = await postJson("/api/map-collab", { actions, by: "地図ユーザー" });
-      const wantsDeleteCourse = actions.some((a) => a.type === "delete_course");
-      const wantsDeleteSite = actions.some((a) => a.type === "delete_site");
-      if (wantsDeleteCourse && !(res.log || []).some((line) => String(line).includes("コース削除"))) {
-        throw new Error("コース削除が反映されませんでした。地図を開き直してから再試行してください。");
-      }
-      if (wantsDeleteSite && !(res.log || []).some((line) => String(line).includes("工務店消去"))) {
-        throw new Error("工務店消去が反映されませんでした。1〜2分待ってから再試行してください。");
+      let res = await postJson("/api/map-collab", { actions, by: "地図ユーザー" });
+      if (res.pending && res.request_id) {
+        res = await pollCollabResult(res.request_id, statusEl);
       }
       if (res.ok === false) {
         throw new Error(res.message || res.error || "反映に失敗しました");
       }
-      if (res.rebuilt === false || res.published === false) {
+      if (!isCollabTerminalSuccess(res)) {
         throw new Error(
           res.message ||
             "保存しましたが共有URLへの反映に失敗しました。1〜2分待ってから再試行してください。"
