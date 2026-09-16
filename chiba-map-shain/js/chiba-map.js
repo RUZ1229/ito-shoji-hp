@@ -1996,14 +1996,45 @@ html, body {
     return `${meta.content.trim().replace(/\/?$/, "/")}data/map_data.json`;
   }
 
+  function localSiteCount(data) {
+    return Number(data?.site_count) || (data?.sites || []).length;
+  }
+
+  function remoteSiteCount(liveVer, remoteData) {
+    const fromData = localSiteCount(remoteData);
+    const fromVer = Number(liveVer?.site_count);
+    if (fromData > 0) return fromData;
+    return Number.isFinite(fromVer) ? fromVer : 0;
+  }
+
   function isLiveMapDataStale(liveVer, localData) {
     if (!localData) return true;
     const liveGen = String(liveVer?.map_generated || liveVer?.built || "");
     const localGen = String(localData.generated || "");
     if (liveGen && localGen && liveGen !== localGen) return true;
     const liveCount = Number(liveVer?.site_count);
-    const localCount = Number(localData.site_count) || (localData.sites || []).length;
+    const localCount = localSiteCount(localData);
     return Number.isFinite(liveCount) && liveCount !== localCount;
+  }
+
+  /** live が local より件数が少ないときは fetch しない（GHA 反映遅れ・事例52） */
+  function shouldUpgradeFromLive(liveVer, localData) {
+    if (!localData) return true;
+    const localCount = localSiteCount(localData);
+    const verCount = Number(liveVer?.site_count);
+    if (Number.isFinite(verCount) && verCount < localCount) return false;
+    return isLiveMapDataStale(liveVer, localData);
+  }
+
+  function pickMapData(localData, remote, liveVer) {
+    const localCount = localSiteCount(localData);
+    const remoteCount = remoteSiteCount(liveVer, remote);
+    const localGen = String(localData?.generated || "");
+    const remoteGen = String(remote?.generated || "");
+    if (remoteCount > localCount) return remote;
+    if (remoteCount < localCount) return localData;
+    if (remoteGen && localGen && remoteGen > localGen) return remote;
+    return localData;
   }
 
   async function fetchRemoteMapData(url, signal) {
@@ -2036,22 +2067,6 @@ html, body {
 
     try {
       const liveUrl = !IS_WEB_HOST ? liveMapDataUrl() : null;
-      if (liveUrl) {
-        try {
-          const remote = await fetchRemoteMapData(liveUrl, controller.signal);
-          clearTimeout(timer);
-          const ver = await fetchLiveVersionMeta();
-          const pageBuild = pageBuildStamp();
-          if (ver?.built && (!pageBuild || ver.built > pageBuild)) {
-            if (reloadOnce("chiba-map-reloaded-for", ver.built)) {
-              await new Promise((resolve) => setTimeout(resolve, 3000));
-            }
-          }
-          return remote;
-        } catch (_) {
-          /* オフライン時はローカル map_data へ */
-        }
-      }
 
       const r = await fetch(`${DATA_URL}?v=${Date.now()}`, {
         signal: controller.signal,
@@ -2065,7 +2080,7 @@ html, body {
             : "map_data.json を読めません。ターミナルで cd AI化/千葉配送地図 && python3 -m http.server 8765 を実行してください。"
         );
       }
-      const data = await r.json();
+      const localData = await r.json();
       const ver = await fetchLiveVersionMeta();
       const pageBuild = pageBuildStamp();
       if (ver?.built && (!pageBuild || ver.built > pageBuild)) {
@@ -2073,14 +2088,15 @@ html, body {
           await new Promise((resolve) => setTimeout(resolve, 3000));
         }
       }
-      if (liveUrl && isLiveMapDataStale(ver, data)) {
+      if (liveUrl && shouldUpgradeFromLive(ver, localData)) {
         try {
-          return await fetchRemoteMapData(liveUrl, controller.signal);
+          const remote = await fetchRemoteMapData(liveUrl, controller.signal);
+          return pickMapData(localData, remote, ver);
         } catch (_) {
           /* ローカル維持 */
         }
       }
-      return data;
+      return localData;
     } catch (err) {
       clearTimeout(timer);
       if (err.name === "AbortError") {
