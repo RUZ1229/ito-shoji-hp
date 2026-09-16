@@ -12,6 +12,23 @@
   let activeTab = "add";
 
   let cachedApiBase = null;
+  let collabBusy = false;
+
+  const COLLAB_CONFIRM_IDS = [
+    "collabConfirmAdd",
+    "collabConfirmMove",
+    "collabConfirmDelete",
+    "collabConfirmDeleteCourse",
+    "collabConfirmCreate",
+  ];
+
+  function setCollabBusy(busy) {
+    collabBusy = busy;
+    for (const id of COLLAB_CONFIRM_IDS) {
+      const el = document.getElementById(id);
+      if (el) el.disabled = busy;
+    }
+  }
 
   function isOnlineSharedMap() {
     if (document.querySelector('meta[name="chiba-map-collab-api"]')?.content?.trim()) return true;
@@ -173,10 +190,15 @@
   }
 
   async function submitActions(actions, statusEl) {
+    if (collabBusy) {
+      statusEl.textContent = "反映中です。完了するまでお待ちください。";
+      return;
+    }
     if (!editKey()) {
       statusEl.textContent = "合言葉未入力。「編集」を一度閉じて、もう一度「編集」から合言葉を入れてください。";
       return;
     }
+    setCollabBusy(true);
     statusEl.textContent = "反映中…";
     try {
       let res = await postJson("/api/map-collab", { actions, by: "地図ユーザー" });
@@ -201,6 +223,7 @@
       }, 1200);
     } catch (err) {
       statusEl.textContent = err.message || String(err);
+      setCollabBusy(false);
     }
   }
 
@@ -543,7 +566,7 @@
         return `<option value="${escapeHtml(n)}">${escapeHtml(n)}（${nshop}店）</option>`;
       })
       .join("");
-    if (btn) btn.disabled = false;
+    if (btn) btn.disabled = collabBusy;
   }
 
   function bindMultiShopSearch({ searchId, suggestionsId }) {
