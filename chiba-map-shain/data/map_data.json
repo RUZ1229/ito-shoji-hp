@@ -1,10 +1,10 @@
 {
-  "generated": "2026-09-16T05:04:36",
+  "generated": "2026-09-16T05:04:40",
   "map_variant": "社内",
   "map_variant_label": "伊藤商事専用（社内）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図/data/map_overrides.json",
-  "map_collaborative": "2026-09-16T05:04:34Z",
+  "map_collaborative": "2026-09-16T05:04:39Z",
   "collab_custom_courses": {
     "柏４V": {
       "label": "柏４V",
@@ -18,7 +18,7 @@
       "created_by": "地図ユーザー"
     }
   },
-  "site_count": 319,
+  "site_count": 318,
   "zones": {
     "chiba_a": {
       "label": "千葉A",
@@ -7528,26 +7528,6 @@
       "address": "千葉県市川市高石神36-14",
       "lat": 35.715641,
       "lng": 139.941147,
-      "color": "hsl(180, 72%, 46%)",
-      "geocode_source": "gsi",
-      "visit_count": 0,
-      "weight_kg": 0.0,
-      "first_visit": null,
-      "last_visit": null,
-      "collab_added": true,
-      "marker_shape": "circle"
-    },
-    {
-      "id": "collab_0029",
-      "course": "柏1H",
-      "master_course": "柏1H",
-      "map_course": "柏1H",
-      "zone": "chiba_a",
-      "hub": "yachiyo_dp",
-      "name": "協調E2Eテスト",
-      "address": "千葉県千葉市中央区中央2-1-1",
-      "lat": 35.609062,
-      "lng": 140.120193,
       "color": "hsl(180, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 0,
