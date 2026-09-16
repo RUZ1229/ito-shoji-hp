@@ -1,12 +1,12 @@
 {
-  "generated": "2026-09-16T15:58:44",
-  "map_variant": "他社",
-  "map_variant_label": "他社向け",
+  "generated": "2026-09-16T16:30:59",
+  "map_variant": "社内",
+  "map_variant_label": "伊藤商事専用（社内）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
-  "map_overrides": "AI化/千葉配送地図_他社/data/map_overrides.json",
-  "map_collaborative": "2026-09-16T05:05:43Z",
+  "map_overrides": "AI化/千葉配送地図/data/map_overrides.json",
+  "map_collaborative": "2026-09-16T06:48:10Z",
   "collab_custom_courses": {},
-  "site_count": 320,
+  "site_count": 319,
   "zones": {
     "chiba_a": {
       "label": "千葉A",
@@ -550,7 +550,7 @@
       "last_visit": "2026-09-16",
       "weight_kg": 5095,
       "master_course": "柏2S",
-      "map_course": "柏1H",
+      "map_course": "柏2S",
       "marker_shape": "circle",
       "search_names": [
         "（株）メイク東関東支店",
@@ -576,7 +576,8 @@
       "weight_kg": 1548,
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
+      "truck_t": 4,
       "search_names": [
         "藤野トーヨー住器（株）市原支店",
         "藤野ト ーヨー住器（ 株） 市原支店"
@@ -599,7 +600,8 @@
       "weight_kg": 2237,
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
+      "truck_t": 4,
       "search_names": [
         "ＮＢＰ日板Ｓ＆Ｓ（トップＥ工場",
         "ＮＢＰ日板千葉（ＪＨＲＭＡＤＯ",
@@ -633,7 +635,8 @@
       "weight_kg": 352,
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
+      "truck_t": 4,
       "search_names": []
     },
     {
@@ -727,7 +730,8 @@
       "weight_kg": 652,
       "master_course": "柏3V",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
+      "truck_t": 4,
       "search_names": [
         "（株）山善 （エヌ・イー）",
         "（株）エヌ・イー",
@@ -1060,7 +1064,8 @@
       "weight_kg": 117,
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
+      "truck_t": 4,
       "search_names": [
         "（株）佐川材木店（通常）",
         "（ 株） 佐川材木店（ 通常）"
@@ -1083,7 +1088,8 @@
       "weight_kg": 98,
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
+      "truck_t": 4,
       "search_names": []
     },
     {
@@ -4689,7 +4695,8 @@
       "weight_kg": 155,
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
+      "truck_t": 4,
       "search_names": [
         "日の出グリーン建商（ 株） ＨＢ"
       ]
@@ -5368,7 +5375,8 @@
       "weight_kg": 0,
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
+      "truck_t": 4,
       "search_names": []
     },
     {
@@ -5468,7 +5476,8 @@
       "weight_kg": 1,
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
+      "truck_t": 4,
       "search_names": [
         "（株）ひらい 特販課"
       ]
@@ -5889,7 +5898,8 @@
       "weight_kg": 12,
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
+      "truck_t": 4,
       "search_names": []
     },
     {
@@ -5909,7 +5919,8 @@
       "weight_kg": 545,
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
+      "truck_t": 4,
       "search_names": []
     },
     {
@@ -6053,7 +6064,8 @@
       "weight_kg": 0,
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
+      "truck_t": 4,
       "search_names": []
     },
     {
@@ -6073,7 +6085,8 @@
       "weight_kg": 0,
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
-      "marker_shape": "circle",
+      "marker_shape": "square",
+      "truck_t": 4,
       "search_names": []
     },
     {
@@ -7535,26 +7548,6 @@
       "map_course": "千Aア",
       "marker_shape": "circle",
       "search_names": []
-    },
-    {
-      "id": "collab_0028",
-      "course": "柏1H",
-      "master_course": "柏1H",
-      "map_course": "柏1H",
-      "zone": "chiba_a",
-      "hub": "yachiyo_dp",
-      "name": "伊藤建材",
-      "address": "千葉県市川市高石神36-14",
-      "lat": 35.715641,
-      "lng": 139.941147,
-      "color": "hsl(180, 72%, 46%)",
-      "geocode_source": "gsi",
-      "visit_count": 0,
-      "weight_kg": 0.0,
-      "first_visit": null,
-      "last_visit": null,
-      "collab_added": true,
-      "marker_shape": "circle"
     }
   ],
   "visit_period_start": "2026-05-25",
@@ -7563,12 +7556,13 @@
   "weight_period_end": null,
   "course_merges": {
     "柏2T.5O": {
-      "label": "柏2T+5O",
+      "label": "柏2T+5O（4t）",
       "source_courses": [
         "柏2T",
         "柏5O"
       ],
-      "marker_shape": "circle",
+      "marker_shape": "square",
+      "truck_t": 4,
       "hub": "yachiyo_dp",
       "color": "hsl(175, 72%, 46%)"
     },
@@ -7595,7 +7589,8 @@
   },
   "marker_legend": {
     "circle": "通常（丸）",
-    "triangle": "2t専用（三角）"
+    "triangle": "2t専用（三角）",
+    "square": "4t専用（四角）"
   },
   "site_cards": {},
   "course_aliases": {
