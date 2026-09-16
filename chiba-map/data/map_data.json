@@ -1,10 +1,10 @@
 {
-  "generated": "2026-09-16T04:44:37",
+  "generated": "2026-09-16T04:45:19",
   "map_variant": "他社",
   "map_variant_label": "他社向け",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図_他社/data/map_overrides.json",
-  "map_collaborative": "2026-09-16T04:44:35Z",
+  "map_collaborative": "2026-09-16T04:45:18Z",
   "collab_custom_courses": {
     "柏４V": {
       "label": "柏４V",
