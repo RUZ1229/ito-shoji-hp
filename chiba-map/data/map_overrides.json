@@ -1,6 +1,6 @@
 {
   "note": "地図表示専用。現場マスタ.json は変更しない。build_chiba_map_data.py が map_data.json 生成時に適用。",
-  "updated": "2026-09-04",
+  "updated": "2026-09-03",
   "course_moves": [
     { "site_id": "site_140", "map_course": "柏3V車立て", "reason": "ヨドハン千葉のみ独立コース" },
     { "site_id": "site_33", "map_course": "柏1H", "reason": "3X→1H 石川商会" },
@@ -14,9 +14,10 @@
   ],
   "course_merges": {
     "柏2T.5O": {
-      "label": "柏2T+5O",
+      "label": "柏2T+5O（4t）",
       "source_courses": ["柏2T", "柏5O"],
-      "marker_shape": "circle",
+      "marker_shape": "square",
+      "truck_t": 4,
       "hub": "yachiyo_dp",
       "color": "hsl(175, 72%, 46%)"
     },
@@ -51,6 +52,7 @@
   ],
   "marker_legend": {
     "circle": "通常（丸）",
-    "triangle": "2t専用（三角）"
+    "triangle": "2t専用（三角）",
+    "square": "4t専用（四角）"
   }
 }

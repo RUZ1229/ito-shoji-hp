@@ -1,21 +1,4 @@
-﻿
-$cfgPath = Join-Path $PSScriptRoot "data\update_config.json"
-if (Test-Path $cfgPath) {
-  try {
-    $cfg = Get-Content $cfgPath -Raw -Encoding UTF8 | ConvertFrom-Json
-    if ($cfg.live_url) {
-      Write-Host ""
-      Write-Host "千葉配送地図（オンライン最新版）を開きます..."
-      Write-Host "  $($cfg.live_url)"
-      Write-Host "  ※ 機能追加後はブラウザ再読込(F5)だけで反映されます"
-      Write-Host ""
-      Start-Process $cfg.live_url
-      Read-Host "Enter で終了"
-      exit 0
-    }
-  } catch { }
-}
-param([int]$Port = 8766)
+﻿param([int]$Port = 8765)
 $ErrorActionPreference = "Stop"
 $Root = (Resolve-Path $PSScriptRoot).Path
 
