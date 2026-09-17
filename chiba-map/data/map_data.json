@@ -1,10 +1,10 @@
 {
-  "generated": "2026-09-17T02:48:49",
+  "generated": "2026-09-17T02:55:13",
   "map_variant": "社内",
   "map_variant_label": "伊藤商事専用（社内）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図/data/map_overrides.json",
-  "map_collaborative": "2026-09-17T02:48:47Z",
+  "map_collaborative": "2026-09-17T02:55:12Z",
   "collab_custom_courses": {
     "柏4V": {
       "label": "柏4V",
@@ -15,6 +15,17 @@
       "zone": "chiba_b",
       "marker_shape": "circle",
       "created_at": "2026-09-16T08:23:07Z",
+      "created_by": "地図ユーザー"
+    },
+    "柏5V": {
+      "label": "柏5V",
+      "site_ids": [
+        "site_1"
+      ],
+      "hub": "yachiyo_dp",
+      "zone": "chiba_b",
+      "marker_shape": "circle",
+      "created_at": "2026-09-17T02:55:12Z",
       "created_by": "地図ユーザー"
     }
   },
@@ -175,7 +186,7 @@
     {
       "id": "site_1",
       "course": "柏1H",
-      "zone": "chiba_a",
+      "zone": "chiba_b",
       "hub": "yachiyo_dp",
       "name": "小川ガラス店",
       "address": "千葉県 旭市三川セ３４２５ー１",
@@ -188,7 +199,7 @@
       "last_visit": "2026-09-15",
       "weight_kg": 5323,
       "master_course": "柏1H",
-      "map_course": "柏1H",
+      "map_course": "柏5V",
       "marker_shape": "circle",
       "search_names": [
         "（有）小川ガラス店",
@@ -7563,6 +7574,16 @@
       "site_ids": [
         "site_71"
       ]
+    },
+    "柏5V": {
+      "label": "柏5V",
+      "marker_shape": "circle",
+      "hub": "yachiyo_dp",
+      "zone": "chiba_b",
+      "color": null,
+      "site_ids": [
+        "site_1"
+      ]
     }
   },
   "marker_legend": {
@@ -7620,6 +7641,7 @@
     "柏2T.5O",
     "柏1I.5P",
     "柏3V車立て",
-    "柏4V"
+    "柏4V",
+    "柏5V"
   ]
 }
