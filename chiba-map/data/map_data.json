@@ -1,12 +1,12 @@
 {
-  "generated": "2026-09-17T23:20:12",
+  "generated": "2026-09-17T23:22:07",
   "map_variant": "社内",
   "map_variant_label": "伊藤商事専用（社内）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図/data/map_overrides.json",
-  "map_collaborative": "2026-09-17T23:20:11Z",
+  "map_collaborative": "2026-09-17T23:21:52Z",
   "collab_custom_courses": {},
-  "site_count": 320,
+  "site_count": 319,
   "zones": {
     "chiba_a": {
       "label": "千葉A",
@@ -7547,26 +7547,6 @@
       "map_course": "千Aア",
       "marker_shape": "circle",
       "search_names": []
-    },
-    {
-      "id": "collab_0043",
-      "course": "柏1H",
-      "master_course": "柏1H",
-      "map_course": "柏1H",
-      "zone": "chiba_a",
-      "hub": "yachiyo_dp",
-      "name": "協調E2Eテスト",
-      "address": "千葉県千葉市中央区中央2-1-1",
-      "lat": 35.609062,
-      "lng": 140.120193,
-      "color": "hsl(180, 72%, 46%)",
-      "geocode_source": "gsi",
-      "visit_count": 0,
-      "weight_kg": 0.0,
-      "first_visit": null,
-      "last_visit": null,
-      "collab_added": true,
-      "marker_shape": "circle"
     }
   ],
   "visit_period_start": "2026-05-25",
