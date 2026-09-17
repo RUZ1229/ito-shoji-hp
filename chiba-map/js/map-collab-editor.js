@@ -216,11 +216,6 @@
       }
       statusEl.textContent = res.message || "反映しました";
       api.setStatus("反映しました。再読込します…");
-      try {
-        sessionStorage.setItem("chiba-map-force-live", "1");
-      } catch (_) {
-        /* ignore */
-      }
       setTimeout(() => {
         const url = new URL(window.location.href);
         url.searchParams.set("_", String(Date.now()));
@@ -555,12 +550,10 @@
     if (btn) btn.disabled = true;
     sel.innerHTML = '<option value="">読込中…</option>';
     const collab = await fetchCollabData();
-    const fromMap = api?.getMapData()?.collab_custom_courses || {};
-    const fromApi = collab?.custom_courses;
     const custom =
-      fromApi && Object.keys(fromApi).length > 0
-        ? { ...fromMap, ...fromApi }
-        : fromMap;
+      collab?.custom_courses ||
+      api?.getMapData()?.collab_custom_courses ||
+      {};
     const names = Object.keys(custom).sort((a, b) => a.localeCompare(b, "ja"));
     if (!names.length) {
       sel.innerHTML = '<option value="">削除できるコースがありません</option>';

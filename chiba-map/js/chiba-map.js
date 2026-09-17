@@ -2004,47 +2004,6 @@ html, body {
     }
   }
 
-  function liveMapDataCandidates() {
-    const meta = document.querySelector('meta[name="chiba-map-live-base"]');
-    if (!meta?.content?.trim()) return [];
-    const base = meta.content.trim().replace(/\/?$/, "/");
-    return [`${base}data/map_data.json`];
-  }
-
-  function mapDataGenerated(data) {
-    return (data?.generated || "").trim();
-  }
-
-  /** 8765: 協調編集後は live、通常は generated 新しい方（事例50/52/59） */
-  function pickMapData(localData, liveData, { forceLive = false } = {}) {
-    if (!liveData?.sites?.length) return localData;
-    if (!localData?.sites?.length) return liveData;
-    if (forceLive) return liveData;
-    const liveGen = mapDataGenerated(liveData);
-    const localGen = mapDataGenerated(localData);
-    if (liveGen && localGen) {
-      if (liveGen > localGen) return liveData;
-      if (localGen > liveGen) return localData;
-    }
-    const liveN = liveData.sites.length;
-    const localN = localData.sites.length;
-    if (localN > liveN) return localData;
-    if (liveN > localN) return liveData;
-    return liveData;
-  }
-
-  async function fetchMapDataJson(url, signal) {
-    const r = await fetch(`${url}?v=${Date.now()}`, { signal, cache: "no-store" });
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    return r.json();
-  }
-
-  function mapDataLoadError() {
-    return IS_WEB_HOST
-      ? "map_data.json を読めません。ページを再読込（Ctrl+F5）するか、しばらく待ってから再度開いてください。"
-      : "map_data.json を読めません。ターミナルで cd AI化/千葉配送地図 && python3 -m http.server 8765 を実行してください。";
-  }
-
   async function loadMapDataOnce() {
     if (typeof L === "undefined") {
       throw new Error("地図ライブラリ（Leaflet）が読み込めません。ネット接続を確認して再読込してください。");
@@ -2052,51 +2011,21 @@ html, body {
 
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 15000);
-    const forceLive = safeSessionGet("chiba-map-force-live") === "1";
-    if (forceLive) {
-      try {
-        sessionStorage.removeItem("chiba-map-force-live");
-      } catch (_) {
-        /* ignore */
-      }
-    }
 
     try {
-      let localData = null;
-      let liveData = null;
-      const liveUrls = liveMapDataCandidates();
-
-      if (!forceLive) {
-        try {
-          localData = await fetchMapDataJson(DATA_URL, controller.signal);
-        } catch (_) {
-          /* local optional when live-base configured */
-        }
-      }
-
-      for (const url of liveUrls) {
-        try {
-          liveData = await fetchMapDataJson(url, controller.signal);
-          if (liveData?.sites?.length) break;
-          liveData = null;
-        } catch (_) {
-          /* try next */
-        }
-      }
-
+      const r = await fetch(`${DATA_URL}?v=${Date.now()}`, {
+        signal: controller.signal,
+        cache: "no-store",
+      });
       clearTimeout(timer);
-
-      let data = null;
-      if (liveUrls.length && liveData) {
-        data = pickMapData(localData, liveData, { forceLive });
-      } else if (localData) {
-        data = localData;
+      if (!r.ok) {
+        throw new Error(
+          IS_WEB_HOST
+            ? "map_data.json を読めません。ページを再読込（Ctrl+F5）するか、しばらく待ってから再度開いてください。"
+            : "map_data.json を読めません。ターミナルで cd AI化/千葉配送地図 && python3 -m http.server 8765 を実行してください。"
+        );
       }
-
-      if (!data?.sites?.length) {
-        throw new Error(mapDataLoadError());
-      }
-
+      const data = await r.json();
       const ver = await fetchLiveVersionMeta();
       const pageBuild = pageBuildStamp();
       if (ver?.built && (!pageBuild || ver.built > pageBuild)) {
