@@ -1573,10 +1573,14 @@ html, body {
 
   function resolveSiteHubId(site) {
     if (!site) return null;
-    if (site.hub) return site.hub;
+    const course = getMapCourse(site);
+    const master = (site.master_course || site.course || "").trim();
+    const mapCourse = (course || "").trim();
+    // カスタムコース削除・コース変更後: master と一致するとき site.hub は使わない（倉庫戻り）
+    const revertedToMaster = mapCourse && master && mapCourse === master;
+    if (!revertedToMaster && site.hub) return site.hub;
     const zoneHub = mapData.zones?.[site.zone]?.hub;
     if (zoneHub) return zoneHub;
-    const course = getMapCourse(site);
     return (
       mapData.course_merges?.[course]?.hub ||
       mapData.new_courses?.[course]?.hub ||
