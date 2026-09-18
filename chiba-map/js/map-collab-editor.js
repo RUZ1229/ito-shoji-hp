@@ -216,11 +216,6 @@
       }
       statusEl.textContent = res.message || "反映しました";
       api.setStatus("反映しました。再読込します…");
-      try {
-        sessionStorage.setItem("chiba-map-force-live", "1");
-      } catch (_) {
-        /* ignore */
-      }
       setTimeout(() => {
         const url = new URL(window.location.href);
         url.searchParams.set("_", String(Date.now()));
@@ -548,37 +543,17 @@
     }
   }
 
-  function activeCustomCoursesFromMap(mapData) {
-    const custom = mapData?.collab_custom_courses || {};
-    const sites = mapData?.sites || [];
-    const out = {};
-    for (const [name, cfg] of Object.entries(custom)) {
-      const ids = sites
-        .filter((s) => (s.map_course || "").trim() === name)
-        .map((s) => s.id)
-        .filter(Boolean);
-      if (ids.length > 0) {
-        out[name] = { ...cfg, site_ids: ids };
-      }
-    }
-    return out;
-  }
-
   async function fillDeletableCourses() {
     const sel = document.getElementById("collabDeleteCourse");
     const btn = document.getElementById("collabConfirmDeleteCourse");
     if (!sel) return;
     if (btn) btn.disabled = true;
     sel.innerHTML = '<option value="">読込中…</option>';
-    // 地図上に店がある かつ サーバー custom_courses に存在（course_not_found 防止）
-    const fromMap = activeCustomCoursesFromMap(api?.getMapData());
-    const workerCustom = (await fetchCollabData())?.custom_courses || {};
-    const custom = {};
-    for (const [name, cfg] of Object.entries(fromMap)) {
-      if (Object.prototype.hasOwnProperty.call(workerCustom, name)) {
-        custom[name] = cfg;
-      }
-    }
+    const collab = await fetchCollabData();
+    const custom =
+      collab?.custom_courses ||
+      api?.getMapData()?.collab_custom_courses ||
+      {};
     const names = Object.keys(custom).sort((a, b) => a.localeCompare(b, "ja"));
     if (!names.length) {
       sel.innerHTML = '<option value="">削除できるコースがありません</option>';
