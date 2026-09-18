@@ -1,10 +1,10 @@
 {
-  "generated": "2026-09-18T05:16:06",
+  "generated": "2026-09-18T05:18:05",
   "map_variant": "社内",
   "map_variant_label": "伊藤商事専用（社内）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図/data/map_overrides.json",
-  "map_collaborative": "2026-09-18T05:16:05Z",
+  "map_collaborative": "2026-09-18T05:18:04Z",
   "collab_custom_courses": {
     "柏４V": {
       "label": "柏４V",
@@ -549,8 +549,8 @@
     {
       "id": "site_16",
       "course": "柏2S",
-      "zone": "chiba_b",
-      "hub": "esr_kazo",
+      "zone": "chiba_a",
+      "hub": "yachiyo_dp",
       "name": "メイク東関東支店",
       "address": "千葉県 船橋市習志野４ー７ー６",
       "lat": 35.7024,
@@ -562,7 +562,7 @@
       "last_visit": "2026-09-16",
       "weight_kg": 5095,
       "master_course": "柏2S",
-      "map_course": "千Aア",
+      "map_course": "柏2S",
       "marker_shape": "circle",
       "search_names": [
         "（株）メイク東関東支店",
