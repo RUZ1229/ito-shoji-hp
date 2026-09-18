@@ -570,8 +570,15 @@
     if (!sel) return;
     if (btn) btn.disabled = true;
     sel.innerHTML = '<option value="">読込中…</option>';
-    // 削除一覧は「地図上に店が載っているカスタムコース」のみ（Worker / 古い collab キーは使わない）
-    const custom = activeCustomCoursesFromMap(api?.getMapData());
+    // 地図上に店がある かつ サーバー custom_courses に存在（course_not_found 防止）
+    const fromMap = activeCustomCoursesFromMap(api?.getMapData());
+    const workerCustom = (await fetchCollabData())?.custom_courses || {};
+    const custom = {};
+    for (const [name, cfg] of Object.entries(fromMap)) {
+      if (Object.prototype.hasOwnProperty.call(workerCustom, name)) {
+        custom[name] = cfg;
+      }
+    }
     const names = Object.keys(custom).sort((a, b) => a.localeCompare(b, "ja"));
     if (!names.length) {
       sel.innerHTML = '<option value="">削除できるコースがありません</option>';
