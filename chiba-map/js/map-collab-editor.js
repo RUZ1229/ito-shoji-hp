@@ -548,13 +548,26 @@
     }
   }
 
+  function normCourseName(s) {
+    return String(s || "").trim().normalize("NFKC");
+  }
+
+  function workerCourseKey(workerCustom, name) {
+    const target = normCourseName(name);
+    for (const key of Object.keys(workerCustom || {})) {
+      if (normCourseName(key) === target) return key;
+    }
+    return null;
+  }
+
   function activeCustomCoursesFromMap(mapData) {
     const custom = mapData?.collab_custom_courses || {};
     const sites = mapData?.sites || [];
     const out = {};
     for (const [name, cfg] of Object.entries(custom)) {
+      const nname = normCourseName(name);
       const ids = sites
-        .filter((s) => (s.map_course || "").trim() === name)
+        .filter((s) => normCourseName(s.map_course || "") === nname)
         .map((s) => s.id)
         .filter(Boolean);
       if (ids.length > 0) {
@@ -570,8 +583,14 @@
     if (!sel) return;
     if (btn) btn.disabled = true;
     sel.innerHTML = '<option value="">読込中…</option>';
-    // 削除一覧は「地図上に店が載っているカスタムコース」のみ（Worker / 古い collab キーは使わない）
-    const custom = activeCustomCoursesFromMap(api?.getMapData());
+    // 地図上に店がある かつ Worker custom_courses に NFKC 一致（course_not_found 防止）
+    const fromMap = activeCustomCoursesFromMap(api?.getMapData());
+    const workerCustom = (await fetchCollabData())?.custom_courses || {};
+    const custom = {};
+    for (const [name, cfg] of Object.entries(fromMap)) {
+      const key = workerCourseKey(workerCustom, name);
+      if (key) custom[key] = cfg;
+    }
     const names = Object.keys(custom).sort((a, b) => a.localeCompare(b, "ja"));
     if (!names.length) {
       sel.innerHTML = '<option value="">削除できるコースがありません</option>';
