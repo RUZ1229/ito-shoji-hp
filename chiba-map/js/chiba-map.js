@@ -2078,7 +2078,6 @@ html, body {
           <div class="site-card-panel__photo-placeholder">PDF読込中…</div>
         </div>
         <figcaption>${escapeHtml(label)}</figcaption>
-        <p class="site-card-panel__photo-memo">${escapeHtml(row.name || "")}</p>
       </figure>`;
     }
     const imgSrc = siteMediaImageSrc(row);

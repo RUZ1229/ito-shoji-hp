@@ -735,45 +735,62 @@ body.site-card-panel-open {
   margin-bottom: 10px;
 }
 
+/* 現場写真グリッド … 一全登録写真と同じ縦型カード＋下部キャプション */
 .site-card-panel__photo {
+  position: relative;
   margin: 0;
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  aspect-ratio: 3 / 4;
+  max-height: 240px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.site-card-panel__photo img,
+.site-card-panel__photo-pdf-wrap,
+.site-card-panel__photo-placeholder {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .site-card-panel__photo img {
   display: block;
-  width: 100%;
-  height: auto;
-  max-height: 220px;
   object-fit: contain;
   background: #fff;
   cursor: zoom-in;
 }
 
 .site-card-panel__photo figcaption {
-  padding: 4px 6px 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  margin: 0;
+  padding: 18px 8px 8px;
   font-size: 0.72rem;
   font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.82) 72%);
+  pointer-events: none;
 }
 
 .site-card-panel__photo-memo {
-  margin: 2px 6px 6px;
-  font-size: 0.68rem;
-  color: var(--muted);
-  line-height: 1.4;
+  display: none;
 }
 
 .site-card-panel__photo-placeholder {
-  min-height: 110px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--muted);
   font-size: 0.72rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .site-card-panel__empty {
@@ -811,9 +828,11 @@ body.site-card-panel-open {
 .site-card-panel__photo-add {
   position: relative;
   margin: 0;
-  min-height: 110px;
+  aspect-ratio: 3 / 4;
+  max-height: 240px;
+  min-height: 0;
   border: 2px dashed var(--border);
-  border-radius: 8px;
+  border-radius: 12px;
   background: rgba(255, 255, 255, 0.04);
   color: var(--shop-blue);
   font-size: 2rem;
@@ -850,20 +869,6 @@ body.site-card-panel-open {
   background: rgba(36, 136, 212, 0.12);
 }
 
-.site-card-panel__photo--user {
-  position: relative;
-}
-
-.site-card-panel__photo--user img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 220px;
-  min-height: 110px;
-  object-fit: contain;
-  background: #fff;
-}
-
 .site-card-panel__photo-delete {
   position: absolute;
   top: 4px;
@@ -887,10 +892,6 @@ body.site-card-panel-open {
 }
 
 .site-card-panel__photo-pdf-wrap {
-  position: relative;
-  width: 100%;
-  min-height: 110px;
-  height: 140px;
   overflow: hidden;
   background: #fff;
 }
@@ -899,8 +900,6 @@ body.site-card-panel-open {
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 110px;
-  max-height: 220px;
   object-fit: contain;
   background: #fff;
   pointer-events: none;
