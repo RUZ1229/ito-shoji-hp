@@ -554,22 +554,10 @@
     return s < MAP_VISIT_PERIOD_FLOOR ? MAP_VISIT_PERIOD_FLOOR : s;
   }
 
-  /** 配送カード等の記載用（事例119）。過去月はそのまま、当月以降は始端も下限以上。 */
+  /** 配送カード等の記載用（事例117）。月次は map_data の start/end をそのまま（始端は月初）。 */
   function clampWeightMonthPeriodForDisplay(start, end, monthKey) {
     if (!end) return { start, end };
-    const e = atLeastMapPeriodFloor(end);
-    let s = start;
-    const floorMonth = MAP_VISIT_PERIOD_FLOOR.slice(0, 7);
-    if (
-      s &&
-      monthKey &&
-      String(monthKey) >= floorMonth &&
-      String(s) < MAP_VISIT_PERIOD_FLOOR &&
-      String(e) >= MAP_VISIT_PERIOD_FLOOR
-    ) {
-      s = MAP_VISIT_PERIOD_FLOOR;
-    }
-    return { start: s, end: e };
+    return { start, end };
   }
 
   function applyMapPeriodFloor(data) {
