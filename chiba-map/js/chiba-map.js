@@ -1139,15 +1139,28 @@
     if (!isPdf && (!printSrc || String(printSrc).startsWith("blob:"))) {
       printSrc = await resolvePhotoPrintSrc(item.src);
     }
-    if (isPdf && item.pdfDataUrl) {
-      printSrc = item.pdfDataUrl;
-    } else if (isPdf && item.userMediaId) {
-      const row = photoViewerUserMediaById.get(item.userMediaId);
-      try {
-        printSrc = (await siteMediaPdfDataUrl(row)) || printSrc;
-      } catch {
-        /* displaySrc 画像で印刷 */
+    /* 追加PDF … 拡大は pdf.js の JPEG。印刷も同画像（embed PDF は Safari で空白になりやすい・事例120/122） */
+    let printAsPdfEmbed = false;
+    if (isPdf) {
+      if (!String(printSrc).startsWith("data:image/")) {
+        printSrc = (await ensurePhotoViewerItemDisplaySrc(item)) || printSrc;
       }
+      if (!String(printSrc).startsWith("data:image/")) {
+        try {
+          const row = photoViewerUserMediaById.get(item.userMediaId || "");
+          const pdfDataUrl = item.pdfDataUrl || (row ? await siteMediaPdfDataUrl(row) : "");
+          if (pdfDataUrl) {
+            printSrc = pdfDataUrl;
+            printAsPdfEmbed = true;
+          }
+        } catch {
+          /* 下で img 空なら中断 */
+        }
+      }
+    }
+    if (!printSrc) {
+      alert("印刷用の画像を読み込めませんでした。");
+      return;
     }
     const title = escapeHtml(item.label || (isPdf ? "PDF" : "現場写真"));
 
@@ -1212,7 +1225,7 @@ html, body {
 <div class="print-page">
   <h1 class="print-title">${title}</h1>
   ${
-    isPdf
+    printAsPdfEmbed
       ? `<embed class="print-pdf" type="application/pdf" src="${String(printSrc).replace(/"/g, "&quot;")}">`
       : `<img class="print-photo" src="${String(printSrc).replace(/"/g, "&quot;")}" alt="${title}">`
   }
@@ -1231,6 +1244,11 @@ html, body {
     };
 
     const img = doc.querySelector(".print-photo");
+    const embed = doc.querySelector(".print-pdf");
+    if (embed) {
+      setTimeout(runPrint, 350);
+      return;
+    }
     if (!img) {
       runPrint();
       return;
