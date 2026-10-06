@@ -1139,23 +1139,29 @@
     if (!isPdf && (!printSrc || String(printSrc).startsWith("blob:"))) {
       printSrc = await resolvePhotoPrintSrc(item.src);
     }
-    /* 追加PDF … 拡大は pdf.js の JPEG。印刷も同画像（embed PDF は Safari で空白になりやすい・事例120/122） */
-    let printAsPdfEmbed = false;
+    /* 追加PDF … 印刷は pdf.js JPEG のみ（embed PDF は Safari 空白・事例124） */
     if (isPdf) {
       if (!String(printSrc).startsWith("data:image/")) {
-        printSrc = (await ensurePhotoViewerItemDisplaySrc(item)) || printSrc;
+        item.displaySrc = "";
+        printSrc = (await ensurePhotoViewerItemDisplaySrc(item)) || "";
       }
       if (!String(printSrc).startsWith("data:image/")) {
         try {
           const row = photoViewerUserMediaById.get(item.userMediaId || "");
-          const pdfDataUrl = item.pdfDataUrl || (row ? await siteMediaPdfDataUrl(row) : "");
+          const pdfDataUrl = row ? await siteMediaPdfDataUrl(row) : "";
           if (pdfDataUrl) {
-            printSrc = pdfDataUrl;
-            printAsPdfEmbed = true;
+            printSrc = await renderPdfFirstPageImageDataUrl(pdfDataUrl, 1400);
+            if (printSrc) item.displaySrc = printSrc;
           }
         } catch {
-          /* 下で img 空なら中断 */
+          printSrc = "";
         }
+      }
+      if (!String(printSrc).startsWith("data:image/")) {
+        alert(
+          "PDFを印刷用に変換できませんでした。拡大表示を確認してから、もう一度🖨を押してください。"
+        );
+        return;
       }
     }
     if (!printSrc) {
@@ -1224,11 +1230,7 @@ html, body {
 <body>
 <div class="print-page">
   <h1 class="print-title">${title}</h1>
-  ${
-    printAsPdfEmbed
-      ? `<embed class="print-pdf" type="application/pdf" src="${String(printSrc).replace(/"/g, "&quot;")}">`
-      : `<img class="print-photo" src="${String(printSrc).replace(/"/g, "&quot;")}" alt="${title}">`
-  }
+  <img class="print-photo" src="${String(printSrc).replace(/"/g, "&quot;")}" alt="${title}">
 </div>
 </body>
 </html>`);
@@ -1244,11 +1246,6 @@ html, body {
     };
 
     const img = doc.querySelector(".print-photo");
-    const embed = doc.querySelector(".print-pdf");
-    if (embed) {
-      setTimeout(runPrint, 350);
-      return;
-    }
     if (!img) {
       runPrint();
       return;
