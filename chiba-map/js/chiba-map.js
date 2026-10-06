@@ -19,8 +19,15 @@
   const SITE_MEDIA_DB_NAME = "ito_chiba_map_site_media";
   const SITE_MEDIA_DB_VER = 1;
   const SITE_MEDIA_MAX_BYTES = 20 * 1024 * 1024;
+  const PDFJS_ASSET_V = "20261006T142200";
   /** @type {string[]} */
   let siteCardPanelObjectUrls = [];
+  /** @type {Map<string, string>} */
+  const siteMediaPdfDataUrlCache = new Map();
+  /** @type {Map<string, string>} */
+  const siteMediaPdfThumbCache = new Map();
+  /** @type {Promise<unknown>|null} */
+  let pdfJsLoadPromise = null;
   let shopMarkers = [];
   let warehouseMarkers = {};
   let routeLayers = [];
@@ -867,16 +874,127 @@
     return registerSiteCardObjectUrl(URL.createObjectURL(blob));
   }
 
+  async function siteMediaPdfDataUrl(row) {
+    if (!row?.id) return "";
+    const hit = siteMediaPdfDataUrlCache.get(row.id);
+    if (hit) return hit;
+    const blob = siteMediaRowBlob(row);
+    if (!blob) return "";
+    return new Promise((resolve, reject) => {
+      const fr = new FileReader();
+      fr.onload = () => {
+        const url = String(fr.result || "");
+        if (url.startsWith("data:application/pdf")) {
+          siteMediaPdfDataUrlCache.set(row.id, url);
+          resolve(url);
+        } else resolve("");
+      };
+      fr.onerror = () => reject(fr.error);
+      fr.readAsDataURL(blob);
+    });
+  }
+
+  function ensurePdfJs() {
+    const lib = window["pdfjsLib"];
+    if (lib?.getDocument) {
+      lib.GlobalWorkerOptions.workerSrc = `vendor/pdf.worker.min.js?v=${PDFJS_ASSET_V}`;
+      return Promise.resolve(lib);
+    }
+    if (!pdfJsLoadPromise) {
+      pdfJsLoadPromise = new Promise((resolve, reject) => {
+        const s = document.createElement("script");
+        s.src = `vendor/pdf.min.js?v=${PDFJS_ASSET_V}`;
+        s.async = true;
+        s.onload = () => {
+          const loaded = window["pdfjsLib"];
+          if (!loaded?.getDocument) {
+            reject(new Error("pdfjs_load_failed"));
+            return;
+          }
+          loaded.GlobalWorkerOptions.workerSrc = `vendor/pdf.worker.min.js?v=${PDFJS_ASSET_V}`;
+          resolve(loaded);
+        };
+        s.onerror = () => reject(new Error("pdfjs_script_failed"));
+        document.head.appendChild(s);
+      });
+    }
+    return pdfJsLoadPromise;
+  }
+
+  async function renderPdfFirstPageImageDataUrl(pdfDataUrl, maxDim = 720) {
+    if (!pdfDataUrl) return "";
+    const pdfjs = await ensurePdfJs();
+    const task = pdfjs.getDocument({ url: pdfDataUrl, disableFontFace: true });
+    const pdf = await task.promise;
+    const page = await pdf.getPage(1);
+    const baseVp = page.getViewport({ scale: 1 });
+    const scale = Math.min(
+      maxDim / Math.max(baseVp.width, 1),
+      maxDim / Math.max(baseVp.height, 1),
+      2.5
+    );
+    const viewport = page.getViewport({ scale: Math.max(scale, 0.25) });
+    const canvas = document.createElement("canvas");
+    canvas.width = Math.floor(viewport.width);
+    canvas.height = Math.floor(viewport.height);
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return "";
+    await page.render({ canvasContext: ctx, viewport }).promise;
+    return canvas.toDataURL("image/jpeg", 0.9);
+  }
+
+  async function siteMediaPdfThumbDataUrl(row, maxDim = 220) {
+    if (!row?.id) return "";
+    const cached = siteMediaPdfThumbCache.get(`${row.id}:${maxDim}`);
+    if (cached) return cached;
+    try {
+      const pdfDataUrl = await siteMediaPdfDataUrl(row);
+      if (!pdfDataUrl) return "";
+      const imgUrl = await renderPdfFirstPageImageDataUrl(pdfDataUrl, maxDim);
+      if (imgUrl) siteMediaPdfThumbCache.set(`${row.id}:${maxDim}`, imgUrl);
+      return imgUrl;
+    } catch {
+      return "";
+    }
+  }
+
+  async function hydrateSiteCardPdfThumbs(body, userMedia) {
+    if (!body) return;
+    const byId = new Map((userMedia || []).map((r) => [r.id, r]));
+    const hosts = [...body.querySelectorAll("[data-pdf-thumb-host]")];
+    await Promise.all(
+      hosts.map(async (host) => {
+        const fig = host.closest(".site-card-panel__photo");
+        const id = fig?.dataset?.userMediaId || "";
+        const row = byId.get(id);
+        if (!row) {
+          host.innerHTML = `<div class="site-card-panel__photo-placeholder">読込失敗</div>`;
+          return;
+        }
+        const thumb = await siteMediaPdfThumbDataUrl(row, 280);
+        if (!thumb) {
+          host.innerHTML = `<div class="site-card-panel__photo-placeholder">PDFプレビュー不可</div>`;
+          return;
+        }
+        host.innerHTML = `<img src="${thumb}" alt="${escapeHtml(row.label || row.name || "PDF")}" loading="lazy">`;
+      })
+    );
+  }
+
   async function ensurePhotoViewerItemDisplaySrc(item) {
     if (!item) return "";
     if (item.type === "pdf") {
-      if (item.pdfEmbedUrl) return item.pdfEmbedUrl;
+      if (item.displaySrc?.startsWith("data:image/")) return item.displaySrc;
       const row = photoViewerUserMediaById.get(item.userMediaId || "");
-      const blob = siteMediaRowBlob(row);
-      if (blob) {
-        item.pdfEmbedUrl = pinPhotoViewerObjectUrl(URL.createObjectURL(blob));
+      try {
+        const pdfDataUrl = await siteMediaPdfDataUrl(row);
+        item.pdfDataUrl = pdfDataUrl || item.pdfDataUrl || "";
+        const imgUrl = await renderPdfFirstPageImageDataUrl(pdfDataUrl, 1400);
+        item.displaySrc = imgUrl || "";
+        item.pdfEmbedUrl = "";
+      } catch {
+        item.displaySrc = "";
       }
-      item.displaySrc = item.pdfEmbedUrl || "";
       return item.displaySrc;
     }
     if (item.displaySrc) return item.displaySrc;
@@ -911,10 +1029,11 @@
     const caption = root.querySelector("#photoViewerCaption");
     const counter = root.querySelector("#photoViewerCounter");
     const isPdf = item.type === "pdf";
+    const pdfAsImage = isPdf && String(item.displaySrc || "").startsWith("data:image/");
     if (img) {
-      img.hidden = isPdf;
-      if (!isPdf) {
-        img.alt = item.label || "現場写真";
+      img.hidden = isPdf && !pdfAsImage;
+      if (!isPdf || pdfAsImage) {
+        img.alt = item.label || (isPdf ? "PDF" : "現場写真");
         const nextSrc = item.displaySrc || item.src || "";
         if (img.src !== nextSrc) {
           img.src = nextSrc;
@@ -927,14 +1046,8 @@
       }
     }
     if (pdfFrame) {
-      pdfFrame.hidden = !isPdf;
-      if (isPdf) {
-        const base = item.pdfEmbedUrl || item.displaySrc || "";
-        const nextPdf = base ? `${base}#toolbar=1&navpanes=0` : "";
-        if (pdfFrame.src !== nextPdf) pdfFrame.src = nextPdf;
-      } else {
-        pdfFrame.removeAttribute("src");
-      }
+      pdfFrame.hidden = true;
+      pdfFrame.removeAttribute("src");
     }
     if (caption) caption.textContent = item.label;
     const printTitle = root.querySelector(".photo-viewer__print-title");
@@ -1025,6 +1138,16 @@
     }
     if (!isPdf && (!printSrc || String(printSrc).startsWith("blob:"))) {
       printSrc = await resolvePhotoPrintSrc(item.src);
+    }
+    if (isPdf && item.pdfDataUrl) {
+      printSrc = item.pdfDataUrl;
+    } else if (isPdf && item.userMediaId) {
+      const row = photoViewerUserMediaById.get(item.userMediaId);
+      try {
+        printSrc = (await siteMediaPdfDataUrl(row)) || printSrc;
+      } catch {
+        /* displaySrc 画像で印刷 */
+      }
     }
     const title = escapeHtml(item.label || (isPdf ? "PDF" : "現場写真"));
 
@@ -1314,13 +1437,14 @@ html, body {
     body.querySelectorAll(".site-card-panel__photo").forEach((fig) => {
       if (fig.dataset.mediaKind === "pdf") {
         if (!fig.dataset.userMediaId) return;
+        const pdfImg = fig.querySelector("[data-pdf-thumb-host] img, .site-card-panel__photo-pdf-wrap img");
         const label =
           fig.querySelector("figcaption")?.textContent?.trim() ||
           fig.querySelector(".site-card-panel__photo-memo")?.textContent?.trim() ||
           "PDF";
         items.push({
           type: "pdf",
-          src: "",
+          src: pdfImg?.currentSrc || pdfImg?.src || "",
           label,
           userMediaId: fig.dataset.userMediaId || "",
         });
@@ -1342,7 +1466,9 @@ html, body {
 
   function siteCardPhotoViewerFigures(body) {
     return [...body.querySelectorAll(".site-card-panel__photo")].filter((fig) => {
-      if (fig.dataset.mediaKind === "pdf") return Boolean(fig.dataset.userMediaId);
+      if (fig.dataset.mediaKind === "pdf") {
+        return Boolean(fig.dataset.userMediaId && fig.querySelector("[data-pdf-thumb-host] img, .site-card-panel__photo-pdf-wrap img"));
+      }
       return Boolean(fig.querySelector("img"));
     });
   }
@@ -1943,15 +2069,13 @@ html, body {
       row.mime === "application/pdf" || /\.pdf$/i.test(row.name || "");
     const delBtn = `<button type="button" class="site-card-panel__photo-delete" data-delete-user-media="${escapeHtml(row.id)}" aria-label="削除">×</button>`;
     if (isPdf) {
-      const pdfUrl = siteMediaPdfEmbedUrl(row);
-      if (!pdfUrl) {
+      if (!siteMediaRowBlob(row)) {
         return `<figure class="site-card-panel__photo site-card-panel__photo--user"><div class="site-card-panel__photo-placeholder">読込失敗</div></figure>`;
       }
-      const pdfSrc = `${pdfUrl}#toolbar=0&navpanes=0&view=FitH`;
       return `<figure class="site-card-panel__photo site-card-panel__photo--user site-card-panel__photo--pdf" data-media-kind="pdf" data-user-media-id="${escapeHtml(row.id)}">
         ${delBtn}
-        <div class="site-card-panel__photo-pdf-wrap">
-          <iframe class="site-card-panel__photo-pdf-embed" src="${pdfSrc}" title="${escapeHtml(label)}" tabindex="-1"></iframe>
+        <div class="site-card-panel__photo-pdf-wrap" data-pdf-thumb-host>
+          <div class="site-card-panel__photo-placeholder">PDF読込中…</div>
         </div>
         <figcaption>${escapeHtml(label)}</figcaption>
         <p class="site-card-panel__photo-memo">${escapeHtml(row.name || "")}</p>
@@ -2040,8 +2164,9 @@ html, body {
       ${renderSiteCardPhotos(hasDetail ? card?.photos : [], userMedia)}
       ${cardLink}`;
 
-    bindSiteCardPhotoClicks(body, userMedia);
     bindSiteCardMediaDelete(body, sid);
+    await hydrateSiteCardPdfThumbs(body, userMedia);
+    bindSiteCardPhotoClicks(body, userMedia);
 
     root.hidden = false;
     document.body.classList.add("site-card-panel-open");
