@@ -697,10 +697,37 @@
     return spec ? `${mc}（${spec}）` : mc;
   }
 
+  function injectDeliveryCodeField(site, fields) {
+    const out = (fields || []).map((f) => ({ ...f }));
+    const dc = String(site?.delivery_code || "").trim();
+    const legacyIdx = out.findIndex((f) => (f.label || "") === "配送先コード");
+    const codeIdx = out.findIndex((f) => (f.label || "") === "配送コード");
+    if (!dc) {
+      if (codeIdx >= 0) out.splice(codeIdx, 1);
+      return out;
+    }
+    const row = { label: "配送コード", value: dc };
+    if (codeIdx >= 0) {
+      out[codeIdx] = row;
+      if (legacyIdx >= 0 && legacyIdx !== codeIdx) out.splice(legacyIdx, 1);
+      return out;
+    }
+    if (legacyIdx >= 0) {
+      out[legacyIdx] = row;
+      return out;
+    }
+    const nameIdx = out.findIndex((f) => /配送先名|正式名称/.test(f.label || ""));
+    const courseIdx = out.findIndex((f) => /地図コース|コース/.test(f.label || ""));
+    const insertAt =
+      nameIdx >= 0 ? nameIdx + 1 : courseIdx >= 0 ? courseIdx : out.length;
+    out.splice(insertAt, 0, row);
+    return out;
+  }
+
   function patchSiteCardFields(site, fields) {
     const mc = getMapCourse(site);
     const master = site.master_course || site.course || "";
-    const out = (fields || []).map((f) => ({ ...f }));
+    let out = injectDeliveryCodeField(site, fields);
     const mapVal = formatMapCourseValue(site);
     let mapIdx = out.findIndex((f) => /地図コース/.test(f.label || ""));
     if (mapIdx >= 0) {
@@ -735,10 +762,10 @@
 
   function buildDefaultSiteFields(site) {
     const mc = getMapCourse(site);
-    const fields = [
-      { label: "配送先名", value: site.name },
-      { label: "地図コース", value: formatMapCourseValue(site) },
-    ];
+    const fields = [{ label: "配送先名", value: site.name }];
+    const dc = String(site?.delivery_code || "").trim();
+    if (dc) fields.push({ label: "配送コード", value: dc });
+    fields.push({ label: "地図コース", value: formatMapCourseValue(site) });
     if (site.master_course && site.master_course !== mc) {
       fields.push({ label: "マスタコース（配車依頼書）", value: site.master_course });
     }
