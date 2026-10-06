@@ -781,7 +781,24 @@ body.site-card-panel-open {
 }
 
 .site-card-panel__photo-memo {
-  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  margin: 0;
+  padding: 4px 8px 6px;
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.35;
+  text-align: center;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.88) 45%);
+  pointer-events: none;
+}
+
+.site-card-panel__photo:has(.site-card-panel__photo-memo) figcaption {
+  bottom: 1.35rem;
+  padding-bottom: 4px;
 }
 
 .site-card-panel__photo-placeholder {
