@@ -28,6 +28,8 @@
   const siteMediaPdfThumbCache = new Map();
   /** @type {Promise<unknown>|null} */
   let pdfJsLoadPromise = null;
+  /** @type {string|null} */
+  let photoViewerPrintObjectUrl = null;
   let shopMarkers = [];
   let warehouseMarkers = {};
   let routeLayers = [];
@@ -1105,6 +1107,48 @@
     renderPhotoViewerFrame();
   }
 
+  function revokePhotoViewerPrintObjectUrl() {
+    if (!photoViewerPrintObjectUrl) return;
+    try {
+      URL.revokeObjectURL(photoViewerPrintObjectUrl);
+    } catch (_) {
+      /* ignore */
+    }
+    photoViewerPrintObjectUrl = null;
+  }
+
+  /** 印刷 iframe 用 … data URL を blob URL に（0px iframe・巨大 src 文字列対策・事例124） */
+  async function preparePrintImageBlobUrl(src) {
+    if (!src) return "";
+    revokePhotoViewerPrintObjectUrl();
+    let blob = null;
+    const s = String(src);
+    if (s.startsWith("data:")) {
+      blob = await fetch(s).then((r) => r.blob());
+    } else if (s.startsWith("blob:")) {
+      try {
+        blob = await fetch(s).then((r) => r.blob());
+      } catch {
+        blob = null;
+      }
+    } else {
+      try {
+        const res = await fetch(s);
+        blob = await res.blob();
+      } catch {
+        const fallback = await resolvePhotoPrintSrc(src);
+        if (fallback && String(fallback).startsWith("data:")) {
+          blob = await fetch(fallback).then((r) => r.blob());
+        } else {
+          return fallback || "";
+        }
+      }
+    }
+    if (!blob) return "";
+    photoViewerPrintObjectUrl = URL.createObjectURL(blob);
+    return photoViewerPrintObjectUrl;
+  }
+
   async function resolvePhotoPrintSrc(src) {
     if (!src) return src;
     if (String(src).startsWith("data:")) return src;
@@ -1169,16 +1213,21 @@
       return;
     }
     const title = escapeHtml(item.label || (isPdf ? "PDF" : "現場写真"));
+    const imgBlobUrl = await preparePrintImageBlobUrl(printSrc);
+    if (!imgBlobUrl) {
+      alert("印刷用の画像を読み込めませんでした。");
+      return;
+    }
 
     let frame = document.getElementById("photoViewerPrintFrame");
     if (!frame) {
       frame = document.createElement("iframe");
       frame.id = "photoViewerPrintFrame";
       frame.setAttribute("title", "印刷プレビュー");
-      frame.style.cssText =
-        "position:fixed;width:0;height:0;border:0;opacity:0;pointer-events:none";
       document.body.appendChild(frame);
     }
+    frame.style.cssText =
+      "position:fixed;left:0;top:0;width:794px;height:1123px;border:0;opacity:0;pointer-events:none;z-index:-1;";
 
     const win = frame.contentWindow;
     const doc = win.document;
@@ -1219,18 +1268,12 @@ html, body {
   object-fit: contain;
   page-break-inside: avoid;
 }
-.print-pdf {
-  display: block;
-  width: 100%;
-  height: 268mm;
-  border: 0;
-}
 </style>
 </head>
 <body>
 <div class="print-page">
   <h1 class="print-title">${title}</h1>
-  <img class="print-photo" src="${String(printSrc).replace(/"/g, "&quot;")}" alt="${title}">
+  <img class="print-photo" alt="${title}">
 </div>
 </body>
 </html>`);
@@ -1250,12 +1293,16 @@ html, body {
       runPrint();
       return;
     }
-    if (img.complete) {
-      setTimeout(runPrint, 80);
-    } else {
-      img.onload = () => setTimeout(runPrint, 80);
-      img.onerror = () => alert("写真を読み込めませんでした。");
-    }
+    const onPrinted = () => revokePhotoViewerPrintObjectUrl();
+    win.addEventListener("afterprint", onPrinted, { once: true });
+    const startPrint = () => setTimeout(runPrint, 120);
+    img.onload = () => startPrint();
+    img.onerror = () => {
+      revokePhotoViewerPrintObjectUrl();
+      alert("写真を読み込めませんでした。");
+    };
+    img.src = imgBlobUrl;
+    if (img.complete) startPrint();
   }
 
   function formatPrintDate() {
@@ -2418,12 +2465,14 @@ html, body {
 
     const labels = activeSelections.map((s) => s.label).join("、");
     const totalShops = shopMarkers.length;
+    /* チップ（searchTags）と同内容のヒントバーは出さない（二重表示防止） */
+    hideHint();
     if (!filterMarkers && visibleSites.length) {
-      showHint(`${totalShops}件表示中（${visibleSites.length}件選択） … ${labels}`);
-      $("#statusText").textContent = `表示 ${totalShops}件（選択 ${visibleSites.length}件）`;
+      $("#statusText").textContent = `${totalShops}件表示中（${visibleSites.length}件選択）… ${labels}`;
     } else {
-      showHint(`${visibleSites.length}件表示中 … ${labels}`);
-      $("#statusText").textContent = `表示 ${visibleSites.length}件 / 検索 ${activeSelections.length}件`;
+      $("#statusText").textContent = labels
+        ? `${visibleSites.length}件表示中 … ${labels}`
+        : `表示 ${visibleSites.length}件 / 検索 ${activeSelections.length}件`;
     }
     maybeShowSiteCardForSelections();
     raiseWarehouseMarkers();
