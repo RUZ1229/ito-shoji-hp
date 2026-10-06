@@ -1,10 +1,10 @@
 {
-  "generated": "2026-10-06T15:09:03",
+  "generated": "2026-10-06T08:05:38",
   "map_variant": "社内",
   "map_variant_label": "正本（8765）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図/data/map_overrides.json",
-  "map_collaborative": "2026-10-06T01:39:48Z",
+  "map_collaborative": "2026-10-06T08:05:36Z",
   "collab_custom_courses": {},
   "site_count": 324,
   "zones": {
@@ -151,7 +151,7 @@
       "geocode_source": "gsi",
       "visit_count": 44,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1856,
       "weight_months": [
         {
@@ -167,7 +167,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "2907H6",
       "master_course": "柏1H",
       "map_course": "柏1H",
       "marker_shape": "circle",
@@ -186,9 +185,9 @@
       "lng": 140.700321,
       "color": "hsl(180, 72%, 46%)",
       "geocode_source": "gsi_oaza_offset",
-      "visit_count": 71,
+      "visit_count": 70,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 9521,
       "weight_months": [
         {
@@ -204,7 +203,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053602",
       "master_course": "柏1H",
       "map_course": "柏1H",
       "marker_shape": "circle",
@@ -236,7 +234,7 @@
       "geocode_source": "gsi",
       "visit_count": 13,
       "first_visit": "2026-06-11",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 9,
       "weight_months": [
         {
@@ -272,7 +270,7 @@
       "geocode_source": "gsi_oaza_offset",
       "visit_count": 18,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 7,
       "weight_months": [
         {
@@ -303,7 +301,7 @@
       "geocode_source": "gsi",
       "visit_count": 23,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 227,
       "weight_months": [
         {
@@ -319,7 +317,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053HV8",
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
@@ -341,7 +338,7 @@
       "geocode_source": "gsi",
       "visit_count": 6,
       "first_visit": "2026-07-07",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏1I",
@@ -365,7 +362,7 @@
       "geocode_source": "gsi",
       "visit_count": 15,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 361,
       "weight_months": [
         {
@@ -401,9 +398,9 @@
       "lng": 140.312439,
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 50,
+      "visit_count": 49,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 819,
       "weight_months": [
         {
@@ -419,7 +416,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053HV2",
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
@@ -444,9 +440,9 @@
       "lng": 140.299484,
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 9,
+      "visit_count": 8,
       "first_visit": "2026-08-05",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 878,
       "weight_months": [
         {
@@ -456,7 +452,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "174BPT",
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
@@ -478,7 +473,7 @@
       "geocode_source": "gsi",
       "visit_count": 3,
       "first_visit": "2026-07-07",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏1I",
@@ -500,7 +495,7 @@
       "geocode_source": "gsi",
       "visit_count": 32,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 53,
       "weight_months": [
         {
@@ -510,7 +505,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053JBG",
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
@@ -530,9 +524,9 @@
       "lng": 140.230438,
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 70,
+      "visit_count": 69,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1833,
       "weight_months": [
         {
@@ -548,7 +542,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053EEG",
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
@@ -574,9 +567,9 @@
       "lng": 140.342209,
       "color": "hsl(207, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 67,
+      "visit_count": 66,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1846,
       "weight_months": [
         {
@@ -592,7 +585,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "290215",
       "master_course": "柏2S",
       "map_course": "柏2S",
       "marker_shape": "circle",
@@ -616,9 +608,9 @@
       "lng": 140.141602,
       "color": "hsl(207, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 71,
+      "visit_count": 70,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 5086,
       "weight_months": [
         {
@@ -634,7 +626,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "290354",
       "master_course": "柏2S",
       "map_course": "柏2S",
       "marker_shape": "circle",
@@ -655,9 +646,9 @@
       "lng": 140.14418,
       "color": "hsl(207, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 48,
+      "visit_count": 47,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 415,
       "weight_months": [
         {
@@ -667,7 +658,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "290212",
       "master_course": "柏2S",
       "map_course": "柏2S",
       "marker_shape": "circle",
@@ -691,7 +681,7 @@
       "geocode_source": "gsi",
       "visit_count": 23,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 191,
       "weight_months": [
         {
@@ -723,9 +713,9 @@
       "lng": 140.060181,
       "color": "hsl(207, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 71,
+      "visit_count": 70,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 8499,
       "weight_months": [
         {
@@ -741,7 +731,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "2902B4",
       "master_course": "柏2S",
       "map_course": "柏2S",
       "marker_shape": "circle",
@@ -763,9 +752,9 @@
       "lng": 140.058777,
       "color": "hsl(175, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 60,
+      "visit_count": 59,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2188,
       "weight_months": [
         {
@@ -781,7 +770,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053EHA",
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
@@ -802,9 +790,9 @@
       "lng": 140.022659,
       "color": "hsl(175, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 71,
+      "visit_count": 70,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2757,
       "weight_months": [
         {
@@ -820,7 +808,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053CVW",
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
@@ -854,7 +841,7 @@
       "geocode_source": "gsi",
       "visit_count": 26,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 445,
       "weight_months": [
         {
@@ -870,7 +857,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "060GRC",
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
@@ -888,9 +874,9 @@
       "lng": 140.142838,
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 61,
+      "visit_count": 60,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1526,
       "weight_months": [
         {
@@ -906,7 +892,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053DD5",
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -927,7 +912,7 @@
       "geocode_source": "gsi",
       "visit_count": 43,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1088,
       "weight_months": [
         {
@@ -943,7 +928,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053KAZ",
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -970,9 +954,9 @@
       "lng": 140.124847,
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 13,
+      "visit_count": 12,
       "first_visit": "2026-06-11",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 40,
       "weight_months": [
         {
@@ -982,7 +966,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "290YAN",
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -1001,9 +984,9 @@
       "lng": 140.176575,
       "color": "hsl(175, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 52,
+      "visit_count": 51,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 844,
       "weight_months": [
         {
@@ -1019,7 +1002,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053HQJ",
       "master_course": "柏3V",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
@@ -1045,9 +1027,9 @@
       "lng": 140.099731,
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 57,
+      "visit_count": 56,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 925,
       "weight_months": [
         {
@@ -1063,7 +1045,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "232GN4",
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -1082,9 +1063,9 @@
       "lng": 140.115936,
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 4,
+      "visit_count": 3,
       "first_visit": "2026-07-07",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 173,
       "weight_months": [
         {
@@ -1094,7 +1075,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053HYQ",
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -1113,9 +1093,9 @@
       "lng": 140.114563,
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 43,
+      "visit_count": 42,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 581,
       "weight_months": [
         {
@@ -1125,7 +1105,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "2908ND",
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -1144,9 +1123,9 @@
       "lng": 140.103882,
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 19,
+      "visit_count": 18,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 838,
       "weight_months": [
         {
@@ -1156,7 +1135,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "174THA",
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -1175,7 +1153,7 @@
       "geocode_source": "gsi",
       "visit_count": 33,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 666,
       "weight_months": [
         {
@@ -1210,9 +1188,9 @@
       "lng": 140.178955,
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 58,
+      "visit_count": 57,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2683,
       "weight_months": [
         {
@@ -1228,7 +1206,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053W16",
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -1250,9 +1227,9 @@
       "lng": 140.152344,
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 67,
+      "visit_count": 66,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2556,
       "weight_months": [
         {
@@ -1268,7 +1245,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053052",
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -1290,7 +1266,7 @@
       "geocode_source": "gsi",
       "visit_count": 51,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1419,
       "weight_months": [
         {
@@ -1306,7 +1282,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053HFF",
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -1326,9 +1301,9 @@
       "lng": 140.521179,
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 64,
+      "visit_count": 63,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2684,
       "weight_months": [
         {
@@ -1338,7 +1313,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053GDQ",
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
@@ -1359,9 +1333,9 @@
       "lng": 140.646973,
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 58,
+      "visit_count": 57,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2138,
       "weight_months": [
         {
@@ -1377,7 +1351,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053EJ4",
       "master_course": "柏3X",
       "map_course": "柏1H",
       "marker_shape": "circle",
@@ -1400,9 +1373,9 @@
       "lng": 140.600128,
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 48,
+      "visit_count": 47,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 853,
       "weight_months": [
         {
@@ -1418,7 +1391,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053EJ2",
       "master_course": "柏3X",
       "map_course": "柏1H",
       "marker_shape": "circle",
@@ -1444,7 +1416,7 @@
       "geocode_source": "gsi",
       "visit_count": 28,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 62,
       "weight_months": [
         {
@@ -1476,7 +1448,7 @@
       "geocode_source": "gsi",
       "visit_count": 50,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 734,
       "weight_months": [
         {
@@ -1492,7 +1464,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053GAV",
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
@@ -1513,9 +1484,9 @@
       "lng": 140.066299,
       "color": "hsl(175, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 20,
+      "visit_count": 19,
       "first_visit": "2026-06-05",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 118,
       "weight_months": [
         {
@@ -1531,7 +1502,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053DL6",
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
@@ -1552,9 +1522,9 @@
       "lng": 140.06522,
       "color": "hsl(175, 72%, 46%)",
       "geocode_source": "gsi_oaza_offset",
-      "visit_count": 27,
+      "visit_count": 26,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 759,
       "weight_months": [
         {
@@ -1570,7 +1540,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "2907H5",
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
@@ -1588,9 +1557,9 @@
       "lng": 140.294785,
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 70,
+      "visit_count": 69,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 4301,
       "weight_months": [
         {
@@ -1606,7 +1575,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053FK4",
       "master_course": "柏5P",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
@@ -1643,7 +1611,7 @@
       "geocode_source": "gsi",
       "visit_count": 44,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 125,
       "weight_months": [
         {
@@ -1659,7 +1627,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "0530D6",
       "master_course": "柏5P",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
@@ -1681,9 +1648,9 @@
       "lng": 139.918182,
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 62,
+      "visit_count": 61,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1743,
       "weight_months": [
         {
@@ -1699,7 +1666,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053J0B",
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -1720,9 +1686,9 @@
       "lng": 139.957016,
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 27,
+      "visit_count": 26,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 963,
       "weight_months": [
         {
@@ -1732,7 +1698,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "1743CR",
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -1749,9 +1714,9 @@
       "lng": 139.91066,
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 33,
+      "visit_count": 32,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 408,
       "weight_months": [
         {
@@ -1761,7 +1726,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "065MAB",
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -1780,9 +1744,9 @@
       "lng": 139.955399,
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 21,
+      "visit_count": 20,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 267,
       "weight_months": [
         {
@@ -1792,7 +1756,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053209",
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -1813,7 +1776,7 @@
       "geocode_source": "gsi",
       "visit_count": 28,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 102,
       "weight_months": [
         {
@@ -1844,9 +1807,9 @@
       "lng": 139.979385,
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 43,
+      "visit_count": 42,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2040,
       "weight_months": [
         {
@@ -1862,7 +1825,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053192",
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -1884,9 +1846,9 @@
       "lng": 139.962219,
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 70,
+      "visit_count": 69,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2585,
       "weight_months": [
         {
@@ -1902,7 +1864,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053BGH",
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -1932,9 +1893,9 @@
       "lng": 140.004074,
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 56,
+      "visit_count": 55,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 3131,
       "weight_months": [
         {
@@ -1950,7 +1911,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053QG9",
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -1975,7 +1935,7 @@
       "geocode_source": "gsi",
       "visit_count": 45,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1915,
       "weight_months": [
         {
@@ -1991,7 +1951,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "060KAB",
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -2013,7 +1972,7 @@
       "geocode_source": "gsi",
       "visit_count": 19,
       "first_visit": "2026-06-08",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 112,
       "weight_months": [
         {
@@ -2048,9 +2007,9 @@
       "lng": 139.955002,
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 59,
+      "visit_count": 58,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2267,
       "weight_months": [
         {
@@ -2066,7 +2025,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "2905G4",
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
@@ -2087,9 +2045,9 @@
       "lng": 139.94191,
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 71,
+      "visit_count": 70,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 6264,
       "weight_months": [
         {
@@ -2105,7 +2063,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053300",
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
@@ -2135,9 +2092,9 @@
       "lng": 139.940994,
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 42,
+      "visit_count": 41,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1427,
       "weight_months": [
         {
@@ -2153,7 +2110,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "0621A9",
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
@@ -2182,7 +2138,7 @@
       "geocode_source": "gsi",
       "visit_count": 18,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 24,
       "weight_months": [
         {
@@ -2210,9 +2166,9 @@
       "lng": 139.906479,
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 58,
+      "visit_count": 57,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2791,
       "weight_months": [
         {
@@ -2228,7 +2184,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "290226",
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
@@ -2249,9 +2204,9 @@
       "lng": 139.93457,
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 71,
+      "visit_count": 70,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 20398,
       "weight_months": [
         {
@@ -2267,7 +2222,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "0537XJ",
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
@@ -2292,9 +2246,9 @@
       "lng": 139.857849,
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 14,
+      "visit_count": 13,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 119,
       "weight_months": [
         {
@@ -2304,7 +2258,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053200",
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
@@ -2326,7 +2279,7 @@
       "geocode_source": "gsi",
       "visit_count": 60,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1656,
       "weight_months": [
         {
@@ -2342,7 +2295,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "0608WB",
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
@@ -2362,9 +2314,9 @@
       "lng": 139.955231,
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 45,
+      "visit_count": 44,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 277,
       "weight_months": [
         {
@@ -2380,7 +2332,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "060GE8",
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
@@ -2402,9 +2353,9 @@
       "lng": 139.952606,
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 38,
+      "visit_count": 37,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2645,
       "weight_months": [
         {
@@ -2420,7 +2371,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053KLJ",
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
@@ -2444,9 +2394,9 @@
       "lng": 140.018982,
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 57,
+      "visit_count": 56,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1474,
       "weight_months": [
         {
@@ -2462,7 +2412,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053BHN",
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
@@ -2489,7 +2438,7 @@
       "geocode_source": "gsi",
       "visit_count": 43,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 672,
       "weight_months": [
         {
@@ -2505,7 +2454,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "290RMM",
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
@@ -2522,9 +2470,9 @@
       "lng": 139.995178,
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 64,
+      "visit_count": 63,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 661,
       "weight_months": [
         {
@@ -2540,7 +2488,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "276208",
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
@@ -2564,9 +2511,9 @@
       "lng": 139.996948,
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 56,
+      "visit_count": 55,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 875,
       "weight_months": [
         {
@@ -2582,7 +2529,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "060BA4",
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
@@ -2604,9 +2550,9 @@
       "lng": 140.240448,
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 64,
+      "visit_count": 63,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1568,
       "weight_months": [
         {
@@ -2622,7 +2568,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053HNZ",
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
@@ -2645,9 +2590,9 @@
       "lng": 140.113174,
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 71,
+      "visit_count": 70,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 5549,
       "weight_months": [
         {
@@ -2663,7 +2608,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053396",
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
@@ -2695,9 +2639,9 @@
       "lng": 140.099202,
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi_oaza_offset",
-      "visit_count": 71,
+      "visit_count": 70,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 5100,
       "weight_months": [
         {
@@ -2713,7 +2657,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "29025H",
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
@@ -2741,7 +2684,7 @@
       "geocode_source": "gsi",
       "visit_count": 33,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1633,
       "weight_months": [
         {
@@ -2757,7 +2700,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053KMJ",
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
@@ -2781,9 +2723,9 @@
       "lng": 140.283905,
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 65,
+      "visit_count": 64,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2125,
       "weight_months": [
         {
@@ -2799,7 +2741,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "060G9K",
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
@@ -2823,9 +2764,9 @@
       "lng": 140.005997,
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 67,
+      "visit_count": 66,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 4708,
       "weight_months": [
         {
@@ -2841,7 +2782,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053CMX",
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
@@ -2863,9 +2803,9 @@
       "lng": 140.064377,
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 67,
+      "visit_count": 66,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1967,
       "weight_months": [
         {
@@ -2881,7 +2821,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053A0A",
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
@@ -2896,8 +2835,7 @@
         "（ 株） 総和 ＳＨ",
         "（ 株） 総和 ＡＫ",
         "（株）総和 角栄Ｈ",
-        "（株）総和　ＮＡ",
-        "（株）総和　ＲＷ"
+        "（株）総和　ＮＡ"
       ]
     },
     {
@@ -2913,7 +2851,7 @@
       "geocode_source": "gsi",
       "visit_count": 4,
       "first_visit": "2026-06-05",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 61,
       "weight_months": [
         {
@@ -2943,7 +2881,7 @@
       "geocode_source": "gsi",
       "visit_count": 50,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 622,
       "weight_months": [
         {
@@ -2953,7 +2891,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053II5",
       "master_course": "千Cエ",
       "map_course": "千Cエ",
       "marker_shape": "circle",
@@ -2974,9 +2911,9 @@
       "lng": 140.004745,
       "color": "hsl(55, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 71,
+      "visit_count": 70,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 27380,
       "weight_months": [
         {
@@ -2992,7 +2929,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053DMV",
       "master_course": "千Cエ",
       "map_course": "千Cエ",
       "marker_shape": "circle",
@@ -3017,9 +2953,9 @@
       "lng": 139.905991,
       "color": "hsl(55, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 66,
+      "visit_count": 65,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2870,
       "weight_months": [
         {
@@ -3035,7 +2971,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "290E4B",
       "master_course": "千Cエ",
       "map_course": "千Cエ",
       "marker_shape": "circle",
@@ -3066,7 +3001,7 @@
       "geocode_source": "gsi",
       "visit_count": 15,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 23,
       "weight_months": [
         {
@@ -3076,7 +3011,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053203",
       "master_course": "千Cオ",
       "map_course": "千Cオ",
       "marker_shape": "circle",
@@ -3096,9 +3030,9 @@
       "lng": 139.963684,
       "color": "hsl(69, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 71,
+      "visit_count": 70,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 5886,
       "weight_months": [
         {
@@ -3114,7 +3048,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "290BB2",
       "master_course": "千Cオ",
       "map_course": "千Cオ",
       "marker_shape": "circle",
@@ -3145,9 +3078,9 @@
       "lng": 139.949768,
       "color": "hsl(69, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 70,
+      "visit_count": 69,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2410,
       "weight_months": [
         {
@@ -3163,7 +3096,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "2902A9",
       "master_course": "千Cオ",
       "map_course": "千Cオ",
       "marker_shape": "circle",
@@ -3184,9 +3116,9 @@
       "lng": 139.934799,
       "color": "hsl(69, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 71,
+      "visit_count": 70,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2807,
       "weight_months": [
         {
@@ -3202,7 +3134,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "0530AN",
       "master_course": "千Cオ",
       "map_course": "千Cオ",
       "marker_shape": "circle",
@@ -3237,9 +3168,9 @@
       "lng": 139.839676,
       "color": "hsl(69, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 69,
+      "visit_count": 68,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 3542,
       "weight_months": [
         {
@@ -3255,7 +3186,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "290217",
       "master_course": "千Cオ",
       "map_course": "千Cオ",
       "marker_shape": "circle",
@@ -3277,9 +3207,9 @@
       "lng": 140.454697,
       "color": "hsl(83, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 71,
+      "visit_count": 70,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 3636,
       "weight_months": [
         {
@@ -3295,7 +3225,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053DP4",
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
@@ -3331,7 +3260,7 @@
       "geocode_source": "gsi",
       "visit_count": 4,
       "first_visit": "2026-07-07",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 447,
       "weight_months": [
         {
@@ -3359,9 +3288,9 @@
       "lng": 140.509201,
       "color": "hsl(83, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 34,
+      "visit_count": 33,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1182,
       "weight_months": [
         {
@@ -3377,7 +3306,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053TW1",
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
@@ -3399,7 +3327,7 @@
       "geocode_source": "gsi",
       "visit_count": 15,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 50,
       "weight_months": [
         {
@@ -3427,9 +3355,9 @@
       "lng": 140.479446,
       "color": "hsl(83, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 71,
+      "visit_count": 70,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 4856,
       "weight_months": [
         {
@@ -3445,7 +3373,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053TF5",
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
@@ -3467,12 +3394,11 @@
       "lng": 140.504089,
       "color": "hsl(83, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 17,
+      "visit_count": 16,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
-      "delivery_code": "053JFT",
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
@@ -3489,9 +3415,9 @@
       "lng": 140.528931,
       "color": "hsl(83, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 63,
+      "visit_count": 62,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1235,
       "weight_months": [
         {
@@ -3507,7 +3433,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053TK2",
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
@@ -3527,9 +3452,9 @@
       "lng": 140.471039,
       "color": "hsl(83, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 67,
+      "visit_count": 66,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2515,
       "weight_months": [
         {
@@ -3545,7 +3470,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053GBV",
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
@@ -3572,7 +3496,7 @@
       "geocode_source": "gsi",
       "visit_count": 29,
       "first_visit": "2026-06-10",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1094,
       "weight_months": [
         {
@@ -3607,9 +3531,9 @@
       "lng": 140.319794,
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 71,
+      "visit_count": 70,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 5184,
       "weight_months": [
         {
@@ -3625,7 +3549,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053AUC",
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
@@ -3660,9 +3583,9 @@
       "lng": 140.340515,
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 58,
+      "visit_count": 57,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 966,
       "weight_months": [
         {
@@ -3678,7 +3601,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "065KED",
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
@@ -3699,9 +3621,9 @@
       "lng": 140.34082,
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 20,
+      "visit_count": 19,
       "first_visit": "2026-06-08",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 63,
       "weight_months": [
         {
@@ -3717,7 +3639,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053W15",
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
@@ -3737,9 +3658,9 @@
       "lng": 140.141327,
       "color": "hsl(110, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 71,
+      "visit_count": 70,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 6518,
       "weight_months": [
         {
@@ -3755,7 +3676,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "0533YA",
       "master_course": "千E1",
       "map_course": "千E1",
       "marker_shape": "circle",
@@ -3800,9 +3720,9 @@
       "lng": 140.140244,
       "color": "hsl(110, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 25,
+      "visit_count": 24,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 673,
       "weight_months": [
         {
@@ -3818,7 +3738,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053V0P",
       "master_course": "千E1",
       "map_course": "千E1",
       "marker_shape": "circle",
@@ -3838,9 +3757,9 @@
       "lng": 140.206329,
       "color": "hsl(110, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 42,
+      "visit_count": 41,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 915,
       "weight_months": [
         {
@@ -3856,7 +3775,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053DXV",
       "master_course": "千E1",
       "map_course": "千E1",
       "marker_shape": "circle",
@@ -3880,9 +3798,9 @@
       "lng": 140.212326,
       "color": "hsl(110, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 71,
+      "visit_count": 70,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 19662,
       "weight_months": [
         {
@@ -3898,7 +3816,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "276210",
       "master_course": "千E1",
       "map_course": "千E1",
       "marker_shape": "circle",
@@ -3926,9 +3843,9 @@
       "lng": 140.114563,
       "color": "hsl(124, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 71,
+      "visit_count": 70,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 30693,
       "weight_months": [
         {
@@ -3944,7 +3861,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "0536NR",
       "master_course": "千F2",
       "map_course": "千F2",
       "marker_shape": "circle",
@@ -3999,9 +3915,9 @@
       "lng": 140.105713,
       "color": "hsl(124, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 60,
+      "visit_count": 59,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 3463,
       "weight_months": [
         {
@@ -4017,7 +3933,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053HXN",
       "master_course": "千F2",
       "map_course": "千F2",
       "marker_shape": "circle",
@@ -4046,9 +3961,9 @@
       "lng": 140.178421,
       "color": "hsl(138, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 71,
+      "visit_count": 70,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 16998,
       "weight_months": [
         {
@@ -4064,7 +3979,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "0536T1",
       "master_course": "千G3",
       "map_course": "千G3",
       "marker_shape": "circle",
@@ -4092,9 +4006,9 @@
       "lng": 140.063858,
       "color": "hsl(138, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 71,
+      "visit_count": 70,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 7101,
       "weight_months": [
         {
@@ -4110,7 +4024,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053DMF",
       "master_course": "千G3",
       "map_course": "千G3",
       "marker_shape": "circle",
@@ -4140,9 +4053,9 @@
       "lng": 140.028168,
       "color": "hsl(152, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 71,
+      "visit_count": 70,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 47737,
       "weight_months": [
         {
@@ -4158,7 +4071,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "0537VB",
       "master_course": "千H4",
       "map_course": "千H4",
       "marker_shape": "circle",
@@ -4208,9 +4120,9 @@
       "lng": 139.942963,
       "color": "hsl(166, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 71,
+      "visit_count": 70,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 5818,
       "weight_months": [
         {
@@ -4226,7 +4138,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "290WW5",
       "master_course": "千J6",
       "map_course": "千J6",
       "marker_shape": "circle",
@@ -4254,7 +4165,7 @@
       "geocode_source": "gsi",
       "visit_count": 45,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 440,
       "weight_months": [
         {
@@ -4264,7 +4175,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053HB6",
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
@@ -4286,7 +4196,7 @@
       "geocode_source": "gsi",
       "visit_count": 42,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 293,
       "weight_months": [
         {
@@ -4302,7 +4212,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053HG2",
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
@@ -4324,7 +4233,7 @@
       "geocode_source": "gsi",
       "visit_count": 27,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 141,
       "weight_months": [
         {
@@ -4359,9 +4268,9 @@
       "lng": 139.861298,
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 69,
+      "visit_count": 68,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 3320,
       "weight_months": [
         {
@@ -4377,7 +4286,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053HL2",
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
@@ -4402,7 +4310,7 @@
       "geocode_source": "gsi",
       "visit_count": 58,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1468,
       "weight_months": [
         {
@@ -4412,7 +4320,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053HK6",
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
@@ -4433,9 +4340,9 @@
       "lng": 139.925903,
       "color": "hsl(318, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 68,
+      "visit_count": 67,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2457,
       "weight_months": [
         {
@@ -4451,7 +4358,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053AF3",
       "master_course": "房君3",
       "map_course": "房君3",
       "marker_shape": "circle",
@@ -4482,9 +4388,9 @@
       "lng": 139.84201,
       "color": "hsl(318, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 29,
+      "visit_count": 28,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 165,
       "weight_months": [
         {
@@ -4500,7 +4406,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053EJY",
       "master_course": "房君3",
       "map_course": "房君3",
       "marker_shape": "circle",
@@ -4519,9 +4424,9 @@
       "lng": 139.913452,
       "color": "hsl(332, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 65,
+      "visit_count": 64,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1343,
       "weight_months": [
         {
@@ -4537,7 +4442,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053DW3",
       "master_course": "房木4",
       "map_course": "房木4",
       "marker_shape": "circle",
@@ -4564,9 +4468,9 @@
       "lng": 139.939941,
       "color": "hsl(332, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 71,
+      "visit_count": 70,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 3843,
       "weight_months": [
         {
@@ -4582,7 +4486,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053713",
       "master_course": "房木4",
       "map_course": "房木4",
       "marker_shape": "circle",
@@ -4608,9 +4511,9 @@
       "lng": 139.917847,
       "color": "hsl(346, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 70,
+      "visit_count": 69,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 18117,
       "weight_months": [
         {
@@ -4626,7 +4529,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "0516WW",
       "master_course": "房木5",
       "map_course": "房木5",
       "marker_shape": "circle",
@@ -4670,7 +4572,7 @@
       "geocode_source": "gsi",
       "visit_count": 29,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 23,
       "weight_months": [
         {
@@ -4680,7 +4582,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "174VB3",
       "master_course": "房木5",
       "map_course": "房木5",
       "marker_shape": "circle",
@@ -4699,9 +4600,9 @@
       "lng": 139.975433,
       "color": "hsl(346, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 33,
+      "visit_count": 32,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 163,
       "weight_months": [
         {
@@ -4717,7 +4618,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053EBC",
       "master_course": "房木5",
       "map_course": "房木5",
       "marker_shape": "circle",
@@ -4736,9 +4636,9 @@
       "lng": 140.047871,
       "color": "hsl(346, 72%, 46%)",
       "geocode_source": "gsi_oaza_offset",
-      "visit_count": 60,
+      "visit_count": 59,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 3743,
       "weight_months": [
         {
@@ -4754,7 +4654,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "06010B",
       "master_course": "房木5",
       "map_course": "房木5",
       "marker_shape": "circle",
@@ -4774,9 +4673,9 @@
       "lng": 139.908325,
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 26,
+      "visit_count": 25,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 345,
       "weight_months": [
         {
@@ -4792,7 +4691,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053CKA",
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -4815,7 +4713,7 @@
       "geocode_source": "gsi",
       "visit_count": 17,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aア",
@@ -4836,7 +4734,7 @@
       "geocode_source": "gsi",
       "visit_count": 33,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 164,
       "weight_months": [
         {
@@ -4852,7 +4750,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053B0A",
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -4871,7 +4768,7 @@
       "geocode_source": "gsi",
       "visit_count": 11,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aア",
@@ -4894,7 +4791,7 @@
       "geocode_source": "gsi",
       "visit_count": 17,
       "first_visit": "2026-06-05",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 86,
       "weight_months": [
         {
@@ -4924,7 +4821,7 @@
       "geocode_source": "gsi",
       "visit_count": 37,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2059,
       "weight_months": [
         {
@@ -4940,7 +4837,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "17470K",
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
@@ -4963,9 +4859,9 @@
       "lng": 140.025665,
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 21,
+      "visit_count": 20,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 349,
       "weight_months": [
         {
@@ -4981,7 +4877,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "065LDL",
       "master_course": "千Bカ",
       "map_course": "千Bカ",
       "marker_shape": "circle",
@@ -5002,7 +4897,7 @@
       "geocode_source": "gsi",
       "visit_count": 17,
       "first_visit": "2026-06-08",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 29,
       "weight_months": [
         {
@@ -5038,7 +4933,7 @@
       "geocode_source": "gsi",
       "visit_count": 16,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 99,
       "weight_months": [
         {
@@ -5068,7 +4963,7 @@
       "geocode_source": "gsi_oaza_offset",
       "visit_count": 1,
       "first_visit": "2026-07-08",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Bキ",
@@ -5087,9 +4982,9 @@
       "lng": 140.095139,
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 12,
+      "visit_count": 11,
       "first_visit": "2026-06-05",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 237,
       "weight_months": [
         {
@@ -5105,7 +5000,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053CPD",
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
@@ -5122,9 +5016,9 @@
       "lng": 140.060562,
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 59,
+      "visit_count": 58,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 4173,
       "weight_months": [
         {
@@ -5140,7 +5034,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053KBQ",
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
@@ -5162,7 +5055,7 @@
       "geocode_source": "gsi",
       "visit_count": 19,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1676,
       "weight_months": [
         {
@@ -5172,7 +5065,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "0530A6",
       "master_course": "千Cオ",
       "map_course": "千Cオ",
       "marker_shape": "circle",
@@ -5193,7 +5085,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-07-08",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Dタ",
@@ -5214,7 +5106,7 @@
       "geocode_source": "gsi",
       "visit_count": 5,
       "first_visit": "2026-06-10",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 49,
       "weight_months": [
         {
@@ -5242,7 +5134,7 @@
       "geocode_source": "gsi",
       "visit_count": 10,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千E1",
@@ -5268,7 +5160,7 @@
       "geocode_source": "gsi",
       "visit_count": 16,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 98,
       "weight_months": [
         {
@@ -5299,7 +5191,7 @@
       "geocode_source": "gsi",
       "visit_count": 5,
       "first_visit": "2026-07-08",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千F2",
@@ -5320,7 +5212,7 @@
       "geocode_source": "gsi",
       "visit_count": 8,
       "first_visit": "2026-07-08",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 117,
       "weight_months": [
         {
@@ -5336,7 +5228,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053DDE",
       "master_course": "柏1H",
       "map_course": "柏1H",
       "marker_shape": "circle",
@@ -5357,7 +5248,7 @@
       "geocode_source": "gsi_oaza_offset",
       "visit_count": 19,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1,
       "weight_months": [
         {
@@ -5367,7 +5258,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053646",
       "master_course": "柏1H",
       "map_course": "柏1H",
       "marker_shape": "circle",
@@ -5388,7 +5278,7 @@
       "geocode_source": "gsi",
       "visit_count": 15,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 80,
       "weight_months": [
         {
@@ -5424,7 +5314,7 @@
       "geocode_source": "gsi",
       "visit_count": 12,
       "first_visit": "2026-07-08",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 536,
       "weight_months": [
         {
@@ -5453,7 +5343,7 @@
       "geocode_source": "gsi",
       "visit_count": 14,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 626,
       "weight_months": [
         {
@@ -5469,7 +5359,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "290YG8",
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
@@ -5490,9 +5379,9 @@
       "lng": 140.310165,
       "color": "hsl(207, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 67,
+      "visit_count": 66,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2498,
       "weight_months": [
         {
@@ -5508,7 +5397,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "290228",
       "master_course": "柏2S",
       "map_course": "柏2S",
       "marker_shape": "circle",
@@ -5529,9 +5417,9 @@
       "lng": 140.311264,
       "color": "hsl(200, 75%, 48%)",
       "geocode_source": "gsi",
-      "visit_count": 64,
+      "visit_count": 63,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 5303,
       "weight_months": [
         {
@@ -5547,7 +5435,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "290YGH",
       "master_course": "柏3V",
       "map_course": "柏3V車立て",
       "marker_shape": "circle",
@@ -5573,7 +5460,7 @@
       "geocode_source": "gsi",
       "visit_count": 5,
       "first_visit": "2026-06-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 159,
       "weight_months": [
         {
@@ -5601,9 +5488,9 @@
       "lng": 140.165329,
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 45,
+      "visit_count": 44,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 3885,
       "weight_months": [
         {
@@ -5619,7 +5506,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053KJY",
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -5641,7 +5527,7 @@
       "geocode_source": "gsi",
       "visit_count": 22,
       "first_visit": "2026-07-08",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 812,
       "weight_months": [
         {
@@ -5677,9 +5563,9 @@
       "lng": 140.157913,
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 14,
+      "visit_count": 13,
       "first_visit": "2026-06-17",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 298,
       "weight_months": [
         {
@@ -5689,7 +5575,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "290FL9",
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -5708,7 +5593,7 @@
       "geocode_source": "gsi",
       "visit_count": 37,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1596,
       "weight_months": [
         {
@@ -5745,7 +5630,7 @@
       "geocode_source": "gsi",
       "visit_count": 58,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2882,
       "weight_months": [
         {
@@ -5761,7 +5646,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053JCC",
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
@@ -5786,7 +5670,7 @@
       "geocode_source": "gsi",
       "visit_count": 17,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2,
       "weight_months": [
         {
@@ -5816,7 +5700,7 @@
       "geocode_source": "gsi",
       "visit_count": 27,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1629,
       "weight_months": [
         {
@@ -5832,7 +5716,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "0604KN",
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
@@ -5849,9 +5732,9 @@
       "lng": 140.648117,
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 49,
+      "visit_count": 48,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1153,
       "weight_months": [
         {
@@ -5867,7 +5750,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053QM1",
       "master_course": "柏3X",
       "map_course": "柏1H",
       "marker_shape": "circle",
@@ -5887,9 +5769,9 @@
       "lng": 140.365036,
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 20,
+      "visit_count": 19,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 19,
       "weight_months": [
         {
@@ -5899,7 +5781,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053667",
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
@@ -5916,9 +5797,9 @@
       "lng": 139.98317,
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 42,
+      "visit_count": 41,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 500,
       "weight_months": [
         {
@@ -5934,7 +5815,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053833",
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
@@ -5955,7 +5835,7 @@
       "geocode_source": "gsi",
       "visit_count": 61,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2953,
       "weight_months": [
         {
@@ -5971,7 +5851,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053C8K",
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
@@ -5997,7 +5876,7 @@
       "geocode_source": "gsi",
       "visit_count": 24,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 95,
       "weight_months": [
         {
@@ -6025,7 +5904,7 @@
       "geocode_source": "gsi_oaza_offset",
       "visit_count": 13,
       "first_visit": "2026-06-09",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 5,
       "weight_months": [
         {
@@ -6041,7 +5920,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053JDH",
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
@@ -6060,7 +5938,7 @@
       "geocode_source": "gsi",
       "visit_count": 13,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 66,
       "weight_months": [
         {
@@ -6094,7 +5972,7 @@
       "geocode_source": "gsi",
       "visit_count": 29,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 270,
       "weight_months": [
         {
@@ -6110,7 +5988,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053FP9",
       "master_course": "房君3",
       "map_course": "房君3",
       "marker_shape": "circle",
@@ -6131,7 +6008,7 @@
       "geocode_source": "gsi",
       "visit_count": 3,
       "first_visit": "2026-07-08",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "房木4",
@@ -6152,7 +6029,7 @@
       "geocode_source": "gsi",
       "visit_count": 11,
       "first_visit": "2026-07-08",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 353,
       "weight_months": [
         {
@@ -6180,7 +6057,7 @@
       "geocode_source": "gsi",
       "visit_count": 11,
       "first_visit": "2026-06-24",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 40,
       "weight_months": [
         {
@@ -6208,7 +6085,7 @@
       "geocode_source": "gsi",
       "visit_count": 18,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 53,
       "weight_months": [
         {
@@ -6236,7 +6113,7 @@
       "geocode_source": "gsi",
       "visit_count": 50,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1398,
       "weight_months": [
         {
@@ -6252,7 +6129,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053CEJ",
       "master_course": "千Cオ",
       "map_course": "千Cオ",
       "marker_shape": "circle",
@@ -6274,7 +6150,7 @@
       "geocode_source": "gsi",
       "visit_count": 16,
       "first_visit": "2026-06-09",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 467,
       "weight_months": [
         {
@@ -6306,7 +6182,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-07-13",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Dチ",
@@ -6330,7 +6206,7 @@
       "geocode_source": "gsi_oaza_offset",
       "visit_count": 20,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 118,
       "weight_months": [
         {
@@ -6364,7 +6240,7 @@
       "geocode_source": "gsi",
       "visit_count": 9,
       "first_visit": "2026-06-29",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 153,
       "weight_months": [
         {
@@ -6374,7 +6250,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053FE6",
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
@@ -6394,7 +6269,7 @@
       "geocode_source": "gsi",
       "visit_count": 20,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 77,
       "weight_months": [
         {
@@ -6423,7 +6298,7 @@
       "geocode_source": "gsi",
       "visit_count": 3,
       "first_visit": "2026-06-29",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏1I",
@@ -6445,7 +6320,7 @@
       "geocode_source": "gsi",
       "visit_count": 14,
       "first_visit": "2026-06-11",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 457,
       "weight_months": [
         {
@@ -6475,7 +6350,7 @@
       "geocode_source": "gsi",
       "visit_count": 14,
       "first_visit": "2026-06-10",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 368,
       "weight_months": [
         {
@@ -6485,7 +6360,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "174XQ4",
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -6505,9 +6379,9 @@
       "lng": 140.146393,
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 39,
+      "visit_count": 38,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1084,
       "weight_months": [
         {
@@ -6523,7 +6397,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053E2X",
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -6550,7 +6423,7 @@
       "geocode_source": "gsi",
       "visit_count": 22,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 604,
       "weight_months": [
         {
@@ -6586,7 +6459,7 @@
       "geocode_source": "gsi",
       "visit_count": 33,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 723,
       "weight_months": [
         {
@@ -6596,7 +6469,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053836",
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
@@ -6613,9 +6485,9 @@
       "lng": 139.91185,
       "color": "hsl(318, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 36,
+      "visit_count": 35,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 308,
       "weight_months": [
         {
@@ -6631,7 +6503,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053684",
       "master_course": "房君3",
       "map_course": "房君3",
       "marker_shape": "circle",
@@ -6653,7 +6524,7 @@
       "geocode_source": "gsi",
       "visit_count": 42,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 70,
       "weight_months": [
         {
@@ -6690,7 +6561,7 @@
       "geocode_source": "gsi",
       "visit_count": 18,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 31,
       "weight_months": [
         {
@@ -6700,7 +6571,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053FM7",
       "master_course": "房君3",
       "map_course": "房君3",
       "marker_shape": "circle",
@@ -6722,7 +6592,7 @@
       "geocode_source": "gsi",
       "visit_count": 11,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 43,
       "weight_months": [
         {
@@ -6753,7 +6623,7 @@
       "geocode_source": "gsi",
       "visit_count": 32,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 162,
       "weight_months": [
         {
@@ -6769,7 +6639,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053KHU",
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -6791,7 +6660,7 @@
       "geocode_source": "gsi",
       "visit_count": 14,
       "first_visit": "2026-06-09",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 146,
       "weight_months": [
         {
@@ -6827,7 +6696,7 @@
       "geocode_source": "gsi",
       "visit_count": 28,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 156,
       "weight_months": [
         {
@@ -6864,7 +6733,7 @@
       "geocode_source": "gsi",
       "visit_count": 5,
       "first_visit": "2026-06-26",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千E1",
@@ -6887,7 +6756,7 @@
       "geocode_source": "gsi",
       "visit_count": 4,
       "first_visit": "2026-06-05",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏1I",
@@ -6907,9 +6776,9 @@
       "lng": 140.07399,
       "color": "hsl(175, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 41,
+      "visit_count": 40,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 313,
       "weight_months": [
         {
@@ -6925,7 +6794,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053EAF",
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
@@ -6947,7 +6815,7 @@
       "geocode_source": "gsi",
       "visit_count": 23,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 405,
       "weight_months": [
         {
@@ -6963,7 +6831,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053AJ9",
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -6982,9 +6849,9 @@
       "lng": 140.11377,
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 42,
+      "visit_count": 41,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2019,
       "weight_months": [
         {
@@ -7000,7 +6867,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053KAA",
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -7019,9 +6885,9 @@
       "lng": 140.102284,
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi_oaza_offset",
-      "visit_count": 36,
+      "visit_count": 35,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1601,
       "weight_months": [
         {
@@ -7037,7 +6903,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053X32",
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -7056,7 +6921,7 @@
       "geocode_source": "gsi",
       "visit_count": 19,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 69,
       "weight_months": [
         {
@@ -7086,7 +6951,7 @@
       "geocode_source": "gsi",
       "visit_count": 17,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 15,
       "weight_months": [
         {
@@ -7114,9 +6979,9 @@
       "lng": 139.924103,
       "color": "hsl(318, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 21,
+      "visit_count": 20,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 148,
       "weight_months": [
         {
@@ -7132,7 +6997,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053HZE",
       "master_course": "房君3",
       "map_course": "房君3",
       "marker_shape": "circle",
@@ -7153,7 +7017,7 @@
       "geocode_source": "gsi",
       "visit_count": 14,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 7,
       "weight_months": [
         {
@@ -7187,9 +7051,9 @@
       "lng": 139.937759,
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 32,
+      "visit_count": 31,
       "first_visit": "2026-06-05",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2983,
       "weight_months": [
         {
@@ -7205,7 +7069,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053CCJ",
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -7228,7 +7091,7 @@
       "geocode_source": "gsi",
       "visit_count": 40,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1582,
       "weight_months": [
         {
@@ -7244,7 +7107,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "1747NX",
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -7265,7 +7127,7 @@
       "geocode_source": "gsi",
       "visit_count": 12,
       "first_visit": "2026-06-05",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 285,
       "weight_months": [
         {
@@ -7295,7 +7157,7 @@
       "geocode_source": "gsi",
       "visit_count": 12,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Dタ",
@@ -7316,7 +7178,7 @@
       "geocode_source": "gsi",
       "visit_count": 30,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 40,
       "weight_months": [
         {
@@ -7350,9 +7212,9 @@
       "lng": 140.353821,
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 27,
+      "visit_count": 26,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1187,
       "weight_months": [
         {
@@ -7368,7 +7230,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053JJT",
       "master_course": "千Dチ",
       "map_course": "千Dチ",
       "marker_shape": "circle",
@@ -7391,7 +7252,7 @@
       "geocode_source": "gsi",
       "visit_count": 5,
       "first_visit": "2026-06-10",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Dチ",
@@ -7414,7 +7275,7 @@
       "geocode_source": "gsi",
       "visit_count": 11,
       "first_visit": "2026-06-24",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 36,
       "weight_months": [
         {
@@ -7444,7 +7305,7 @@
       "geocode_source": "gsi",
       "visit_count": 13,
       "first_visit": "2026-06-11",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 443,
       "weight_months": [
         {
@@ -7482,7 +7343,7 @@
       "geocode_source": "gsi",
       "visit_count": 9,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 216,
       "weight_months": [
         {
@@ -7511,7 +7372,7 @@
       "geocode_source": "gsi",
       "visit_count": 6,
       "first_visit": "2026-06-10",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 29,
       "weight_months": [
         {
@@ -7541,7 +7402,7 @@
       "geocode_source": "gsi",
       "visit_count": 2,
       "first_visit": "2026-06-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3V",
@@ -7562,7 +7423,7 @@
       "geocode_source": "gsi",
       "visit_count": 8,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 35,
       "weight_months": [
         {
@@ -7572,7 +7433,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "174D0R",
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
@@ -7591,7 +7451,7 @@
       "geocode_source": "gsi",
       "visit_count": 13,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 257,
       "weight_months": [
         {
@@ -7622,7 +7482,7 @@
       "geocode_source": "gsi",
       "visit_count": 3,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 28,
       "weight_months": [
         {
@@ -7650,7 +7510,7 @@
       "geocode_source": "gsi",
       "visit_count": 5,
       "first_visit": "2026-06-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "房館1",
@@ -7673,7 +7533,7 @@
       "geocode_source": "gsi",
       "visit_count": 33,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 568,
       "weight_months": [
         {
@@ -7711,7 +7571,7 @@
       "geocode_source": "gsi",
       "visit_count": 10,
       "first_visit": "2026-06-11",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aイ",
@@ -7735,7 +7595,7 @@
       "geocode_source": "gsi",
       "visit_count": 8,
       "first_visit": "2026-06-09",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 3,
       "weight_months": [
         {
@@ -7745,7 +7605,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "101QJ5",
       "master_course": "千Bキ",
       "map_course": "千Bキ",
       "marker_shape": "circle",
@@ -7767,7 +7626,7 @@
       "geocode_source": "gsi",
       "visit_count": 19,
       "first_visit": "2026-06-10",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 51,
       "weight_months": [
         {
@@ -7783,7 +7642,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053GBR",
       "master_course": "千Dタ",
       "map_course": "千Dタ",
       "marker_shape": "circle",
@@ -7805,7 +7663,7 @@
       "geocode_source": "gsi",
       "visit_count": 15,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 7,
       "weight_months": [
         {
@@ -7835,7 +7693,7 @@
       "geocode_source": "gsi",
       "visit_count": 9,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 9,
       "weight_months": [
         {
@@ -7861,9 +7719,9 @@
       "lng": 140.144913,
       "color": "hsl(138, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 33,
+      "visit_count": 32,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1669,
       "weight_months": [
         {
@@ -7879,7 +7737,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053EAK",
       "master_course": "千G3",
       "map_course": "千G3",
       "marker_shape": "circle",
@@ -7903,7 +7760,7 @@
       "geocode_source": "gsi",
       "visit_count": 13,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 44,
       "weight_months": [
         {
@@ -7938,7 +7795,7 @@
       "geocode_source": "gsi",
       "visit_count": 6,
       "first_visit": "2026-06-24",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 78,
       "weight_months": [
         {
@@ -7966,7 +7823,7 @@
       "geocode_source": "gsi",
       "visit_count": 4,
       "first_visit": "2026-09-07",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3V",
@@ -7987,7 +7844,7 @@
       "geocode_source": "gsi",
       "visit_count": 3,
       "first_visit": "2026-06-24",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 3,
       "weight_months": [
         {
@@ -8015,7 +7872,7 @@
       "geocode_source": "gsi",
       "visit_count": 3,
       "first_visit": "2026-06-17",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1,
       "weight_months": [
         {
@@ -8043,7 +7900,7 @@
       "geocode_source": "gsi",
       "visit_count": 7,
       "first_visit": "2026-06-09",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1,
       "weight_months": [
         {
@@ -8053,7 +7910,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053LG0",
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
@@ -8075,7 +7931,7 @@
       "geocode_source": "gsi",
       "visit_count": 4,
       "first_visit": "2026-06-18",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "房木4",
@@ -8096,7 +7952,7 @@
       "geocode_source": "gsi",
       "visit_count": 7,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3V",
@@ -8117,7 +7973,7 @@
       "geocode_source": "gsi",
       "visit_count": 5,
       "first_visit": "2026-06-08",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3V",
@@ -8138,7 +7994,7 @@
       "geocode_source": "gsi",
       "visit_count": 16,
       "first_visit": "2026-06-10",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 219,
       "weight_months": [
         {
@@ -8154,7 +8010,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053D1T",
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -8173,9 +8028,9 @@
       "lng": 140.461746,
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 27,
+      "visit_count": 26,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 941,
       "weight_months": [
         {
@@ -8191,7 +8046,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053GBJ",
       "master_course": "柏3X",
       "map_course": "柏3X",
       "marker_shape": "circle",
@@ -8210,7 +8064,7 @@
       "geocode_source": "gsi",
       "visit_count": 13,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 60,
       "weight_months": [
         {
@@ -8242,9 +8096,9 @@
       "lng": 139.866577,
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 22,
+      "visit_count": 21,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 233,
       "weight_months": [
         {
@@ -8254,7 +8108,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053JDF",
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
@@ -8275,7 +8128,7 @@
       "geocode_source": "gsi",
       "visit_count": 30,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 412,
       "weight_months": [
         {
@@ -8291,7 +8144,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053EX1",
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
@@ -8308,9 +8160,9 @@
       "lng": 140.269135,
       "color": "hsl(304, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 16,
+      "visit_count": 15,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 31,
       "weight_months": [
         {
@@ -8326,7 +8178,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053778",
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
@@ -8345,7 +8196,7 @@
       "geocode_source": "gsi",
       "visit_count": 20,
       "first_visit": "2026-06-08",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1222,
       "weight_months": [
         {
@@ -8361,7 +8212,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053EJC",
       "master_course": "房木5",
       "map_course": "房木5",
       "marker_shape": "circle",
@@ -8383,7 +8233,7 @@
       "geocode_source": "gsi",
       "visit_count": 20,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 583,
       "weight_months": [
         {
@@ -8399,7 +8249,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053CBU",
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -8418,7 +8267,7 @@
       "geocode_source": "gsi",
       "visit_count": 13,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 185,
       "weight_months": [
         {
@@ -8446,9 +8295,9 @@
       "lng": 140.061813,
       "color": "hsl(138, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 6,
+      "visit_count": 5,
       "first_visit": "2026-06-19",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 42,
       "weight_months": [
         {
@@ -8458,7 +8307,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053HNP",
       "master_course": "千G3",
       "map_course": "千G3",
       "marker_shape": "circle",
@@ -8477,12 +8325,11 @@
       "lng": 140.348816,
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 5,
+      "visit_count": 4,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
-      "delivery_code": "053FE9",
       "master_course": "柏1I",
       "map_course": "柏1I.5P",
       "marker_shape": "triangle",
@@ -8502,7 +8349,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-06-22",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3X",
@@ -8523,7 +8370,7 @@
       "geocode_source": "gsi",
       "visit_count": 11,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 16,
       "weight_months": [
         {
@@ -8554,7 +8401,7 @@
       "geocode_source": "gsi",
       "visit_count": 3,
       "first_visit": "2026-06-10",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3X",
@@ -8575,7 +8422,7 @@
       "geocode_source": "gsi",
       "visit_count": 22,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 411,
       "weight_months": [
         {
@@ -8613,7 +8460,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-06-19",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Bキ",
@@ -8632,9 +8479,9 @@
       "lng": 140.116913,
       "color": "hsl(175, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 8,
+      "visit_count": 7,
       "first_visit": "2026-06-19",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 12,
       "weight_months": [
         {
@@ -8644,7 +8491,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "174PS7",
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
@@ -8664,7 +8510,7 @@
       "geocode_source": "gsi",
       "visit_count": 14,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 966,
       "weight_months": [
         {
@@ -8680,7 +8526,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "290Y92",
       "master_course": "柏2T",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
@@ -8700,7 +8545,7 @@
       "geocode_source": "gsi",
       "visit_count": 10,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 5,
       "weight_months": [
         {
@@ -8716,7 +8561,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053820",
       "master_course": "柏3V",
       "map_course": "柏3V",
       "marker_shape": "circle",
@@ -8735,7 +8579,7 @@
       "geocode_source": "gsi",
       "visit_count": 2,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3X",
@@ -8756,7 +8600,7 @@
       "geocode_source": "gsi",
       "visit_count": 22,
       "first_visit": "2026-06-18",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 189,
       "weight_months": [
         {
@@ -8784,7 +8628,7 @@
       "geocode_source": "gsi",
       "visit_count": 8,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Bキ",
@@ -8807,7 +8651,7 @@
       "geocode_source": "gsi",
       "visit_count": 2,
       "first_visit": "2026-06-18",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 40,
       "weight_months": [
         {
@@ -8835,7 +8679,7 @@
       "geocode_source": "gsi",
       "visit_count": 3,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3V",
@@ -8858,7 +8702,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-06-18",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏5O",
@@ -8878,12 +8722,11 @@
       "lng": 140.064114,
       "color": "hsl(175, 72%, 46%)",
       "geocode_source": "gsi_oaza_offset",
-      "visit_count": 15,
+      "visit_count": 14,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
-      "delivery_code": "290RHL",
       "master_course": "柏5O",
       "map_course": "柏2T.5O",
       "marker_shape": "square",
@@ -8903,7 +8746,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-06-17",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aア",
@@ -8924,7 +8767,7 @@
       "geocode_source": "gsi",
       "visit_count": 3,
       "first_visit": "2026-06-17",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Dチ",
@@ -8945,7 +8788,7 @@
       "geocode_source": "gsi",
       "visit_count": 3,
       "first_visit": "2026-06-12",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3X",
@@ -8968,7 +8811,7 @@
       "geocode_source": "gsi",
       "visit_count": 6,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 195,
       "weight_months": [
         {
@@ -8978,7 +8821,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053CQR",
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
@@ -8997,7 +8839,7 @@
       "geocode_source": "gsi",
       "visit_count": 6,
       "first_visit": "2026-06-12",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 152,
       "weight_months": [
         {
@@ -9025,7 +8867,7 @@
       "geocode_source": "gsi",
       "visit_count": 4,
       "first_visit": "2026-06-12",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 27,
       "weight_months": [
         {
@@ -9053,7 +8895,7 @@
       "geocode_source": "gsi",
       "visit_count": 16,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 296,
       "weight_months": [
         {
@@ -9083,7 +8925,7 @@
       "geocode_source": "gsi",
       "visit_count": 6,
       "first_visit": "2026-06-12",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 55,
       "weight_months": [
         {
@@ -9114,7 +8956,7 @@
       "geocode_source": "gsi",
       "visit_count": 5,
       "first_visit": "2026-06-11",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aア",
@@ -9135,7 +8977,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-06-11",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aイ",
@@ -9156,7 +8998,7 @@
       "geocode_source": "gsi",
       "visit_count": 6,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1,
       "weight_months": [
         {
@@ -9184,7 +9026,7 @@
       "geocode_source": "gsi",
       "visit_count": 8,
       "first_visit": "2026-06-10",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 3,
       "weight_months": [
         {
@@ -9194,7 +9036,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053JDA",
       "master_course": "房館1",
       "map_course": "房館1",
       "marker_shape": "circle",
@@ -9213,7 +9054,7 @@
       "geocode_source": "gsi",
       "visit_count": 5,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 4,
       "weight_months": [
         {
@@ -9239,9 +9080,9 @@
       "lng": 140.08017,
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 12,
+      "visit_count": 11,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 183,
       "weight_months": [
         {
@@ -9257,7 +9098,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053CGU",
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
@@ -9279,7 +9119,7 @@
       "geocode_source": "gsi",
       "visit_count": 3,
       "first_visit": "2026-06-10",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1,
       "weight_months": [
         {
@@ -9289,7 +9129,6 @@
           "end": "2026-10-05"
         }
       ],
-      "delivery_code": "053199",
       "master_course": "千Aイ",
       "map_course": "千Aイ",
       "marker_shape": "circle",
@@ -9310,7 +9149,7 @@
       "geocode_source": "gsi",
       "visit_count": 5,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Bキ",
@@ -9331,9 +9170,9 @@
       "lng": 139.944611,
       "color": "hsl(69, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 14,
+      "visit_count": 13,
       "first_visit": "2026-06-08",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 623,
       "weight_months": [
         {
@@ -9349,7 +9188,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053HFG",
       "master_course": "千Cオ",
       "map_course": "千Cオ",
       "marker_shape": "circle",
@@ -9372,7 +9210,7 @@
       "geocode_source": "gsi",
       "visit_count": 4,
       "first_visit": "2026-06-10",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 141,
       "weight_months": [
         {
@@ -9400,7 +9238,7 @@
       "geocode_source": "gsi",
       "visit_count": 12,
       "first_visit": "2026-06-08",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1,
       "weight_months": [
         {
@@ -9430,7 +9268,7 @@
       "geocode_source": "gsi",
       "visit_count": 2,
       "first_visit": "2026-06-09",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 58,
       "weight_months": [
         {
@@ -9458,7 +9296,7 @@
       "geocode_source": "gsi",
       "visit_count": 6,
       "first_visit": "2026-06-09",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2719,
       "weight_months": [
         {
@@ -9486,7 +9324,7 @@
       "geocode_source": "gsi",
       "visit_count": 4,
       "first_visit": "2026-06-09",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "房館1",
@@ -9507,7 +9345,7 @@
       "geocode_source": "gsi",
       "visit_count": 2,
       "first_visit": "2026-06-08",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aア",
@@ -9528,7 +9366,7 @@
       "geocode_source": "gsi",
       "visit_count": 2,
       "first_visit": "2026-06-08",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 2,
       "weight_months": [
         {
@@ -9556,7 +9394,7 @@
       "geocode_source": "gsi",
       "visit_count": 6,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "房勝2",
@@ -9577,7 +9415,7 @@
       "geocode_source": "gsi",
       "visit_count": 12,
       "first_visit": "2026-06-08",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 59,
       "weight_months": [
         {
@@ -9587,7 +9425,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053874",
       "master_course": "房勝2",
       "map_course": "房勝2",
       "marker_shape": "circle",
@@ -9604,9 +9441,9 @@
       "lng": 139.900436,
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 6,
+      "visit_count": 5,
       "first_visit": "2026-06-05",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 260,
       "weight_months": [
         {
@@ -9616,7 +9453,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "174UB8",
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -9635,7 +9471,7 @@
       "geocode_source": "gsi",
       "visit_count": 5,
       "first_visit": "2026-06-05",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏1I",
@@ -9657,7 +9493,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-06-05",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3V",
@@ -9678,7 +9514,7 @@
       "geocode_source": "gsi",
       "visit_count": 2,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "房君3",
@@ -9699,7 +9535,7 @@
       "geocode_source": "gsi",
       "visit_count": 4,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Bカ",
@@ -9720,7 +9556,7 @@
       "geocode_source": "gsi",
       "visit_count": 8,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 432,
       "weight_months": [
         {
@@ -9756,7 +9592,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "房勝2",
@@ -9777,7 +9613,7 @@
       "geocode_source": "gsi",
       "visit_count": 10,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 58,
       "weight_months": [
         {
@@ -9787,7 +9623,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "1744DS",
       "master_course": "房木4",
       "map_course": "房木4",
       "marker_shape": "circle",
@@ -9806,7 +9641,7 @@
       "geocode_source": "gsi",
       "visit_count": 3,
       "first_visit": "2026-06-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 34,
       "weight_months": [
         {
@@ -9840,7 +9675,7 @@
       "geocode_source": "gsi",
       "visit_count": 2,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aア",
@@ -9861,7 +9696,7 @@
       "geocode_source": "gsi",
       "visit_count": 10,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 26,
       "weight_months": [
         {
@@ -9896,7 +9731,7 @@
       "geocode_source": "gsi_oaza_offset",
       "visit_count": 1,
       "first_visit": "2026-06-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "房館1",
@@ -9917,7 +9752,7 @@
       "geocode_source": "gsi",
       "visit_count": 3,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aイ",
@@ -9938,7 +9773,7 @@
       "geocode_source": "gsi",
       "visit_count": 4,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Bカ",
@@ -9959,7 +9794,7 @@
       "geocode_source": "gsi_oaza_offset",
       "visit_count": 4,
       "first_visit": "2026-06-02",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 292,
       "weight_months": [
         {
@@ -9987,7 +9822,7 @@
       "geocode_source": "gsi",
       "visit_count": 8,
       "first_visit": "2026-07-09",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 104,
       "weight_months": [
         {
@@ -10024,7 +9859,7 @@
       "geocode_source": "gsi",
       "visit_count": 2,
       "first_visit": "2026-07-09",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3V",
@@ -10045,7 +9880,7 @@
       "geocode_source": "gsi",
       "visit_count": 5,
       "first_visit": "2026-07-10",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 156,
       "weight_months": [
         {
@@ -10073,7 +9908,7 @@
       "geocode_source": "gsi",
       "visit_count": 2,
       "first_visit": "2026-07-10",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "房勝2",
@@ -10094,7 +9929,7 @@
       "geocode_source": "gsi",
       "visit_count": 4,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aイ",
@@ -10117,7 +9952,7 @@
       "geocode_source": "gsi_oaza_offset",
       "visit_count": 3,
       "first_visit": "2026-07-14",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 683,
       "weight_months": [
         {
@@ -10145,7 +9980,7 @@
       "geocode_source": "gsi",
       "visit_count": 3,
       "first_visit": "2026-07-15",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏1I",
@@ -10167,7 +10002,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-07-16",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Bキ",
@@ -10190,7 +10025,7 @@
       "geocode_source": "gsi",
       "visit_count": 5,
       "first_visit": "2026-07-16",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 31,
       "weight_months": [
         {
@@ -10224,7 +10059,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-07-22",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3V",
@@ -10245,7 +10080,7 @@
       "geocode_source": "gsi",
       "visit_count": 3,
       "first_visit": "2026-07-17",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3X",
@@ -10266,7 +10101,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-07-22",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3X",
@@ -10287,7 +10122,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-07-23",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 76,
       "weight_months": [
         {
@@ -10317,7 +10152,7 @@
       "geocode_source": "gsi",
       "visit_count": 2,
       "first_visit": "2026-07-23",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 4,
       "weight_months": [
         {
@@ -10345,7 +10180,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-07-23",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "房勝2",
@@ -10366,7 +10201,7 @@
       "geocode_source": "gsi",
       "visit_count": 2,
       "first_visit": "2026-07-27",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Dタ",
@@ -10387,7 +10222,7 @@
       "geocode_source": "gsi",
       "visit_count": 5,
       "first_visit": "2026-05-25",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 102,
       "weight_months": [
         {
@@ -10416,7 +10251,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-07-28",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3X",
@@ -10437,7 +10272,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-07-29",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aア",
@@ -10458,7 +10293,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-07-29",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aイ",
@@ -10479,7 +10314,7 @@
       "geocode_source": "gsi",
       "visit_count": 4,
       "first_visit": "2026-07-30",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "房勝2",
@@ -10500,7 +10335,7 @@
       "geocode_source": "gsi",
       "visit_count": 2,
       "first_visit": "2026-07-31",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 3,
       "weight_months": [
         {
@@ -10530,7 +10365,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-08-03",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aイ",
@@ -10551,7 +10386,7 @@
       "geocode_source": "gsi",
       "visit_count": 4,
       "first_visit": "2026-08-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 250,
       "weight_months": [
         {
@@ -10579,7 +10414,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-08-04",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Dチ",
@@ -10602,7 +10437,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-09-15",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 20,
       "weight_months": [
         {
@@ -10630,7 +10465,7 @@
       "geocode_source": "gsi",
       "visit_count": 3,
       "first_visit": "2026-09-15",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 219,
       "weight_months": [
         {
@@ -10640,7 +10475,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "053DVH",
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -10659,7 +10493,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-09-15",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1,
       "weight_months": [
         {
@@ -10687,7 +10521,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-09-16",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 13,
       "weight_months": [
         {
@@ -10714,9 +10548,9 @@
       "lng": 139.977249,
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 4,
+      "visit_count": 3,
       "first_visit": "2026-09-16",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 91,
       "weight_months": [
         {
@@ -10726,7 +10560,6 @@
           "end": "2026-09-30"
         }
       ],
-      "delivery_code": "0516YH",
       "master_course": "千Aア",
       "map_course": "千Aア",
       "marker_shape": "circle",
@@ -10747,7 +10580,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-09-28",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 35,
       "weight_months": [
         {
@@ -10775,7 +10608,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-09-29",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 97,
       "weight_months": [
         {
@@ -10803,7 +10636,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-09-30",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 24,
       "weight_months": [
         {
@@ -10832,7 +10665,7 @@
       "geocode_source": "gsi",
       "visit_count": 1,
       "first_visit": "2026-10-01",
-      "last_visit": "2026-10-06",
+      "last_visit": "2026-10-05",
       "weight_kg": 1,
       "weight_months": [
         {
@@ -10848,30 +10681,28 @@
       "search_names": []
     },
     {
-      "id": "site_323",
-      "course": "房君3",
-      "zone": "funa",
-      "hub": "nbs",
-      "name": "ＤＡ【岩瀬】合同会社弥栄ホーム",
-      "address": "千葉県 富津市岩瀬1035ー1",
-      "lat": 35.284386,
-      "lng": 139.856079,
-      "color": "hsl(318, 72%, 46%)",
+      "id": "collab_0093",
+      "course": "千Aイ",
+      "master_course": "千Aイ",
+      "map_course": "千Aイ",
+      "zone": "chiba_b",
+      "hub": "esr_kazo",
+      "name": "藤代造園（関宿台町）",
+      "address": "千葉県野田市関宿台町2769",
+      "lat": 36.091373,
+      "lng": 139.790192,
+      "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
-      "visit_count": 1,
-      "first_visit": "2026-10-06",
-      "last_visit": "2026-10-06",
-      "weight_kg": 0,
-      "weight_months": [],
-      "delivery_code": "174SSP",
-      "master_course": "房君3",
-      "map_course": "房君3",
-      "marker_shape": "circle",
-      "search_names": []
+      "visit_count": 0,
+      "weight_kg": 0.0,
+      "first_visit": null,
+      "last_visit": null,
+      "collab_added": true,
+      "marker_shape": "circle"
     }
   ],
   "visit_period_start": "2026-05-25",
-  "visit_period_end": "2026-10-06",
+  "visit_period_end": "2026-10-05",
   "weight_period_start": "2026-09-01",
   "weight_period_end": "2026-10-05",
   "course_merges": {
