@@ -8,7 +8,7 @@
   const DATA_URL = "data/map_data.json";
   const SITE_CARDS_URL = "data/site_cards.json";
   /** 事例119 … 配送回数・重量の表示終端（build_chiba_map_data.MAP_PERIOD_FLOOR と揃える） */
-  const MAP_VISIT_PERIOD_FLOOR = "2026-10-05";
+  const MAP_VISIT_PERIOD_FLOOR = "2026-10-06";
   const GEOJSON_URL = "data/chiba_cities.geojson";
   const IS_WEB_HOST = /github\.io$/i.test(window.location.hostname);
 
