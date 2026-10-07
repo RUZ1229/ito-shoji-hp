@@ -6,7 +6,7 @@
   "map_overrides": "AI化/千葉配送地図/data/map_overrides.json",
   "map_collaborative": "2026-10-06T01:39:48Z",
   "collab_custom_courses": {},
-  "site_count": 326,
+  "site_count": 327,
   "zones": {
     "chiba_a": {
       "label": "千葉A",
@@ -11014,6 +11014,26 @@
       "map_course": "房館1",
       "marker_shape": "circle",
       "search_names": []
+    },
+    {
+      "id": "collab_0093",
+      "course": "千Aイ",
+      "master_course": "千Aイ",
+      "map_course": "千Aイ",
+      "zone": "chiba_b",
+      "hub": "esr_kazo",
+      "name": "藤代造園（関宿台町）",
+      "address": "千葉県野田市関宿台町2769",
+      "lat": 36.091373,
+      "lng": 139.790192,
+      "color": "hsl(13, 72%, 46%)",
+      "geocode_source": "gsi",
+      "visit_count": 0,
+      "weight_kg": 0.0,
+      "first_visit": null,
+      "last_visit": null,
+      "collab_added": true,
+      "marker_shape": "circle"
     }
   ],
   "visit_period_start": "2026-05-25",
