@@ -1586,11 +1586,17 @@ html, body {
         ev.stopPropagation();
         const id = btn.getAttribute("data-delete-user-media");
         if (!id) return;
-        if (!window.confirm("この追加ファイルを削除しますか？")) return;
+        const shared = btn.getAttribute("data-delete-shared") === "1";
+        const msg = shared
+          ? "この追加ファイルを全員から削除しますか？"
+          : "この追加ファイルを削除しますか？";
+        if (!window.confirm(msg)) return;
         try {
-          await deleteSiteMedia(id);
+          const result = await deleteSiteMedia(id, siteId);
           await showSiteCardPanel(siteId);
-          $("#statusText").textContent = "追加ファイルを削除しました";
+          $("#statusText").textContent = result.sharedRemoved
+            ? "追加ファイルを全員から削除しました"
+            : "追加ファイルを削除しました";
         } catch {
           $("#statusText").textContent = "削除できませんでした";
         }
@@ -2283,14 +2289,49 @@ html, body {
     }
   }
 
-  async function deleteSiteMedia(id) {
-    const db = await openSiteMediaDb();
-    await new Promise((resolve, reject) => {
-      const tx = db.transaction("media", "readwrite");
-      tx.objectStore("media").delete(id);
-      tx.oncomplete = () => resolve(undefined);
-      tx.onerror = () => reject(tx.error);
+  async function deleteSharedSiteMediaFromServer(siteId, mediaId) {
+    const base = collabApiBaseQuick();
+    const key = mapEditKeyForUpload();
+    if (!base || !key) throw new Error("no_key");
+    const r = await fetch(
+      `${base}/api/site-media?site_id=${encodeURIComponent(siteId)}&media_id=${encodeURIComponent(mediaId)}`,
+      { method: "DELETE", headers: { "X-Map-Edit-Key": key } }
+    );
+    const data = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(data.error || "delete_failed");
+    siteMediaManifestCache = null;
+    siteMediaPdfDataUrlCache.delete(mediaId);
+    siteMediaPdfThumbCache.forEach((_v, k) => {
+      if (String(k).startsWith(`${mediaId}:`)) siteMediaPdfThumbCache.delete(k);
     });
+    return true;
+  }
+
+  async function deleteSiteMedia(id, siteIdHint = "") {
+    const mid = String(id || "");
+    if (!mid) throw new Error("no_id");
+    let sharedRemoved = false;
+    const manifestItems = await fetchSiteMediaManifestItems(true);
+    const manifestHit = manifestItems.find((x) => x.id === mid);
+    if (manifestHit) {
+      await deleteSharedSiteMediaFromServer(
+        String(manifestHit.siteId || siteIdHint || ""),
+        mid
+      );
+      sharedRemoved = true;
+    }
+    try {
+      const db = await openSiteMediaDb();
+      await new Promise((resolve, reject) => {
+        const tx = db.transaction("media", "readwrite");
+        tx.objectStore("media").delete(mid);
+        tx.oncomplete = () => resolve(undefined);
+        tx.onerror = () => reject(tx.error);
+      });
+    } catch {
+      if (!sharedRemoved) throw new Error("local_delete_failed");
+    }
+    return { sharedRemoved };
   }
 
   async function addSiteMediaFiles(siteId, fileList) {
@@ -2404,9 +2445,8 @@ html, body {
     const label = row.label || row.name || "追加ファイル";
     const isPdf =
       row.mime === "application/pdf" || /\.pdf$/i.test(row.name || "");
-    const delBtn = row.shared
-      ? ""
-      : `<button type="button" class="site-card-panel__photo-delete" data-delete-user-media="${escapeHtml(row.id)}" aria-label="削除">×</button>`;
+    const sharedAttr = row.shared ? ' data-delete-shared="1"' : "";
+    const delBtn = `<button type="button" class="site-card-panel__photo-delete" data-delete-user-media="${escapeHtml(row.id)}"${sharedAttr} aria-label="削除">×</button>`;
     if (isPdf) {
       if (!row.shared && !siteMediaRowBlob(row)) {
         return `<figure class="site-card-panel__photo site-card-panel__photo--user"><div class="site-card-panel__photo-placeholder">読込失敗</div></figure>`;
