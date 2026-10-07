@@ -1,7 +1,10 @@
 {
-  "built": "2026-10-06T15:09:06",
+  "built": "2026-10-07T11:50:00+09:00",
   "map_generated": "2026-10-06T15:09:03",
-  "git": "f9ebb59",
+  "git": "restore-106-weight-dc",
   "variant": "社内用（オンライン）",
-  "site_count": 324
+  "site_count": 325,
+  "visit_period_end": "2026-10-06",
+  "weight_period_end": "2026-10-06",
+  "note": "10/6重量・配送コード167・復旧deploy"
 }
