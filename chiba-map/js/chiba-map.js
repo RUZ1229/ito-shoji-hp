@@ -2270,12 +2270,50 @@ html, body {
     }
   }
 
+  async function deleteSiteMediaLocalOnly(id) {
+    const mid = String(id || "");
+    if (!mid) return;
+    const db = await openSiteMediaDb();
+    await new Promise((resolve, reject) => {
+      const tx = db.transaction("media", "readwrite");
+      tx.objectStore("media").delete(mid);
+      tx.oncomplete = () => resolve(undefined);
+      tx.onerror = () => reject(tx.error);
+    });
+  }
+
+  /** manifest から消えた sharedUploaded 行＝サーバ再upload・削除後のゴースト（相川6枚等） */
+  async function purgeOrphanSharedLocalSiteMedia(siteId, manifestIdsForSite) {
+    const sid = String(siteId || "");
+    if (!sid || !manifestIdsForSite?.size) return;
+    try {
+      const locals = await listLocalSiteMediaForSite(sid);
+      for (const row of locals) {
+        if (row.sharedUploaded && !manifestIdsForSite.has(row.id)) {
+          await deleteSiteMediaLocalOnly(row.id);
+        }
+      }
+    } catch {
+      /* ignore */
+    }
+  }
+
   async function listSiteMediaForSite(siteId) {
     const sid = String(siteId || "");
     if (!sid) return [];
     try {
       await syncLocalSiteMediaToShared(sid);
-      const out = await listLocalSiteMediaForSite(sid);
+      const manifestItems = await fetchSiteMediaManifestItems();
+      const manifestIdsForSite = new Set(
+        manifestItems.filter((i) => String(i.siteId) === sid).map((i) => i.id)
+      );
+      await purgeOrphanSharedLocalSiteMedia(sid, manifestIdsForSite);
+      const locals = await listLocalSiteMediaForSite(sid);
+      const out = [];
+      for (const row of locals) {
+        if (row.sharedUploaded && !manifestIdsForSite.has(row.id)) continue;
+        out.push(row);
+      }
       const shared = await fetchSharedSiteMediaForSite(sid);
       const seen = new Set(out.map((r) => r.id));
       for (const row of shared) {
@@ -2321,13 +2359,7 @@ html, body {
       sharedRemoved = true;
     }
     try {
-      const db = await openSiteMediaDb();
-      await new Promise((resolve, reject) => {
-        const tx = db.transaction("media", "readwrite");
-        tx.objectStore("media").delete(mid);
-        tx.oncomplete = () => resolve(undefined);
-        tx.onerror = () => reject(tx.error);
-      });
+      await deleteSiteMediaLocalOnly(mid);
     } catch {
       if (!sharedRemoved) throw new Error("local_delete_failed");
     }
