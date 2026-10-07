@@ -2023,7 +2023,14 @@ html, body {
   }
 
   function mapEditKeyForUpload() {
-    return normalizeAccessKey(sessionStorage.getItem("chiba-map-edit-key") || "");
+    const fromInput = normalizeAccessKey(sessionStorage.getItem("chiba-map-edit-key") || "");
+    if (fromInput) return fromInput;
+    const sk = accessStorageKey();
+    if (sk && sessionStorage.getItem(sk) === "1") {
+      const aliases = accessKeyAliases();
+      if (aliases.length) return aliases[0];
+    }
+    return "";
   }
 
   /** @type {{ items: object[], at: number } | null} */
@@ -2145,6 +2152,7 @@ html, body {
     const sid = String(siteId || "");
     const locals = sid ? await listLocalSiteMediaForSite(sid) : await listAllLocalSiteMediaRows();
     let uploaded = 0;
+    let lastFail = "";
     for (const row of locals) {
       if (row.sharedUploaded || sharedIds.has(row.id)) {
         if (sharedIds.has(row.id) && !row.sharedUploaded) {
@@ -2158,7 +2166,12 @@ html, body {
         sharedIds.add(row.id);
         await markSiteMediaSharedUploaded(row.id);
         siteMediaManifestCache = null;
+      } else {
+        lastFail = up.reason || "upload_failed";
       }
+    }
+    if (!uploaded && locals.length && lastFail) {
+      window.__siteMediaSyncLastError = lastFail;
     }
     return uploaded;
   }
@@ -2167,6 +2180,10 @@ html, body {
     const rel = String(item?.path || "").replace(/^\//, "");
     if (!rel) return "";
     const v = encodeURIComponent(item.addedAt || item.id || "");
+    const base = collabApiBaseQuick();
+    if (base) {
+      return `${base}/api/site-media/file?path=${encodeURIComponent(rel)}&v=${v}`;
+    }
     return `${SITE_MEDIA_RAW_BASE}${rel}?v=${v}`;
   }
 
@@ -3805,7 +3822,12 @@ html, body {
       setTimeout(() => {
         void syncLocalSiteMediaToShared("").then((n) => {
           if (n > 0) {
-            setStatus(`この端末の現場写真 ${n} 件を全員共有しました`);
+            setStatus(`この端末の現場写真 ${n} 件を全員共有しました（1〜2分で他端末にも表示）`);
+            return;
+          }
+          const err = window.__siteMediaSyncLastError;
+          if (err && err !== "no_key") {
+            setStatus(`現場写真の共有に失敗しました（${err}）。＋から再追加するかページを再読込してください`);
           }
         });
       }, 1500);
