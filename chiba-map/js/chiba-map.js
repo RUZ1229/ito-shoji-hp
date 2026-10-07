@@ -899,6 +899,10 @@
     if (!row?.id) return "";
     const hit = siteMediaPdfDataUrlCache.get(row.id);
     if (hit) return hit;
+    if (row.shared && row.remoteUrl) {
+      siteMediaPdfDataUrlCache.set(row.id, row.remoteUrl);
+      return row.remoteUrl;
+    }
     const blob = siteMediaRowBlob(row);
     if (!blob) return "";
     return new Promise((resolve, reject) => {
