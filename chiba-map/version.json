@@ -1,13 +1,7 @@
 {
-  "built": "2026-10-07T12:00:00+09:00",
-  "map_generated": "2026-10-07T11:47:45",
-  "git": "ceo-baseline-20261007",
+  "built": "2026-10-07T15:10:47",
+  "map_generated": "2026-10-07T15:10:44",
+  "git": "f9ebb59",
   "variant": "社内用（オンライン）",
-  "site_count": 325,
-  "visit_period_end": "2026-10-06",
-  "weight_period_end": "2026-10-06",
-  "delivery_code_sites": 167,
-  "baseline_locked": "2026-10-07",
-  "baseline_doc": "AI化/千葉配送地図/社長完了基準_20261007.md",
-  "note": "社長完了・事例128・後退禁止"
+  "site_count": 326
 }
