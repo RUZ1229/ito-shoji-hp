@@ -20,6 +20,9 @@
   const SITE_MEDIA_DB_VER = 1;
   const SITE_MEDIA_MAX_BYTES = 20 * 1024 * 1024;
   const SITE_MEDIA_MANIFEST_URL = "data/site_media/manifest.json";
+  /** Pages CDN 遅延時も共有写真を出す（事例10・116） */
+  const SITE_MEDIA_RAW_BASE =
+    "https://raw.githubusercontent.com/RUZ1229/ito-shoji-hp/main/chiba-map/";
   const PDFJS_ASSET_V = "20261006T142200";
   /** @type {string[]} */
   let siteCardPanelObjectUrls = [];
@@ -2035,6 +2038,35 @@ html, body {
       return siteMediaManifestCache.items;
     }
     try {
+      const r = await fetch(`${SITE_MEDIA_RAW_BASE}data/site_media/manifest.json?v=${Date.now()}`, {
+        cache: "no-store",
+      });
+      if (r.ok) {
+        const manifest = await r.json();
+        const items = manifest.items || [];
+        siteMediaManifestCache = { items, at: Date.now() };
+        return items;
+      }
+    } catch {
+      /* fall through */
+    }
+    try {
+      const base = collabApiBaseQuick();
+      if (base) {
+        const r = await fetch(`${base}/api/site-media/manifest?v=${Date.now()}`, {
+          cache: "no-store",
+        });
+        if (r.ok) {
+          const data = await r.json();
+          const items = data.items || [];
+          siteMediaManifestCache = { items, at: Date.now() };
+          return items;
+        }
+      }
+    } catch {
+      /* ignore */
+    }
+    try {
       const r = await fetch(`${SITE_MEDIA_MANIFEST_URL}?v=${Date.now()}`, { cache: "no-store" });
       if (!r.ok) return siteMediaManifestCache?.items || [];
       const manifest = await r.json();
@@ -2131,6 +2163,13 @@ html, body {
     return uploaded;
   }
 
+  function sharedSiteMediaPublicUrl(item) {
+    const rel = String(item?.path || "").replace(/^\//, "");
+    if (!rel) return "";
+    const v = encodeURIComponent(item.addedAt || item.id || "");
+    return `${SITE_MEDIA_RAW_BASE}${rel}?v=${v}`;
+  }
+
   function sharedSiteMediaItemToRow(item) {
     return {
       id: item.id,
@@ -2140,7 +2179,7 @@ html, body {
       name: item.name,
       addedAt: item.addedAt,
       shared: true,
-      remoteUrl: item.path,
+      remoteUrl: sharedSiteMediaPublicUrl(item),
     };
   }
 
@@ -2159,12 +2198,8 @@ html, body {
           return (data.items || []).map(sharedSiteMediaItemToRow);
         }
       }
-      const r = await fetch(`${SITE_MEDIA_MANIFEST_URL}?v=${Date.now()}`, { cache: "no-store" });
-      if (!r.ok) return [];
-      const manifest = await r.json();
-      return (manifest.items || [])
-        .filter((x) => String(x.siteId) === sid)
-        .map(sharedSiteMediaItemToRow);
+      const items = await fetchSiteMediaManifestItems(true);
+      return items.filter((x) => String(x.siteId) === sid).map(sharedSiteMediaItemToRow);
     } catch {
       return [];
     }
@@ -3667,7 +3702,13 @@ html, body {
     if (!isLiveAccessRequired()) return;
     stripAccessKeyFromUrl();
     const sk = accessStorageKey();
-    if (sk && sessionStorage.getItem(sk) === "1") return;
+    const accessOk = sk && sessionStorage.getItem(sk) === "1";
+    if (accessOk && mapEditKeyForUpload()) return;
+    if (accessOk && !mapEditKeyForUpload()) {
+      await showAccessGate();
+      return;
+    }
+    if (accessOk) return;
 
     await showAccessGate();
   }
