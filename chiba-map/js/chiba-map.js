@@ -2160,14 +2160,15 @@ html, body {
     const manifestItems = await fetchSiteMediaManifestItems();
     const sharedIds = new Set(manifestItems.map((i) => i.id));
     const sid = String(siteId || "");
-    const manifestIdsForSite = new Set(
-      manifestItems.filter((i) => String(i.siteId) === sid).map((i) => i.id)
-    );
     const locals = sid ? await listLocalSiteMediaForSite(sid) : await listAllLocalSiteMediaRows();
     let uploaded = 0;
     let lastFail = "";
     for (const row of locals) {
-      if (sid && siteMediaLocalRowIsOrphan(row, manifestIdsForSite)) {
+      const rowSid = String(row.siteId || "");
+      const rowManifestIds = new Set(
+        manifestItems.filter((i) => String(i.siteId) === rowSid).map((i) => i.id)
+      );
+      if (rowSid && siteMediaLocalRowIsOrphan(row, rowManifestIds)) {
         await deleteSiteMediaLocalOnly(row.id);
         continue;
       }
