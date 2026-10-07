@@ -1,10 +1,13 @@
 {
-  "built": "2026-10-07T11:50:00+09:00",
-  "map_generated": "2026-10-06T15:09:03",
-  "git": "restore-106-weight-dc",
+  "built": "2026-10-07T12:00:00+09:00",
+  "map_generated": "2026-10-07T11:47:45",
+  "git": "ceo-baseline-20261007",
   "variant": "社内用（オンライン）",
   "site_count": 325,
   "visit_period_end": "2026-10-06",
   "weight_period_end": "2026-10-06",
-  "note": "10/6重量・配送コード167・復旧deploy"
+  "delivery_code_sites": 167,
+  "baseline_locked": "2026-10-07",
+  "baseline_doc": "AI化/千葉配送地図/社長完了基準_20261007.md",
+  "note": "社長完了・事例128・後退禁止"
 }

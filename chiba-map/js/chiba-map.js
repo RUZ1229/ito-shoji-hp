@@ -19,6 +19,7 @@
   const SITE_MEDIA_DB_NAME = "ito_chiba_map_site_media";
   const SITE_MEDIA_DB_VER = 1;
   const SITE_MEDIA_MAX_BYTES = 20 * 1024 * 1024;
+  const SITE_MEDIA_MANIFEST_URL = "data/site_media/manifest.json";
   const PDFJS_ASSET_V = "20261006T142200";
   /** @type {string[]} */
   let siteCardPanelObjectUrls = [];
@@ -1616,8 +1617,20 @@ html, body {
         return;
       }
       const added = await addSiteMediaFiles(sid, fileArr);
+      let sharedOk = 0;
+      for (const row of added) {
+        const up = await uploadSharedSiteMedia(row);
+        if (up.ok) sharedOk += 1;
+      }
       await showSiteCardPanel(sid, { justAdded: added });
-      $("#statusText").textContent = "現場写真を追加しました（この端末に保存）";
+      if (sharedOk === added.length) {
+        $("#statusText").textContent = "現場写真を追加しました（全員に共有）";
+      } else if (sharedOk > 0) {
+        $("#statusText").textContent = `現場写真を追加（共有 ${sharedOk}/${added.length} 件）`;
+      } else {
+        $("#statusText").textContent =
+          "現場写真を追加（この端末のみ）。合言葉で地図を開き直してから＋を押すと共有されます";
+      }
     } catch (err) {
       const msg = String(err?.message || err);
       if (msg.startsWith("file_too_large:")) {
@@ -1901,6 +1914,7 @@ html, body {
 
   function siteMediaImageSrc(row) {
     if (!row || row.mime !== "image/jpeg") return "";
+    if (row.shared && row.remoteUrl) return row.remoteUrl;
     let blob = null;
     const bin = normalizeIdbBinary(row);
     if (bin instanceof ArrayBuffer) blob = new Blob([bin], { type: "image/jpeg" });
@@ -1990,6 +2004,101 @@ html, body {
     return row;
   }
 
+  function arrayBufferToBase64(buf) {
+    const bytes = new Uint8Array(buf);
+    let binary = "";
+    const chunk = 0x8000;
+    for (let i = 0; i < bytes.length; i += chunk) {
+      binary += String.fromCharCode.apply(null, bytes.subarray(i, i + chunk));
+    }
+    return btoa(binary);
+  }
+
+  function collabApiBaseQuick() {
+    const meta = document.querySelector('meta[name="chiba-map-collab-api"]');
+    return meta?.content?.trim().replace(/\/$/, "") || "";
+  }
+
+  function mapEditKeyForUpload() {
+    return normalizeAccessKey(sessionStorage.getItem("chiba-map-edit-key") || "");
+  }
+
+  function sharedSiteMediaItemToRow(item) {
+    return {
+      id: item.id,
+      siteId: item.siteId,
+      mime: item.mime,
+      label: item.label,
+      name: item.name,
+      addedAt: item.addedAt,
+      shared: true,
+      remoteUrl: item.path,
+    };
+  }
+
+  async function fetchSharedSiteMediaForSite(siteId) {
+    const sid = String(siteId || "");
+    if (!sid) return [];
+    const base = collabApiBaseQuick();
+    try {
+      if (base) {
+        const r = await fetch(
+          `${base}/api/site-media/list?site_id=${encodeURIComponent(sid)}`,
+          { cache: "no-store" }
+        );
+        if (r.ok) {
+          const data = await r.json();
+          return (data.items || []).map(sharedSiteMediaItemToRow);
+        }
+      }
+      const r = await fetch(`${SITE_MEDIA_MANIFEST_URL}?v=${Date.now()}`, { cache: "no-store" });
+      if (!r.ok) return [];
+      const manifest = await r.json();
+      return (manifest.items || [])
+        .filter((x) => String(x.siteId) === sid)
+        .map(sharedSiteMediaItemToRow);
+    } catch {
+      return [];
+    }
+  }
+
+  async function uploadSharedSiteMedia(row) {
+    const base = collabApiBaseQuick();
+    const key = mapEditKeyForUpload();
+    if (!base || !key) return { ok: false, reason: "no_key" };
+    let dataB64 = "";
+    if (row.mime === "image/jpeg") {
+      const buf = siteMediaJpegArrayBuffer(row);
+      if (!buf?.byteLength) return { ok: false, reason: "no_data" };
+      dataB64 = arrayBufferToBase64(buf);
+    } else if (row.mime === "application/pdf") {
+      const bin = normalizeIdbBinary(row);
+      if (!(bin instanceof ArrayBuffer) || !bin.byteLength) return { ok: false, reason: "no_data" };
+      dataB64 = arrayBufferToBase64(bin);
+    } else {
+      return { ok: false, reason: "unsupported" };
+    }
+    try {
+      const r = await fetch(`${base}/api/site-media`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "X-Map-Edit-Key": key },
+        body: JSON.stringify({
+          site_id: row.siteId,
+          media_id: row.id,
+          mime: row.mime,
+          label: row.label,
+          name: row.name,
+          data_b64: dataB64,
+          added_at: row.addedAt,
+        }),
+      });
+      const data = await r.json().catch(() => ({}));
+      return { ok: r.ok, data, reason: data.error };
+    } catch {
+      return { ok: false, reason: "network" };
+    }
+  }
+
   async function listSiteMediaForSite(siteId) {
     const sid = String(siteId || "");
     if (!sid) return [];
@@ -2016,6 +2125,12 @@ html, body {
       for (const row of rows) {
         out.push(await ensureSiteMediaJpeg(row));
       }
+      const shared = await fetchSharedSiteMediaForSite(sid);
+      const seen = new Set(out.map((r) => r.id));
+      for (const row of shared) {
+        if (!seen.has(row.id)) out.push(row);
+      }
+      out.sort((a, b) => String(a.addedAt || "").localeCompare(String(b.addedAt || "")));
       return out;
     } catch {
       window.__siteMediaListFailed = true;
@@ -3440,6 +3555,10 @@ html, body {
         }
         const sk = accessStorageKey();
         if (sk) sessionStorage.setItem(sk, "1");
+        sessionStorage.setItem(
+          "chiba-map-edit-key",
+          normalizeAccessKey(input.value)
+        );
         overlay.remove();
         document.body.classList.remove("access-gate-open");
         resolve();
