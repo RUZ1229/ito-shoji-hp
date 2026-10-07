@@ -1,5 +1,16 @@
 {
   "version": 1,
-  "updated": "2026-10-07T00:00:00Z",
-  "items": []
+  "updated": "2026-10-07T03:49:01.654Z",
+  "items": [
+    {
+      "id": "test_upload_probe",
+      "siteId": "site_101",
+      "path": "data/site_media/files/site_101/test_upload_probe.jpg",
+      "mime": "image/jpeg",
+      "label": "probe",
+      "name": "probe.jpg",
+      "addedAt": "2026-10-07T12:00:00Z",
+      "by": "地図ユーザー"
+    }
+  ]
 }
