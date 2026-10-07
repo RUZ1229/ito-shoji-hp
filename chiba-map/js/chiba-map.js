@@ -2023,6 +2023,114 @@ html, body {
     return normalizeAccessKey(sessionStorage.getItem("chiba-map-edit-key") || "");
   }
 
+  /** @type {{ items: object[], at: number } | null} */
+  let siteMediaManifestCache = null;
+
+  async function fetchSiteMediaManifestItems(forceRefresh = false) {
+    if (
+      !forceRefresh &&
+      siteMediaManifestCache &&
+      Date.now() - siteMediaManifestCache.at < 45000
+    ) {
+      return siteMediaManifestCache.items;
+    }
+    try {
+      const r = await fetch(`${SITE_MEDIA_MANIFEST_URL}?v=${Date.now()}`, { cache: "no-store" });
+      if (!r.ok) return siteMediaManifestCache?.items || [];
+      const manifest = await r.json();
+      const items = manifest.items || [];
+      siteMediaManifestCache = { items, at: Date.now() };
+      return items;
+    } catch {
+      return siteMediaManifestCache?.items || [];
+    }
+  }
+
+  async function markSiteMediaSharedUploaded(id) {
+    if (!id) return;
+    try {
+      const row = await getSiteMediaRowById(id);
+      if (!row) return;
+      row.sharedUploaded = true;
+      await putSiteMediaRow(row);
+    } catch {
+      /* ignore */
+    }
+  }
+
+  async function listLocalSiteMediaForSite(siteId) {
+    const sid = String(siteId || "");
+    if (!sid) return [];
+    const db = await openSiteMediaDb();
+    const allRows = await new Promise((resolve, reject) => {
+      const tx = db.transaction("media", "readonly");
+      const req = tx.objectStore("media").getAll();
+      req.onsuccess = () => resolve(req.result || []);
+      req.onerror = () => reject(req.error);
+    });
+    let rows = allRows.filter((r) => String(r?.siteId ?? "") === sid);
+    if (!rows.length) {
+      rows = await new Promise((resolve, reject) => {
+        const tx = db.transaction("media", "readonly");
+        const req = tx.objectStore("media").index("siteId").getAll(sid);
+        req.onsuccess = () => resolve(req.result || []);
+        req.onerror = () => reject(req.error);
+      });
+      rows = (rows || []).filter((r) => String(r?.siteId ?? "") === sid);
+    }
+    rows.sort((a, b) => String(a.addedAt || "").localeCompare(String(b.addedAt || "")));
+    const out = [];
+    for (const row of rows) {
+      out.push(await ensureSiteMediaJpeg(row));
+    }
+    return out;
+  }
+
+  async function listAllLocalSiteMediaRows() {
+    try {
+      const db = await openSiteMediaDb();
+      const allRows = await new Promise((resolve, reject) => {
+        const tx = db.transaction("media", "readonly");
+        const req = tx.objectStore("media").getAll();
+        req.onsuccess = () => resolve(req.result || []);
+        req.onerror = () => reject(req.error);
+      });
+      const out = [];
+      for (const row of allRows || []) {
+        out.push(await ensureSiteMediaJpeg(row));
+      }
+      return out;
+    } catch {
+      return [];
+    }
+  }
+
+  /** 端末ローカルで未共有の＋写真を Worker へ（siteId 空＝全現場） */
+  async function syncLocalSiteMediaToShared(siteId = "") {
+    if (!mapEditKeyForUpload()) return 0;
+    const manifestItems = await fetchSiteMediaManifestItems();
+    const sharedIds = new Set(manifestItems.map((i) => i.id));
+    const sid = String(siteId || "");
+    const locals = sid ? await listLocalSiteMediaForSite(sid) : await listAllLocalSiteMediaRows();
+    let uploaded = 0;
+    for (const row of locals) {
+      if (row.sharedUploaded || sharedIds.has(row.id)) {
+        if (sharedIds.has(row.id) && !row.sharedUploaded) {
+          await markSiteMediaSharedUploaded(row.id);
+        }
+        continue;
+      }
+      const up = await uploadSharedSiteMedia(row);
+      if (up.ok) {
+        uploaded += 1;
+        sharedIds.add(row.id);
+        await markSiteMediaSharedUploaded(row.id);
+        siteMediaManifestCache = null;
+      }
+    }
+    return uploaded;
+  }
+
   function sharedSiteMediaItemToRow(item) {
     return {
       id: item.id,
@@ -2093,6 +2201,7 @@ html, body {
         }),
       });
       const data = await r.json().catch(() => ({}));
+      if (r.ok) siteMediaManifestCache = null;
       return { ok: r.ok, data, reason: data.error };
     } catch {
       return { ok: false, reason: "network" };
@@ -2103,28 +2212,8 @@ html, body {
     const sid = String(siteId || "");
     if (!sid) return [];
     try {
-      const db = await openSiteMediaDb();
-      const allRows = await new Promise((resolve, reject) => {
-        const tx = db.transaction("media", "readonly");
-        const req = tx.objectStore("media").getAll();
-        req.onsuccess = () => resolve(req.result || []);
-        req.onerror = () => reject(req.error);
-      });
-      let rows = allRows.filter((r) => String(r?.siteId ?? "") === sid);
-      if (!rows.length) {
-        rows = await new Promise((resolve, reject) => {
-          const tx = db.transaction("media", "readonly");
-          const req = tx.objectStore("media").index("siteId").getAll(sid);
-          req.onsuccess = () => resolve(req.result || []);
-          req.onerror = () => reject(req.error);
-        });
-        rows = (rows || []).filter((r) => String(r?.siteId ?? "") === sid);
-      }
-      rows.sort((a, b) => String(a.addedAt || "").localeCompare(String(b.addedAt || "")));
-      const out = [];
-      for (const row of rows) {
-        out.push(await ensureSiteMediaJpeg(row));
-      }
+      await syncLocalSiteMediaToShared(sid);
+      const out = await listLocalSiteMediaForSite(sid);
       const shared = await fetchSharedSiteMediaForSite(sid);
       const seen = new Set(out.map((r) => r.id));
       for (const row of shared) {
@@ -2259,9 +2348,11 @@ html, body {
     const label = row.label || row.name || "追加ファイル";
     const isPdf =
       row.mime === "application/pdf" || /\.pdf$/i.test(row.name || "");
-    const delBtn = `<button type="button" class="site-card-panel__photo-delete" data-delete-user-media="${escapeHtml(row.id)}" aria-label="削除">×</button>`;
+    const delBtn = row.shared
+      ? ""
+      : `<button type="button" class="site-card-panel__photo-delete" data-delete-user-media="${escapeHtml(row.id)}" aria-label="削除">×</button>`;
     if (isPdf) {
-      if (!siteMediaRowBlob(row)) {
+      if (!row.shared && !siteMediaRowBlob(row)) {
         return `<figure class="site-card-panel__photo site-card-panel__photo--user"><div class="site-card-panel__photo-placeholder">読込失敗</div></figure>`;
       }
       return `<figure class="site-card-panel__photo site-card-panel__photo--user site-card-panel__photo--pdf" data-media-kind="pdf" data-user-media-id="${escapeHtml(row.id)}">
@@ -3670,6 +3761,13 @@ html, body {
       if (window.__chibaMapCollabInit) window.__chibaMapCollabInit(window.__chibaMapApi);
       const ver = await fetchLiveVersionMeta();
       startLiveVersionWatch(ver?.built || data.generated);
+      setTimeout(() => {
+        void syncLocalSiteMediaToShared("").then((n) => {
+          if (n > 0) {
+            setStatus(`この端末の現場写真 ${n} 件を全員共有しました`);
+          }
+        });
+      }, 1500);
     } catch (err) {
       setStatus(err.message);
       showHint(err.message);
