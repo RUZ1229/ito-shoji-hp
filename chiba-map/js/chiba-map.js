@@ -2160,10 +2160,17 @@ html, body {
     const manifestItems = await fetchSiteMediaManifestItems();
     const sharedIds = new Set(manifestItems.map((i) => i.id));
     const sid = String(siteId || "");
+    const manifestIdsForSite = new Set(
+      manifestItems.filter((i) => String(i.siteId) === sid).map((i) => i.id)
+    );
     const locals = sid ? await listLocalSiteMediaForSite(sid) : await listAllLocalSiteMediaRows();
     let uploaded = 0;
     let lastFail = "";
     for (const row of locals) {
+      if (sid && siteMediaLocalRowIsOrphan(row, manifestIdsForSite)) {
+        await deleteSiteMediaLocalOnly(row.id);
+        continue;
+      }
       if (row.sharedUploaded || sharedIds.has(row.id)) {
         if (sharedIds.has(row.id) && !row.sharedUploaded) {
           await markSiteMediaSharedUploaded(row.id);
@@ -2175,6 +2182,7 @@ html, body {
         uploaded += 1;
         sharedIds.add(row.id);
         await markSiteMediaSharedUploaded(row.id);
+        ensureSiteMediaPendingIds().delete(row.id);
         siteMediaManifestCache = null;
       } else {
         lastFail = up.reason || "upload_failed";
@@ -2282,15 +2290,37 @@ html, body {
     });
   }
 
-  /** manifest から消えた sharedUploaded 行＝サーバ再upload・削除後のゴースト（相川6枚等） */
-  async function purgeOrphanSharedLocalSiteMedia(siteId, manifestIdsForSite) {
+  function ensureSiteMediaPendingIds() {
+    if (!window.__siteMediaPendingIds) window.__siteMediaPendingIds = new Set();
+    return window.__siteMediaPendingIds;
+  }
+
+  /** サーバ manifest に無い古いローカル行（sharedUploaded 無しも含む・池部 Windows 等） */
+  function isPendingLocalSiteMediaRow(row, manifestIdsForSite) {
+    if (!row?.id) return false;
+    if (!manifestIdsForSite?.size) return true;
+    if (manifestIdsForSite.has(row.id)) return false;
+    if (ensureSiteMediaPendingIds().has(row.id)) return true;
+    const t = Date.parse(String(row.addedAt || ""));
+    if (!Number.isFinite(t)) return false;
+    return Date.now() - t < 20 * 60 * 1000;
+  }
+
+  function siteMediaLocalRowIsOrphan(row, manifestIdsForSite) {
+    if (!manifestIdsForSite?.size) return false;
+    if (manifestIdsForSite.has(row.id)) return false;
+    return !isPendingLocalSiteMediaRow(row, manifestIdsForSite);
+  }
+
+  async function purgeOrphanLocalSiteMedia(siteId, manifestIdsForSite) {
     const sid = String(siteId || "");
     if (!sid || !manifestIdsForSite?.size) return;
     try {
       const locals = await listLocalSiteMediaForSite(sid);
       for (const row of locals) {
-        if (row.sharedUploaded && !manifestIdsForSite.has(row.id)) {
+        if (siteMediaLocalRowIsOrphan(row, manifestIdsForSite)) {
           await deleteSiteMediaLocalOnly(row.id);
+          ensureSiteMediaPendingIds().delete(row.id);
         }
       }
     } catch {
@@ -2302,22 +2332,32 @@ html, body {
     const sid = String(siteId || "");
     if (!sid) return [];
     try {
-      await syncLocalSiteMediaToShared(sid);
       const manifestItems = await fetchSiteMediaManifestItems();
       const manifestIdsForSite = new Set(
         manifestItems.filter((i) => String(i.siteId) === sid).map((i) => i.id)
       );
-      await purgeOrphanSharedLocalSiteMedia(sid, manifestIdsForSite);
-      const locals = await listLocalSiteMediaForSite(sid);
-      const out = [];
-      for (const row of locals) {
-        if (row.sharedUploaded && !manifestIdsForSite.has(row.id)) continue;
-        out.push(row);
-      }
+      await purgeOrphanLocalSiteMedia(sid, manifestIdsForSite);
+      await syncLocalSiteMediaToShared(sid);
+      await purgeOrphanLocalSiteMedia(sid, manifestIdsForSite);
       const shared = await fetchSharedSiteMediaForSite(sid);
-      const seen = new Set(out.map((r) => r.id));
-      for (const row of shared) {
-        if (!seen.has(row.id)) out.push(row);
+      const locals = await listLocalSiteMediaForSite(sid);
+      const localsById = new Map(locals.map((r) => [r.id, r]));
+      let out = [];
+      if (manifestIdsForSite.size > 0) {
+        for (const row of shared) {
+          const local = localsById.get(row.id);
+          out.push(local ? { ...local, shared: true, remoteUrl: row.remoteUrl } : row);
+        }
+        for (const row of locals) {
+          if (manifestIdsForSite.has(row.id)) continue;
+          if (isPendingLocalSiteMediaRow(row, manifestIdsForSite)) out.push(row);
+        }
+      } else {
+        out = [...locals];
+        const seen = new Set(out.map((r) => r.id));
+        for (const row of shared) {
+          if (!seen.has(row.id)) out.push(row);
+        }
       }
       out.sort((a, b) => String(a.addedAt || "").localeCompare(String(b.addedAt || "")));
       return out;
@@ -2409,6 +2449,7 @@ html, body {
         };
       }
       await putSiteMediaRow(row);
+      ensureSiteMediaPendingIds().add(row.id);
       const verified = await getSiteMediaRowById(row.id);
       added.push(await ensureSiteMediaJpeg(verified ? { ...row, ...verified } : { ...row }));
     }
