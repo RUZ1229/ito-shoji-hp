@@ -1,9 +1,26 @@
 {
   "version": 1,
   "note": "地図受信者の協調編集。build_chiba_map_data.py が map_data 生成時にマージ。",
-  "updated": "2026-10-06T01:39:48Z",
-  "updated_by": "e2e-test",
-  "user_added_sites": [],
+  "updated": "2026-10-07T06:22:16Z",
+  "updated_by": "sync_editor_sites_collab_from_map",
+  "user_added_sites": [
+    {
+      "id": "collab_0093",
+      "name": "藤代造園（関宿台町）",
+      "address": "千葉県野田市関宿台町2769",
+      "map_course": "千Aイ",
+      "course": "千Aイ",
+      "hub": "esr_kazo",
+      "lat": 36.091373,
+      "lng": 139.790192,
+      "geocode_source": "gsi",
+      "visit_count": 0,
+      "weight_kg": 0.0,
+      "first_visit": null,
+      "last_visit": null,
+      "synced_from_map_at": "2026-10-07T06:22:16Z"
+    }
+  ],
   "course_moves": [
     {
       "site_id": "site_66",
