@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-10-08T06:36:55.552Z",
+  "updated": "2026-10-07T04:28:00Z",
   "items": [
     {
       "id": "site_190_1791265357408_y0bid0e",
@@ -200,16 +200,6 @@
       "label": "20261007120435488",
       "name": "20261007120435488.pdf",
       "addedAt": "2026-10-07T03:33:40.061Z",
-      "by": "地図ユーザー"
-    },
-    {
-      "id": "site_48_1791441420131_yy1u0wi",
-      "siteId": "site_48",
-      "path": "data/site_media/files/site_48/site_48_1791441420131_yy1u0wi.pdf",
-      "mime": "application/pdf",
-      "label": "マテックスイトウ",
-      "name": "マテックスイトウ.pdf",
-      "addedAt": "2026-10-08T06:37:00.133Z",
       "by": "地図ユーザー"
     }
   ]
