@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>伊藤商事 会社案内（デジタルブック）</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Syne:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="company-brochure-viewer.css">
+</head>
+<body>
+<div id="viewer-loading" class="viewer-loading">読み込み中…</div>
+
+<div class="viewer-app">
+  <header class="viewer-toolbar">
+    <div class="viewer-toolbar__left">
+      <button type="button" class="viewer-btn" id="btn-toc" title="目次" aria-label="目次">☰</button>
+      <a class="viewer-link" href="company-brochure-view.html">縦スクロール</a>
+      <a class="viewer-link" href="company-brochure-viewer-3d.html">3Dめくり（案）</a>
+    </div>
+    <div class="viewer-toolbar__center">
+      <button type="button" class="viewer-btn" id="btn-prev" title="前のページ" aria-label="前のページ">‹</button>
+      <button type="button" class="viewer-btn" id="btn-zoom-out" title="縮小" aria-label="縮小">−</button>
+      <span class="viewer-page-num" id="page-num">1 / 10</span>
+      <button type="button" class="viewer-btn" id="btn-zoom-in" title="拡大" aria-label="拡大">+</button>
+      <button type="button" class="viewer-btn" id="btn-next" title="次のページ" aria-label="次のページ">›</button>
+    </div>
+    <div class="viewer-toolbar__right">
+      <a class="viewer-link" href="../会社案内/伊藤商事_会社案内_印刷版.html">印刷版</a>
+    </div>
+  </header>
+
+  <div class="viewer-stage">
+    <div class="viewer-book-wrap" id="book-wrap">
+      <div class="viewer-page-slot viewer-page-slot--portrait" id="page-current"></div>
+    </div>
+  </div>
+</div>
+
+<div class="viewer-toc" id="viewer-toc">
+  <div class="viewer-toc__panel">
+    <h2>目次 <button type="button" class="viewer-btn" id="btn-toc-close" aria-label="閉じる">×</button></h2>
+    <ul id="toc-list"></ul>
+  </div>
+</div>
+
+<script src="company-brochure-booklet.js"></script>
+<script src="company-brochure-viewer.js"></script>
+</body>
+</html>

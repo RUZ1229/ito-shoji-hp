@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>配送先情報カード｜一全 柏営業所</title>
+<style>
+  @page { size: A4 portrait; margin: 12mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    color: #111;
+    margin: 0;
+    padding: 12mm;
+    max-width: 210mm;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: -12mm -12mm 8px;
+    padding: 8px 12mm;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+    font-size: 12px;
+  }
+  .toolbar button {
+    padding: 6px 12px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .toolbar .hint { color: #666; }
+  @media print {
+    .toolbar { display: none; }
+    .map-toolbar { display: none; }
+    body { padding: 0; }
+    [contenteditable]:empty::before { color: transparent; }
+    .edit-hint { display: none; }
+    .map-svg { cursor: default; }
+    .map-svg .selected { stroke: #444 !important; stroke-width: inherit !important; }
+  }
+  .title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin: 0 0 8px;
+  }
+  table { border-collapse: collapse; width: 100%; }
+  td, th {
+    border: 1px solid #333;
+    padding: 4px 6px;
+    font-size: 12px;
+    vertical-align: middle;
+  }
+  .lbl {
+    background: #eee;
+    font-weight: 700;
+    white-space: nowrap;
+    text-align: center;
+    width: 120px;
+  }
+  .val { font-size: 13px; min-height: 1.4em; }
+  .sub { color: #555; font-size: 10px; }
+  h2.sec {
+    font-size: 13px;
+    margin: 14px 0 4px;
+    padding: 3px 6px;
+    background: #333;
+    color: #fff;
+  }
+  .map-section {
+    position: relative;
+  }
+  .maparea {
+    width: 100%;
+    border: 1px solid #333;
+    min-height: 340px;
+    padding: 0;
+    overflow: hidden;
+  }
+  .map-toolbar {
+    position: absolute;
+    right: calc(100% + 6px);
+    top: 28px;
+    width: 52px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 10px;
+    z-index: 5;
+  }
+  .map-toolbar button {
+    width: 100%;
+    padding: 3px 2px;
+    font-size: 10px;
+    line-height: 1.2;
+    cursor: pointer;
+    border: 1px solid #bbb;
+    background: #fff;
+    border-radius: 2px;
+    text-align: center;
+  }
+  .map-toolbar button.active {
+    background: #333;
+    color: #fff;
+    border-color: #333;
+  }
+  .map-toolbar .sep {
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    margin: 1px 0;
+  }
+  .map-toolbar .hint {
+    color: #888;
+    font-size: 8px;
+    line-height: 1.3;
+    margin-top: 2px;
+  }
+  .map-svg {
+    display: block;
+    width: 100%;
+    height: 340px;
+    background: #fff;
+    cursor: crosshair;
+    user-select: none;
+  }
+  .map-svg .selected {
+    stroke: #0066cc !important;
+    stroke-width: 1.2 !important;
+  }
+  .edit-hint { display: none; }
+  .notes td { vertical-align: top; font-size: 11px; line-height: 1.6; }
+  .notes ul { margin: 4px 0; padding-left: 16px; min-height: 80px; }
+  .notes .h { font-weight: 700; background: #eee; text-align: center; }
+  .foot { text-align: right; font-size: 10px; color: #555; margin-top: 4px; }
+  [contenteditable] {
+    outline: none;
+    min-width: 1em;
+    display: inline-block;
+  }
+  [contenteditable]:empty::before {
+    content: attr(data-placeholder);
+    color: #bbb;
+  }
+  [contenteditable]:focus {
+    background: #fffde7;
+    box-shadow: inset 0 0 0 1px #ffc107;
+  }
+  .circ {
+    border: 1.5px solid #111;
+    border-radius: 50%;
+    padding: 0 5px;
+    font-weight: 700;
+    cursor: pointer;
+    user-select: none;
+  }
+  .circ.selected { background: #333; color: #fff; }
+  .choice { cursor: pointer; user-select: none; }
+  .choice.selected {
+    border: 1.5px solid #111;
+    border-radius: 50%;
+    padding: 0 5px;
+    font-weight: 700;
+  }
+  .date-cell { min-width: 44px; text-align: right; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button type="button" onclick="window.print()">印刷 / PDF保存</button>
+  <button type="button" onclick="duplicateForNewSite()">別現場用に複製</button>
+  <span class="hint">各欄をクリックして入力。丸印はクリックで選択。</span>
+</div>
+
+<div style="display:flex; align-items:flex-end; margin:0 0 8px;">
+  <div style="flex:1;"></div>
+  <div class="title" style="flex:2; margin:0;">配送先情報カード</div>
+  <div style="flex:1; display:flex; justify-content:flex-end;">
+    <table style="border-collapse:collapse; font-size:10px; width:auto;">
+      <tbody><tr>
+        <td style="border:1px solid #333; padding:3px 8px; font-weight:700; text-align:center; background:#eee;">NO</td>
+        <td colspan="3" style="border:1px solid #333; padding:3px 6px; min-width:160px;">
+          <span contenteditable="true">site_101</span>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #333; padding:3px 8px; font-weight:700; text-align:center; background:#eee; white-space:nowrap;">作成日</td>
+        <td class="date-cell" style="border:1px solid #333; padding:3px 6px;"><span contenteditable="true">2026</span>年</td>
+        <td class="date-cell" style="border:1px solid #333; padding:3px 6px;"><span contenteditable="true">9</span>月</td>
+        <td class="date-cell" style="border:1px solid #333; padding:3px 6px;"><span contenteditable="true">7</span>日</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #333; padding:3px 8px; font-weight:700; text-align:center; background:#eee; white-space:nowrap;">修正日</td>
+        <td class="date-cell" style="border:1px solid #333; padding:3px 6px;"><span contenteditable="true" data-placeholder=""></span>年</td>
+        <td class="date-cell" style="border:1px solid #333; padding:3px 6px;"><span contenteditable="true" data-placeholder=""></span>月</td>
+        <td class="date-cell" style="border:1px solid #333; padding:3px 6px;"><span contenteditable="true" data-placeholder=""></span>日</td>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+<table>
+  <tbody><tr>
+    <td class="lbl">配送業者名</td>
+    <td class="val" colspan="3"><span contenteditable="true">伊藤商事有限会社</span></td>
+    <td class="lbl">作成者</td>
+    <td class="val"><span contenteditable="true" data-placeholder="氏名"></span></td>
+  </tr>
+  <tr>
+    <td class="lbl">方面名称</td>
+    <td class="val" colspan="3"><span contenteditable="true">千H4</span></td>
+    <td class="lbl">方面コード</td>
+    <td class="val"><span contenteditable="true">BH4</span></td>
+  </tr>
+  <tr>
+    <td class="lbl">配送先名</td>
+    <td class="val" colspan="3"><span contenteditable="true">一全</span>　<span contenteditable="true" style="color:#c00">柏</span></td>
+    <td class="lbl">配送先コード</td>
+    <td class="val"><span contenteditable="true">053-RIT</span></td>
+  </tr>
+  <tr>
+    <td class="lbl">住所</td>
+    <td class="val" colspan="5"><span contenteditable="true">千葉県 柏市藤ケ谷１０５９ー１</span></td>
+  </tr>
+  <tr>
+    <td class="lbl">TEL</td>
+    <td class="val" colspan="3"><span contenteditable="true" data-placeholder=""></span></td>
+    <td class="lbl">4t車可否</td>
+    <td class="val">
+      <span class="choice" data-group="4t">可</span>　　<span class="choice" data-group="4t">否</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="lbl">棚の預かり<br><span class="sub">（管理場所・預かり方法）</span></td>
+    <td colspan="3" style="font-size:11px;">
+      鍵　<span class="choice" data-group="key">無</span> <span class="choice" data-group="key">有</span> → 管理方法は（<span contenteditable="true" data-placeholder=""></span>）<br>
+      警備　<span class="choice" data-group="guard">無</span> <span class="choice" data-group="guard">有</span> → 管理方法は（<span contenteditable="true" data-placeholder=""></span>）
+    </td>
+    <td class="lbl">受領印</td>
+    <td class="val">
+      <span class="choice" data-group="stamp">もらえる</span>　/　<span class="choice" data-group="stamp">もらえない</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="lbl">時間指定</td>
+    <td colspan="3" style="font-size:11px;">
+      <span class="choice" data-group="time">無</span>　<span class="choice" data-group="time">有</span> →　
+      <span contenteditable="true" data-placeholder=""></span>時　
+      <span contenteditable="true" data-placeholder=""></span>分
+    </td>
+    <td class="lbl">標準配達時間<br><span class="sub">（到着時間）</span></td>
+    <td class="val">
+      <span contenteditable="true" data-placeholder=""></span> 時
+      <span contenteditable="true" data-placeholder=""></span> 分
+    </td>
+  </tr>
+  <tr>
+    <td class="lbl">仕分け条件</td>
+    <td colspan="5" style="font-size:11px;">
+      <span class="choice" data-group="sort">無</span>　<span class="choice" data-group="sort">有</span> → どのように　
+      <span class="choice" data-group="sort-type">物件別</span>　
+      <span class="choice" data-group="sort-type">アイテム別</span>　
+      その他（<span contenteditable="true" data-placeholder=""></span>）
+    </td>
+  </tr>
+</tbody></table>
+
+<h2 class="sec">荷降ろし場所・返品受取場所見取り図</h2>
+<div class="map-section">
+  <div class="map-toolbar">
+    <button type="button" class="map-tool active" data-tool="select">選択</button>
+    <button type="button" class="map-tool" data-tool="rect">四角</button>
+    <button type="button" class="map-tool" data-tool="line">線</button>
+    <button type="button" class="map-tool" data-tool="arrow">矢印</button>
+    <button type="button" class="map-tool" data-tool="ellipse">楕円</button>
+    <button type="button" class="map-tool" data-tool="text">文字</button>
+    <span class="sep"></span>
+    <button type="button" id="map-border">外枠</button>
+    <button type="button" id="map-delete">削除</button>
+    <button type="button" id="map-clear">全消去</button>
+    <span class="hint">移動/Delete</span>
+  </div>
+  <div class="maparea">
+    <svg id="map-svg" class="map-svg" viewBox="0 0 200 115" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#222"></path>
+        </marker>
+      </defs>
+      <rect x="0" y="0" width="200" height="115" fill="#fff" stroke="none"></rect>
+      <g id="draw-layer"></g>
+      <g id="preview-layer"></g>
+    </svg>
+  </div>
+</div>
+
+<h2 class="sec">注意厳守事項</h2>
+<table class="notes">
+  <tbody><tr>
+    <td class="h" width="33%">搬入時</td>
+    <td class="h" width="40%">荷降ろし時</td>
+    <td class="h">退出時</td>
+  </tr>
+  <tr>
+    <td><ul contenteditable="true" data-placeholder="・搬入時の注意事項"></ul></td>
+    <td><ul contenteditable="true" data-placeholder="・荷降ろし時の注意事項"></ul></td>
+    <td><ul contenteditable="true" data-placeholder="・退出時の注意事項"></ul></td>
+  </tr>
+</tbody></table>
+
+<div class="foot">配送先情報カード Sheet1</div>
+
+<script>
+document.querySelectorAll('.choice').forEach(function (el) {
+  el.addEventListener('click', function () {
+    var group = el.getAttribute('data-group');
+    document.querySelectorAll('.choice[data-group="' + group + '"]').forEach(function (sibling) {
+      sibling.classList.remove('selected');
+    });
+    el.classList.add('selected');
+  });
+});
+
+function duplicateForNewSite() {
+  var name = prompt('配送先名を入力（ファイル名に使います）', '');
+  if (!name) return;
+  var safe = name.replace(/[\\/:*?"<>|]/g, '_').trim();
+  if (!safe) return;
+  var html = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+  var blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = '配送先情報カード_' + safe + '.html';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+(function () {
+  var svg = document.getElementById('map-svg');
+  var layer = document.getElementById('draw-layer');
+  var preview = document.getElementById('preview-layer');
+  var tool = 'select';
+  var selected = null;
+  var drawing = false;
+  var startPt = null;
+  var dragOffset = null;
+  var FF = 'Hiragino Kaku Gothic ProN, Yu Gothic, sans-serif';
+
+  function pt(evt) {
+    var p = svg.createSVGPoint();
+    p.x = evt.clientX;
+    p.y = evt.clientY;
+    return p.matrixTransform(svg.getScreenCTM().inverse());
+  }
+
+  function clearPreview() {
+    while (preview.firstChild) preview.removeChild(preview.firstChild);
+  }
+
+  function deselect() {
+    if (selected) selected.classList.remove('selected');
+    selected = null;
+  }
+
+  function selectEl(el) {
+    deselect();
+    if (el && el.parentNode === layer) {
+      selected = el;
+      selected.classList.add('selected');
+    }
+  }
+
+  function makeRect(x, y, w, h, opts) {
+    opts = opts || {};
+    var r = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    r.setAttribute('x', Math.min(x, x + w));
+    r.setAttribute('y', Math.min(y, y + h));
+    r.setAttribute('width', Math.abs(w));
+    r.setAttribute('height', Math.abs(h));
+    r.setAttribute('fill', 'none');
+    r.setAttribute('stroke', opts.stroke || '#444');
+    r.setAttribute('stroke-width', opts.sw || '0.5');
+    return r;
+  }
+
+  function addRect(x, y, w, h, opts) {
+    var r = makeRect(x, y, w, h, opts);
+    layer.appendChild(r);
+    return r;
+  }
+
+  function makeLine(x1, y1, x2, y2, arrow) {
+    var l = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    l.setAttribute('x1', x1);
+    l.setAttribute('y1', y1);
+    l.setAttribute('x2', x2);
+    l.setAttribute('y2', y2);
+    l.setAttribute('stroke', arrow ? '#222' : '#444');
+    l.setAttribute('stroke-width', arrow ? '0.6' : '0.45');
+    if (arrow) l.setAttribute('marker-end', 'url(#ar)');
+    return l;
+  }
+
+  function addLine(x1, y1, x2, y2, arrow) {
+    var l = makeLine(x1, y1, x2, y2, arrow);
+    layer.appendChild(l);
+    return l;
+  }
+
+  function makeEllipse(cx, cy, rx, ry) {
+    var e = document.createElementNS('http://www.w3.org/2000/svg', 'ellipse');
+    e.setAttribute('cx', cx);
+    e.setAttribute('cy', cy);
+    e.setAttribute('rx', Math.abs(rx));
+    e.setAttribute('ry', Math.abs(ry));
+    e.setAttribute('fill', 'none');
+    e.setAttribute('stroke', '#333');
+    e.setAttribute('stroke-width', '0.5');
+    return e;
+  }
+
+  function addEllipse(cx, cy, rx, ry) {
+    var e = makeEllipse(cx, cy, rx, ry);
+    layer.appendChild(e);
+    return e;
+  }
+
+  function addText(x, y, label) {
+    var t = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    t.setAttribute('x', x);
+    t.setAttribute('y', y + 4);
+    t.setAttribute('font-size', '4.5');
+    t.setAttribute('text-anchor', 'middle');
+    t.setAttribute('font-family', FF);
+    t.setAttribute('fill', '#111');
+    t.textContent = label;
+    layer.appendChild(t);
+    return t;
+  }
+
+  function moveEl(el, dx, dy) {
+    var tag = el.tagName;
+    if (tag === 'rect') {
+      el.setAttribute('x', +el.getAttribute('x') + dx);
+      el.setAttribute('y', +el.getAttribute('y') + dy);
+    } else if (tag === 'line') {
+      el.setAttribute('x1', +el.getAttribute('x1') + dx);
+      el.setAttribute('y1', +el.getAttribute('y1') + dy);
+      el.setAttribute('x2', +el.getAttribute('x2') + dx);
+      el.setAttribute('y2', +el.getAttribute('y2') + dy);
+    } else if (tag === 'ellipse') {
+      el.setAttribute('cx', +el.getAttribute('cx') + dx);
+      el.setAttribute('cy', +el.getAttribute('cy') + dy);
+    } else if (tag === 'text') {
+      el.setAttribute('x', +el.getAttribute('x') + dx);
+      el.setAttribute('y', +el.getAttribute('y') + dy);
+    }
+  }
+
+  document.querySelectorAll('.map-tool').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.map-tool').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      tool = btn.getAttribute('data-tool');
+      deselect();
+      clearPreview();
+      svg.style.cursor = tool === 'select' ? 'default' : (tool === 'text' ? 'text' : 'crosshair');
+    });
+  });
+
+  document.getElementById('map-border').addEventListener('click', function () {
+    addLine(2, 2, 198, 2);
+    addLine(198, 2, 198, 113);
+    addLine(2, 113, 198, 113);
+    addLine(2, 2, 2, 113);
+  });
+
+  document.getElementById('map-delete').addEventListener('click', function () {
+    if (selected) {
+      selected.remove();
+      selected = null;
+    }
+  });
+
+  document.getElementById('map-clear').addEventListener('click', function () {
+    if (confirm('見取り図をすべて消しますか？')) {
+      layer.innerHTML = '';
+      deselect();
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if ((e.key === 'Delete' || e.key === 'Backspace') && selected && document.activeElement === document.body) {
+      selected.remove();
+      selected = null;
+      e.preventDefault();
+    }
+  });
+
+  svg.addEventListener('mousedown', function (e) {
+    if (e.button !== 0) return;
+    var p = pt(e);
+
+    if (tool === 'select') {
+      if (e.target.parentNode === layer) {
+        selectEl(e.target);
+        dragOffset = { x: p.x, y: p.y };
+        drawing = true;
+      } else {
+        deselect();
+      }
+      return;
+    }
+
+    if (tool === 'text') {
+      var label = prompt('ラベル文字を入力', '停車位置');
+      if (label) addText(p.x, p.y, label);
+      return;
+    }
+
+    startPt = p;
+    drawing = true;
+    clearPreview();
+  });
+
+  svg.addEventListener('mousemove', function (e) {
+    if (!drawing) return;
+    var p = pt(e);
+
+    if (tool === 'select' && selected && dragOffset) {
+      moveEl(selected, p.x - dragOffset.x, p.y - dragOffset.y);
+      dragOffset = { x: p.x, y: p.y };
+      return;
+    }
+
+    if (!startPt) return;
+    clearPreview();
+
+    if (tool === 'rect') {
+      preview.appendChild(makeRect(startPt.x, startPt.y, p.x - startPt.x, p.y - startPt.y));
+    } else if (tool === 'line' || tool === 'arrow') {
+      preview.appendChild(makeLine(startPt.x, startPt.y, p.x, p.y, tool === 'arrow'));
+    } else if (tool === 'ellipse') {
+      preview.appendChild(makeEllipse(
+        (startPt.x + p.x) / 2,
+        (startPt.y + p.y) / 2,
+        (p.x - startPt.x) / 2,
+        (p.y - startPt.y) / 2
+      ));
+    }
+  });
+
+  svg.addEventListener('mouseup', function (e) {
+    if (!drawing) return;
+    var p = pt(e);
+
+    if (tool === 'select') {
+      drawing = false;
+      dragOffset = null;
+      return;
+    }
+
+    if (!startPt) return;
+    clearPreview();
+
+    if (tool === 'rect') {
+      if (Math.abs(p.x - startPt.x) > 1 && Math.abs(p.y - startPt.y) > 1) {
+        selectEl(addRect(startPt.x, startPt.y, p.x - startPt.x, p.y - startPt.y));
+      }
+    } else if (tool === 'line' || tool === 'arrow') {
+      if (Math.hypot(p.x - startPt.x, p.y - startPt.y) > 1) {
+        selectEl(addLine(startPt.x, startPt.y, p.x, p.y, tool === 'arrow'));
+      }
+    } else if (tool === 'ellipse') {
+      if (Math.abs(p.x - startPt.x) > 1 && Math.abs(p.y - startPt.y) > 1) {
+        var cx = (startPt.x + p.x) / 2;
+        var cy = (startPt.y + p.y) / 2;
+        selectEl(addEllipse(cx, cy, (p.x - startPt.x) / 2, (p.y - startPt.y) / 2));
+      }
+    }
+
+    drawing = false;
+    startPt = null;
+  });
+
+  svg.addEventListener('dblclick', function (e) {
+    if (e.target.tagName === 'text' && e.target.parentNode === layer) {
+      var next = prompt('文字を編集', e.target.textContent);
+      if (next !== null) e.target.textContent = next;
+    }
+  });
+})();
+</script>
+
+
+</body></html>

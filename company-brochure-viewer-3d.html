@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>伊藤商事 会社案内（3Dめくり・案）</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Syne:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="company-brochure-viewer-3d.css">
+</head>
+<body>
+<div id="viewer-loading" class="viewer-loading">読み込み中…</div>
+
+<div class="viewer-app">
+  <header class="viewer-toolbar">
+    <div class="viewer-toolbar__left">
+      <button type="button" class="viewer-btn" id="btn-toc" aria-label="目次">☰</button>
+      <a class="viewer-link" href="company-brochure-viewer.html">平面見開き</a>
+    </div>
+    <div class="viewer-toolbar__center">
+      <button type="button" class="viewer-btn" id="btn-prev" aria-label="前へ">‹</button>
+      <span class="viewer-page-num" id="page-num">1 / 1</span>
+      <button type="button" class="viewer-btn" id="btn-next" aria-label="次へ">›</button>
+    </div>
+    <div class="viewer-toolbar__right">
+      <a class="viewer-link" href="company-brochure-viewer.html">平面見開き</a>
+    </div>
+  </header>
+
+  <div class="viewer-stage">
+    <div class="book-root" id="book-root">
+      <div class="book-spread" id="book-spread">
+        <div class="book-page book-page--left" id="book-left"></div>
+        <div class="book-spine" aria-hidden="true"></div>
+        <div class="book-page book-page--right" id="book-right"></div>
+      </div>
+    </div>
+  </div>
+  <p class="viewer-hint">参考：パンフレット専科「3Dデザイン」型のデジタル試作（枚数追加可）</p>
+</div>
+
+<div class="viewer-toc" id="viewer-toc">
+  <div class="viewer-toc__panel">
+    <h2>目次 <button type="button" class="viewer-btn" id="btn-toc-close" aria-label="閉じる">×</button></h2>
+    <ul id="toc-list"></ul>
+  </div>
+</div>
+
+<script src="company-brochure-booklet.js"></script>
+<script src="company-brochure-viewer-3d.js"></script>
+</body>
+</html>
