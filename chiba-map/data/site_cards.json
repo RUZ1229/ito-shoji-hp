@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-10-20",
+  "generated": "2026-10-20T-fix-akiyama-card",
   "sites": {
     "site_102": {
       "title": "一全",
@@ -173,6 +173,7 @@
           "value": "千葉県 習志野市東習志野６ー１６ー３１"
         }
       ],
+      "card_html": "data/cards/site_101/card.html",
       "photos": [],
       "aliases_note": "秋山木材産業（株）各種部門表記 等（map_data aliases 参照）"
     }
