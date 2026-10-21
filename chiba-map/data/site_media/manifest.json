@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-10-21T08:07:16.478Z",
+  "updated": "2026-10-21T08:07:27.940Z",
   "items": [
     {
       "id": "site_190_1791265357408_y0bid0e",
@@ -240,16 +240,6 @@
       "label": "納品場所②",
       "name": "納品場所②.pdf",
       "addedAt": "2026-10-14T02:53:38.238Z",
-      "by": "地図ユーザー"
-    },
-    {
-      "id": "site_28_1792569709078_2x8aora",
-      "siteId": "site_28",
-      "path": "data/site_media/files/site_28/site_28_1792569709078_2x8aora.jpg",
-      "mime": "image/jpeg",
-      "label": "Screenshot 2026-10-21 164843",
-      "name": "Screenshot 2026-10-21 164843.jpg",
-      "addedAt": "2026-10-21T08:01:49.107Z",
       "by": "地図ユーザー"
     },
     {
