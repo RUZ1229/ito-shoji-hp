@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-21T15:10:17",
+  "generated": "2026-10-21T17:26:21",
   "map_variant": "社内",
   "map_variant_label": "正本（8765）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
@@ -152,7 +152,7 @@
       "visit_count": 51,
       "first_visit": "2026-06-02",
       "last_visit": "2026-10-21",
-      "weight_kg": 2381,
+      "weight_kg": 2420,
       "weight_months": [
         {
           "month": "2026-10",
@@ -189,7 +189,7 @@
       "visit_count": 84,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 12971,
+      "weight_kg": 13048,
       "weight_months": [
         {
           "month": "2026-10",
@@ -312,7 +312,7 @@
       "visit_count": 29,
       "first_visit": "2026-06-02",
       "last_visit": "2026-10-21",
-      "weight_kg": 271,
+      "weight_kg": 288,
       "weight_months": [
         {
           "month": "2026-10",
@@ -421,7 +421,7 @@
       "visit_count": 56,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 1558,
+      "weight_kg": 1591,
       "weight_months": [
         {
           "month": "2026-10",
@@ -571,7 +571,7 @@
       "visit_count": 83,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 3117,
+      "weight_kg": 3290,
       "weight_months": [
         {
           "month": "2026-10",
@@ -615,7 +615,7 @@
       "visit_count": 80,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 4109,
+      "weight_kg": 4368,
       "weight_months": [
         {
           "month": "2026-10",
@@ -657,7 +657,7 @@
       "visit_count": 84,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 5142,
+      "weight_kg": 5200,
       "weight_months": [
         {
           "month": "2026-10",
@@ -696,7 +696,7 @@
       "visit_count": 57,
       "first_visit": "2026-06-02",
       "last_visit": "2026-10-21",
-      "weight_kg": 1809,
+      "weight_kg": 1811,
       "weight_months": [
         {
           "month": "2026-10",
@@ -777,7 +777,7 @@
       "visit_count": 84,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 8627,
+      "weight_kg": 8653,
       "weight_months": [
         {
           "month": "2026-10",
@@ -817,7 +817,7 @@
       "visit_count": 72,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 2385,
+      "weight_kg": 2875,
       "weight_months": [
         {
           "month": "2026-10",
@@ -856,7 +856,7 @@
       "visit_count": 82,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 3385,
+      "weight_kg": 3564,
       "weight_months": [
         {
           "month": "2026-10",
@@ -906,7 +906,7 @@
       "visit_count": 29,
       "first_visit": "2026-06-03",
       "last_visit": "2026-10-21",
-      "weight_kg": 577,
+      "weight_kg": 617,
       "weight_months": [
         {
           "month": "2026-10",
@@ -942,7 +942,7 @@
       "visit_count": 74,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 1961,
+      "weight_kg": 2024,
       "weight_months": [
         {
           "month": "2026-10",
@@ -980,7 +980,7 @@
       "visit_count": 0,
       "first_visit": null,
       "last_visit": null,
-      "weight_kg": 1,
+      "weight_kg": 2,
       "weight_months": [
         {
           "month": "2026-10",
@@ -1010,7 +1010,7 @@
       "visit_count": 53,
       "first_visit": "2026-06-02",
       "last_visit": "2026-10-21",
-      "weight_kg": 1578,
+      "weight_kg": 1670,
       "weight_months": [
         {
           "month": "2026-10",
@@ -1093,7 +1093,7 @@
       "visit_count": 64,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 3527,
+      "weight_kg": 3657,
       "weight_months": [
         {
           "month": "2026-10",
@@ -1136,7 +1136,7 @@
       "visit_count": 67,
       "first_visit": "2026-06-02",
       "last_visit": "2026-10-21",
-      "weight_kg": 1041,
+      "weight_kg": 1058,
       "weight_months": [
         {
           "month": "2026-10",
@@ -1210,7 +1210,7 @@
       "visit_count": 53,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 945,
+      "weight_kg": 970,
       "weight_months": [
         {
           "month": "2026-10",
@@ -1321,7 +1321,7 @@
       "visit_count": 71,
       "first_visit": "2026-06-02",
       "last_visit": "2026-10-21",
-      "weight_kg": 3809,
+      "weight_kg": 3840,
       "weight_months": [
         {
           "month": "2026-10",
@@ -1361,7 +1361,7 @@
       "visit_count": 79,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 2759,
+      "weight_kg": 2921,
       "weight_months": [
         {
           "month": "2026-10",
@@ -1437,7 +1437,7 @@
       "visit_count": 77,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 4934,
+      "weight_kg": 5262,
       "weight_months": [
         {
           "month": "2026-10",
@@ -1476,7 +1476,7 @@
       "visit_count": 70,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 2769,
+      "weight_kg": 2771,
       "weight_months": [
         {
           "month": "2026-10",
@@ -1517,7 +1517,7 @@
       "visit_count": 58,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 1150,
+      "weight_kg": 1155,
       "weight_months": [
         {
           "month": "2026-10",
@@ -1559,7 +1559,7 @@
       "visit_count": 31,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 109,
+      "weight_kg": 114,
       "weight_months": [
         {
           "month": "2026-10",
@@ -1598,7 +1598,7 @@
       "visit_count": 61,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 780,
+      "weight_kg": 843,
       "weight_months": [
         {
           "month": "2026-10",
@@ -1637,7 +1637,7 @@
       "visit_count": 25,
       "first_visit": "2026-06-05",
       "last_visit": "2026-10-21",
-      "weight_kg": 393,
+      "weight_kg": 394,
       "weight_months": [
         {
           "month": "2026-10",
@@ -1712,7 +1712,7 @@
       "visit_count": 83,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 7294,
+      "weight_kg": 7493,
       "weight_months": [
         {
           "month": "2026-10",
@@ -1765,7 +1765,7 @@
       "visit_count": 54,
       "first_visit": "2026-06-04",
       "last_visit": "2026-10-21",
-      "weight_kg": 1906,
+      "weight_kg": 1945,
       "weight_months": [
         {
           "month": "2026-10",
@@ -1805,7 +1805,7 @@
       "visit_count": 75,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 2645,
+      "weight_kg": 2674,
       "weight_months": [
         {
           "month": "2026-10",
@@ -1916,7 +1916,7 @@
       "visit_count": 28,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 322,
+      "weight_kg": 332,
       "weight_months": [
         {
           "month": "2026-10",
@@ -1993,7 +1993,7 @@
       "visit_count": 50,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 2119,
+      "weight_kg": 2583,
       "weight_months": [
         {
           "month": "2026-10",
@@ -2033,7 +2033,7 @@
       "visit_count": 83,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 3187,
+      "weight_kg": 3213,
       "weight_months": [
         {
           "month": "2026-10",
@@ -2081,7 +2081,7 @@
       "visit_count": 66,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 3524,
+      "weight_kg": 3678,
       "weight_months": [
         {
           "month": "2026-10",
@@ -2124,7 +2124,7 @@
       "visit_count": 55,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 2726,
+      "weight_kg": 2727,
       "weight_months": [
         {
           "month": "2026-10",
@@ -2162,7 +2162,7 @@
       "visit_count": 25,
       "first_visit": "2026-06-08",
       "last_visit": "2026-10-21",
-      "weight_kg": 165,
+      "weight_kg": 178,
       "weight_months": [
         {
           "month": "2026-10",
@@ -2200,7 +2200,7 @@
       "visit_count": 72,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 2804,
+      "weight_kg": 2813,
       "weight_months": [
         {
           "month": "2026-10",
@@ -2239,7 +2239,7 @@
       "visit_count": 84,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 9200,
+      "weight_kg": 9513,
       "weight_months": [
         {
           "month": "2026-10",
@@ -2369,7 +2369,7 @@
       "visit_count": 69,
       "first_visit": "2026-06-02",
       "last_visit": "2026-10-21",
-      "weight_kg": 3530,
+      "weight_kg": 3537,
       "weight_months": [
         {
           "month": "2026-10",
@@ -2408,7 +2408,7 @@
       "visit_count": 84,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 26145,
+      "weight_kg": 27409,
       "weight_months": [
         {
           "month": "2026-10",
@@ -2567,7 +2567,7 @@
       "visit_count": 44,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 3194,
+      "weight_kg": 4648,
       "weight_months": [
         {
           "month": "2026-10",
@@ -2610,7 +2610,7 @@
       "visit_count": 67,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 2077,
+      "weight_kg": 2162,
       "weight_months": [
         {
           "month": "2026-10",
@@ -2653,7 +2653,7 @@
       "visit_count": 51,
       "first_visit": "2026-06-02",
       "last_visit": "2026-10-21",
-      "weight_kg": 760,
+      "weight_kg": 808,
       "weight_months": [
         {
           "month": "2026-10",
@@ -2688,7 +2688,7 @@
       "visit_count": 75,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 1248,
+      "weight_kg": 1292,
       "weight_months": [
         {
           "month": "2026-10",
@@ -2730,7 +2730,7 @@
       "visit_count": 66,
       "first_visit": "2026-06-02",
       "last_visit": "2026-10-21",
-      "weight_kg": 1007,
+      "weight_kg": 1009,
       "weight_months": [
         {
           "month": "2026-10",
@@ -2770,7 +2770,7 @@
       "visit_count": 76,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 1792,
+      "weight_kg": 1794,
       "weight_months": [
         {
           "month": "2026-10",
@@ -2811,7 +2811,7 @@
       "visit_count": 84,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 5859,
+      "weight_kg": 6204,
       "weight_months": [
         {
           "month": "2026-10",
@@ -2861,7 +2861,7 @@
       "visit_count": 83,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 6224,
+      "weight_kg": 6918,
       "weight_months": [
         {
           "month": "2026-10",
@@ -2905,7 +2905,7 @@
       "visit_count": 38,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 1346,
+      "weight_kg": 1365,
       "weight_months": [
         {
           "month": "2026-10",
@@ -2947,7 +2947,7 @@
       "visit_count": 77,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 5673,
+      "weight_kg": 5680,
       "weight_months": [
         {
           "month": "2026-10",
@@ -2989,7 +2989,7 @@
       "visit_count": 79,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 4855,
+      "weight_kg": 5055,
       "weight_months": [
         {
           "month": "2026-10",
@@ -3029,7 +3029,7 @@
       "visit_count": 80,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 2515,
+      "weight_kg": 2779,
       "weight_months": [
         {
           "month": "2026-10",
@@ -3107,7 +3107,7 @@
       "visit_count": 58,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 1143,
+      "weight_kg": 1239,
       "weight_months": [
         {
           "month": "2026-10",
@@ -3146,7 +3146,7 @@
       "visit_count": 84,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 35920,
+      "weight_kg": 37322,
       "weight_months": [
         {
           "month": "2026-10",
@@ -3189,7 +3189,7 @@
       "visit_count": 78,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 4326,
+      "weight_kg": 4432,
       "weight_months": [
         {
           "month": "2026-10",
@@ -3274,7 +3274,7 @@
       "visit_count": 84,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 6563,
+      "weight_kg": 6672,
       "weight_months": [
         {
           "month": "2026-10",
@@ -3323,7 +3323,7 @@
       "visit_count": 83,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 2706,
+      "weight_kg": 2728,
       "weight_months": [
         {
           "month": "2026-10",
@@ -3362,7 +3362,7 @@
       "visit_count": 84,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 3381,
+      "weight_kg": 3431,
       "weight_months": [
         {
           "month": "2026-10",
@@ -3415,7 +3415,7 @@
       "visit_count": 81,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 4096,
+      "weight_kg": 4264,
       "weight_months": [
         {
           "month": "2026-10",
@@ -3455,7 +3455,7 @@
       "visit_count": 84,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 5618,
+      "weight_kg": 5824,
       "weight_months": [
         {
           "month": "2026-10",
@@ -3537,7 +3537,7 @@
       "visit_count": 38,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 1160,
+      "weight_kg": 1189,
       "weight_months": [
         {
           "month": "2026-10",
@@ -3612,7 +3612,7 @@
       "visit_count": 84,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 6073,
+      "weight_kg": 7318,
       "weight_months": [
         {
           "month": "2026-10",
@@ -3687,7 +3687,7 @@
       "visit_count": 76,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 2513,
+      "weight_kg": 2645,
       "weight_months": [
         {
           "month": "2026-10",
@@ -3725,7 +3725,7 @@
       "visit_count": 77,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 2813,
+      "weight_kg": 3056,
       "weight_months": [
         {
           "month": "2026-10",
@@ -3807,7 +3807,7 @@
       "visit_count": 84,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 4816,
+      "weight_kg": 4986,
       "weight_months": [
         {
           "month": "2026-10",
@@ -3860,7 +3860,7 @@
       "visit_count": 67,
       "first_visit": "2026-06-02",
       "last_visit": "2026-10-21",
-      "weight_kg": 1313,
+      "weight_kg": 1464,
       "weight_months": [
         {
           "month": "2026-10",
@@ -3899,7 +3899,7 @@
       "visit_count": 26,
       "first_visit": "2026-06-08",
       "last_visit": "2026-10-21",
-      "weight_kg": 108,
+      "weight_kg": 110,
       "weight_months": [
         {
           "month": "2026-10",
@@ -3937,7 +3937,7 @@
       "visit_count": 84,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 8484,
+      "weight_kg": 8687,
       "weight_months": [
         {
           "month": "2026-10",
@@ -4000,7 +4000,7 @@
       "visit_count": 30,
       "first_visit": "2026-06-04",
       "last_visit": "2026-10-21",
-      "weight_kg": 997,
+      "weight_kg": 1103,
       "weight_months": [
         {
           "month": "2026-10",
@@ -4038,7 +4038,7 @@
       "visit_count": 52,
       "first_visit": "2026-06-04",
       "last_visit": "2026-10-21",
-      "weight_kg": 2116,
+      "weight_kg": 2438,
       "weight_months": [
         {
           "month": "2026-10",
@@ -4080,7 +4080,7 @@
       "visit_count": 84,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 26201,
+      "weight_kg": 26859,
       "weight_months": [
         {
           "month": "2026-10",
@@ -4126,7 +4126,7 @@
       "visit_count": 84,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 39367,
+      "weight_kg": 40703,
       "weight_months": [
         {
           "month": "2026-10",
@@ -4200,7 +4200,7 @@
       "visit_count": 71,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 7332,
+      "weight_kg": 7537,
       "weight_months": [
         {
           "month": "2026-10",
@@ -4247,7 +4247,7 @@
       "visit_count": 84,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 24328,
+      "weight_kg": 24775,
       "weight_months": [
         {
           "month": "2026-10",
@@ -4293,7 +4293,7 @@
       "visit_count": 84,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 8594,
+      "weight_kg": 8648,
       "weight_months": [
         {
           "month": "2026-10",
@@ -4341,7 +4341,7 @@
       "visit_count": 84,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 65478,
+      "weight_kg": 68316,
       "weight_months": [
         {
           "month": "2026-10",
@@ -4410,7 +4410,7 @@
       "visit_count": 84,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 8499,
+      "weight_kg": 8594,
       "weight_months": [
         {
           "month": "2026-10",
@@ -4455,7 +4455,7 @@
       "visit_count": 51,
       "first_visit": "2026-06-03",
       "last_visit": "2026-10-21",
-      "weight_kg": 747,
+      "weight_kg": 928,
       "weight_months": [
         {
           "month": "2026-10",
@@ -4493,7 +4493,7 @@
       "visit_count": 52,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 547,
+      "weight_kg": 559,
       "weight_months": [
         {
           "month": "2026-10",
@@ -4531,7 +4531,7 @@
       "visit_count": 32,
       "first_visit": "2026-06-03",
       "last_visit": "2026-10-21",
-      "weight_kg": 232,
+      "weight_kg": 286,
       "weight_months": [
         {
           "month": "2026-10",
@@ -4569,7 +4569,7 @@
       "visit_count": 82,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 6589,
+      "weight_kg": 6619,
       "weight_months": [
         {
           "month": "2026-10",
@@ -4610,7 +4610,7 @@
       "visit_count": 70,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 2162,
+      "weight_kg": 2386,
       "weight_months": [
         {
           "month": "2026-10",
@@ -4651,7 +4651,7 @@
       "visit_count": 80,
       "first_visit": "2026-06-02",
       "last_visit": "2026-10-21",
-      "weight_kg": 3819,
+      "weight_kg": 4581,
       "weight_months": [
         {
           "month": "2026-10",
@@ -4738,7 +4738,7 @@
       "visit_count": 77,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 3199,
+      "weight_kg": 3495,
       "weight_months": [
         {
           "month": "2026-10",
@@ -4783,7 +4783,7 @@
       "visit_count": 84,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 5179,
+      "weight_kg": 5451,
       "weight_months": [
         {
           "month": "2026-10",
@@ -4827,7 +4827,7 @@
       "visit_count": 83,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 23896,
+      "weight_kg": 25533,
       "weight_months": [
         {
           "month": "2026-10",
@@ -5002,7 +5002,7 @@
       "visit_count": 32,
       "first_visit": "2026-06-02",
       "last_visit": "2026-10-21",
-      "weight_kg": 475,
+      "weight_kg": 485,
       "weight_months": [
         {
           "month": "2026-10",
@@ -5157,7 +5157,7 @@
       "visit_count": 43,
       "first_visit": "2026-06-02",
       "last_visit": "2026-10-21",
-      "weight_kg": 1892,
+      "weight_kg": 2190,
       "weight_months": [
         {
           "month": "2026-10",
@@ -5235,7 +5235,7 @@
       "visit_count": 22,
       "first_visit": "2026-06-08",
       "last_visit": "2026-10-21",
-      "weight_kg": 137,
+      "weight_kg": 141,
       "weight_months": [
         {
           "month": "2026-10",
@@ -5272,7 +5272,7 @@
       "visit_count": 17,
       "first_visit": "2026-06-02",
       "last_visit": "2026-10-21",
-      "weight_kg": 99,
+      "weight_kg": 151,
       "weight_months": [
         {
           "month": "2026-09",
@@ -5324,7 +5324,7 @@
       "visit_count": 18,
       "first_visit": "2026-06-05",
       "last_visit": "2026-10-21",
-      "weight_kg": 475,
+      "weight_kg": 476,
       "weight_months": [
         {
           "month": "2026-10",
@@ -5359,7 +5359,7 @@
       "visit_count": 71,
       "first_visit": "2026-06-02",
       "last_visit": "2026-10-21",
-      "weight_kg": 4361,
+      "weight_kg": 4366,
       "weight_months": [
         {
           "month": "2026-10",
@@ -5556,7 +5556,7 @@
       "visit_count": 6,
       "first_visit": "2026-07-08",
       "last_visit": "2026-10-21",
-      "weight_kg": 10,
+      "weight_kg": 24,
       "weight_months": [
         {
           "month": "2026-10",
@@ -5623,7 +5623,7 @@
       "visit_count": 25,
       "first_visit": "2026-06-04",
       "last_visit": "2026-10-21",
-      "weight_kg": 41,
+      "weight_kg": 60,
       "weight_months": [
         {
           "month": "2026-10",
@@ -5771,7 +5771,7 @@
       "visit_count": 80,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 4214,
+      "weight_kg": 4215,
       "weight_months": [
         {
           "month": "2026-10",
@@ -5810,7 +5810,7 @@
       "visit_count": 74,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 7162,
+      "weight_kg": 7418,
       "weight_months": [
         {
           "month": "2026-10",
@@ -5994,7 +5994,7 @@
       "visit_count": 43,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 1587,
+      "weight_kg": 2158,
       "weight_months": [
         {
           "month": "2026-10",
@@ -6033,7 +6033,7 @@
       "visit_count": 71,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 3691,
+      "weight_kg": 3861,
       "weight_months": [
         {
           "month": "2026-10",
@@ -6074,7 +6074,7 @@
       "visit_count": 18,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 2,
+      "weight_kg": 5,
       "weight_months": [
         {
           "month": "2026-09",
@@ -6140,7 +6140,7 @@
       "visit_count": 57,
       "first_visit": "2026-06-02",
       "last_visit": "2026-10-21",
-      "weight_kg": 1260,
+      "weight_kg": 1261,
       "weight_months": [
         {
           "month": "2026-10",
@@ -6213,7 +6213,7 @@
       "visit_count": 48,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 576,
+      "weight_kg": 577,
       "weight_months": [
         {
           "month": "2026-10",
@@ -6250,7 +6250,7 @@
       "visit_count": 73,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 2853,
+      "weight_kg": 3292,
       "weight_months": [
         {
           "month": "2026-10",
@@ -6396,7 +6396,7 @@
       "visit_count": 35,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 407,
+      "weight_kg": 409,
       "weight_months": [
         {
           "month": "2026-10",
@@ -6561,7 +6561,7 @@
       "visit_count": 58,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 1259,
+      "weight_kg": 1308,
       "weight_months": [
         {
           "month": "2026-10",
@@ -6600,7 +6600,7 @@
       "visit_count": 20,
       "first_visit": "2026-06-09",
       "last_visit": "2026-10-21",
-      "weight_kg": 687,
+      "weight_kg": 747,
       "weight_months": [
         {
           "month": "2026-10",
@@ -6734,7 +6734,7 @@
       "visit_count": 26,
       "first_visit": "2026-06-02",
       "last_visit": "2026-10-21",
-      "weight_kg": 356,
+      "weight_kg": 377,
       "weight_months": [
         {
           "month": "2026-10",
@@ -6912,7 +6912,7 @@
       "visit_count": 26,
       "first_visit": "2026-06-04",
       "last_visit": "2026-10-21",
-      "weight_kg": 460,
+      "weight_kg": 470,
       "weight_months": [
         {
           "month": "2026-10",
@@ -7098,7 +7098,7 @@
       "visit_count": 15,
       "first_visit": "2026-06-02",
       "last_visit": "2026-10-21",
-      "weight_kg": 74,
+      "weight_kg": 106,
       "weight_months": [
         {
           "month": "2026-10",
@@ -7136,7 +7136,7 @@
       "visit_count": 38,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 780,
+      "weight_kg": 1059,
       "weight_months": [
         {
           "month": "2026-10",
@@ -7174,7 +7174,7 @@
       "visit_count": 20,
       "first_visit": "2026-06-09",
       "last_visit": "2026-10-21",
-      "weight_kg": 239,
+      "weight_kg": 300,
       "weight_months": [
         {
           "month": "2026-10",
@@ -7211,7 +7211,7 @@
       "visit_count": 34,
       "first_visit": "2026-06-03",
       "last_visit": "2026-10-21",
-      "weight_kg": 230,
+      "weight_kg": 231,
       "weight_months": [
         {
           "month": "2026-10",
@@ -7302,7 +7302,7 @@
       "visit_count": 47,
       "first_visit": "2026-06-03",
       "last_visit": "2026-10-21",
-      "weight_kg": 479,
+      "weight_kg": 567,
       "weight_months": [
         {
           "month": "2026-10",
@@ -7377,7 +7377,7 @@
       "visit_count": 49,
       "first_visit": "2026-06-03",
       "last_visit": "2026-10-21",
-      "weight_kg": 2826,
+      "weight_kg": 2841,
       "weight_months": [
         {
           "month": "2026-10",
@@ -7414,7 +7414,7 @@
       "visit_count": 43,
       "first_visit": "2026-06-02",
       "last_visit": "2026-10-21",
-      "weight_kg": 1865,
+      "weight_kg": 2303,
       "weight_months": [
         {
           "month": "2026-10",
@@ -7517,7 +7517,7 @@
       "visit_count": 27,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 161,
+      "weight_kg": 168,
       "weight_months": [
         {
           "month": "2026-10",
@@ -7554,7 +7554,7 @@
       "visit_count": 16,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 8,
+      "weight_kg": 9,
       "weight_months": [
         {
           "month": "2026-10",
@@ -7591,7 +7591,7 @@
       "visit_count": 43,
       "first_visit": "2026-06-05",
       "last_visit": "2026-10-21",
-      "weight_kg": 5050,
+      "weight_kg": 5348,
       "weight_months": [
         {
           "month": "2026-10",
@@ -7861,7 +7861,7 @@
       "visit_count": 16,
       "first_visit": "2026-06-11",
       "last_visit": "2026-10-21",
-      "weight_kg": 499,
+      "weight_kg": 504,
       "weight_months": [
         {
           "month": "2026-10",
@@ -8021,7 +8021,7 @@
       "visit_count": 15,
       "first_visit": "2026-06-02",
       "last_visit": "2026-10-21",
-      "weight_kg": 257,
+      "weight_kg": 461,
       "weight_months": [
         {
           "month": "2026-09",
@@ -8213,7 +8213,7 @@
       "visit_count": 26,
       "first_visit": "2026-06-10",
       "last_visit": "2026-10-21",
-      "weight_kg": 355,
+      "weight_kg": 381,
       "weight_months": [
         {
           "month": "2026-10",
@@ -8324,7 +8324,7 @@
       "visit_count": 39,
       "first_visit": "2026-06-02",
       "last_visit": "2026-10-21",
-      "weight_kg": 1714,
+      "weight_kg": 1715,
       "weight_months": [
         {
           "month": "2026-10",
@@ -8650,7 +8650,7 @@
       "visit_count": 32,
       "first_visit": "2026-06-02",
       "last_visit": "2026-10-21",
-      "weight_kg": 980,
+      "weight_kg": 999,
       "weight_months": [
         {
           "month": "2026-10",
@@ -8757,7 +8757,7 @@
       "visit_count": 35,
       "first_visit": "2026-06-04",
       "last_visit": "2026-10-21",
-      "weight_kg": 695,
+      "weight_kg": 716,
       "weight_months": [
         {
           "month": "2026-10",
@@ -8827,7 +8827,7 @@
       "visit_count": 25,
       "first_visit": "2026-06-08",
       "last_visit": "2026-10-21",
-      "weight_kg": 1349,
+      "weight_kg": 1353,
       "weight_months": [
         {
           "month": "2026-10",
@@ -8865,7 +8865,7 @@
       "visit_count": 25,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 662,
+      "weight_kg": 663,
       "weight_months": [
         {
           "month": "2026-10",
@@ -8900,7 +8900,7 @@
       "visit_count": 19,
       "first_visit": "2026-06-03",
       "last_visit": "2026-10-21",
-      "weight_kg": 349,
+      "weight_kg": 422,
       "weight_months": [
         {
           "month": "2026-10",
@@ -8938,7 +8938,7 @@
       "visit_count": 8,
       "first_visit": "2026-06-19",
       "last_visit": "2026-10-21",
-      "weight_kg": 84,
+      "weight_kg": 101,
       "weight_months": [
         {
           "month": "2026-10",
@@ -9175,7 +9175,7 @@
       "visit_count": 18,
       "first_visit": "2026-05-25",
       "last_visit": "2026-10-21",
-      "weight_kg": 1242,
+      "weight_kg": 1243,
       "weight_months": [
         {
           "month": "2026-10",
@@ -9727,7 +9727,7 @@
       "visit_count": 16,
       "first_visit": "2026-06-10",
       "last_visit": "2026-10-21",
-      "weight_kg": 87,
+      "weight_kg": 89,
       "weight_months": [
         {
           "month": "2026-10",
@@ -10306,7 +10306,7 @@
       "visit_count": 11,
       "first_visit": "2026-06-04",
       "last_visit": "2026-10-21",
-      "weight_kg": 708,
+      "weight_kg": 712,
       "weight_months": [
         {
           "month": "2026-10",
@@ -10621,7 +10621,7 @@
       "visit_count": 13,
       "first_visit": "2026-07-09",
       "last_visit": "2026-10-21",
-      "weight_kg": 197,
+      "weight_kg": 201,
       "weight_months": [
         {
           "month": "2026-10",
@@ -10788,7 +10788,7 @@
       "visit_count": 5,
       "first_visit": "2026-07-15",
       "last_visit": "2026-10-21",
-      "weight_kg": 1,
+      "weight_kg": 4,
       "weight_months": [
         {
           "month": "2026-10",
@@ -10841,7 +10841,7 @@
       "visit_count": 7,
       "first_visit": "2026-07-16",
       "last_visit": "2026-10-21",
-      "weight_kg": 73,
+      "weight_kg": 106,
       "weight_months": [
         {
           "month": "2026-10",
@@ -10876,7 +10876,7 @@
       "visit_count": 2,
       "first_visit": "2026-07-22",
       "last_visit": "2026-10-21",
-      "weight_kg": 0,
+      "weight_kg": 3,
       "weight_months": [],
       "delivery_code": "053DTE",
       "master_course": "柏3V",
@@ -11393,7 +11393,7 @@
       "visit_count": 9,
       "first_visit": "2026-09-16",
       "last_visit": "2026-10-21",
-      "weight_kg": 1088,
+      "weight_kg": 1089,
       "weight_months": [
         {
           "month": "2026-10",
@@ -11601,7 +11601,7 @@
       "visit_count": 2,
       "first_visit": "2026-10-07",
       "last_visit": "2026-10-21",
-      "weight_kg": 12,
+      "weight_kg": 26,
       "weight_months": [
         {
           "month": "2026-10",
@@ -11952,7 +11952,7 @@
       "visit_count": 1,
       "first_visit": "2026-10-21",
       "last_visit": "2026-10-21",
-      "weight_kg": 0,
+      "weight_kg": 61,
       "weight_months": [],
       "delivery_code": "290AV0",
       "master_course": "千Dチ",
@@ -11974,7 +11974,7 @@
       "visit_count": 1,
       "first_visit": "2026-10-21",
       "last_visit": "2026-10-21",
-      "weight_kg": 0,
+      "weight_kg": 51,
       "weight_months": [],
       "delivery_code": "2907TH",
       "master_course": "房館1",
@@ -11996,7 +11996,7 @@
       "visit_count": 1,
       "first_visit": "2026-10-21",
       "last_visit": "2026-10-21",
-      "weight_kg": 0,
+      "weight_kg": 45,
       "weight_months": [],
       "delivery_code": "053FK1",
       "master_course": "房勝2",
@@ -12018,7 +12018,7 @@
       "visit_count": 1,
       "first_visit": "2026-10-21",
       "last_visit": "2026-10-21",
-      "weight_kg": 0,
+      "weight_kg": 68,
       "weight_months": [],
       "delivery_code": "053KMT",
       "master_course": "房木4",
@@ -12070,7 +12070,7 @@
   "visit_period_start": "2026-05-25",
   "visit_period_end": "2026-10-21",
   "weight_period_start": "2026-09-01",
-  "weight_period_end": "2026-10-21",
+  "weight_period_end": "2026-10-22",
   "course_merges": {
     "柏2T.5O": {
       "label": "柏2T+5O（4t）",
