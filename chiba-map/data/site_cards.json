@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "generated": "2026-10-20T-fix-akiyama-card",
+  "generated": "2026-09-07",
   "sites": {
-    "site_102": {
+    "site_101": {
       "title": "一全",
       "subtitle": "（株）一全 柏営業所",
       "course": "千H4",
       "address": "千葉県 柏市 藤ケ谷１０５９ー１",
-      "card_html": "data/cards/site_102/card.html",
+      "card_html": "data/cards/site_101/card.html",
       "fields": [
         {
           "label": "配送先名",
@@ -66,116 +66,89 @@
         {
           "id": "haisou_card_01",
           "label": "配送カード（見取り図①）",
-          "src": "data/cards/site_102/photos/haisou_card_01.png",
+          "src": "data/cards/site_101/photos/haisou_card_01.png",
           "memo": ""
         },
         {
           "id": "haisou_card_kashiwa_02",
           "label": "配送カード（見取り図②）",
-          "src": "data/cards/site_102/photos/haisou_card_kashiwa_02.png",
+          "src": "data/cards/site_101/photos/haisou_card_kashiwa_02.png",
           "memo": ""
         },
         {
           "id": "genba_01",
           "label": "荷降ろし場・入口",
-          "src": "data/cards/site_102/photos/genba_01.png",
+          "src": "data/cards/site_101/photos/genba_01.png",
           "memo": ""
         },
         {
           "id": "genba_02",
           "label": "荷降ろし場・入口②",
-          "src": "data/cards/site_102/photos/genba_02.png",
+          "src": "data/cards/site_101/photos/genba_02.png",
           "memo": ""
         },
         {
           "id": "genba_03",
           "label": "部品棚 ①",
-          "src": "data/cards/site_102/photos/genba_03.png",
+          "src": "data/cards/site_101/photos/genba_03.png",
           "memo": ""
         },
         {
           "id": "genba_04",
           "label": "窓・障子②",
-          "src": "data/cards/site_102/photos/genba_04.png",
+          "src": "data/cards/site_101/photos/genba_04.png",
           "memo": ""
         },
         {
           "id": "genba_05",
           "label": "枠・シャッター枠③",
-          "src": "data/cards/site_102/photos/genba_05.png",
+          "src": "data/cards/site_101/photos/genba_05.png",
           "memo": ""
         },
         {
           "id": "genba_06",
           "label": "玄関・ドア枠④",
-          "src": "data/cards/site_102/photos/genba_06.png",
+          "src": "data/cards/site_101/photos/genba_06.png",
           "memo": ""
         },
         {
           "id": "genba_07",
           "label": "返品置き場⑤",
-          "src": "data/cards/site_102/photos/genba_07.png",
+          "src": "data/cards/site_101/photos/genba_07.png",
           "memo": ""
         },
         {
           "id": "genba_08",
           "label": "フォーク⑥",
-          "src": "data/cards/site_102/photos/genba_08.png",
+          "src": "data/cards/site_101/photos/genba_08.png",
           "memo": ""
         },
         {
           "id": "genba_09",
           "label": "シャッター⑦",
-          "src": "data/cards/site_102/photos/genba_09.png",
+          "src": "data/cards/site_101/photos/genba_09.png",
           "memo": ""
         },
         {
           "id": "genba_10",
           "label": "シャッター本体・レールなど⑧",
-          "src": "data/cards/site_102/photos/genba_10.png",
+          "src": "data/cards/site_101/photos/genba_10.png",
           "memo": ""
         },
         {
           "id": "genba_11",
           "label": "ルーバーなど⑨",
-          "src": "data/cards/site_102/photos/genba_11.png",
+          "src": "data/cards/site_101/photos/genba_11.png",
           "memo": ""
         },
         {
           "id": "genba_12",
           "label": "網戸 ⑩",
-          "src": "data/cards/site_102/photos/genba_12.png",
+          "src": "data/cards/site_101/photos/genba_12.png",
           "memo": ""
         }
       ],
       "aliases_note": "総栄一全柏第一、●アルシス一全柏、渡辺パイプ（一全柏） 等"
-    },
-    "site_101": {
-      "title": "秋山木材産業",
-      "subtitle": "秋山木材産業（株）",
-      "course": "千G3",
-      "address": "千葉県 習志野市東習志野６ー１６ー３１",
-      "fields": [
-        {
-          "label": "配送先名",
-          "value": "秋山木材産業"
-        },
-        {
-          "label": "地図コース",
-          "value": "千G3"
-        },
-        {
-          "label": "配送コード",
-          "value": "053DMF"
-        },
-        {
-          "label": "住所",
-          "value": "千葉県 習志野市東習志野６ー１６ー３１"
-        }
-      ],
-      "card_html": "data/cards/site_101/card.html",
-      "photos": [],
-      "aliases_note": "秋山木材産業（株）各種部門表記 等（map_data aliases 参照）"
     }
   }
 }
