@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-23T13:49:42",
+  "generated": "2026-10-23T13:55:51",
   "map_variant": "社内",
   "map_variant_label": "正本（8765）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
@@ -150,8 +150,8 @@
       "color": "hsl(180, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 51,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 2420,
       "weight_months": [
         {
@@ -187,8 +187,8 @@
       "color": "hsl(180, 72%, 46%)",
       "geocode_source": "gsi_oaza_offset",
       "visit_count": 85,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 13302,
       "weight_months": [
         {
@@ -235,8 +235,8 @@
       "color": "hsl(180, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 16,
-      "first_visit": "2026-06-11",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-12",
+      "last_visit": "2026-10-23",
       "weight_kg": 29,
       "weight_months": [
         {
@@ -272,8 +272,8 @@
       "color": "hsl(180, 72%, 46%)",
       "geocode_source": "gsi_oaza_offset",
       "visit_count": 22,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 561,
       "weight_months": [
         {
@@ -310,8 +310,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 29,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 288,
       "weight_months": [
         {
@@ -348,8 +348,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 9,
-      "first_visit": "2026-07-07",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-08",
+      "last_visit": "2026-10-23",
       "weight_kg": 495,
       "weight_months": [
         {
@@ -380,8 +380,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 18,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 856,
       "weight_months": [
         {
@@ -419,8 +419,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 57,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 1651,
       "weight_months": [
         {
@@ -463,8 +463,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 13,
-      "first_visit": "2026-08-05",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-08-06",
+      "last_visit": "2026-10-23",
       "weight_kg": 1903,
       "weight_months": [
         {
@@ -501,8 +501,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 4,
-      "first_visit": "2026-07-07",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-08",
+      "last_visit": "2026-10-23",
       "weight_kg": 2,
       "weight_months": [
         {
@@ -531,8 +531,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 37,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 186,
       "weight_months": [
         {
@@ -569,8 +569,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 84,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 3317,
       "weight_months": [
         {
@@ -613,8 +613,8 @@
       "color": "hsl(207, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 81,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 4469,
       "weight_months": [
         {
@@ -655,8 +655,8 @@
       "color": "hsl(207, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 85,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 5215,
       "weight_months": [
         {
@@ -694,8 +694,8 @@
       "color": "hsl(207, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 57,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 1811,
       "weight_months": [
         {
@@ -734,8 +734,8 @@
       "color": "hsl(207, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 24,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 204,
       "weight_months": [
         {
@@ -775,8 +775,8 @@
       "color": "hsl(207, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 85,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 8875,
       "weight_months": [
         {
@@ -815,8 +815,8 @@
       "color": "hsl(175, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 73,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 3385,
       "weight_months": [
         {
@@ -854,8 +854,8 @@
       "color": "hsl(175, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 83,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 3623,
       "weight_months": [
         {
@@ -904,8 +904,8 @@
       "color": "hsl(175, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 29,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 617,
       "weight_months": [
         {
@@ -940,8 +940,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 74,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 2024,
       "weight_months": [
         {
@@ -1008,8 +1008,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 54,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 1690,
       "weight_months": [
         {
@@ -1053,8 +1053,8 @@
       "color": "hsl(175, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 14,
-      "first_visit": "2026-06-11",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-12",
+      "last_visit": "2026-10-23",
       "weight_kg": 293,
       "weight_months": [
         {
@@ -1091,8 +1091,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 65,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 3659,
       "weight_months": [
         {
@@ -1134,8 +1134,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 68,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 1078,
       "weight_months": [
         {
@@ -1171,8 +1171,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 5,
-      "first_visit": "2026-07-07",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-08",
+      "last_visit": "2026-10-23",
       "weight_kg": 232,
       "weight_months": [
         {
@@ -1208,8 +1208,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 53,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 970,
       "weight_months": [
         {
@@ -1246,8 +1246,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 22,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 1458,
       "weight_months": [
         {
@@ -1281,8 +1281,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 39,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 925,
       "weight_months": [
         {
@@ -1319,8 +1319,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 72,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 3859,
       "weight_months": [
         {
@@ -1359,8 +1359,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 79,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 2921,
       "weight_months": [
         {
@@ -1397,8 +1397,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 62,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 1780,
       "weight_months": [
         {
@@ -1435,8 +1435,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 78,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 5527,
       "weight_months": [
         {
@@ -1474,8 +1474,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 71,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 2825,
       "weight_months": [
         {
@@ -1515,8 +1515,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 59,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 1266,
       "weight_months": [
         {
@@ -1557,8 +1557,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 31,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 114,
       "weight_months": [
         {
@@ -1596,8 +1596,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 62,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 877,
       "weight_months": [
         {
@@ -1635,8 +1635,8 @@
       "color": "hsl(175, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 25,
-      "first_visit": "2026-06-05",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-06",
+      "last_visit": "2026-10-23",
       "weight_kg": 394,
       "weight_months": [
         {
@@ -1674,8 +1674,8 @@
       "color": "hsl(175, 72%, 46%)",
       "geocode_source": "gsi_oaza_offset",
       "visit_count": 37,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 842,
       "weight_months": [
         {
@@ -1710,8 +1710,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 84,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 7574,
       "weight_months": [
         {
@@ -1763,8 +1763,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 55,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 2170,
       "weight_months": [
         {
@@ -1803,8 +1803,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 76,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 2686,
       "weight_months": [
         {
@@ -1842,8 +1842,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 31,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 1214,
       "weight_months": [
         {
@@ -1877,8 +1877,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 35,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 762,
       "weight_months": [
         {
@@ -1914,8 +1914,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 28,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 332,
       "weight_months": [
         {
@@ -1951,8 +1951,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 30,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 103,
       "weight_months": [
         {
@@ -1991,8 +1991,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 50,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 2583,
       "weight_months": [
         {
@@ -2031,8 +2031,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 84,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 3242,
       "weight_months": [
         {
@@ -2079,8 +2079,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 67,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 3728,
       "weight_months": [
         {
@@ -2122,8 +2122,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 56,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 2741,
       "weight_months": [
         {
@@ -2160,8 +2160,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 25,
-      "first_visit": "2026-06-08",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-09",
+      "last_visit": "2026-10-23",
       "weight_kg": 178,
       "weight_months": [
         {
@@ -2198,8 +2198,8 @@
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 72,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 2813,
       "weight_months": [
         {
@@ -2237,8 +2237,8 @@
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 85,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 10165,
       "weight_months": [
         {
@@ -2285,8 +2285,8 @@
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 50,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 1511,
       "weight_months": [
         {
@@ -2330,8 +2330,8 @@
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 20,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 51,
       "weight_months": [
         {
@@ -2367,8 +2367,8 @@
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 70,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 3599,
       "weight_months": [
         {
@@ -2406,8 +2406,8 @@
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 85,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 29842,
       "weight_months": [
         {
@@ -2449,8 +2449,8 @@
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 19,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 136,
       "weight_months": [
         {
@@ -2487,8 +2487,8 @@
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 67,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 2170,
       "weight_months": [
         {
@@ -2525,8 +2525,8 @@
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 48,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 528,
       "weight_months": [
         {
@@ -2565,8 +2565,8 @@
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 45,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 5123,
       "weight_months": [
         {
@@ -2609,8 +2609,8 @@
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 68,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 2166,
       "weight_months": [
         {
@@ -2652,8 +2652,8 @@
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 52,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 1076,
       "weight_months": [
         {
@@ -2687,8 +2687,8 @@
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 76,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 1297,
       "weight_months": [
         {
@@ -2729,8 +2729,8 @@
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 67,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 1344,
       "weight_months": [
         {
@@ -2769,8 +2769,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 77,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 1808,
       "weight_months": [
         {
@@ -2810,8 +2810,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 85,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 6515,
       "weight_months": [
         {
@@ -2860,8 +2860,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi_oaza_offset",
       "visit_count": 84,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 7026,
       "weight_months": [
         {
@@ -2904,8 +2904,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 39,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 1375,
       "weight_months": [
         {
@@ -2946,8 +2946,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 78,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 6029,
       "weight_months": [
         {
@@ -2988,8 +2988,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 79,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 5055,
       "weight_months": [
         {
@@ -3028,8 +3028,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 81,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 2788,
       "weight_months": [
         {
@@ -3076,8 +3076,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 4,
-      "first_visit": "2026-06-05",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-06",
+      "last_visit": "2026-10-23",
       "weight_kg": 61,
       "weight_months": [
         {
@@ -3106,8 +3106,8 @@
       "color": "hsl(55, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 59,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 1292,
       "weight_months": [
         {
@@ -3145,8 +3145,8 @@
       "color": "hsl(55, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 85,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 38316,
       "weight_months": [
         {
@@ -3188,8 +3188,8 @@
       "color": "hsl(55, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 79,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 4438,
       "weight_months": [
         {
@@ -3235,8 +3235,8 @@
       "color": "hsl(69, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 17,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 898,
       "weight_months": [
         {
@@ -3273,8 +3273,8 @@
       "color": "hsl(69, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 85,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 7214,
       "weight_months": [
         {
@@ -3322,8 +3322,8 @@
       "color": "hsl(69, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 84,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 2741,
       "weight_months": [
         {
@@ -3361,8 +3361,8 @@
       "color": "hsl(69, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 85,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 3718,
       "weight_months": [
         {
@@ -3414,8 +3414,8 @@
       "color": "hsl(69, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 82,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 4474,
       "weight_months": [
         {
@@ -3454,8 +3454,8 @@
       "color": "hsl(83, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 85,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 6479,
       "weight_months": [
         {
@@ -3506,8 +3506,8 @@
       "color": "hsl(83, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 4,
-      "first_visit": "2026-07-07",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-08",
+      "last_visit": "2026-10-23",
       "weight_kg": 447,
       "weight_months": [
         {
@@ -3536,8 +3536,8 @@
       "color": "hsl(83, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 39,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 1222,
       "weight_months": [
         {
@@ -3574,8 +3574,8 @@
       "color": "hsl(83, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 18,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 93,
       "weight_months": [
         {
@@ -3611,8 +3611,8 @@
       "color": "hsl(83, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 85,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 8265,
       "weight_months": [
         {
@@ -3651,8 +3651,8 @@
       "color": "hsl(83, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 19,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 194,
       "weight_months": [
         {
@@ -3686,8 +3686,8 @@
       "color": "hsl(83, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 77,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 2689,
       "weight_months": [
         {
@@ -3724,8 +3724,8 @@
       "color": "hsl(83, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 77,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 3056,
       "weight_months": [
         {
@@ -3768,8 +3768,8 @@
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 32,
-      "first_visit": "2026-06-10",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-11",
+      "last_visit": "2026-10-23",
       "weight_kg": 1660,
       "weight_months": [
         {
@@ -3806,8 +3806,8 @@
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 85,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 5164,
       "weight_months": [
         {
@@ -3859,8 +3859,8 @@
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 67,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 1464,
       "weight_months": [
         {
@@ -3898,8 +3898,8 @@
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 26,
-      "first_visit": "2026-06-08",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-09",
+      "last_visit": "2026-10-23",
       "weight_kg": 110,
       "weight_months": [
         {
@@ -3936,8 +3936,8 @@
       "color": "hsl(110, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 85,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 9040,
       "weight_months": [
         {
@@ -3999,8 +3999,8 @@
       "color": "hsl(110, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 31,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 1381,
       "weight_months": [
         {
@@ -4037,8 +4037,8 @@
       "color": "hsl(110, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 53,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 2789,
       "weight_months": [
         {
@@ -4079,8 +4079,8 @@
       "color": "hsl(110, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 85,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 28145,
       "weight_months": [
         {
@@ -4125,8 +4125,8 @@
       "color": "hsl(124, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 85,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 41563,
       "weight_months": [
         {
@@ -4199,8 +4199,8 @@
       "color": "hsl(124, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 72,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 8644,
       "weight_months": [
         {
@@ -4246,8 +4246,8 @@
       "color": "hsl(138, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 85,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 25380,
       "weight_months": [
         {
@@ -4292,8 +4292,8 @@
       "color": "hsl(138, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 85,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 8659,
       "weight_months": [
         {
@@ -4340,8 +4340,8 @@
       "color": "hsl(152, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 85,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 69706,
       "weight_months": [
         {
@@ -4409,8 +4409,8 @@
       "color": "hsl(166, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 85,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 8646,
       "weight_months": [
         {
@@ -4454,8 +4454,8 @@
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 52,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 939,
       "weight_months": [
         {
@@ -4492,8 +4492,8 @@
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 52,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 559,
       "weight_months": [
         {
@@ -4530,8 +4530,8 @@
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 32,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 286,
       "weight_months": [
         {
@@ -4568,8 +4568,8 @@
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 83,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 6983,
       "weight_months": [
         {
@@ -4609,8 +4609,8 @@
       "color": "hsl(304, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 71,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 2586,
       "weight_months": [
         {
@@ -4650,8 +4650,8 @@
       "color": "hsl(318, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 81,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 4632,
       "weight_months": [
         {
@@ -4700,8 +4700,8 @@
       "color": "hsl(318, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 32,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 294,
       "weight_months": [
         {
@@ -4737,8 +4737,8 @@
       "color": "hsl(332, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 78,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 3496,
       "weight_months": [
         {
@@ -4782,8 +4782,8 @@
       "color": "hsl(332, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 85,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 5516,
       "weight_months": [
         {
@@ -4826,8 +4826,8 @@
       "color": "hsl(346, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 84,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 26884,
       "weight_months": [
         {
@@ -4889,8 +4889,8 @@
       "color": "hsl(346, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 35,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 2330,
       "weight_months": [
         {
@@ -4926,8 +4926,8 @@
       "color": "hsl(346, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 41,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 494,
       "weight_months": [
         {
@@ -4963,8 +4963,8 @@
       "color": "hsl(346, 72%, 46%)",
       "geocode_source": "gsi_oaza_offset",
       "visit_count": 73,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 5484,
       "weight_months": [
         {
@@ -5001,8 +5001,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 32,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 485,
       "weight_months": [
         {
@@ -5040,8 +5040,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 17,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aア",
@@ -5061,8 +5061,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 37,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 203,
       "weight_months": [
         {
@@ -5096,8 +5096,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 11,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aア",
@@ -5119,8 +5119,8 @@
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 18,
-      "first_visit": "2026-06-05",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-06",
+      "last_visit": "2026-10-23",
       "weight_kg": 109,
       "weight_months": [
         {
@@ -5156,8 +5156,8 @@
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 43,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 2190,
       "weight_months": [
         {
@@ -5197,8 +5197,8 @@
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 22,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 388,
       "weight_months": [
         {
@@ -5234,8 +5234,8 @@
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 22,
-      "first_visit": "2026-06-08",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-09",
+      "last_visit": "2026-10-23",
       "weight_kg": 141,
       "weight_months": [
         {
@@ -5271,8 +5271,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 17,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 151,
       "weight_months": [
         {
@@ -5308,8 +5308,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi_oaza_offset",
       "visit_count": 1,
-      "first_visit": "2026-07-08",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-09",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Bキ",
@@ -5329,8 +5329,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 19,
-      "first_visit": "2026-06-05",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-06",
+      "last_visit": "2026-10-23",
       "weight_kg": 486,
       "weight_months": [
         {
@@ -5364,8 +5364,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 72,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 4503,
       "weight_months": [
         {
@@ -5402,8 +5402,8 @@
       "color": "hsl(69, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 20,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 1729,
       "weight_months": [
         {
@@ -5439,8 +5439,8 @@
       "color": "hsl(83, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-07-08",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-09",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Dタ",
@@ -5460,8 +5460,8 @@
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 7,
-      "first_visit": "2026-06-10",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-11",
+      "last_visit": "2026-10-23",
       "weight_kg": 141,
       "weight_months": [
         {
@@ -5495,8 +5495,8 @@
       "color": "hsl(110, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 11,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 90,
       "weight_months": [
         {
@@ -5529,8 +5529,8 @@
       "color": "hsl(124, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 18,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 114,
       "weight_months": [
         {
@@ -5561,8 +5561,8 @@
       "color": "hsl(124, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 6,
-      "first_visit": "2026-07-08",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-09",
+      "last_visit": "2026-10-23",
       "weight_kg": 24,
       "weight_months": [
         {
@@ -5590,8 +5590,8 @@
       "color": "hsl(180, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 11,
-      "first_visit": "2026-07-08",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-09",
+      "last_visit": "2026-10-23",
       "weight_kg": 117,
       "weight_months": [
         {
@@ -5628,8 +5628,8 @@
       "color": "hsl(180, 72%, 46%)",
       "geocode_source": "gsi_oaza_offset",
       "visit_count": 25,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 60,
       "weight_months": [
         {
@@ -5665,8 +5665,8 @@
       "color": "hsl(180, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 15,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 80,
       "weight_months": [
         {
@@ -5701,8 +5701,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 15,
-      "first_visit": "2026-07-08",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-09",
+      "last_visit": "2026-10-23",
       "weight_kg": 728,
       "weight_months": [
         {
@@ -5737,8 +5737,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 17,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 972,
       "weight_months": [
         {
@@ -5776,8 +5776,8 @@
       "color": "hsl(200, 75%, 48%)",
       "geocode_source": "gsi",
       "visit_count": 81,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 4405,
       "weight_months": [
         {
@@ -5815,8 +5815,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 75,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 7733,
       "weight_months": [
         {
@@ -5857,8 +5857,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 5,
-      "first_visit": "2026-06-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 159,
       "weight_months": [
         {
@@ -5887,8 +5887,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 50,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 5022,
       "weight_months": [
         {
@@ -5925,8 +5925,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 25,
-      "first_visit": "2026-07-08",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-09",
+      "last_visit": "2026-10-23",
       "weight_kg": 1214,
       "weight_months": [
         {
@@ -5964,8 +5964,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 16,
-      "first_visit": "2026-06-17",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-18",
+      "last_visit": "2026-10-23",
       "weight_kg": 541,
       "weight_months": [
         {
@@ -5999,8 +5999,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 43,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 2158,
       "weight_months": [
         {
@@ -6038,8 +6038,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 72,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 3863,
       "weight_months": [
         {
@@ -6079,8 +6079,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 18,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 5,
       "weight_months": [
         {
@@ -6116,8 +6116,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 34,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 1932,
       "weight_months": [
         {
@@ -6151,8 +6151,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 58,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 1306,
       "weight_months": [
         {
@@ -6189,8 +6189,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 23,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 281,
       "weight_months": [
         {
@@ -6224,8 +6224,8 @@
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 49,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 674,
       "weight_months": [
         {
@@ -6261,8 +6261,8 @@
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 74,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 3587,
       "weight_months": [
         {
@@ -6303,8 +6303,8 @@
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 31,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 515,
       "weight_months": [
         {
@@ -6338,8 +6338,8 @@
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi_oaza_offset",
       "visit_count": 17,
-      "first_visit": "2026-06-09",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-10",
+      "last_visit": "2026-10-23",
       "weight_kg": 63,
       "weight_months": [
         {
@@ -6373,8 +6373,8 @@
       "color": "hsl(304, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 13,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 66,
       "weight_months": [
         {
@@ -6407,8 +6407,8 @@
       "color": "hsl(318, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 36,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 421,
       "weight_months": [
         {
@@ -6444,8 +6444,8 @@
       "color": "hsl(332, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 5,
-      "first_visit": "2026-07-08",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-09",
+      "last_visit": "2026-10-23",
       "weight_kg": 27,
       "weight_months": [
         {
@@ -6473,8 +6473,8 @@
       "color": "hsl(346, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 16,
-      "first_visit": "2026-07-08",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-09",
+      "last_visit": "2026-10-23",
       "weight_kg": 462,
       "weight_months": [
         {
@@ -6508,8 +6508,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 15,
-      "first_visit": "2026-06-24",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-25",
+      "last_visit": "2026-10-23",
       "weight_kg": 184,
       "weight_months": [
         {
@@ -6537,8 +6537,8 @@
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 24,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 1389,
       "weight_months": [
         {
@@ -6572,8 +6572,8 @@
       "color": "hsl(69, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 59,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 1318,
       "weight_months": [
         {
@@ -6611,8 +6611,8 @@
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 21,
-      "first_visit": "2026-06-09",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-10",
+      "last_visit": "2026-10-23",
       "weight_kg": 749,
       "weight_months": [
         {
@@ -6650,8 +6650,8 @@
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-07-13",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-14",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Dチ",
@@ -6674,8 +6674,8 @@
       "color": "hsl(180, 72%, 46%)",
       "geocode_source": "gsi_oaza_offset",
       "visit_count": 22,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 134,
       "weight_months": [
         {
@@ -6709,8 +6709,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 16,
-      "first_visit": "2026-06-29",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-30",
+      "last_visit": "2026-10-23",
       "weight_kg": 272,
       "weight_months": [
         {
@@ -6745,8 +6745,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 27,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 378,
       "weight_months": [
         {
@@ -6781,8 +6781,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 4,
-      "first_visit": "2026-06-29",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-30",
+      "last_visit": "2026-10-23",
       "weight_kg": 4,
       "weight_months": [
         {
@@ -6811,8 +6811,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 19,
-      "first_visit": "2026-06-11",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-12",
+      "last_visit": "2026-10-23",
       "weight_kg": 495,
       "weight_months": [
         {
@@ -6848,8 +6848,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 14,
-      "first_visit": "2026-06-10",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-11",
+      "last_visit": "2026-10-23",
       "weight_kg": 368,
       "weight_months": [
         {
@@ -6880,8 +6880,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 49,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 2432,
       "weight_months": [
         {
@@ -6923,8 +6923,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 26,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 470,
       "weight_months": [
         {
@@ -6960,8 +6960,8 @@
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 40,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 799,
       "weight_months": [
         {
@@ -6995,8 +6995,8 @@
       "color": "hsl(318, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 47,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 384,
       "weight_months": [
         {
@@ -7033,8 +7033,8 @@
       "color": "hsl(318, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 46,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 230,
       "weight_months": [
         {
@@ -7071,8 +7071,8 @@
       "color": "hsl(318, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 24,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 1047,
       "weight_months": [
         {
@@ -7109,8 +7109,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 16,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 124,
       "weight_months": [
         {
@@ -7147,8 +7147,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 39,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 1060,
       "weight_months": [
         {
@@ -7185,8 +7185,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 20,
-      "first_visit": "2026-06-09",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-10",
+      "last_visit": "2026-10-23",
       "weight_kg": 300,
       "weight_months": [
         {
@@ -7222,8 +7222,8 @@
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 35,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 305,
       "weight_months": [
         {
@@ -7260,8 +7260,8 @@
       "color": "hsl(110, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 7,
-      "first_visit": "2026-06-26",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-27",
+      "last_visit": "2026-10-23",
       "weight_kg": 2,
       "weight_months": [
         {
@@ -7291,8 +7291,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 4,
-      "first_visit": "2026-06-05",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-06",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏1I",
@@ -7313,8 +7313,8 @@
       "color": "hsl(175, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 48,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 638,
       "weight_months": [
         {
@@ -7351,8 +7351,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 28,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 488,
       "weight_months": [
         {
@@ -7388,8 +7388,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 50,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 3184,
       "weight_months": [
         {
@@ -7425,8 +7425,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi_oaza_offset",
       "visit_count": 44,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 2406,
       "weight_months": [
         {
@@ -7460,8 +7460,8 @@
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 21,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 119,
       "weight_months": [
         {
@@ -7497,8 +7497,8 @@
       "color": "hsl(304, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 18,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 20,
       "weight_months": [
         {
@@ -7528,8 +7528,8 @@
       "color": "hsl(318, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 27,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 168,
       "weight_months": [
         {
@@ -7565,8 +7565,8 @@
       "color": "hsl(332, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 16,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 9,
       "weight_months": [
         {
@@ -7602,8 +7602,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 43,
-      "first_visit": "2026-06-05",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-06",
+      "last_visit": "2026-10-23",
       "weight_kg": 5348,
       "weight_months": [
         {
@@ -7641,8 +7641,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 45,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 2950,
       "weight_months": [
         {
@@ -7678,8 +7678,8 @@
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 15,
-      "first_visit": "2026-06-05",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-06",
+      "last_visit": "2026-10-23",
       "weight_kg": 287,
       "weight_months": [
         {
@@ -7715,8 +7715,8 @@
       "color": "hsl(83, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 12,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 1,
       "weight_months": [
         {
@@ -7743,8 +7743,8 @@
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 31,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 178,
       "weight_months": [
         {
@@ -7780,8 +7780,8 @@
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 36,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 2150,
       "weight_months": [
         {
@@ -7819,8 +7819,8 @@
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 5,
-      "first_visit": "2026-06-10",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-11",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Dチ",
@@ -7842,8 +7842,8 @@
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 11,
-      "first_visit": "2026-06-24",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-25",
+      "last_visit": "2026-10-23",
       "weight_kg": 33,
       "weight_months": [
         {
@@ -7873,8 +7873,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 17,
-      "first_visit": "2026-06-11",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-12",
+      "last_visit": "2026-10-23",
       "weight_kg": 1022,
       "weight_months": [
         {
@@ -7912,8 +7912,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 9,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 216,
       "weight_months": [
         {
@@ -7941,8 +7941,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 7,
-      "first_visit": "2026-06-10",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-11",
+      "last_visit": "2026-10-23",
       "weight_kg": 29,
       "weight_months": [
         {
@@ -7972,8 +7972,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 5,
-      "first_visit": "2026-06-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 511,
       "weight_months": [
         {
@@ -8004,8 +8004,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 8,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 115,
       "weight_months": [
         {
@@ -8033,8 +8033,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 15,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 461,
       "weight_months": [
         {
@@ -8071,8 +8071,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 3,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 28,
       "weight_months": [
         {
@@ -8099,8 +8099,8 @@
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 6,
-      "first_visit": "2026-06-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 3,
       "weight_months": [
         {
@@ -8136,8 +8136,8 @@
       "color": "hsl(346, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 38,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 724,
       "weight_months": [
         {
@@ -8175,8 +8175,8 @@
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 10,
-      "first_visit": "2026-06-11",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-12",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aイ",
@@ -8199,8 +8199,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 8,
-      "first_visit": "2026-06-09",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-10",
+      "last_visit": "2026-10-23",
       "weight_kg": 3,
       "weight_months": [
         {
@@ -8231,8 +8231,8 @@
       "color": "hsl(83, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 26,
-      "first_visit": "2026-06-10",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-11",
+      "last_visit": "2026-10-23",
       "weight_kg": 381,
       "weight_months": [
         {
@@ -8270,8 +8270,8 @@
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 16,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 124,
       "weight_months": [
         {
@@ -8307,8 +8307,8 @@
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 11,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 27,
       "weight_months": [
         {
@@ -8342,8 +8342,8 @@
       "color": "hsl(138, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 40,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 1720,
       "weight_months": [
         {
@@ -8382,8 +8382,8 @@
       "color": "hsl(175, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 14,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 59,
       "weight_months": [
         {
@@ -8418,8 +8418,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 8,
-      "first_visit": "2026-06-24",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-25",
+      "last_visit": "2026-10-23",
       "weight_kg": 91,
       "weight_months": [
         {
@@ -8453,8 +8453,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 4,
-      "first_visit": "2026-09-07",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-09-08",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3V",
@@ -8474,8 +8474,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 3,
-      "first_visit": "2026-06-24",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-25",
+      "last_visit": "2026-10-23",
       "weight_kg": 7,
       "weight_months": [
         {
@@ -8502,8 +8502,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 4,
-      "first_visit": "2026-06-17",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-18",
+      "last_visit": "2026-10-23",
       "weight_kg": 61,
       "weight_months": [
         {
@@ -8537,8 +8537,8 @@
       "color": "hsl(175, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 8,
-      "first_visit": "2026-06-09",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-10",
+      "last_visit": "2026-10-23",
       "weight_kg": 11,
       "weight_months": [
         {
@@ -8575,8 +8575,8 @@
       "color": "hsl(332, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 4,
-      "first_visit": "2026-06-18",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-19",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "房木4",
@@ -8596,8 +8596,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 7,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3V",
@@ -8617,8 +8617,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 5,
-      "first_visit": "2026-06-08",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-09",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3V",
@@ -8638,8 +8638,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 22,
-      "first_visit": "2026-06-10",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-11",
+      "last_visit": "2026-10-23",
       "weight_kg": 265,
       "weight_months": [
         {
@@ -8675,8 +8675,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 33,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 1007,
       "weight_months": [
         {
@@ -8710,8 +8710,8 @@
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 14,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 60,
       "weight_months": [
         {
@@ -8745,8 +8745,8 @@
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 29,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 349,
       "weight_months": [
         {
@@ -8782,8 +8782,8 @@
       "color": "hsl(304, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 36,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 766,
       "weight_months": [
         {
@@ -8817,8 +8817,8 @@
       "color": "hsl(304, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 19,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 180,
       "weight_months": [
         {
@@ -8852,8 +8852,8 @@
       "color": "hsl(346, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 26,
-      "first_visit": "2026-06-08",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-09",
+      "last_visit": "2026-10-23",
       "weight_kg": 1425,
       "weight_months": [
         {
@@ -8890,8 +8890,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 25,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 663,
       "weight_months": [
         {
@@ -8925,8 +8925,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 20,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 439,
       "weight_months": [
         {
@@ -8963,8 +8963,8 @@
       "color": "hsl(138, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 8,
-      "first_visit": "2026-06-19",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-20",
+      "last_visit": "2026-10-23",
       "weight_kg": 101,
       "weight_months": [
         {
@@ -9000,8 +9000,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 7,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 42,
       "weight_months": [
         {
@@ -9030,8 +9030,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-06-22",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-23",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3X",
@@ -9051,8 +9051,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 11,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 16,
       "weight_months": [
         {
@@ -9082,8 +9082,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 4,
-      "first_visit": "2026-06-10",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-11",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "delivery_code": "053EK8",
@@ -9104,8 +9104,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 25,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 596,
       "weight_months": [
         {
@@ -9143,8 +9143,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-06-19",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-20",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Bキ",
@@ -9164,8 +9164,8 @@
       "color": "hsl(175, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 10,
-      "first_visit": "2026-06-19",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-20",
+      "last_visit": "2026-10-23",
       "weight_kg": 820,
       "weight_months": [
         {
@@ -9200,8 +9200,8 @@
       "color": "hsl(175, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 19,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 1296,
       "weight_months": [
         {
@@ -9236,8 +9236,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 15,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 68,
       "weight_months": [
         {
@@ -9271,8 +9271,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 2,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3X",
@@ -9292,8 +9292,8 @@
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 23,
-      "first_visit": "2026-06-18",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-19",
+      "last_visit": "2026-10-23",
       "weight_kg": 247,
       "weight_months": [
         {
@@ -9321,8 +9321,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 8,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Bキ",
@@ -9344,8 +9344,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 2,
-      "first_visit": "2026-06-18",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-19",
+      "last_visit": "2026-10-23",
       "weight_kg": 40,
       "weight_months": [
         {
@@ -9372,8 +9372,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 3,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3V",
@@ -9395,8 +9395,8 @@
       "color": "hsl(175, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-06-18",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-19",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏5O",
@@ -9417,8 +9417,8 @@
       "color": "hsl(175, 72%, 46%)",
       "geocode_source": "gsi_oaza_offset",
       "visit_count": 16,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 374,
       "weight_months": [
         {
@@ -9447,8 +9447,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-06-17",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-18",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aア",
@@ -9468,8 +9468,8 @@
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 3,
-      "first_visit": "2026-06-17",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-18",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Dチ",
@@ -9489,8 +9489,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 3,
-      "first_visit": "2026-06-12",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-13",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3X",
@@ -9512,8 +9512,8 @@
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 7,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 356,
       "weight_months": [
         {
@@ -9549,8 +9549,8 @@
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 8,
-      "first_visit": "2026-06-12",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-13",
+      "last_visit": "2026-10-23",
       "weight_kg": 155,
       "weight_months": [
         {
@@ -9584,8 +9584,8 @@
       "color": "hsl(138, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 5,
-      "first_visit": "2026-06-12",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-13",
+      "last_visit": "2026-10-23",
       "weight_kg": 28,
       "weight_months": [
         {
@@ -9619,8 +9619,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 18,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 296,
       "weight_months": [
         {
@@ -9650,8 +9650,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 6,
-      "first_visit": "2026-06-12",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-13",
+      "last_visit": "2026-10-23",
       "weight_kg": 55,
       "weight_months": [
         {
@@ -9681,8 +9681,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 5,
-      "first_visit": "2026-06-11",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-12",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aア",
@@ -9702,8 +9702,8 @@
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-06-11",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-12",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aイ",
@@ -9723,8 +9723,8 @@
       "color": "hsl(180, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 7,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 35,
       "weight_months": [
         {
@@ -9758,8 +9758,8 @@
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 17,
-      "first_visit": "2026-06-10",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-11",
+      "last_visit": "2026-10-23",
       "weight_kg": 100,
       "weight_months": [
         {
@@ -9793,8 +9793,8 @@
       "color": "hsl(304, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 6,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 11,
       "weight_months": [
         {
@@ -9822,8 +9822,8 @@
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 15,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 188,
       "weight_months": [
         {
@@ -9860,8 +9860,8 @@
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 4,
-      "first_visit": "2026-06-10",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-11",
+      "last_visit": "2026-10-23",
       "weight_kg": 1,
       "weight_months": [
         {
@@ -9891,8 +9891,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 5,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Bキ",
@@ -9914,8 +9914,8 @@
       "color": "hsl(69, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 16,
-      "first_visit": "2026-06-08",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-09",
+      "last_visit": "2026-10-23",
       "weight_kg": 625,
       "weight_months": [
         {
@@ -9953,8 +9953,8 @@
       "color": "hsl(180, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 4,
-      "first_visit": "2026-06-10",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-11",
+      "last_visit": "2026-10-23",
       "weight_kg": 141,
       "weight_months": [
         {
@@ -9981,8 +9981,8 @@
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 13,
-      "first_visit": "2026-06-08",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-09",
+      "last_visit": "2026-10-23",
       "weight_kg": 1,
       "weight_months": [
         {
@@ -10012,8 +10012,8 @@
       "color": "hsl(83, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 3,
-      "first_visit": "2026-06-09",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-10",
+      "last_visit": "2026-10-23",
       "weight_kg": 58,
       "weight_months": [
         {
@@ -10041,8 +10041,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 6,
-      "first_visit": "2026-06-09",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-10",
+      "last_visit": "2026-10-23",
       "weight_kg": 2719,
       "weight_months": [
         {
@@ -10069,8 +10069,8 @@
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 4,
-      "first_visit": "2026-06-09",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-10",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "房館1",
@@ -10090,8 +10090,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 2,
-      "first_visit": "2026-06-08",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-09",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aア",
@@ -10111,8 +10111,8 @@
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 2,
-      "first_visit": "2026-06-08",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-09",
+      "last_visit": "2026-10-23",
       "weight_kg": 2,
       "weight_months": [
         {
@@ -10139,8 +10139,8 @@
       "color": "hsl(304, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 7,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 51,
       "weight_months": [
         {
@@ -10168,8 +10168,8 @@
       "color": "hsl(304, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 15,
-      "first_visit": "2026-06-08",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-09",
+      "last_visit": "2026-10-23",
       "weight_kg": 284,
       "weight_months": [
         {
@@ -10203,8 +10203,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 7,
-      "first_visit": "2026-06-05",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-06",
+      "last_visit": "2026-10-23",
       "weight_kg": 382,
       "weight_months": [
         {
@@ -10238,8 +10238,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 6,
-      "first_visit": "2026-06-05",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-06",
+      "last_visit": "2026-10-23",
       "weight_kg": 334,
       "weight_months": [
         {
@@ -10274,8 +10274,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-06-05",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-06",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3V",
@@ -10295,8 +10295,8 @@
       "color": "hsl(318, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 2,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "房君3",
@@ -10316,8 +10316,8 @@
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 4,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Bカ",
@@ -10337,8 +10337,8 @@
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 12,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 803,
       "weight_months": [
         {
@@ -10375,8 +10375,8 @@
       "color": "hsl(304, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "房勝2",
@@ -10396,8 +10396,8 @@
       "color": "hsl(332, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 12,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 88,
       "weight_months": [
         {
@@ -10431,8 +10431,8 @@
       "color": "hsl(346, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 4,
-      "first_visit": "2026-06-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 36,
       "weight_months": [
         {
@@ -10466,8 +10466,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 3,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 14,
       "weight_months": [
         {
@@ -10495,8 +10495,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 13,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 301,
       "weight_months": [
         {
@@ -10531,8 +10531,8 @@
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi_oaza_offset",
       "visit_count": 1,
-      "first_visit": "2026-06-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "房館1",
@@ -10552,8 +10552,8 @@
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 4,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 14,
       "weight_months": [
         {
@@ -10583,8 +10583,8 @@
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 4,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 162,
       "weight_months": [
         {
@@ -10617,8 +10617,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi_oaza_offset",
       "visit_count": 7,
-      "first_visit": "2026-06-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-06-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 364,
       "weight_months": [
         {
@@ -10652,8 +10652,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 13,
-      "first_visit": "2026-07-09",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-10",
+      "last_visit": "2026-10-23",
       "weight_kg": 201,
       "weight_months": [
         {
@@ -10690,8 +10690,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 2,
-      "first_visit": "2026-07-09",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-10",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3V",
@@ -10711,8 +10711,8 @@
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 6,
-      "first_visit": "2026-07-10",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-11",
+      "last_visit": "2026-10-23",
       "weight_kg": 156,
       "weight_months": [
         {
@@ -10740,8 +10740,8 @@
       "color": "hsl(304, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 2,
-      "first_visit": "2026-07-10",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-11",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "房勝2",
@@ -10761,8 +10761,8 @@
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 4,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aイ",
@@ -10784,8 +10784,8 @@
       "color": "hsl(346, 72%, 46%)",
       "geocode_source": "gsi_oaza_offset",
       "visit_count": 6,
-      "first_visit": "2026-07-14",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-15",
+      "last_visit": "2026-10-23",
       "weight_kg": 159,
       "weight_months": [
         {
@@ -10819,8 +10819,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 5,
-      "first_visit": "2026-07-15",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-16",
+      "last_visit": "2026-10-23",
       "weight_kg": 4,
       "weight_months": [
         {
@@ -10849,8 +10849,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-07-16",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-17",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Bキ",
@@ -10872,8 +10872,8 @@
       "color": "hsl(318, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 8,
-      "first_visit": "2026-07-16",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-17",
+      "last_visit": "2026-10-23",
       "weight_kg": 139,
       "weight_months": [
         {
@@ -10907,8 +10907,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 2,
-      "first_visit": "2026-07-22",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-23",
+      "last_visit": "2026-10-23",
       "weight_kg": 3,
       "weight_months": [
         {
@@ -10936,8 +10936,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 3,
-      "first_visit": "2026-07-17",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-18",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3X",
@@ -10957,8 +10957,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 2,
-      "first_visit": "2026-07-22",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-23",
+      "last_visit": "2026-10-23",
       "weight_kg": 66,
       "weight_months": [
         {
@@ -10986,8 +10986,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-07-23",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-24",
+      "last_visit": "2026-10-23",
       "weight_kg": 76,
       "weight_months": [
         {
@@ -11016,8 +11016,8 @@
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 4,
-      "first_visit": "2026-07-23",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-24",
+      "last_visit": "2026-10-23",
       "weight_kg": 100,
       "weight_months": [
         {
@@ -11045,8 +11045,8 @@
       "color": "hsl(304, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-07-23",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-24",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "房勝2",
@@ -11066,8 +11066,8 @@
       "color": "hsl(83, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 2,
-      "first_visit": "2026-07-27",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-28",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Dタ",
@@ -11087,8 +11087,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 6,
-      "first_visit": "2026-05-25",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-05-26",
+      "last_visit": "2026-10-23",
       "weight_kg": 102,
       "weight_months": [
         {
@@ -11117,8 +11117,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-07-28",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-29",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "柏3X",
@@ -11138,8 +11138,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-07-29",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-30",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aア",
@@ -11159,8 +11159,8 @@
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-07-29",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-30",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aイ",
@@ -11180,8 +11180,8 @@
       "color": "hsl(304, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 4,
-      "first_visit": "2026-07-30",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-07-31",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "房勝2",
@@ -11201,8 +11201,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 3,
-      "first_visit": "2026-07-31",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-08-01",
+      "last_visit": "2026-10-23",
       "weight_kg": 5,
       "weight_months": [
         {
@@ -11239,8 +11239,8 @@
       "color": "hsl(13, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-08-03",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-08-04",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Aイ",
@@ -11260,8 +11260,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 4,
-      "first_visit": "2026-08-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-08-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 250,
       "weight_months": [
         {
@@ -11288,8 +11288,8 @@
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-08-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-08-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 0,
       "weight_months": [],
       "master_course": "千Dチ",
@@ -11311,8 +11311,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-09-15",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-09-16",
+      "last_visit": "2026-10-23",
       "weight_kg": 20,
       "weight_months": [
         {
@@ -11339,8 +11339,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 10,
-      "first_visit": "2026-09-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-09-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 597,
       "weight_months": [
         {
@@ -11374,8 +11374,8 @@
       "color": "hsl(41, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-09-15",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-09-16",
+      "last_visit": "2026-10-23",
       "weight_kg": 1,
       "weight_months": [
         {
@@ -11402,8 +11402,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-09-16",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-09-17",
+      "last_visit": "2026-10-23",
       "weight_kg": 13,
       "weight_months": [
         {
@@ -11431,8 +11431,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 10,
-      "first_visit": "2026-09-16",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-09-17",
+      "last_visit": "2026-10-23",
       "weight_kg": 1793,
       "weight_months": [
         {
@@ -11468,8 +11468,8 @@
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-09-28",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-09-29",
+      "last_visit": "2026-10-23",
       "weight_kg": 35,
       "weight_months": [
         {
@@ -11496,8 +11496,8 @@
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-09-29",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-09-30",
+      "last_visit": "2026-10-23",
       "weight_kg": 97,
       "weight_months": [
         {
@@ -11524,8 +11524,8 @@
       "color": "hsl(39, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-09-30",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-10-01",
+      "last_visit": "2026-10-23",
       "weight_kg": 24,
       "weight_months": [
         {
@@ -11553,8 +11553,8 @@
       "color": "hsl(83, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-10-01",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-10-02",
+      "last_visit": "2026-10-23",
       "weight_kg": 1,
       "weight_months": [
         {
@@ -11581,8 +11581,8 @@
       "color": "hsl(318, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 3,
-      "first_visit": "2026-10-06",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-10-07",
+      "last_visit": "2026-10-23",
       "weight_kg": 22,
       "weight_months": [
         {
@@ -11610,8 +11610,8 @@
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-10-07",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-10-08",
+      "last_visit": "2026-10-23",
       "weight_kg": 2,
       "weight_months": [
         {
@@ -11639,8 +11639,8 @@
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 2,
-      "first_visit": "2026-10-07",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-10-08",
+      "last_visit": "2026-10-23",
       "weight_kg": 26,
       "weight_months": [
         {
@@ -11674,8 +11674,8 @@
       "color": "hsl(110, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 2,
-      "first_visit": "2026-10-08",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-10-09",
+      "last_visit": "2026-10-23",
       "weight_kg": 313,
       "weight_months": [
         {
@@ -11709,8 +11709,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-10-09",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-10-10",
+      "last_visit": "2026-10-23",
       "weight_kg": 104,
       "weight_months": [
         {
@@ -11738,8 +11738,8 @@
       "color": "hsl(346, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 2,
-      "first_visit": "2026-09-02",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-09-03",
+      "last_visit": "2026-10-23",
       "weight_kg": 296,
       "weight_months": [
         {
@@ -11773,8 +11773,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 2,
-      "first_visit": "2026-09-04",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-09-05",
+      "last_visit": "2026-10-23",
       "weight_kg": 106,
       "weight_months": [
         {
@@ -11810,8 +11810,8 @@
       "color": "hsl(235, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 2,
-      "first_visit": "2026-09-08",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-09-09",
+      "last_visit": "2026-10-23",
       "weight_kg": 117,
       "weight_months": [
         {
@@ -11845,8 +11845,8 @@
       "color": "hsl(27, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-09-08",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-09-09",
+      "last_visit": "2026-10-23",
       "weight_kg": 198,
       "weight_months": [
         {
@@ -11874,8 +11874,8 @@
       "color": "hsl(249, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-09-09",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-09-10",
+      "last_visit": "2026-10-23",
       "weight_kg": 1,
       "weight_months": [
         {
@@ -11903,8 +11903,8 @@
       "color": "hsl(304, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-09-10",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-09-11",
+      "last_visit": "2026-10-23",
       "weight_kg": 1,
       "weight_months": [
         {
@@ -11932,8 +11932,8 @@
       "color": "hsl(180, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-10-05",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-10-06",
+      "last_visit": "2026-10-23",
       "weight_kg": 44,
       "weight_months": [
         {
@@ -11961,8 +11961,8 @@
       "color": "hsl(0, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 2,
-      "first_visit": "2026-10-14",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-10-15",
+      "last_visit": "2026-10-23",
       "weight_kg": 352,
       "weight_months": [
         {
@@ -11990,8 +11990,8 @@
       "color": "hsl(96, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-10-21",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-10-22",
+      "last_visit": "2026-10-23",
       "weight_kg": 61,
       "weight_months": [
         {
@@ -12019,8 +12019,8 @@
       "color": "hsl(290, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-10-21",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-10-22",
+      "last_visit": "2026-10-23",
       "weight_kg": 51,
       "weight_months": [
         {
@@ -12048,8 +12048,8 @@
       "color": "hsl(304, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-10-21",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-10-22",
+      "last_visit": "2026-10-23",
       "weight_kg": 45,
       "weight_months": [
         {
@@ -12077,8 +12077,8 @@
       "color": "hsl(332, 72%, 46%)",
       "geocode_source": "gsi",
       "visit_count": 1,
-      "first_visit": "2026-10-21",
-      "last_visit": "2026-10-22",
+      "first_visit": "2026-10-22",
+      "last_visit": "2026-10-23",
       "weight_kg": 68,
       "weight_months": [
         {
@@ -12135,8 +12135,8 @@
       "marker_shape": "circle"
     }
   ],
-  "visit_period_start": "2026-05-25",
-  "visit_period_end": "2026-10-22",
+  "visit_period_start": "2026-05-26",
+  "visit_period_end": "2026-10-23",
   "weight_period_start": "2026-09-01",
   "weight_period_end": "2026-10-23",
   "course_merges": {
