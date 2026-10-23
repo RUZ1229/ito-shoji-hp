@@ -580,7 +580,7 @@
       end = MAP_VISIT_PERIOD_FLOOR;
     }
     if (!start && !end) return "";
-    return `配送回数集計 ${formatJpDate(start)}〜${formatJpDate(end)}`;
+    return `配送回数集計（出荷日） ${formatJpDate(start)}〜${formatJpDate(end)}`;
   }
 
   function refreshVisitPeriodLabel() {
@@ -602,9 +602,9 @@
     const start = site.first_visit;
     let end = atLeastMapPeriodFloor(site.last_visit);
     if (start && end) {
-      return `運送回数: ${n}回（${formatJpDate(start)}〜${formatJpDate(end)}）`;
+      return `運送回数: ${n}回（出荷 ${formatJpDate(start)}〜${formatJpDate(end)}）`;
     }
-    if (end) return `運送回数: ${n}回（最終: ${formatJpDate(end)}）`;
+    if (end) return `運送回数: ${n}回（出荷 最終: ${formatJpDate(end)}）`;
     return `運送回数: ${n}回`;
   }
 
@@ -620,7 +620,7 @@
           m.month || (m.start ? String(m.start).slice(0, 7) : "")
         );
         if (start && end) {
-          return `${kg.toLocaleString()} kg（${formatJpDate(start)}〜${formatJpDate(end)}）`;
+          return `${kg.toLocaleString()} kg（出荷 ${formatJpDate(start)}〜${formatJpDate(end)}）`;
         }
         return `${kg.toLocaleString()} kg`;
       });
@@ -635,7 +635,7 @@
       floorMonth
     );
     if (start && end) {
-      return [`${n.toLocaleString()} kg（${formatJpDate(start)}〜${formatJpDate(end)}）`];
+      return [`${n.toLocaleString()} kg（出荷 ${formatJpDate(start)}〜${formatJpDate(end)}）`];
     }
     return [`${n.toLocaleString()} kg`];
   }
