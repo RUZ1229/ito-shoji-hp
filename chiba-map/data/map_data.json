@@ -1,10 +1,10 @@
 {
-  "generated": "2026-10-24T22:49:47",
+  "generated": "2026-10-24T22:50:46",
   "map_variant": "社内",
   "map_variant_label": "正本（8765）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
   "map_overrides": "AI化/千葉配送地図/data/map_overrides.json",
-  "map_collaborative": "2026-10-24T22:49:45Z",
+  "map_collaborative": "2026-10-24T22:50:45Z",
   "collab_custom_courses": {},
   "site_count": 340,
   "zones": {
