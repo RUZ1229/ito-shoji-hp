@@ -1,0 +1,671 @@
+/* 伊藤商事 — Web会社案内（お客様向け） */
+:root {
+  --navy: #0c1b2e;
+  --navy-mid: #1a3352;
+  --accent: #3b82f6;
+  --accent-soft: rgba(59, 130, 246, 0.15);
+  --text: #0f172a;
+  --muted: #64748b;
+  --white: #fff;
+  --section-pad: clamp(4rem, 10vw, 7rem);
+  --font: "Noto Sans JP", "Hiragino Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--text);
+  background: #f1f5f9;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+/* —— ツールバー（社内プレビュー用） —— */
+.brochure-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(12, 27, 46, 0.92);
+  color: var(--white);
+  font-size: 0.8125rem;
+  backdrop-filter: blur(8px);
+}
+
+.brochure-bar a,
+.brochure-bar button {
+  font: inherit;
+  color: var(--navy);
+  background: var(--white);
+  border: none;
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.brochure-bar span {
+  opacity: 0.85;
+}
+
+body.has-bar {
+  padding-top: 2.75rem;
+}
+
+@media print {
+  .brochure-bar {
+    display: none;
+  }
+  body.has-bar {
+    padding-top: 0;
+  }
+}
+
+/* —— ナビ —— */
+.bro-nav {
+  position: sticky;
+  top: 2.75rem;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem clamp(1rem, 4vw, 2.5rem);
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid #e2e8f0;
+  backdrop-filter: blur(10px);
+}
+
+@media print {
+  .bro-nav {
+    position: static;
+  }
+}
+
+.bro-nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9375rem;
+}
+
+.bro-nav__brand img {
+  height: 36px;
+  width: auto;
+}
+
+.bro-nav__links {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.bro-nav__links a {
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.bro-nav__links a:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.bro-nav__cta {
+  padding: 0.45rem 1rem;
+  background: var(--navy);
+  color: var(--white) !important;
+  border-radius: 999px;
+  opacity: 1 !important;
+}
+
+@media (max-width: 720px) {
+  .bro-nav__links a:not(.bro-nav__cta) {
+    display: none;
+  }
+}
+
+/* —— ヒーロー —— */
+.bro-hero {
+  position: relative;
+  min-height: min(92vh, 900px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--navy);
+  color: var(--white);
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .bro-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+}
+
+.bro-hero__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--section-pad) clamp(1.5rem, 5vw, 4rem);
+  position: relative;
+  z-index: 2;
+}
+
+.bro-hero__tag {
+  font-size: 0.8125rem;
+  letter-spacing: 0.12em;
+  color: #93c5fd;
+  margin: 0 0 1rem;
+}
+
+.bro-hero__title {
+  font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+  font-weight: 900;
+  line-height: 1.25;
+  margin: 0 0 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+.bro-hero__title em {
+  font-style: normal;
+  background: linear-gradient(90deg, #60a5fa, #a5b4fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bro-hero__lead {
+  margin: 0 0 2rem;
+  max-width: 28rem;
+  font-size: 0.9375rem;
+  opacity: 0.92;
+  line-height: 1.85;
+}
+
+.bro-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.bro-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.75rem 1.35rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.bro-btn--primary {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.bro-btn--ghost {
+  border-color: rgba(255, 255, 255, 0.45);
+  color: var(--white);
+}
+
+.bro-btn:hover {
+  transform: translateY(-1px);
+}
+
+.bro-hero__visual {
+  position: relative;
+  min-height: 360px;
+}
+
+.bro-hero__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bro-hero__visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--navy) 0%, transparent 45%);
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .bro-hero__visual::after {
+    background: linear-gradient(0deg, var(--navy) 0%, transparent 50%);
+  }
+}
+
+.bro-hero__card {
+  position: absolute;
+  bottom: 2rem;
+  left: -2rem;
+  width: min(280px, 55vw);
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--text);
+  border-radius: 4px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+  z-index: 3;
+}
+
+@media (max-width: 900px) {
+  .bro-hero__card {
+    left: 1.5rem;
+    bottom: 1.5rem;
+  }
+}
+
+.bro-hero__card-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  margin: 0 0 0.35rem;
+}
+
+.bro-hero__card strong {
+  display: block;
+  font-size: 1.125rem;
+  margin-bottom: 0.35rem;
+}
+
+.bro-hero__card p {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+/* —— 数字 —— */
+.bro-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--white);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+@media (max-width: 720px) {
+  .bro-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.bro-stat {
+  padding: 2rem 1.25rem;
+  text-align: center;
+  border-right: 1px solid #e2e8f0;
+}
+
+.bro-stat:last-child {
+  border-right: none;
+}
+
+@media (max-width: 720px) {
+  .bro-stat:nth-child(2) {
+    border-right: none;
+  }
+  .bro-stat {
+    border-bottom: 1px solid #e2e8f0;
+  }
+}
+
+.bro-stat__num {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 900;
+  color: var(--navy);
+  line-height: 1.1;
+}
+
+.bro-stat__num small {
+  font-size: 0.45em;
+  font-weight: 700;
+}
+
+.bro-stat__label {
+  margin-top: 0.35rem;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+/* —— セクション共通 —— */
+.bro-section {
+  padding: var(--section-pad) clamp(1.25rem, 5vw, 3rem);
+}
+
+.bro-section--dark {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.bro-section--light {
+  background: var(--white);
+}
+
+.bro-section__head {
+  max-width: 40rem;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.bro-section__en {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+}
+
+.bro-section--dark .bro-section__en {
+  color: #93c5fd;
+}
+
+.bro-section__title {
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 900;
+  margin: 0 0 0.75rem;
+  line-height: 1.35;
+}
+
+.bro-section__lead {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.bro-section--dark .bro-section__lead {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* —— 2カラム（写真メイン） —— */
+.bro-split {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bro-split--reverse {
+  direction: rtl;
+}
+
+.bro-split--reverse > * {
+  direction: ltr;
+}
+
+@media (max-width: 860px) {
+  .bro-split,
+  .bro-split--reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+}
+
+.bro-split__media {
+  position: relative;
+  border-radius: 2px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+}
+
+.bro-split__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bro-split__media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bro-split__body h3 {
+  font-size: 1.25rem;
+  margin: 0 0 1rem;
+  font-weight: 800;
+}
+
+.bro-split__body p {
+  margin: 0 0 1rem;
+  font-size: 0.9375rem;
+  color: var(--muted);
+}
+
+.bro-section--dark .bro-split__body p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.bro-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+}
+
+.bro-tags li {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: #1d4ed8;
+}
+
+.bro-section--dark .bro-tags li {
+  background: rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+}
+
+/* —— フロー —— */
+.bro-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (max-width: 860px) {
+  .bro-flow {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .bro-flow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bro-flow__step {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bro-flow__step img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  width: 100%;
+}
+
+.bro-flow__step div {
+  padding: 1rem 1.1rem 1.25rem;
+}
+
+.bro-flow__step span {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  color: #93c5fd;
+  letter-spacing: 0.1em;
+}
+
+.bro-flow__step strong {
+  display: block;
+  margin: 0.25rem 0 0.35rem;
+  font-size: 0.9375rem;
+}
+
+.bro-flow__step p {
+  margin: 0;
+  font-size: 0.8125rem;
+  opacity: 0.75;
+}
+
+/* —— ギャラリー —— */
+.bro-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 720px) {
+  .bro-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.bro-gallery figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.bro-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.bro-gallery figure:hover img {
+  transform: scale(1.04);
+}
+
+/* —— 会社概要 —— */
+.bro-profile {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
+}
+
+.bro-profile table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.bro-profile th,
+.bro-profile td {
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+  vertical-align: top;
+}
+
+.bro-profile th {
+  width: 28%;
+  background: #f8fafc;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+/* —— CTA —— */
+.bro-cta {
+  text-align: center;
+  padding: var(--section-pad) 1.5rem;
+  background: linear-gradient(135deg, var(--navy-mid), var(--navy));
+  color: var(--white);
+}
+
+.bro-cta h2 {
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  margin: 0 0 0.75rem;
+}
+
+.bro-cta p {
+  margin: 0 0 1.75rem;
+  opacity: 0.85;
+  font-size: 0.9375rem;
+}
+
+.bro-cta__tel {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.bro-cta__tel:hover {
+  color: #93c5fd;
+}
+
+.bro-footer {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--muted);
+  background: #e2e8f0;
+}
+
+.bro-footer a {
+  color: var(--navy);
+}
+
+.bro-photo-note {
+  max-width: 720px;
+  margin: 2rem auto 0;
+  padding: 1rem 1.25rem;
+  background: #fffbeb;
+  border: 1px solid #fcd34d;
+  border-radius: 4px;
+  font-size: 0.8125rem;
+  color: #92400e;
+}

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none" aria-hidden="true">
+  <defs>
+    <pattern id="dot" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.15" fill="#1a5fe8" opacity="0.22"/>
+    </pattern>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.92"/>
+      <stop offset="45%" stop-color="#fff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0.75"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#dot)"/>
+  <!-- stylized continents (dot clusters) -->
+  <g fill="#1a5fe8" opacity="0.14">
+    <ellipse cx="320" cy="380" rx="180" ry="130"/>
+    <ellipse cx="520" cy="320" rx="90" ry="70"/>
+    <ellipse cx="780" cy="280" rx="110" ry="85"/>
+    <ellipse cx="980" cy="340" rx="140" ry="100"/>
+    <ellipse cx="1180" cy="420" rx="160" ry="120"/>
+    <ellipse cx="420" cy="560" rx="100" ry="75"/>
+    <ellipse cx="900" cy="580" rx="130" ry="90"/>
+  </g>
+  <g stroke="#1a5fe8" stroke-width="1.2" opacity="0.18" stroke-linecap="round">
+    <path d="M280 360 Q520 280 760 300 T1120 380"/>
+    <path d="M360 480 Q620 420 880 460 T1280 520"/>
+    <path d="M440 620 Q720 540 980 600"/>
+    <path d="M520 260 L680 340 L820 290 L1020 360"/>
+  </g>
+  <g fill="#043d82" opacity="0.12">
+    <circle cx="280" cy="360" r="4"/>
+    <circle cx="520" cy="300" r="3.5"/>
+    <circle cx="760" cy="300" r="4"/>
+    <circle cx="980" cy="340" r="3.5"/>
+    <circle cx="1120" cy="380" r="4"/>
+    <circle cx="420" cy="560" r="3"/>
+    <circle cx="900" cy="580" r="3.5"/>
+  </g>
+  <rect width="1600" height="900" fill="url(#fade)"/>
+</svg>
