@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-05T15:15:11",
+  "generated": "2026-11-05T17:15:32",
   "map_variant": "社内",
   "map_variant_label": "正本（8765）",
   "master_source": "AI化/コース別配車/現場マスタ.json",
@@ -152,8 +152,14 @@
       "visit_count": 52,
       "first_visit": "2026-06-02",
       "last_visit": "2026-11-05",
-      "weight_kg": 2662,
+      "weight_kg": 2665,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 3,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 1041,
@@ -189,13 +195,13 @@
       "visit_count": 87,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 14145,
+      "weight_kg": 15226,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 1810,
+          "kg": 2891,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -243,13 +249,13 @@
       "visit_count": 17,
       "first_visit": "2026-06-11",
       "last_visit": "2026-11-05",
-      "weight_kg": 47,
+      "weight_kg": 52,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 17,
+          "kg": 22,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -324,13 +330,13 @@
       "visit_count": 30,
       "first_visit": "2026-06-02",
       "last_visit": "2026-11-05",
-      "weight_kg": 300,
+      "weight_kg": 363,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 38,
+          "kg": 101,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -400,8 +406,14 @@
       "visit_count": 18,
       "first_visit": "2026-06-03",
       "last_visit": "2026-11-05",
-      "weight_kg": 823,
+      "weight_kg": 926,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 103,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 525,
@@ -439,13 +451,13 @@
       "visit_count": 58,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 2416,
+      "weight_kg": 2442,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 7,
+          "kg": 33,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -489,8 +501,14 @@
       "visit_count": 15,
       "first_visit": "2026-08-05",
       "last_visit": "2026-11-05",
-      "weight_kg": 2066,
+      "weight_kg": 2256,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 190,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 1188,
@@ -533,7 +551,7 @@
           "month": "2026-11",
           "kg": 1,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -569,7 +587,7 @@
           "month": "2026-11",
           "kg": 15,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -607,13 +625,13 @@
       "visit_count": 87,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 3472,
+      "weight_kg": 3502,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 336,
+          "kg": 366,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -657,13 +675,13 @@
       "visit_count": 84,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 5932,
+      "weight_kg": 6002,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 1118,
+          "kg": 1188,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -705,13 +723,13 @@
       "visit_count": 88,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 6413,
+      "weight_kg": 6488,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 83,
+          "kg": 158,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -756,7 +774,7 @@
           "month": "2026-11",
           "kg": 37,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -837,13 +855,13 @@
       "visit_count": 88,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 11460,
+      "weight_kg": 11552,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 506,
+          "kg": 598,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -883,13 +901,13 @@
       "visit_count": 76,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 3189,
+      "weight_kg": 3321,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 96,
+          "kg": 228,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -928,13 +946,13 @@
       "visit_count": 86,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 4395,
+      "weight_kg": 4464,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 441,
+          "kg": 510,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -1020,13 +1038,13 @@
       "visit_count": 75,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 2198,
+      "weight_kg": 2237,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 103,
+          "kg": 142,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -1094,13 +1112,13 @@
       "visit_count": 57,
       "first_visit": "2026-06-02",
       "last_visit": "2026-11-05",
-      "weight_kg": 1726,
+      "weight_kg": 1815,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 21,
+          "kg": 110,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -1183,13 +1201,13 @@
       "visit_count": 65,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 3586,
+      "weight_kg": 3900,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 53,
+          "kg": 367,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -1232,13 +1250,13 @@
       "visit_count": 72,
       "first_visit": "2026-06-02",
       "last_visit": "2026-11-05",
-      "weight_kg": 1183,
+      "weight_kg": 1202,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 41,
+          "kg": 60,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -1312,13 +1330,13 @@
       "visit_count": 55,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 1708,
+      "weight_kg": 1729,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 122,
+          "kg": 143,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -1362,7 +1380,7 @@
           "month": "2026-11",
           "kg": 75,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -1403,7 +1421,7 @@
           "month": "2026-11",
           "kg": 39,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -1441,13 +1459,13 @@
       "visit_count": 75,
       "first_visit": "2026-06-02",
       "last_visit": "2026-11-05",
-      "weight_kg": 4830,
+      "weight_kg": 5109,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 731,
+          "kg": 1010,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -1487,13 +1505,13 @@
       "visit_count": 81,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 3005,
+      "weight_kg": 3074,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 128,
+          "kg": 197,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -1531,13 +1549,13 @@
       "visit_count": 65,
       "first_visit": "2026-06-02",
       "last_visit": "2026-11-05",
-      "weight_kg": 4704,
+      "weight_kg": 6840,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 121,
+          "kg": 2257,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -1575,13 +1593,13 @@
       "visit_count": 81,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 5722,
+      "weight_kg": 6529,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 219,
+          "kg": 1026,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -1620,13 +1638,13 @@
       "visit_count": 73,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 3147,
+      "weight_kg": 3234,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 47,
+          "kg": 134,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -1667,13 +1685,13 @@
       "visit_count": 62,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 2052,
+      "weight_kg": 2073,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 681,
+          "kg": 702,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -1721,7 +1739,7 @@
           "month": "2026-11",
           "kg": 3,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -1766,7 +1784,7 @@
           "month": "2026-11",
           "kg": 16,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -1811,7 +1829,7 @@
           "month": "2026-11",
           "kg": 116,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -1886,13 +1904,13 @@
       "visit_count": 87,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 8029,
+      "weight_kg": 8217,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 204,
+          "kg": 392,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -1945,13 +1963,13 @@
       "visit_count": 57,
       "first_visit": "2026-06-04",
       "last_visit": "2026-11-05",
-      "weight_kg": 1772,
+      "weight_kg": 2025,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 57,
+          "kg": 310,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -1991,13 +2009,13 @@
       "visit_count": 75,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 3187,
+      "weight_kg": 3196,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 611,
+          "kg": 620,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -2036,8 +2054,14 @@
       "visit_count": 33,
       "first_visit": "2026-06-04",
       "last_visit": "2026-11-05",
-      "weight_kg": 1226,
+      "weight_kg": 1264,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 38,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 263,
@@ -2077,7 +2101,7 @@
           "month": "2026-11",
           "kg": 61,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -2114,8 +2138,14 @@
       "visit_count": 26,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 321,
+      "weight_kg": 350,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 29,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 54,
@@ -2185,8 +2215,14 @@
       "visit_count": 52,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 2333,
+      "weight_kg": 2573,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 240,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 1315,
@@ -2225,13 +2261,13 @@
       "visit_count": 87,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 3480,
+      "weight_kg": 3493,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 205,
+          "kg": 218,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -2281,13 +2317,13 @@
       "visit_count": 69,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 3689,
+      "weight_kg": 3905,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 9,
+          "kg": 225,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -2330,13 +2366,13 @@
       "visit_count": 57,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 3117,
+      "weight_kg": 3230,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 1,
+          "kg": 114,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -2374,8 +2410,14 @@
       "visit_count": 26,
       "first_visit": "2026-06-08",
       "last_visit": "2026-11-05",
-      "weight_kg": 289,
+      "weight_kg": 313,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 24,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 178,
@@ -2418,7 +2460,7 @@
           "month": "2026-11",
           "kg": 39,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -2457,13 +2499,13 @@
       "visit_count": 88,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 10946,
+      "weight_kg": 11332,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 1460,
+          "kg": 1846,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -2593,13 +2635,13 @@
       "visit_count": 73,
       "first_visit": "2026-06-02",
       "last_visit": "2026-11-05",
-      "weight_kg": 5485,
+      "weight_kg": 5903,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 8,
+          "kg": 426,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -2638,13 +2680,13 @@
       "visit_count": 88,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 30604,
+      "weight_kg": 31083,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 1656,
+          "kg": 2135,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -2687,13 +2729,13 @@
       "visit_count": 22,
       "first_visit": "2026-06-02",
       "last_visit": "2026-11-05",
-      "weight_kg": 246,
+      "weight_kg": 251,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 1,
+          "kg": 6,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -2731,13 +2773,13 @@
       "visit_count": 72,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 3596,
+      "weight_kg": 3641,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 106,
+          "kg": 151,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -2781,7 +2823,7 @@
           "month": "2026-11",
           "kg": 6,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -2827,7 +2869,7 @@
           "month": "2026-11",
           "kg": 508,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -2876,7 +2918,7 @@
           "month": "2026-11",
           "kg": 340,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -2919,8 +2961,14 @@
       "visit_count": 50,
       "first_visit": "2026-06-02",
       "last_visit": "2026-11-05",
-      "weight_kg": 743,
+      "weight_kg": 1298,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 555,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 95,
@@ -2954,13 +3002,13 @@
       "visit_count": 80,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 1486,
+      "weight_kg": 1678,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 133,
+          "kg": 325,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -3002,13 +3050,13 @@
       "visit_count": 68,
       "first_visit": "2026-06-02",
       "last_visit": "2026-11-05",
-      "weight_kg": 1354,
+      "weight_kg": 1370,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 258,
+          "kg": 274,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -3048,13 +3096,13 @@
       "visit_count": 81,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 2025,
+      "weight_kg": 2081,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 63,
+          "kg": 119,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -3095,13 +3143,13 @@
       "visit_count": 88,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 6985,
+      "weight_kg": 7430,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 482,
+          "kg": 927,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -3151,13 +3199,13 @@
       "visit_count": 87,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 8089,
+      "weight_kg": 8131,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 133,
+          "kg": 175,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -3201,13 +3249,13 @@
       "visit_count": 39,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 1508,
+      "weight_kg": 1594,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 1,
+          "kg": 87,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -3249,13 +3297,13 @@
       "visit_count": 81,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 6307,
+      "weight_kg": 6607,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 278,
+          "kg": 578,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -3297,13 +3345,13 @@
       "visit_count": 83,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 5393,
+      "weight_kg": 6693,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 376,
+          "kg": 1676,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -3343,13 +3391,13 @@
       "visit_count": 83,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 2795,
+      "weight_kg": 2838,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 321,
+          "kg": 364,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -3427,13 +3475,13 @@
       "visit_count": 61,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 1201,
+      "weight_kg": 1295,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 58,
+          "kg": 152,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -3472,13 +3520,13 @@
       "visit_count": 88,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 38207,
+      "weight_kg": 39388,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 1633,
+          "kg": 2814,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -3521,13 +3569,13 @@
       "visit_count": 81,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 6266,
+      "weight_kg": 6502,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 825,
+          "kg": 1061,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -3612,13 +3660,13 @@
       "visit_count": 88,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 7345,
+      "weight_kg": 7565,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 228,
+          "kg": 448,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -3667,13 +3715,13 @@
       "visit_count": 87,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 3665,
+      "weight_kg": 3725,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 624,
+          "kg": 684,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -3712,13 +3760,13 @@
       "visit_count": 88,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 5338,
+      "weight_kg": 6035,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 513,
+          "kg": 1210,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -3771,13 +3819,13 @@
       "visit_count": 86,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 5096,
+      "weight_kg": 5104,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 335,
+          "kg": 343,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -3817,13 +3865,13 @@
       "visit_count": 88,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 6036,
+      "weight_kg": 6243,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 65,
+          "kg": 272,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -3980,13 +4028,13 @@
       "visit_count": 88,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 10342,
+      "weight_kg": 11273,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 1712,
+          "kg": 2643,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -4061,13 +4109,13 @@
       "visit_count": 80,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 3396,
+      "weight_kg": 3440,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 446,
+          "kg": 490,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -4105,13 +4153,13 @@
       "visit_count": 82,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 3412,
+      "weight_kg": 3603,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 206,
+          "kg": 397,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -4161,7 +4209,7 @@
           "month": "2026-11",
           "kg": 365,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -4199,13 +4247,13 @@
       "visit_count": 88,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 6415,
+      "weight_kg": 6762,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 738,
+          "kg": 1085,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -4259,13 +4307,13 @@
       "visit_count": 72,
       "first_visit": "2026-06-02",
       "last_visit": "2026-11-05",
-      "weight_kg": 1551,
+      "weight_kg": 1599,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 21,
+          "kg": 69,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -4310,7 +4358,7 @@
           "month": "2026-11",
           "kg": 21,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -4348,13 +4396,13 @@
       "visit_count": 88,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 10405,
+      "weight_kg": 10718,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 858,
+          "kg": 1171,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -4455,13 +4503,13 @@
       "visit_count": 55,
       "first_visit": "2026-06-04",
       "last_visit": "2026-11-05",
-      "weight_kg": 2240,
+      "weight_kg": 2298,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 13,
+          "kg": 71,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -4503,13 +4551,13 @@
       "visit_count": 88,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 28448,
+      "weight_kg": 29728,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 1756,
+          "kg": 3036,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -4555,13 +4603,13 @@
       "visit_count": 88,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 44068,
+      "weight_kg": 45235,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 2371,
+          "kg": 3538,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -4636,13 +4684,13 @@
       "visit_count": 75,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 8906,
+      "weight_kg": 9414,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 1282,
+          "kg": 1790,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -4689,13 +4737,13 @@
       "visit_count": 88,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 29319,
+      "weight_kg": 30401,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 3025,
+          "kg": 4107,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -4741,13 +4789,13 @@
       "visit_count": 88,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 10425,
+      "weight_kg": 10472,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 1337,
+          "kg": 1384,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -4795,13 +4843,13 @@
       "visit_count": 88,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 72363,
+      "weight_kg": 73762,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 3166,
+          "kg": 4565,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -4869,13 +4917,13 @@
       "visit_count": 88,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 9822,
+      "weight_kg": 9932,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 478,
+          "kg": 588,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -4921,13 +4969,13 @@
       "visit_count": 54,
       "first_visit": "2026-06-03",
       "last_visit": "2026-11-05",
-      "weight_kg": 907,
+      "weight_kg": 998,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 65,
+          "kg": 156,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -4965,13 +5013,13 @@
       "visit_count": 54,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 836,
+      "weight_kg": 894,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 45,
+          "kg": 103,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -5009,13 +5057,13 @@
       "visit_count": 34,
       "first_visit": "2026-06-03",
       "last_visit": "2026-11-05",
-      "weight_kg": 456,
+      "weight_kg": 459,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 62,
+          "kg": 65,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -5053,13 +5101,13 @@
       "visit_count": 86,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 5967,
+      "weight_kg": 6685,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 295,
+          "kg": 1013,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -5100,13 +5148,13 @@
       "visit_count": 73,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 3398,
+      "weight_kg": 3414,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 327,
+          "kg": 343,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -5147,13 +5195,13 @@
       "visit_count": 84,
       "first_visit": "2026-06-02",
       "last_visit": "2026-11-05",
-      "weight_kg": 3719,
+      "weight_kg": 3839,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 106,
+          "kg": 226,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -5246,7 +5294,7 @@
           "month": "2026-11",
           "kg": 121,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -5291,13 +5339,13 @@
       "visit_count": 88,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 6500,
+      "weight_kg": 6593,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 430,
+          "kg": 523,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -5341,13 +5389,13 @@
       "visit_count": 87,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 25835,
+      "weight_kg": 26925,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 3099,
+          "kg": 4189,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -5410,8 +5458,14 @@
       "visit_count": 34,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 2019,
+      "weight_kg": 2300,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 281,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 746,
@@ -5453,7 +5507,7 @@
           "month": "2026-11",
           "kg": 2,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -5490,13 +5544,13 @@
       "visit_count": 76,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 6619,
+      "weight_kg": 7161,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 234,
+          "kg": 776,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -5540,7 +5594,7 @@
           "month": "2026-11",
           "kg": 658,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -5606,7 +5660,7 @@
           "month": "2026-11",
           "kg": 4,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -5701,13 +5755,13 @@
       "visit_count": 44,
       "first_visit": "2026-06-02",
       "last_visit": "2026-11-05",
-      "weight_kg": 2055,
+      "weight_kg": 2199,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 103,
+          "kg": 247,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -5822,13 +5876,13 @@
       "visit_count": 18,
       "first_visit": "2026-06-02",
       "last_visit": "2026-11-05",
-      "weight_kg": 235,
+      "weight_kg": 350,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 136,
+          "kg": 251,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-09",
@@ -5880,13 +5934,13 @@
       "visit_count": 17,
       "first_visit": "2026-06-05",
       "last_visit": "2026-11-05",
-      "weight_kg": 639,
+      "weight_kg": 681,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 10,
+          "kg": 52,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -5927,7 +5981,7 @@
           "month": "2026-11",
           "kg": 18,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -5965,8 +6019,14 @@
       "visit_count": 21,
       "first_visit": "2026-06-04",
       "last_visit": "2026-11-05",
-      "weight_kg": 1729,
+      "weight_kg": 2176,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 447,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 54,
@@ -6023,13 +6083,13 @@
       "visit_count": 9,
       "first_visit": "2026-06-10",
       "last_visit": "2026-11-05",
-      "weight_kg": 317,
+      "weight_kg": 727,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 176,
+          "kg": 586,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -6104,7 +6164,7 @@
           "month": "2026-11",
           "kg": 104,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -6208,8 +6268,14 @@
       "visit_count": 25,
       "first_visit": "2026-06-04",
       "last_visit": "2026-11-05",
-      "weight_kg": 44,
+      "weight_kg": 169,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 125,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 36,
@@ -6245,13 +6311,13 @@
       "visit_count": 19,
       "first_visit": "2026-06-02",
       "last_visit": "2026-11-05",
-      "weight_kg": 152,
+      "weight_kg": 177,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 71,
+          "kg": 96,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -6288,8 +6354,14 @@
       "visit_count": 15,
       "first_visit": "2026-07-08",
       "last_visit": "2026-11-05",
-      "weight_kg": 649,
+      "weight_kg": 1051,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 402,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 113,
@@ -6324,13 +6396,13 @@
       "visit_count": 20,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 1095,
+      "weight_kg": 1096,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 115,
+          "kg": 116,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -6375,7 +6447,7 @@
           "month": "2026-11",
           "kg": 336,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -6414,13 +6486,13 @@
       "visit_count": 79,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 9489,
+      "weight_kg": 9784,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 134,
+          "kg": 429,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -6468,7 +6540,7 @@
           "month": "2026-11",
           "kg": 76,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-09",
@@ -6499,13 +6571,13 @@
       "visit_count": 55,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 5507,
+      "weight_kg": 5689,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 432,
+          "kg": 614,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -6549,7 +6621,7 @@
           "month": "2026-11",
           "kg": 249,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -6629,7 +6701,7 @@
           "month": "2026-11",
           "kg": 463,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -6668,13 +6740,13 @@
       "visit_count": 73,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 4265,
+      "weight_kg": 4348,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 457,
+          "kg": 540,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -6752,8 +6824,14 @@
       "visit_count": 35,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 1937,
+      "weight_kg": 2007,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 70,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 552,
@@ -6793,7 +6871,7 @@
           "month": "2026-11",
           "kg": 1,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -6837,7 +6915,7 @@
           "month": "2026-11",
           "kg": 105,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -6878,7 +6956,7 @@
           "month": "2026-11",
           "kg": 167,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -6921,7 +6999,7 @@
           "month": "2026-11",
           "kg": 273,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -6963,13 +7041,13 @@
       "visit_count": 31,
       "first_visit": "2026-06-02",
       "last_visit": "2026-11-05",
-      "weight_kg": 395,
+      "weight_kg": 426,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 79,
+          "kg": 110,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -7045,7 +7123,7 @@
           "month": "2026-11",
           "kg": 17,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -7086,7 +7164,7 @@
           "month": "2026-11",
           "kg": 8,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -7152,13 +7230,13 @@
       "visit_count": 19,
       "first_visit": "2026-07-08",
       "last_visit": "2026-11-05",
-      "weight_kg": 621,
+      "weight_kg": 624,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 27,
+          "kg": 30,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -7222,13 +7300,13 @@
       "visit_count": 27,
       "first_visit": "2026-06-03",
       "last_visit": "2026-11-05",
-      "weight_kg": 1419,
+      "weight_kg": 1445,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 3,
+          "kg": 29,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -7263,13 +7341,13 @@
       "visit_count": 60,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 1742,
+      "weight_kg": 1797,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 17,
+          "kg": 72,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -7308,13 +7386,13 @@
       "visit_count": 22,
       "first_visit": "2026-06-09",
       "last_visit": "2026-11-05",
-      "weight_kg": 826,
+      "weight_kg": 831,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 55,
+          "kg": 60,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -7377,8 +7455,14 @@
       "visit_count": 25,
       "first_visit": "2026-06-04",
       "last_visit": "2026-11-05",
-      "weight_kg": 168,
+      "weight_kg": 236,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 68,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 143,
@@ -7412,13 +7496,13 @@
       "visit_count": 17,
       "first_visit": "2026-06-29",
       "last_visit": "2026-11-05",
-      "weight_kg": 338,
+      "weight_kg": 341,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 84,
+          "kg": 87,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -7454,8 +7538,14 @@
       "visit_count": 26,
       "first_visit": "2026-06-02",
       "last_visit": "2026-11-05",
-      "weight_kg": 363,
+      "weight_kg": 372,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 9,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 269,
@@ -7581,13 +7671,13 @@
       "visit_count": 50,
       "first_visit": "2026-06-03",
       "last_visit": "2026-11-05",
-      "weight_kg": 2272,
+      "weight_kg": 2368,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 59,
+          "kg": 155,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -7667,13 +7757,13 @@
       "visit_count": 47,
       "first_visit": "2026-06-02",
       "last_visit": "2026-11-05",
-      "weight_kg": 1237,
+      "weight_kg": 1263,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 271,
+          "kg": 297,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -7746,13 +7836,13 @@
       "visit_count": 48,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 627,
+      "weight_kg": 637,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 1,
+          "kg": 11,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -7828,13 +7918,13 @@
       "visit_count": 17,
       "first_visit": "2026-06-02",
       "last_visit": "2026-11-05",
-      "weight_kg": 124,
+      "weight_kg": 178,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 49,
+          "kg": 103,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -7872,8 +7962,14 @@
       "visit_count": 40,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 828,
+      "weight_kg": 1118,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 290,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 696,
@@ -7910,13 +8006,13 @@
       "visit_count": 25,
       "first_visit": "2026-06-09",
       "last_visit": "2026-11-05",
-      "weight_kg": 441,
+      "weight_kg": 515,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 192,
+          "kg": 266,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -7953,8 +8049,14 @@
       "visit_count": 34,
       "first_visit": "2026-06-03",
       "last_visit": "2026-11-05",
-      "weight_kg": 225,
+      "weight_kg": 280,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 55,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 91,
@@ -8044,13 +8146,13 @@
       "visit_count": 50,
       "first_visit": "2026-06-03",
       "last_visit": "2026-11-05",
-      "weight_kg": 540,
+      "weight_kg": 551,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 1,
+          "kg": 12,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -8094,7 +8196,7 @@
           "month": "2026-11",
           "kg": 61,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -8131,13 +8233,13 @@
       "visit_count": 52,
       "first_visit": "2026-06-03",
       "last_visit": "2026-11-05",
-      "weight_kg": 2694,
+      "weight_kg": 2704,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 244,
+          "kg": 254,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -8174,13 +8276,13 @@
       "visit_count": 45,
       "first_visit": "2026-06-02",
       "last_visit": "2026-11-05",
-      "weight_kg": 1623,
+      "weight_kg": 1658,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 16,
+          "kg": 51,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -8326,7 +8428,7 @@
           "month": "2026-11",
           "kg": 99,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -8369,7 +8471,7 @@
           "month": "2026-11",
           "kg": 13,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -8414,7 +8516,7 @@
           "month": "2026-11",
           "kg": 352,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -8451,13 +8553,13 @@
       "visit_count": 18,
       "first_visit": "2026-06-05",
       "last_visit": "2026-11-05",
-      "weight_kg": 340,
+      "weight_kg": 341,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 1,
+          "kg": 2,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -8500,7 +8602,7 @@
           "month": "2026-11",
           "kg": 10,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-09",
@@ -8535,7 +8637,7 @@
           "month": "2026-11",
           "kg": 34,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -8572,8 +8674,14 @@
       "visit_count": 35,
       "first_visit": "2026-06-03",
       "last_visit": "2026-11-05",
-      "weight_kg": 1381,
+      "weight_kg": 1385,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 4,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 562,
@@ -8665,8 +8773,14 @@
       "visit_count": 16,
       "first_visit": "2026-06-11",
       "last_visit": "2026-11-05",
-      "weight_kg": 730,
+      "weight_kg": 738,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 8,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 450,
@@ -8770,8 +8884,14 @@
       "visit_count": 6,
       "first_visit": "2026-06-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 616,
+      "weight_kg": 630,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 14,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 616,
@@ -8934,7 +9054,7 @@
           "month": "2026-11",
           "kg": 20,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -9074,7 +9194,7 @@
           "month": "2026-11",
           "kg": 312,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -9152,7 +9272,7 @@
           "month": "2026-11",
           "kg": 172,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -9290,7 +9410,7 @@
           "month": "2026-11",
           "kg": 1,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -9331,7 +9451,7 @@
           "month": "2026-11",
           "kg": 14,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-09",
@@ -9446,7 +9566,7 @@
           "month": "2026-11",
           "kg": 10,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         }
       ],
       "delivery_code": "290F41",
@@ -9469,13 +9589,13 @@
       "visit_count": 23,
       "first_visit": "2026-06-10",
       "last_visit": "2026-11-05",
-      "weight_kg": 312,
+      "weight_kg": 374,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 4,
+          "kg": 66,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -9512,13 +9632,13 @@
       "visit_count": 39,
       "first_visit": "2026-06-02",
       "last_visit": "2026-11-05",
-      "weight_kg": 1078,
+      "weight_kg": 1322,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 34,
+          "kg": 278,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -9588,13 +9708,13 @@
       "visit_count": 31,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 491,
+      "weight_kg": 492,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 138,
+          "kg": 139,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -9631,13 +9751,13 @@
       "visit_count": 36,
       "first_visit": "2026-06-04",
       "last_visit": "2026-11-05",
-      "weight_kg": 722,
+      "weight_kg": 739,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 107,
+          "kg": 124,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -9672,8 +9792,14 @@
       "visit_count": 23,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 581,
+      "weight_kg": 589,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 8,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 527,
@@ -9707,8 +9833,14 @@
       "visit_count": 23,
       "first_visit": "2026-06-08",
       "last_visit": "2026-11-05",
-      "weight_kg": 1220,
+      "weight_kg": 1229,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 9,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 33,
@@ -9745,8 +9877,14 @@
       "visit_count": 24,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 661,
+      "weight_kg": 666,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 5,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 79,
@@ -9786,7 +9924,7 @@
           "month": "2026-11",
           "kg": 2,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -9861,8 +9999,14 @@
       "visit_count": 8,
       "first_visit": "2026-05-25",
       "last_visit": "2026-11-05",
-      "weight_kg": 42,
+      "weight_kg": 109,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 67,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 42,
@@ -9977,7 +10121,7 @@
           "month": "2026-11",
           "kg": 82,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -10043,7 +10187,7 @@
           "month": "2026-11",
           "kg": 57,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -10177,7 +10321,7 @@
           "month": "2026-11",
           "kg": 75,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -10314,7 +10458,7 @@
           "month": "2026-11",
           "kg": 18,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -10655,8 +10799,14 @@
       "visit_count": 15,
       "first_visit": "2026-06-10",
       "last_visit": "2026-11-05",
-      "weight_kg": 86,
+      "weight_kg": 91,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 5,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 79,
@@ -10724,7 +10874,7 @@
           "month": "2026-11",
           "kg": 3,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -10822,7 +10972,7 @@
           "month": "2026-11",
           "kg": 1,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -11031,8 +11181,14 @@
       "visit_count": 3,
       "first_visit": "2026-06-08",
       "last_visit": "2026-11-05",
-      "weight_kg": 2,
+      "weight_kg": 3,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 1,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-09",
           "kg": 2,
@@ -11089,13 +11245,13 @@
       "visit_count": 17,
       "first_visit": "2026-06-08",
       "last_visit": "2026-11-05",
-      "weight_kg": 235,
+      "weight_kg": 311,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 12,
+          "kg": 88,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -11415,13 +11571,13 @@
       "visit_count": 15,
       "first_visit": "2026-06-03",
       "last_visit": "2026-11-05",
-      "weight_kg": 267,
+      "weight_kg": 334,
       "weight_months": [
         {
           "month": "2026-11",
-          "kg": 2,
+          "kg": 69,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -11457,8 +11613,15 @@
       "visit_count": 2,
       "first_visit": "2026-06-03",
       "last_visit": "2026-11-05",
-      "weight_kg": 0,
-      "weight_months": [],
+      "weight_kg": 173,
+      "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 173,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        }
+      ],
       "delivery_code": "174XNC",
       "master_course": "房館1",
       "map_course": "房館1",
@@ -11747,8 +11910,14 @@
       "visit_count": 5,
       "first_visit": "2026-07-15",
       "last_visit": "2026-11-05",
-      "weight_kg": 1,
+      "weight_kg": 40,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 39,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-10",
           "kg": 1,
@@ -12415,8 +12584,14 @@
       "visit_count": 2,
       "first_visit": "2026-09-29",
       "last_visit": "2026-11-05",
-      "weight_kg": 97,
+      "weight_kg": 99,
       "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 2,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        },
         {
           "month": "2026-09",
           "kg": 97,
@@ -12916,7 +13091,7 @@
           "month": "2026-11",
           "kg": 20,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         },
         {
           "month": "2026-10",
@@ -12951,7 +13126,7 @@
           "month": "2026-11",
           "kg": 2,
           "start": "2026-11-01",
-          "end": "2026-11-04"
+          "end": "2026-11-05"
         }
       ],
       "delivery_code": "053KMT",
@@ -12974,8 +13149,15 @@
       "visit_count": 1,
       "first_visit": "2026-11-05",
       "last_visit": "2026-11-05",
-      "weight_kg": 0,
-      "weight_months": [],
+      "weight_kg": 1,
+      "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 1,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        }
+      ],
       "delivery_code": "053KCH",
       "master_course": "柏3V",
       "map_course": "柏3V",
@@ -12996,8 +13178,15 @@
       "visit_count": 1,
       "first_visit": "2026-11-05",
       "last_visit": "2026-11-05",
-      "weight_kg": 0,
-      "weight_months": [],
+      "weight_kg": 110,
+      "weight_months": [
+        {
+          "month": "2026-11",
+          "kg": 110,
+          "start": "2026-11-01",
+          "end": "2026-11-05"
+        }
+      ],
       "delivery_code": "1740NY",
       "master_course": "房木4",
       "map_course": "房木4",
@@ -13048,7 +13237,7 @@
   "visit_period_start": "2026-05-25",
   "visit_period_end": "2026-11-05",
   "weight_period_start": "2026-09-01",
-  "weight_period_end": "2026-11-04",
+  "weight_period_end": "2026-11-05",
   "course_merges": {
     "柏2T.5O": {
       "label": "柏2T+5O（4t）",
